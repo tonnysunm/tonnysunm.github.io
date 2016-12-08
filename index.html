@@ -8,6 +8,16 @@
     <!-- Use minimum-scale=1 to enable GPU rasterization -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
     <style type="text/css">
+    @font-face {
+        font-family: "BanglaMN-Bold, Bangla MN";
+        src: url("Bangla MN.ttf") format("truetype");
+    }
+    
+    @font-face {
+        font-family: Augie;
+        src: url("augie.ttf") format("truetype");
+    }
+    
     body {
         height: 100%;
         margin: 0;
@@ -24,6 +34,8 @@
         /*vetical center align*/
         display: flex;
         align-items: center;
+        font-family: "BanglaMN-Bold";
+        z-index: 1;
     }
     
     nav ul {
@@ -51,15 +63,101 @@
         margin-top: 64px;
     }
     
-    .main img {
-        max-width: 100%;
-        display: center;
+    section {
+        width: 100%;
         padding-top: 60px;
-        padding-bottom: 160px;
+        padding-bottom: 100px;
+        display: flex;
+        align-items: center;
+        /*justify-content: space-between;*/
+        font-family: Augie;
     }
     
-    .lastImg {
+    .lastSection {
         padding-bottom: 20px;
+    }
+    
+    .helloImg {
+        margin-left: auto;
+    }
+    
+    section img {
+        width: 100%;
+    }
+    
+    section h2 {
+        font-size: 45px;
+        letter-spacing: 5.33px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    section p {
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: #4A4A4A;
+        margin: 10px 0;
+    }
+    
+    .hello {
+        text-align: left;
+        flex-direction: row-reverse;
+    }
+    
+    .hello h2 {
+        color: #5EB7F1;
+    }
+    
+    .work {
+        flex-direction: column;
+    }
+    
+    .work div {
+        position: relative;
+        top: -180px;
+    }
+    
+    .work h2 {
+        font-size: 36px;
+        color: #EB4E5F;
+    }
+    
+    .hobby {
+        text-align: left;
+    }
+    
+    .hobby div {
+        margin-left: 20px;
+    }
+    
+    .hobby h2 {
+        color: #F26D3F;
+    }
+    
+    .nz {
+        text-align: left;
+        flex-direction: row-reverse;
+    }
+    
+    .nz h2 {
+        color: #74B42F;
+    }
+    
+    .nz a {
+        /* Rectangle 15: */
+        background: #5EB7F1;
+        border-radius: 38px;
+        /* contact now: */
+        font-family: Augie;
+        font-size: 24px;
+        color: #FFFFFF;
+        letter-spacing: 2px;
+        padding: 5px 30px;
+        text-decoration: none;
+    }
+    
+    .mobileDesktop {
+        display: none;
     }
     
     @media(max-width:768px) {
@@ -68,14 +166,48 @@
             left: 0;
         }
         li a {
-            padding: 5px;
+            padding: 10px;
+        }
+        .menuHello {
+            display: none;
         }
         .main {
             width: 90%;
         }
-        .main img {
-            padding-top: 10px;
-            padding-bottom: 100px;
+        section {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+        section h2 {
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+        section p {
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 5px 0;
+        }
+        section div {
+            margin-top: 20px;
+        }
+        .hello {
+            text-align: center;
+        }
+        .work div {
+            top: 0;
+        }
+        .hobby {
+            text-align: center;
+        }
+        .nz {
+            text-align: center;
+        }
+        .workDesktop {
+            display: none;
+        }
+        .mobileDesktop {
+            display: block;
         }
     }
     
@@ -89,19 +221,53 @@
 
 <body>
     <nav>
-        <img src="img/logo.png" />
-        <h1>Tonny&Sunm</h1>
+        <a href="#">
+            <img src="img/logo.svg" />
+        </a>
         <ul>
-            <li><a href="#">Hello</a></li>
+            <li><a class="menuHello" href="#">Hello</a></li>
             <li><a href="#news">Works</a></li>
             <li><a href="https://medium.com/tonny-sunm">Blog</a></li>
         </ul>
     </nav>
     <div class="main">
-        <img src="img/1.png" />
-        <img src="img/2.png" />
-        <img src="img/3.png" />
-        <img class="lastImg" src="img/4.png" />
+        <section class="hello">
+            <img class="helloImg" src="img/introduction.svg" />
+            <div>
+                <h2>Hello</h2>
+                <p>welcome to our planet, we are couple and partner. scrow down to find our secret.</p>
+            </div>
+        </section>
+        <section class="work">
+            <img class="workDesktop" src="img/work.svg" />
+            <img class="mobileDesktop" src="img/mobile_work.svg" />
+            <div>
+                <h2>Hey, it’s our work</h2>
+                <p>we are super keen on what we do,
+                    <br/> and do love our job, also always stay revelant.</p>
+            </div>
+        </section>
+        <section class="hobby">
+            <img src="img/hobby.svg" />
+            <div>
+                <h2>HOBBY</h2>
+                <p>at our spare time, we have lots
+                    <br/> for fun,we love the life as well
+                    <br/> as work,we realize that life and
+                    <br/> work balance is super important.</p>
+            </div>
+        </section>
+        <section class="nz lastSection">
+            <img src="img/NZ.svg" />
+            <div>
+                <h2>WHV</h2>
+                <p>Now we arrived NZ,
+                    <br/> we are wondering to expoler
+                    <br/> another life,so
+                    <br/> we are here for you. </p>
+                <a href="mailto:tonny.litao@gmail.com">Email us</a>
+            </div>
+        </section>
     </div>
 </body>
 
