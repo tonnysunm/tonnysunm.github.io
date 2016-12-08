@@ -1,0 +1,37 @@
+{
+  "name": "tonnysunm.github.io",
+  "version": "1.0.0",
+  "description": "This is a site for Tonny&amp;Sunm",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.8.0",
+    "html-webpack-plugin": "^2.24.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "2.1.0-beta.27",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./config/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonnysunm/tonnysunm.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonnysunm/tonnysunm.github.io/issues"
+  },
+  "homepage": "https://github.com/tonnysunm/tonnysunm.github.io#readme"
+}
