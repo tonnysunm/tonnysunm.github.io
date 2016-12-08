@@ -26,7 +26,7 @@
     
     nav {
         width: 60%;
-        height: 64px;
+        height: 60px;
         position: fixed;
         top: 0;
         left: 20%;
@@ -36,6 +36,19 @@
         align-items: center;
         font-family: "BanglaMN-Bold";
         z-index: 1;
+    }
+    
+    .logo {
+        padding-left: 8px;
+    }
+    
+    .logo img {
+        vertical-align: middle;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.75);
     }
     
     nav ul {
@@ -51,7 +64,6 @@
     
     li a {
         display: block;
-        color: black;
         padding: 0 16px;
         text-decoration: none;
     }
@@ -60,17 +72,17 @@
         text-align: center;
         width: 60%;
         margin: auto;
-        margin-top: 64px;
+        margin-top: 60px;
     }
     
     section {
+        font-family: Augie;
         width: 100%;
         padding-top: 60px;
         padding-bottom: 100px;
         display: flex;
         align-items: center;
-        /*justify-content: space-between;*/
-        font-family: Augie;
+        /*flex-wrap: wrap;*/
     }
     
     .lastSection {
@@ -86,8 +98,8 @@
     }
     
     section h2 {
-        font-size: 45px;
-        letter-spacing: 5.33px;
+        font-size: 40px;
+        letter-spacing: 2px;
         margin: 0;
         padding: 0;
     }
@@ -104,7 +116,15 @@
         flex-direction: row-reverse;
     }
     
+    .hello img {
+        width: 60%;
+    }
+    
     .hello h2 {
+        color: #5EB7F1;
+    }
+    
+    .hello span {
         color: #5EB7F1;
     }
     
@@ -130,6 +150,10 @@
         margin-left: 20px;
     }
     
+    .hobby img {
+        width: 60%;
+    }
+    
     .hobby h2 {
         color: #F26D3F;
     }
@@ -137,6 +161,10 @@
     .nz {
         text-align: left;
         flex-direction: row-reverse;
+    }
+    
+    .nz img {
+        width: 60%;
     }
     
     .nz h2 {
@@ -156,11 +184,22 @@
         text-decoration: none;
     }
     
+    .nz span {
+        color: #74B42F;
+    }
+    
+    .nz p {
+        margin: 5px 0 40px;
+    }
+    
     .mobileDesktop {
         display: none;
     }
     
     @media(max-width:768px) {
+        .logo span {
+            display: none;
+        }
         nav {
             width: 100%;
             left: 0;
@@ -188,11 +227,17 @@
             letter-spacing: 1px;
             margin: 5px 0;
         }
+        .nz p {
+            margin: 5px 0 30px;
+        }
         section div {
             margin-top: 20px;
         }
         .hello {
             text-align: center;
+        }
+        .hello img {
+            width: 100%;
         }
         .work div {
             top: 0;
@@ -200,8 +245,14 @@
         .hobby {
             text-align: center;
         }
+        .hobby img {
+            width: 100%;
+        }
         .nz {
             text-align: center;
+        }
+        .nz img {
+            width: 100%;
         }
         .workDesktop {
             display: none;
@@ -221,8 +272,9 @@
 
 <body>
     <nav>
-        <a href="#">
+        <a class="logo" href="#">
             <img src="img/logo.svg" />
+            <span>Tonny&Sunm</span>
         </a>
         <ul>
             <li><a class="menuHello" href="#">Hello</a></li>
@@ -234,37 +286,38 @@
         <section class="hello">
             <img class="helloImg" src="img/introduction.svg" />
             <div>
-                <h2>Hello</h2>
-                <p>welcome to our planet, we are couple and partner. scrow down to find our secret.</p>
+                <h2>Hello World</h2>
+                <p>This is us, we are a couple and working partner. We develop and design our world.</p>
             </div>
         </section>
         <section class="work">
             <img class="workDesktop" src="img/work.svg" />
             <img class="mobileDesktop" src="img/mobile_work.svg" />
             <div>
-                <h2>Hey, it’s our work</h2>
-                <p>we are super keen on what we do,
-                    <br/> and do love our job, also always stay revelant.</p>
+                <h2>Focus on Creating</h2>
+                <p>We're keen on working in IT factory.
+                    <!-- <br/>and creating better products. -->
+                    <br/>Implementing is a great way to understand this world.
+                    <br/> Now is the best time to do something.</p>
             </div>
         </section>
         <section class="hobby">
             <img src="img/hobby.svg" />
             <div>
-                <h2>HOBBY</h2>
-                <p>at our spare time, we have lots
-                    <br/> for fun,we love the life as well
-                    <br/> as work,we realize that life and
-                    <br/> work balance is super important.</p>
+                <h2>Enjoy Life</h2>
+                <p>We try to keep balance, it really can help running longer.
+                    <br/>and sometime it will open another door for you.
+                    <br/>So enjoy it.
+                </p>
             </div>
         </section>
         <section class="nz lastSection">
             <img src="img/NZ.svg" />
             <div>
-                <h2>WHV</h2>
-                <p>Now we arrived NZ,
-                    <br/> we are wondering to expoler
-                    <br/> another life,so
-                    <br/> we are here for you. </p>
+                <h2>New Zealand</h2>
+                <p>We are living in NZ at present, it's a wounderful land to explore our life.
+                    <br/><span>We are here for you</span>
+                </p>
                 <a href="mailto:tonny.litao@gmail.com">Email us</a>
             </div>
         </section>
