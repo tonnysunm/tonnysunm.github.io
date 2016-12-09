@@ -13,6 +13,7 @@ const Nav = ({styles, location})=>{
     	<nav styleName="nav">
             <Link styleName="logo" to="/">
                 <img src="asset/img/logo.svg" />
+                <img styleName="logTitle" src="asset/img/tonnysunm.svg" />
             </Link>
             <ul>
                 <li styleName="menuHello"><Link to="/" style={!isWorks?highlight:normal}>Hello</Link></li>

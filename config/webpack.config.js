@@ -37,7 +37,7 @@ const plugins = [
     }),
 ];
 
-if (process.env === 'production') {
+if (process.env.NODE_ENV === 'production') {
     plugins.push(new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
