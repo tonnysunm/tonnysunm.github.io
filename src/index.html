@@ -5,17 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tonny&Sunm</title>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
     <!-- Use minimum-scale=1 to enable GPU rasterization -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
     <style type="text/css">
     @font-face {
-        font-family: "BanglaMN-Bold, Bangla MN";
-        src: url("Bangla MN.ttf") format("truetype");
+        font-family: Futura;
+        src: local("Futura"), url("asset/Futura.ttc") format("truetype");
     }
     
     @font-face {
         font-family: Augie;
-        src: url("augie.ttf") format("truetype");
+        src: local("Augie"), url("asset/augie.ttf") format("truetype");
     }
     
     body {
@@ -24,48 +25,9 @@
         padding: 0;
     }
     
-    nav {
-        width: 60%;
-        height: 60px;
-        position: fixed;
-        top: 0;
-        left: 20%;
-        background-color: white;
-        /*vetical center align*/
-        display: flex;
-        align-items: center;
-        font-family: "BanglaMN-Bold";
-        z-index: 1;
-    }
-    
-    .logo {
-        padding-left: 8px;
-    }
-    
-    .logo img {
-        vertical-align: middle;
-    }
-    
     a {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.75);
-    }
-    
-    nav ul {
-        list-style-type: none;
-        overflow: hidden;
-        /*float right*/
-        margin-left: auto;
-    }
-    
-    nav li {
-        float: left;
-    }
-    
-    li a {
-        display: block;
-        padding: 0 16px;
-        text-decoration: none;
     }
     
     .main {
@@ -197,19 +159,6 @@
     }
     
     @media(max-width:768px) {
-        .logo span {
-            display: none;
-        }
-        nav {
-            width: 100%;
-            left: 0;
-        }
-        li a {
-            padding: 10px;
-        }
-        .menuHello {
-            display: none;
-        }
         .main {
             width: 90%;
         }
@@ -265,57 +214,7 @@
 </head>
 
 <body>
-    <nav>
-        <a class="logo" href="#">
-            <img src="asset/img/logo.svg" />
-            <span>Tonny&Sunm</span>
-        </a>
-        <ul>
-            <li><a class="menuHello" href="#">Hello</a></li>
-            <li><a href="#news">Works</a></li>
-            <li><a href="https://medium.com/tonny-sunm">Blog</a></li>
-        </ul>
-    </nav>
-    <div class="main">
-        <section class="hello">
-            <img class="helloImg" src="asset/img/introduction.svg" />
-            <div>
-                <h2>Hello World</h2>
-                <p>This is us, we are a couple and working partner. We develop and design our world.</p>
-            </div>
-        </section>
-        <section class="work">
-            <img class="workDesktop" src="asset/img/work.svg" />
-            <img class="mobileDesktop" src="asset/img/mobile_work.svg" />
-            <div>
-                <h2>Focus on Creating</h2>
-                <p>We're keen on working in IT factory.
-                    <!-- <br/>and creating better products. -->
-                    <br/>Implementing is a great way to understand this world.
-                    <br/> Now is the best time to do something.</p>
-            </div>
-        </section>
-        <section class="hobby">
-            <img src="asset/img/hobby.svg" />
-            <div>
-                <h2>Enjoy Life</h2>
-                <p>We try to keep balance, it really can help running longer.
-                    <br/>and sometime it will open another door for you.
-                    <br/>So enjoy it.
-                </p>
-            </div>
-        </section>
-        <section class="nz lastSection">
-            <img src="asset/img/NZ.svg" />
-            <div>
-                <h2>New Zealand</h2>
-                <p>We are living in NZ at present, it's a wounderful land to explore our life.
-                    <br/><span>We are here for you</span>
-                </p>
-                <a href="mailto:tonny.litao@gmail.com">Email us</a>
-            </div>
-        </section>
-    </div>
+    <div id="root"></div>
 </body>
 
 </html>

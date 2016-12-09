@@ -5,4 +5,4 @@ module.exports = {
         "jsx-a11y",
         "import"
     ]
-};
+}
