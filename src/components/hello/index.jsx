@@ -1,12 +1,14 @@
 import React from 'react'
 import CSSModules from 'react-css-modules'
 
+import svg from '../../asset/img/hello/introduction.svg'
+
 import styles from './hello.css'
 
 const Hello = ()=>(
 	<div>
         <section styleName="hello">
-            <img styleName="helloImg" src="asset/img/hello/introduction.svg" />
+            <img styleName="helloImg" src={svg} />
             <div>
                 <h2>Hello World</h2>
                 <p>This is us, we are a couple and working partner. We develop and design our world.</p>
