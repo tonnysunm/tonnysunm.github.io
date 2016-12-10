@@ -25,15 +25,6 @@
         padding: 0;
     }
     
-    a {
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.75);
-    }
-    
-    a:hover {
-        color: #5EB7F1 !important;
-    }
-    
     .main {
         text-align: center;
         width: 60%;
@@ -107,7 +98,6 @@
     }
     
     .work h2 {
-        /*font-size: 36px;*/
         color: #EB4E5F;
     }
     
@@ -166,20 +156,16 @@
     }
     
     @media(max-width:768px) {
-        section > img {
-            width: 85% !important;
-        }
-
-        /*section > div {
-            width: 95% !important;
-        }*/
         .main {
             width: 100%;
         }
+
+        .main section img {
+            width: 85%;
+        }
+
         section {
             display: block;
-            /*padding-top: 20px;
-            padding-bottom: 80px;*/
             min-height: 80vh;
 
             padding-top: 10vh;
@@ -196,10 +182,10 @@
         .nz p {
             margin: 5px 0 30px;
         }
-        section div {
+        .main section div {
             width: 90%;
 
-            margin: 10px 10px 0 10px !important;
+            margin: 10px 10px 0 10px;
         }
         .hello {
             text-align: center;
@@ -213,15 +199,12 @@
         .hobby {
             text-align: center;
         }
-        .hobby img {
-            width: 80% !important;
+        .main .hobby img {
+            width: 80%;
         }
 
         .nz {
             text-align: center;
-        }
-        .nz img {
-            /*width: 100%;*/
         }
         .workDesktop {
             display: none;

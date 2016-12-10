@@ -1,3 +1,4 @@
+
 .nav {
     width: 60%;
     height: 60px;
@@ -25,9 +26,7 @@
     overflow: hidden;
     /*float right*/
     margin: 0 10px 0 auto;
-
     padding: 0;
-
     height: 60px;
     display: flex;
 }
@@ -43,13 +42,23 @@
 .nav li a {
     display: block;
     padding: 0 16px;
+
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.nav a:hover {
+    color: #5EB7F1;
+}
+
+.nav a.active {
+    color: #5EB7F1;
 }
 
 @media(max-width:768px) {
     .logTitle {
         max-width: 50%;
     }
-
     .nav {
         width: 100%;
         left: 0;
@@ -57,7 +66,6 @@
     .nav li a {
         padding: 0 10px;
     }
-
     .menuHello {
         display: none;
     }
