@@ -1,17 +1,20 @@
 import React from 'react'
+import CSSModules from 'react-css-modules'
+
+import styles from './hello.css'
 
 const Hello = ()=>(
-	<div className="main">
-        <section className="hello">
-            <img className="helloImg" src="asset/img/hello/introduction.svg" />
+	<div>
+        <section styleName="hello">
+            <img styleName="helloImg" src="asset/img/hello/introduction.svg" />
             <div>
                 <h2>Hello World</h2>
                 <p>This is us, we are a couple and working partner. We develop and design our world.</p>
             </div>
         </section>
-        <section className="work">
-            <img className="workDesktop" src="asset/img/hello/work.svg" />
-            <img className="mobileDesktop" src="asset/img/hello/work_mobile.svg" />
+        <section styleName="work">
+            <img styleName="workDesktop" src="asset/img/hello/work.svg" />
+            <img styleName="mobileDesktop" src="asset/img/hello/work_mobile.svg" />
             <div>
                 <h2>Focus on Creating</h2>
                 <p>We're keen on working in IT factory.
@@ -19,7 +22,7 @@ const Hello = ()=>(
                     <br/> Now is the best time to do something.</p>
             </div>
         </section>
-        <section className="hobby">
+        <section styleName="hobby">
             <img src="asset/img/hello/hobby.svg" />
             <div>
                 <h2>Enjoy Life</h2>
@@ -29,7 +32,7 @@ const Hello = ()=>(
                 </p>
             </div>
         </section>
-        <section className="nz lastSection">
+        <section styleName="nz">
             <img src="asset/img/hello/NZ.svg" />
             <div>
                 <h2>New Zealand</h2>
@@ -42,4 +45,4 @@ const Hello = ()=>(
     </div>
 )
 
-export default Hello
+export default CSSModules(Hello, styles)

@@ -1,4 +1,3 @@
-
 .nav {
     width: 60%;
     height: 60px;
@@ -19,6 +18,28 @@
 
 .logo img {
     vertical-align: middle;
+}
+
+.menu {
+    margin-left: auto;
+    padding-top: 12px;
+}
+
+.menu a {
+    padding: 0 16px;
+    vertical-align: middle;
+}
+
+.menu a img {
+    height: 22px;
+}
+
+svg:hover path {
+    fill: #5EB7F1;
+}
+
+.active path {
+    fill: #5EB7F1;
 }
 
 .nav ul {
@@ -43,17 +64,10 @@
     display: block;
     padding: 0 16px;
 
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.75);
+    /*text-decoration: none;*/
+    /*color: rgba(0, 0, 0, 0.75);*/
 }
 
-.nav a:hover {
-    color: #5EB7F1;
-}
-
-.nav a.active {
-    color: #5EB7F1;
-}
 
 @media(max-width:768px) {
     .logTitle {
@@ -63,10 +77,10 @@
         width: 100%;
         left: 0;
     }
-    .nav li a {
+    .menu a {
         padding: 0 10px;
     }
-    .menuHello {
+    .menu a:first-child {
         display: none;
     }
 }

@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
 const plugins = [
     new webpack.DefinePlugin({
@@ -24,6 +26,12 @@ const plugins = [
             minifyCSS: true,
             minifyURLs: true
         }
+    }),
+    new CleanWebpackPlugin(['build'], {
+        root: path.resolve(__dirname, '../'),
+        verbose: true,
+        dry: false,
+        exclude: []
     }),
     new CopyWebpackPlugin([{
         from: './src/asset',
@@ -70,8 +78,8 @@ module.exports = {
                 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             ]
         }, {
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'file-loader'
+            test: /\.(jpg|png|svg)$/,
+            loader: 'url-loader?limit=102400',
         }],
     },
     plugins: plugins,

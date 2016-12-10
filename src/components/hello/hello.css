@@ -1,0 +1,170 @@
+section {
+    font-family: Augie;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+    padding-top: 4vh;
+}
+
+.nz {
+    padding-bottom: 30px;
+}
+
+.helloImg {
+    margin-left: auto;
+}
+
+section img {
+    width: 100%;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+section p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #4A4A4A;
+    margin: 10px 0;
+}
+
+.hello {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+
+.hello img {
+    width: 60%;
+}
+
+.hello h2 {
+    color: #5EB7F1;
+}
+
+.hello span {
+    color: #5EB7F1;
+}
+
+.work {
+    flex-direction: column;
+}
+
+.work div {
+    position: relative;
+    top: -180px;
+}
+
+.work h2 {
+    color: #EB4E5F;
+}
+
+.hobby {
+    text-align: left;
+}
+
+.hobby div {
+    margin-left: 20px;
+}
+
+.hobby img {
+    width: 60%;
+}
+
+.hobby h2 {
+    color: #F26D3F;
+}
+
+.nz {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+
+.nz img {
+    width: 60%;
+}
+
+.nz h2 {
+    color: #74B42F;
+}
+
+.nz a {
+    /* Rectangle 15: */
+    background: #74B42F;
+    border-radius: 38px;
+    /* contact now: */
+    font-family: Augie;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    padding: 5px 30px;
+    text-decoration: none;
+}
+
+.nz span {
+    color: #74B42F;
+}
+
+.nz p {
+    margin: 5px 0 40px;
+}
+
+.mobileDesktop {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .main section img {
+        width: 85%;
+    }
+    section {
+        display: block;
+        min-height: 80vh;
+        padding-top: 10vh;
+    }
+    section h2 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    section p {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin: 5px 0;
+    }
+    .nz p {
+        margin: 5px 0 30px;
+    }
+    .main section div {
+        width: 90%;
+        margin: 10px 10px 0 10px;
+    }
+    .hello {
+        text-align: center;
+    }
+    .hello img {
+        /*width: 100%;*/
+    }
+    .work div {
+        top: 0;
+    }
+    .hobby {
+        text-align: center;
+    }
+    .main .hobby img {
+        width: 80%;
+    }
+    .nz {
+        text-align: center;
+    }
+    .workDesktop {
+        display: none;
+    }
+    .mobileDesktop {
+        display: block;
+    }
+}

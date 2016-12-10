@@ -12,7 +12,7 @@ const Works = ()=>{
 			</div>)
 	}
 	return (
-		<div className="main">
+		<div>
 			{works}
 		</div>
 	)
