@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('./nav.ttf') format('truetype');
+}
+
 .nav {
     width: 60%;
     height: 60px;
@@ -5,11 +10,19 @@
     top: 0;
     left: 20%;
     background-color: white;
+
     /*vetical center align*/
     display: flex;
     align-items: center;
-    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    
     z-index: 1;
+}
+
+.nav a {
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.65);
 }
 
 .logo {
@@ -22,7 +35,6 @@
 
 .menu {
     margin-left: auto;
-    padding-top: 12px;
 }
 
 .menu a {
@@ -30,16 +42,12 @@
     vertical-align: middle;
 }
 
-.menu a img {
-    height: 22px;
+.menu a:hover {
+    color: #5EB7F1;
 }
 
-svg:hover path {
-    fill: #5EB7F1;
-}
-
-.active path {
-    fill: #5EB7F1;
+a.active {
+    color: #5EB7F1;
 }
 
 @media(max-width:768px) {

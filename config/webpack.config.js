@@ -78,7 +78,7 @@ module.exports = {
                 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             ]
         }, {
-            test: /\.(jpg|png|svg)$/,
+            test: /\.(jpg|png|svg|ttf)$/,
             loader: 'url-loader?limit=102400',
         }],
     },
