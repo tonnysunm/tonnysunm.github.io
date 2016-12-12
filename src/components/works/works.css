@@ -9,8 +9,8 @@
 .gallery img {
     width: 100%;
     
-    background: #FFFFFF;
-    border: 6px solid #FFFFFF;
+    background: #fff;
+    border: 6px solid #fff;
     box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.09);
     box-sizing: border-box;
 

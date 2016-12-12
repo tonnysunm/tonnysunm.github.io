@@ -139,9 +139,9 @@ section p {
     .nz p {
         margin: 5px 0 30px;
     }
-    .main section div {
+    .text {
         width: 90%;
-        margin: 10px 10px 0 10px;
+        margin: 40px 10px 0 10px;
     }
     .hello {
         text-align: center;
