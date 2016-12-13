@@ -16,3 +16,7 @@ ReactDom.render(
 	</Route>
 </Router>,
 document.body)
+
+if (document.location.search.startsWith("?q=/works")) {
+	browserHistory.push('/works');
+}

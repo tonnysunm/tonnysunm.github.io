@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <title>404</title>
-    <script type="text/javascript" src="/build/asset/js/ghspa.js"></script>
 </head>
 
 <body>
+	<script type="text/javascript">
+		if (window.location.pathname.startsWith('/works')) {
+			window.location = "/?"+"q=/works"
+		}
+    </script>
 </body>
-
 </html>
