@@ -25,7 +25,7 @@
 .logo {
     padding-left: 8px;
     font-weight: bold;
-    color: rgba(0, 0, 0, .47);
+    color: rgba(0, 0, 0, .55);
 }
 
 .logo img {
@@ -39,7 +39,7 @@
 .menu a {
     padding: 0 16px;
     vertical-align: middle;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .55);
 }
 
 .menu a:hover {
