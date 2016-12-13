@@ -4,17 +4,63 @@
     margin: 0;
     padding: 15px;
     width: 33.333%;
+
+    display: flex;
+    align-items: center;
 }
 
-.gallery img {
-    width: 100%;
-    
+.card {
     background: #fff;
-    border: 6px solid #fff;
-    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.09);
+
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 
-    image-rendering: crisp-edges;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+
+.info {
+    height: 32px;
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    text-align: left;
+    color: rgba(0,0,0,0.75);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 16px;
+    max-height: 32px;
+    font-size: 15px
+}
+
+.behanceTitle {
+    text-align: left;
+    color: rgba(0,0,0,0.75);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    line-height: 16px;
+    max-height: 32px;
+    font-size: 15px
+}
+
+.behanceTitle:hover {
+    color: #5EB7F1; 
 }
 
 @media(max-width:768px) {
