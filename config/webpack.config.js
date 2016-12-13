@@ -13,7 +13,27 @@ const plugins = [
     }),
     new HtmlWebpackPlugin({
         inject: true,
+        filename: 'index.html',
         template: './src/index.html',
+        excludeChunks: ['404'],
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeRedundantAttributes: true,
+            useShortDoctype: true,
+            removeEmptyAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            keepClosingSlash: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true
+        }
+    }),
+    new HtmlWebpackPlugin({
+        inject: true,
+        filename: '404.html',
+        template: './404.html',
+        excludeChunks: ['bundle'],
         minify: {
             removeComments: true,
             collapseWhitespace: true,
@@ -57,10 +77,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: {
+        bundle: './src/index.jsx',
+        '404': './src/404.js',
+    },
     output: {
         path: 'build',
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],
