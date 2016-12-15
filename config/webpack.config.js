@@ -3,12 +3,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const autoprefixer = require('autoprefixer');
 
 const plugins = [
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: JSON.stringify('production')
+        }
+    }),
+    new webpack.LoaderOptionsPlugin({
+        options: {
+            context: __dirname,
+            postcss: [
+                autoprefixer
+            ]
         }
     }),
     new HtmlWebpackPlugin({
@@ -98,7 +106,8 @@ module.exports = {
             exclude: /node_modules/,
             use: [
                 'style-loader',
-                'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+                'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 
+                'postcss-loader',
             ]
         }, {
             test: /\.(jpg|png|svg|ttf)$/,
