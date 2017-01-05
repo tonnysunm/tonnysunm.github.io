@@ -1,4 +1,12 @@
 export default [{
+    "title": "Rooster Calendar",
+    "img": "cover21.jpg",
+    "dribbble": "https://dribbble.com/shots/3189567-Rooster-Calendar"
+},{
+    "title": "Workstudio",
+    "img": "cover22.jpg",
+    "dribbble": "https://dribbble.com/shots/3196818-Workstudio"
+},{
     "title": "Cover for Volunteering NZ",
     "img": "cover1.jpg",
 },{

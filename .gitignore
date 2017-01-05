@@ -39,3 +39,5 @@ jspm_packages
 .DS_Storew
 
 .DS_Store
+
+src/asset/img/.DS_Store
