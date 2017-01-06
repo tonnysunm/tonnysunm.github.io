@@ -7,11 +7,14 @@ import works from './works.json.js'
 
 import WorksShow from '../worksShow'
 
+//for github.io
+const assetPrefix = 'production' === process.env ? 'build/' : ''
+
 const Works = ()=>{
 	let worksShow = null;
 
 	const worksDom = works.map(work=>{
-		const src = `asset/img/works/${work.img}`
+		const src = `${assetPrefix}asset/img/works/${work.img}`
 
 		return (
 			<div styleName="gallery">
