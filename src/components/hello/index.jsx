@@ -6,7 +6,7 @@ import svg from '../../asset/img/hello/introduction.svg'
 import styles from './hello.css'
 
 //for github.io
-const assetPrefix = 'production' === process.env ? 'build/' : ''
+const ASSET_FOLDER = process.env.ASSET_FOLDER;
 
 const Hello = ()=>(
 	<div>
@@ -18,8 +18,8 @@ const Hello = ()=>(
             </div>
         </section>
         <section styleName="work">
-            <img styleName="workDesktop" src={`${assetPrefix}asset/img/hello/work.svg`} />
-            <img styleName="mobileDesktop" src={`${assetPrefix}asset/img/hello/work_mobile.svg`} />
+            <img styleName="workDesktop" src={`${ASSET_FOLDER}/img/hello/work.svg`} />
+            <img styleName="mobileDesktop" src={`${ASSET_FOLDER}/img/hello/work_mobile.svg`} />
             <div styleName="text">
                 <h2>Focus on Creating</h2>
                 <p>We're keen on working in IT factory.
@@ -28,7 +28,7 @@ const Hello = ()=>(
             </div>
         </section>
         <section styleName="hobby">
-            <img src={`${assetPrefix}asset/img/hello/hobby.svg`} />
+            <img src={`${ASSET_FOLDER}/img/hello/hobby.svg`} />
             <div styleName="text">
                 <h2>Enjoy Life</h2>
                 <p>We try to keep balance, it really can help running longer.
@@ -38,7 +38,7 @@ const Hello = ()=>(
             </div>
         </section>
         <section styleName="nz">
-            <img src={`${assetPrefix}asset/img/hello/NZ.svg`} />
+            <img src={`${ASSET_FOLDER}/img/hello/NZ.svg`} />
             <div styleName="text">
                 <h2>New Zealand</h2>
                 <p>We are living in NZ at present, it's a wounderful land to explore our life.

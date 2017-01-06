@@ -8,16 +8,16 @@ import works from './works.json.js'
 import WorksShow from '../worksShow'
 
 //for github.io
-const assetPrefix = 'production' === process.env ? 'build/' : ''
+const ASSET_FOLDER = process.env.ASSET_FOLDER;
 
 const Works = ()=>{
 	let worksShow = null;
 
-	const worksDom = works.map(work=>{
-		const src = `${assetPrefix}asset/img/works/${work.img}`
+	const worksDom = works.map((work, i)=>{
+		const src = `${ASSET_FOLDER}/img/works/${work.img}`
 
 		return (
-			<div styleName="gallery">
+			<div key={i} styleName="gallery">
 				<div styleName="card"> 
 					<img src={src} onClick={(e)=>{
 						e.preventDefault()
