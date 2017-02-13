@@ -114,7 +114,7 @@ module.exports = {
             ]
         }, {
             test: /\.(jpg|png|svg|ttf)$/,
-            loader: 'url-loader?limit=102400',
+            loader: 'url-loader?limit=1024000',
         }],
     },
     plugins: plugins,
