@@ -1,4 +1,24 @@
 export default [{
+    "title": "Dribble Redesign",
+    "img": "cover27.gif",
+    "dribbble": "https://dribbble.com/shots/3189567-Rooster-Calendar"
+},{
+    "title": "Cinema App Redesign",
+    "img": "cover26.jpg",
+    "dribbble": "https://dribbble.com/shots/3304161-Event-Cinema"
+},{
+    "title": "Doorkeeper at Cuba Street",
+    "img": "cover24.jpg",
+    "dribbble": "https://dribbble.com/shots/3256913-Doorman"
+},{
+    "title": "Retail App",
+    "img": "cover25.jpg",
+    "dribbble": "https://dribbble.com/shots/3229896-Red-Cross-App"
+},{
+    "title": "Manager",
+    "img": "cover23.jpg",
+    "dribbble": "https://dribbble.com/shots/3232569-Avatar-Manager"
+},{
     "title": "Rooster Calendar",
     "img": "cover21.jpg",
     "dribbble": "https://dribbble.com/shots/3189567-Rooster-Calendar"
@@ -12,6 +32,7 @@ export default [{
 },{
     "title": "Notes App in everyday",
     "img": "cover2.jpg",
+    "github": "https://github.com/TonnyTao/Acornote"
 },{
     "title": "Zootopia animation",
     "img": "cover3.jpg",
@@ -57,4 +78,5 @@ export default [{
 },{
     "title": "MengBox App, Origami DIY",
     "img": "cover16.jpg",
+    "douban": "https://www.douban.com/note/287618328",
 }]
