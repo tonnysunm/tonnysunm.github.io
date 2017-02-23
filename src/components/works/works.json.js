@@ -1,5 +1,5 @@
 export default [{
-    "title": "ANZ App redesign",
+    "title": "ANZ App Redesign",
     "img": "ANZ.gif",
     "dribbble": "https://dribbble.com/shots/3313230-ANZ-bank-app"
 },{
