@@ -1,3 +1,14 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 15px;
+}
+
+.header a {
+    margin-left: 15px;
+}
+
 .gallery {
     float: left;
     box-sizing: border-box;
@@ -61,6 +72,14 @@
 
 .behanceTitle:hover {
     color: #5EB7F1; 
+}
+
+.iconLink {
+    margin-left: 5px;
+}
+
+.iconLink img {
+    width: 20px;
 }
 
 @media(max-width:768px) {

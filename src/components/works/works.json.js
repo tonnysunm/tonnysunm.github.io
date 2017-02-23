@@ -1,4 +1,8 @@
 export default [{
+    "title": "ANZ App redesign",
+    "img": "ANZ.gif",
+    "dribbble": "https://dribbble.com/shots/3313230-ANZ-bank-app"
+},{
     "title": "Dribble Redesign",
     "img": "cover27.gif",
     "dribbble": "https://dribbble.com/shots/3189567-Rooster-Calendar"
@@ -78,5 +82,5 @@ export default [{
 },{
     "title": "MengBox App, Origami DIY",
     "img": "cover16.jpg",
-    "douban": "https://www.douban.com/note/287618328",
+    "douban": "https://www.douban.com/note/287618328/",
 }]
