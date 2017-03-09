@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="158px" height="197px" viewBox="0 0 158 197" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/more</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="114.5" cy="6.5" r="5.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11" height="11" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle id="path-3" cx="61" cy="58" r="7"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="14" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-961.000000, -2210.000000)">
+            <g id="feature" transform="translate(253.000000, 1079.000000)">
+                <g id="Group-2" transform="translate(0.000000, 211.000000)">
+                    <g id="more" transform="translate(708.000000, 919.000000)">
+                        <g id="icon/more">
+                            <g>
+                                <polygon id="Rectangle-3" fill="#0CADE3" points="79.0372173 67.7478432 144.410727 97.2095856 79.0372173 134.294758 13.6637075 97.2095856"></polygon>
+                                <polygon id="Rectangle-3-Copy-5" fill="#37CDFF" points="79.0372173 67.7478432 79.0372173 134.294758 13.6637075 97.2095856"></polygon>
+                                <polygon id="Rectangle-3-Copy-2" fill="#FD0000" points="144.414062 152.114363 144.410727 97.2095856 79.0372173 134.294758 79.0405526 197.573593"></polygon>
+                                <polygon id="Rectangle-3-Copy-3" fill="#FFD52B" points="158.037217 120.747843 144.410727 97.2095856 79.0372173 134.294758 98.6637075 158.209586"></polygon>
+                                <polygon id="Rectangle-3-Copy" fill="#FF5858" points="13 152.895535 79.033882 197.573593 79.0372173 134.294758 13.6637075 97.2095856"></polygon>
+                                <polygon id="Rectangle-3-Copy-4" fill="#FFD52B" transform="translate(39.537217, 127.709586) scale(-1, 1) translate(-39.537217, -127.709586) " points="79.0372173 120.747843 65.4107272 97.2095856 0.0372173367 134.294758 19.6637075 158.209586"></polygon>
+                                <polygon id="Star" fill="#FFD52B" transform="translate(101.993858, 78.406837) rotate(14.000000) translate(-101.993858, -78.406837) " points="101.993858 85.916633 94.5812461 89.8136738 95.996929 81.5596091 90 75.714048 98.2875521 74.5097962 101.993858 67 105.700164 74.5097962 113.987716 75.714048 107.990787 81.5596091 109.40647 89.8136738"></polygon>
+                                <polygon id="Star-Copy" fill="#FFD52B" transform="translate(36.597298, 62.118148) rotate(33.000000) translate(-36.597298, -62.118148) " points="36.5972984 72.7586279 26.0945165 78.2802671 28.1003694 66.5852476 19.6034403 58.3027887 31.3459075 56.5965084 36.5972984 45.9560281 41.8486894 56.5965084 53.5911565 58.3027887 45.0942274 66.5852476 47.1000803 78.2802671"></polygon>
+                                <polygon id="Star-Copy-2" fill="#FFD52B" transform="translate(110.996548, 23.193954) rotate(-24.000000) translate(-110.996548, -23.193954) " points="110.996548 32.5821608 101.729835 37.4539606 103.499619 27.135323 96.0026903 19.8276233 106.363191 18.3221544 110.996548 8.93394773 115.629905 18.3221544 125.990407 19.8276233 118.493477 27.135323 120.263262 37.4539606"></polygon>
+                                <use id="Oval-8" stroke="#38CDFF" mask="url(#mask-2)" stroke-width="6" xlink:href="#path-1"></use>
+                                <use id="Oval-8-Copy" stroke="#38CDFF" mask="url(#mask-4)" stroke-width="6" xlink:href="#path-3"></use>
+                                <polygon id="Star-Copy-3" fill="#FFD52B" transform="translate(53.593548, 9.497180) rotate(-24.000000) translate(-53.593548, -9.497180) " points="53.5935485 13.8762925 49.2711065 16.1487347 50.0966194 11.3356248 46.5996904 7.92696146 51.4323275 7.22473819 53.5935485 2.84562613 55.7547695 7.22473819 60.5874066 7.92696146 57.0904775 11.3356248 57.9159905 16.1487347"></polygon>
+                                <polygon id="Star-Copy-4" fill="#FFD52B" transform="translate(67.593548, 110.497180) rotate(21.000000) translate(-67.593548, -110.497180) " points="67.5935485 114.876292 63.2711065 117.148735 64.0966194 112.335625 60.5996904 108.926961 65.4323275 108.224738 67.5935485 103.845626 69.7547695 108.224738 74.5874066 108.926961 71.0904775 112.335625 71.9159905 117.148735"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="211px" height="164px" viewBox="0 0 211 164" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/bird</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-255.000000, -1805.000000)">
+            <g id="feature" transform="translate(253.000000, 1079.000000)">
+                <g id="Group-2" transform="translate(0.000000, 211.000000)">
+                    <g id="crafts" transform="translate(2.000000, 515.000000)">
+                        <g id="icon/bird">
+                            <g>
+                                <polygon id="Triangle-2-Copy-2" fill="#B92C42" points="140.5 51 182 107 99 107"></polygon>
+                                <polygon id="Triangle-2-Copy-3" fill="#B92C42" points="61.5 56 61 88 0 22 9.166272 20.9998161"></polygon>
+                                <rect id="Rectangle-33" fill="#FE4A5D" x="61" y="56" width="83" height="33"></rect>
+                                <polygon id="Rectangle-33-Copy" fill="#FE4A5D" points="183 12 195 24 182 107 143 55"></polygon>
+                                <polygon id="Rectangle-33-Copy-2" fill="#B92C42" points="183 12 195 24 210 18 211 11"></polygon>
+                                <polygon id="Triangle-2" fill="#FE7C89" transform="translate(102.500000, 126.000000) scale(1, -1) translate(-102.500000, -126.000000) " points="102.5 88 144 164 61 164"></polygon>
+                                <polygon id="Triangle-2-Copy" fill="#B92C42" points="102.5 0 144 56 61 56"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

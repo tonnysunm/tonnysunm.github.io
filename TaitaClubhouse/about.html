@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Taita Clubhouse</title>
+    <link rel="stylesheet" href="index.css"></link>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_container">
+            <a href="#"><img src="img/logo.svg"/></a>
+            <div id="header_links">
+                <div class="header_item">
+                    <a id="header_home" href="index.html">Home</a>
+                    <div class="header_underline"></div>
+                </div>
+                <div class="header_item">
+                    <a id="header_photo" href="photo.html">Photos</a>
+                    <div class="header_underline"></div>
+                </div>
+                <div class="header_item header_item-active">
+                    <a id="header_about" href="about.html">About</a>
+                    <div class="header_underline header_underline_about"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <h1>About Taita clubhouse</h1>
+        <p>Taita Clubhouses are part an international community of 100 Clubhouses located in 19 countries. The Clubhouse Network is a program of the Museum of Science, Boston in collaboration with the MIT Media Lab. 
+Find out more about Clubhouses from around the world at The Clubhouse Network.</p>
+        <a href="http://www.theclubhousenetwork.org" target="_blank">The Clubhouse Network</a>
+    </div>
+    <div id="location">
+        <h1>Where we are</h1>
+        <div id="location_content">
+            <div id='location_content_map' style='height:240px;width:450px;'></div>
+            <div id="location_content_info">
+                <p>1199 High St, Taita, Lower Hutt 5011</p>
+                <p>Opening Hours: Monday to Friday, 3pm-7pm (During School Term)</p>
+                <div id="facebook">
+                    <a href="https://www.facebook.com/TaitaClubhouse/" target="_blank"><img src="img/facebook_logo.svg"/>
+                    <span>Find out what we’ve been up to!</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>Taita Clubhouse</div>
+        <div>Where Creativity Meets Imagination.</div>
+        <div>2010-2017</div>
+    </div>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script type='text/javascript'>
+    function init_map() {
+        var myOptions = {
+            zoom: 15,
+            center: new google.maps.LatLng(-41.1797008, 174.9601139),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('location_content_map'), myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(-41.1797008, 174.9601139)
+        });
+        infowindow = new google.maps.InfoWindow({
+            content: '<strong>Taita Clubhouse</strong><br>1199 High St, Taita, Lower Hutt<br>'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+    }
+    google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+</body>
+
+</html>

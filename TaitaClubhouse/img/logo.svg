@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="242px" height="30px" viewBox="0 0 242 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="DINAlternate-Bold, DIN Alternate" font-weight="bold">
+        <g id="visual/NAV-" transform="translate(-130.000000, -25.000000)">
+            <g id="NAV">
+                <g id="logo" transform="translate(130.000000, 16.000000)">
+                    <text id="Taita" font-size="40" letter-spacing="2">
+                        <tspan x="0.650390625" y="38" fill="#FFA40A">T</tspan>
+                        <tspan x="18.6464844" y="38" fill="#B75FE6">a</tspan>
+                        <tspan x="40.6464844" y="38" fill="#44D9E6">i</tspan>
+                        <tspan x="52.2363281" y="38" fill="#FE62B0">t</tspan>
+                        <tspan x="65.3496094" y="38" fill="#339933">a</tspan>
+                    </text>
+                    <text id="Clubhouse" font-size="30" letter-spacing="1.5" fill="#4A4A4A">
+                        <tspan x="97.8852539" y="38">Clubhouse</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

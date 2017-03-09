@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="181px" height="200px" viewBox="0 0 181 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/printer</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-277.000000, -2213.000000)">
+            <g id="feature" transform="translate(253.000000, 1079.000000)">
+                <g id="Group-2" transform="translate(0.000000, 211.000000)">
+                    <g id="3d" transform="translate(24.000000, 923.000000)">
+                        <g id="icon/printer">
+                            <g>
+                                <rect id="Rectangle-28-Copy" fill="#666666" x="0" y="0" width="181" height="200" rx="10"></rect>
+                                <rect id="Rectangle-31" fill="#FF583D" x="14" y="180" width="8" height="8" rx="4"></rect>
+                                <rect id="Rectangle-31-Copy" fill="#00AA9E" x="28" y="180" width="18" height="8" rx="4"></rect>
+                                <rect id="Rectangle-28" fill="#FFFFFF" x="10" y="10" width="161" height="158" rx="2"></rect>
+                                <g id="Group-4" transform="translate(69.000000, 95.000000)">
+                                    <rect id="Rectangle-32" fill="#8C6338" x="0" y="11" width="44" height="7" rx="3.5"></rect>
+                                    <path d="M44,9 C44,4.02943725 34.1502645,0 22,0 C9.8497355,0 0,4.02943725 0,9 L44,9 Z" id="Oval-12" fill="#F9B256"></path>
+                                    <path d="M44,34.5 C44,29.8055796 34.1502645,26 22,26 C9.8497355,26 0,29.8055796 0,34.5 L44,34.5 Z" id="Oval-12-Copy" fill="#F9B256" transform="translate(22.000000, 30.250000) scale(1, -1) translate(-22.000000, -30.250000) "></path>
+                                    <rect id="Rectangle-32-Copy" fill="#FF583D" x="0" y="20" width="44" height="4" rx="2"></rect>
+                                </g>
+                                <rect id="Rectangle-29-Copy-3" fill="#C1C4C9" x="15" y="30" width="154" height="6"></rect>
+                                <rect id="Rectangle-29-Copy-4" fill="#C1C4C9" x="15" y="46" width="154" height="6"></rect>
+                                <rect id="Rectangle-29-Copy-5" fill="#C1C4C9" x="10" y="152" width="161" height="6"></rect>
+                                <rect id="Rectangle-30" fill="#C1C4C9" x="16" y="53" width="6" height="101"></rect>
+                                <rect id="Rectangle-30-Copy" fill="#C1C4C9" x="159" y="53" width="6" height="101"></rect>
+                                <rect id="Rectangle-29" fill="#00AA9E" x="10" y="24" width="20" height="34"></rect>
+                                <rect id="Rectangle-29-Copy-2" fill="#666666" x="74" y="24" width="34" height="34"></rect>
+                                <rect id="Rectangle-29-Copy-8" fill="#666666" x="88" y="52" width="6" height="24"></rect>
+                                <rect id="Rectangle-29-Copy-9" fill="#F9B256" x="84" y="75" width="14" height="14"></rect>
+                                <circle id="Oval-11" fill="#F2F2F2" cx="91" cy="41" r="8"></circle>
+                                <rect id="Rectangle-29-Copy-6" fill="#666666" x="69" y="134" width="44" height="34"></rect>
+                                <rect id="Rectangle-29-Copy-7" fill="#979797" x="51" y="129" width="80" height="5"></rect>
+                                <rect id="Rectangle-29-Copy" fill="#00AA9E" x="151" y="24" width="20" height="34"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    /*background: #F6F5EF; */
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: #4A4A4A;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    position: fixed;
+    z-index: 1;
+    height: 44px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+#header_container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header_container img {
+    width: 70%;
+}
+
+#header_links {
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.header_item {
+    height: 100%;
+    width: 90px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header_item:nth-of-type(3) {
+    margin-right: 0;
+}
+
+.header_item a {
+    color: #4A4A4A;
+}
+
+.header_underline {
+    width: 80px;
+    height: 4px;
+    margin-top: 5px;
+    background: white;
+}
+
+.header_item-active #header_home,
+#header_home:hover {
+    color: #FFA40A;
+}
+
+.header_item-active .header_underline_home {
+    background: #FFA40A;
+}
+
+.header_item-active #header_photo,
+#header_photo:hover {
+    color: #B75FE6;
+}
+
+.header_item-active .header_underline_photo {
+    background: #B75FE6;
+}
+
+.header_item-active #header_about,
+#header_about:hover {
+    color: #44D9E6;
+}
+
+.header_item-active .header_underline_about {
+    background: #44D9E6;
+}
+
+#banner {
+    margin-top: 44px;
+}
+
+#banner img {
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    top: -100px;
+    width: 70%;
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.card h1 {
+    width: 100%;
+    color: #FFA40A;
+    margin-bottom: 30px;
+}
+
+#introduction p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#introduction, #feature {
+    margin-bottom: 40px;
+}
+
+#feature_grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#feature_grid .icon {
+    margin-top: 30px;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feature_grid .icon img {
+    height: 70%;
+    margin-bottom: 20px;
+}
+
+#feature_grid .icon h4 {
+    color: #4A4A4A;
+}
+
+#values_content {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#values_content .value {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#values_content .value h4 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#values_content .value img {
+    width: 100%;
+}
+
+#values_content .value p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#footer {
+    width: 100%;
+    height: 80px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+#footer div {
+    margin: 2px 0;
+}
+
+
+/*Photos*/
+
+#photowall {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+#photowall h1 {
+    color: #B75FE6;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#photowall_content {
+    margin-bottom: 10px;
+    width: 70%;
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.photo {
+    display: flex;
+}
+
+#photowall_content .title {
+    width: 100%;
+    height: 30px;
+    align-self: flex-end;
+    display: flex;
+    background: transparent;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(transparent, rgba(80, 80, 80, 0.6));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, rgba(80, 80, 80, 0.6));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, rgba(80, 80, 80, 0.6));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, rgba(80, 80, 80, 0.6));
+    /* Standard syntax */
+}
+
+#photowall_content h5 {
+    color: white;
+    align-self: flex-end;
+    margin: 5px;
+}
+
+#photowall_content .row {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+#photowall_content .photo {
+    margin: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#photowall_column {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photowall_column div {
+    width: 100%;
+    height: 50%;
+}
+
+#photowall_content img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#photowall_photo1 {
+    width: 60%;
+    margin-right: 10px !important;
+    background-image: url("http://images.huffingtonpost.com/2015-04-24-1429900455-2487016-Kidscoding.jpg");
+}
+
+#photowall_photo2 {
+    background-image: url("https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/93/11/YouthSpark%2023.jpg");
+}
+
+#photowall_photo3 {
+    background-image: url("http://www.mindyslaughter.com/uploads/1/4/4/6/14462840/9727637.png?663");
+}
+
+#photowall_photo4 {
+    width: 40%;
+    background-image: url("https://b.fastcompany.net/multisite_files/fastcompany/imagecache/w/939/h/528/scale/poster/2016/06/3060905-poster-p-1-why-apples-teaching-kids-to-code-on-the-ipad-copy.jpg");
+}
+
+#photowall_photo5 {
+    width: 60%;
+    background-image: url("http://www.channelnewsasia.com/blob/2536936/1456132837000/nullspace-alan-yong-data.jpg");
+}
+
+#photowall_photo6 {
+    width: 60%;
+    background-image: url("http://www.mindyslaughter.com/uploads/1/4/4/6/14462840/9727637.png?663");
+}
+
+#photowall_photo7 {
+    width: 40%;
+    background-image: url("http://www.mindyslaughter.com/uploads/1/4/4/6/14462840/9727637.png?663");
+}
+
+
+/*About*/
+
+#about {
+    width: 70%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#about h1 {
+    color: #44D9E6;
+}
+
+#about p {
+    margin: 30px 0;
+}
+
+#about a {
+    border-color: #44D9E6;
+    color: #44D9E6;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 40px;
+
+    box-sizing: border-box;
+    padding: 8px 20px;
+}
+
+#location {
+    width: 70%;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#location h1 {
+    color: #44D9E6;
+    margin: 30px 0;
+}
+
+#location_content {
+    display: flex;
+}
+
+#location_content_map {
+    background-image: url("img/map.png");
+}
+
+#location_content_info {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#location_content_info a {
+    display: flex;
+    align-items: center;
+    color: #4A4A4A;
+}
+
+#location_content_info img {
+    width: 7%;
+    margin-right: 10px;
+}
+
+#location_content_info a:hover {
+    color: #44D9E6;
+}
+
+#location_content_info p,
+#location_content_info div {
+    margin: 10px 0;
+}
