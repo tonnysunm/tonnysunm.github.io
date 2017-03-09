@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="201px" height="201px" viewBox="0 0 201 201" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="260px" height="260px" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
     <title>icon/guitar</title>
     <desc>Created with Sketch.</desc>
@@ -9,28 +9,20 @@
             <use xlink:href="#path-1"></use>
         </mask>
     </defs>
-    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-599.000000, -2209.000000)">
-            <g id="feature" transform="translate(253.000000, 1079.000000)">
-                <g id="Group-2" transform="translate(0.000000, 211.000000)">
-                    <g id="music" transform="translate(329.000000, 888.000000)">
-                        <g id="icon/guitar" transform="translate(124.500000, 124.500000) rotate(45.000000) translate(-124.500000, -124.500000) translate(71.000000, 3.000000)">
-                            <g transform="translate(0.863961, 0.852977)">
-                                <path d="M18.2614143,155.678768 C13.616175,145.889925 10.898073,135.055325 10.898073,125.561948 C10.898073,100.558146 29.7535024,94.3268195 53.0128532,94.3268195 C76.2722041,94.3268195 95.1276335,100.558146 95.1276335,125.561948 C95.1276335,135.055325 92.4095315,145.889925 87.7642922,155.678768 C98.7338562,169.103645 105.656329,187.366645 105.656329,203.123335 C105.656329,232.197524 82.0870418,241.72855 53.0128532,241.72855 C23.9386646,241.72855 0.369377905,232.197524 0.369377905,203.123335 C0.369377905,187.366645 7.29185029,169.103645 18.2614143,155.678768 Z" id="Combined-Shape" fill="#F9B256"></path>
-                                <rect id="Rectangle-6" fill="#603B2D" x="45.8507688" y="30.5671792" width="13.585413" height="132.457777"></rect>
-                                <use id="Oval-7" stroke="#89695E" mask="url(#mask-2)" stroke-width="10" fill="#333333" xlink:href="#path-1"></use>
-                                <rect id="Rectangle-12" fill="#333333" x="37.8572701" y="189.019984" width="28.0199143" height="6.79270649" rx="3.39635325"></rect>
-                                <rect id="Rectangle-13-Copy-3" fill="#F9B256" x="31.4162675" y="23.7744727" width="42.4544156" height="6.79270649" rx="3.39635325"></rect>
-                                <rect id="Rectangle-13-Copy-2" fill="#F9B256" x="31.4162675" y="11.8872364" width="42.4544156" height="6.79270649" rx="3.39635325"></rect>
-                                <rect id="Rectangle-13" fill="#89695E" x="35.6617091" y="0" width="33.9635325" height="42.4544156" rx="10"></rect>
-                                <rect id="Rectangle-13-Copy-4" fill="#603B2D" x="42.4544156" y="11.0381481" width="6.79270649" height="6.79270649" rx="2"></rect>
-                                <rect id="Rectangle-13-Copy-5" fill="#603B2D" x="54.341652" y="11.0381481" width="6.79270649" height="6.79270649" rx="2"></rect>
-                                <rect id="Rectangle-13-Copy-7" fill="#603B2D" x="42.4544156" y="22.9253844" width="6.79270649" height="6.79270649" rx="2"></rect>
-                                <rect id="Rectangle-13-Copy-6" fill="#603B2D" x="54.341652" y="22.9253844" width="6.79270649" height="6.79270649" rx="2"></rect>
-                            </g>
-                        </g>
-                    </g>
-                </g>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/guitar">
+            <g transform="translate(130.000000, 130.000000) rotate(45.000000) translate(-130.000000, -130.000000) translate(77.000000, 9.000000)">
+                <path d="M18.2614143,155.678768 C13.616175,145.889925 10.898073,135.055325 10.898073,125.561948 C10.898073,100.558146 29.7535024,94.3268195 53.0128532,94.3268195 C76.2722041,94.3268195 95.1276335,100.558146 95.1276335,125.561948 C95.1276335,135.055325 92.4095315,145.889925 87.7642922,155.678768 C98.7338562,169.103645 105.656329,187.366645 105.656329,203.123335 C105.656329,232.197524 82.0870418,241.72855 53.0128532,241.72855 C23.9386646,241.72855 0.369377905,232.197524 0.369377905,203.123335 C0.369377905,187.366645 7.29185029,169.103645 18.2614143,155.678768 Z" id="Combined-Shape" fill="#FFCD46"></path>
+                <rect id="Rectangle-6" fill="#8C6338" x="45.8507688" y="30.5671792" width="13.585413" height="132.457777"></rect>
+                <use id="Oval-7" stroke="#8C6338" mask="url(#mask-2)" stroke-width="10" fill="#363F51" xlink:href="#path-1"></use>
+                <rect id="Rectangle-12" fill="#363F51" x="37.8572701" y="189.019984" width="28.0199143" height="6.79270649" rx="3.39635325"></rect>
+                <rect id="Rectangle-13-Copy-3" fill="#333333" x="31.4162675" y="23.7744727" width="42.4544156" height="6.79270649" rx="3.39635325"></rect>
+                <rect id="Rectangle-13-Copy-2" fill="#333333" x="31.4162675" y="11.8872364" width="42.4544156" height="6.79270649" rx="3.39635325"></rect>
+                <rect id="Rectangle-13" fill="#89695E" x="35.6617091" y="0" width="33.9635325" height="42.4544156" rx="10"></rect>
+                <rect id="Rectangle-13-Copy-4" fill="#603B2D" x="42.4544156" y="11.0381481" width="6.79270649" height="6.79270649" rx="2"></rect>
+                <rect id="Rectangle-13-Copy-5" fill="#603B2D" x="54.341652" y="11.0381481" width="6.79270649" height="6.79270649" rx="2"></rect>
+                <rect id="Rectangle-13-Copy-7" fill="#603B2D" x="42.4544156" y="22.9253844" width="6.79270649" height="6.79270649" rx="2"></rect>
+                <rect id="Rectangle-13-Copy-6" fill="#603B2D" x="54.341652" y="22.9253844" width="6.79270649" height="6.79270649" rx="2"></rect>
             </g>
         </g>
     </g>

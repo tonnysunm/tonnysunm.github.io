@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="256px" height="173px" viewBox="0 0 256 173" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="260px" height="260px" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
     <title>icon/coding</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-579.000000, -1354.000000)">
-            <g id="feature" transform="translate(253.000000, 1079.000000)">
-                <g id="Group-2" transform="translate(0.000000, 211.000000)">
-                    <g id="coding" transform="translate(326.000000, 64.000000)">
-                        <g id="icon/coding">
-                            <g>
-                                <path d="M37,53 L215,53 L215,163.000943 C215,168.52327 210.522124,173 205.000397,173 L46.9996027,173 C41.4769746,173 37,168.514869 37,163.000943 L37,53 Z" id="Rectangle-14" fill="#363F51"></path>
-                                <rect id="Rectangle-16" fill="#00AA9E" transform="translate(123.800407, 108.230811) rotate(-72.000000) translate(-123.800407, -108.230811) " x="87.8004065" y="102.230811" width="72" height="12"></rect>
-                                <g id="Group-3" transform="translate(88.000000, 109.000000) rotate(-45.000000) translate(-88.000000, -109.000000) translate(68.000000, 89.000000)" fill="#00AA9E">
-                                    <rect id="Rectangle-15" x="0" y="0" width="40" height="12"></rect>
-                                    <rect id="Rectangle-15-Copy" transform="translate(6.000000, 20.000000) rotate(90.000000) translate(-6.000000, -20.000000) " x="-14" y="14" width="40" height="12"></rect>
-                                </g>
-                                <g id="Group-3-Copy" transform="translate(161.000000, 109.000000) scale(-1, 1) rotate(-45.000000) translate(-161.000000, -109.000000) translate(141.000000, 89.000000)" fill="#00AA9E">
-                                    <rect id="Rectangle-15" x="0" y="0" width="40" height="12"></rect>
-                                    <rect id="Rectangle-15-Copy" transform="translate(6.000000, 20.000000) rotate(90.000000) translate(-6.000000, -20.000000) " x="-14" y="14" width="40" height="12"></rect>
-                                </g>
-                                <path d="M37,26.0005416 C37,20.477395 41.4778761,16 46.9996027,16 L205.000397,16 C210.523025,16 215,20.4814851 215,26.0005416 L215,53 L37,53 L37,26.0005416 Z" id="Rectangle-14-Copy" fill="#EDEEF0"></path>
-                                <circle id="Oval-9" fill="#FF583D" cx="54" cy="35" r="6"></circle>
-                                <circle id="Oval-9-Copy" fill="#FFCD46" cx="74" cy="35" r="6"></circle>
-                                <circle id="Oval-9-Copy-2" fill="#B75FE6" cx="94" cy="35" r="6"></circle>
-                                <rect id="Rectangle-17" fill="#FF583D" x="138" y="0" width="66" height="34" rx="17"></rect>
-                                <text id="HTML" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
-                                    <tspan x="147.380859" y="24">HTML</tspan>
-                                </text>
-                                <rect id="Rectangle-17-Copy" fill="#B75FE6" x="0" y="132" width="66" height="34" rx="17"></rect>
-                                <text id="CSS" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
-                                    <tspan x="16.9638672" y="156">CSS</tspan>
-                                </text>
-                                <rect id="Rectangle-17-Copy-2" fill="#FFCD46" x="190" y="102" width="66" height="34" rx="17"></rect>
-                                <text id="JAVA" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
-                                    <tspan x="200.431641" y="126">JAVA</tspan>
-                                </text>
-                            </g>
-                        </g>
-                    </g>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/coding">
+            <g transform="translate(26.000000, 41.000000)">
+                <path d="M13,53 L191,53 L191,163.000943 C191,168.52327 186.522124,173 181.000397,173 L22.9996027,173 C17.4769746,173 13,168.514869 13,163.000943 L13,53 Z" id="Rectangle-14" fill="#363F51"></path>
+                <rect id="Rectangle-16" fill="#00AA9E" transform="translate(99.800407, 108.230811) rotate(-72.000000) translate(-99.800407, -108.230811) " x="63.8004065" y="102.230811" width="72" height="12"></rect>
+                <g id="Group-3" transform="translate(64.000000, 109.000000) rotate(-45.000000) translate(-64.000000, -109.000000) translate(44.000000, 89.000000)" fill="#00AA9E">
+                    <rect id="Rectangle-15" x="4.76063633e-13" y="4.8316906e-13" width="40" height="12"></rect>
+                    <rect id="Rectangle-15-Copy" transform="translate(6.000000, 20.000000) rotate(90.000000) translate(-6.000000, -20.000000) " x="-14" y="14" width="40" height="12"></rect>
                 </g>
+                <g id="Group-3-Copy" transform="translate(137.000000, 109.000000) scale(-1, 1) rotate(-45.000000) translate(-137.000000, -109.000000) translate(117.000000, 89.000000)" fill="#00AA9E">
+                    <rect id="Rectangle-15" x="4.8316906e-13" y="4.8316906e-13" width="40" height="12"></rect>
+                    <rect id="Rectangle-15-Copy" transform="translate(6.000000, 20.000000) rotate(90.000000) translate(-6.000000, -20.000000) " x="-14" y="14" width="40" height="12"></rect>
+                </g>
+                <path d="M13,26.0005416 C13,20.477395 17.4778761,16 22.9996027,16 L181.000397,16 C186.523025,16 191,20.4814851 191,26.0005416 L191,53 L13,53 L13,26.0005416 Z" id="Rectangle-14-Copy" fill="#EDEEF0"></path>
+                <circle id="Oval-9" fill="#FF583D" cx="30" cy="35" r="6"></circle>
+                <circle id="Oval-9-Copy" fill="#FFCD46" cx="50" cy="35" r="6"></circle>
+                <circle id="Oval-9-Copy-2" fill="#B75FE6" cx="70" cy="35" r="6"></circle>
+                <rect id="Rectangle-17" fill="#FF583D" x="114" y="0" width="66" height="34" rx="17"></rect>
+                <text id="HTML" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="123.380859" y="24">HTML</tspan>
+                </text>
+                <rect id="Rectangle-17-Copy" fill="#B75FE6" x="0" y="145" width="66" height="34" rx="17"></rect>
+                <text id="CSS" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="16.9638672" y="169">CSS</tspan>
+                </text>
+                <rect id="Rectangle-17-Copy-2" fill="#FFCD46" x="157" y="113" width="66" height="34" rx="17"></rect>
+                <text id="JAVA" font-family="DINAlternate-Bold, DIN Alternate" font-size="20" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="167.431641" y="137">JAVA</tspan>
+                </text>
             </g>
         </g>
     </g>

@@ -10,14 +10,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /*min-height: 100%;*/
 }
 
 p {
     color: #4A4A4A;
+    line-height: 130%;
 }
 
 h1 {
     text-align: center;
+}
+
+h4 {
+    color: #4A4A4A;
 }
 
 a {
@@ -114,7 +121,7 @@ a {
 
 .card {
     position: relative;
-    top: -100px;
+    top: -80px;
     width: 70%;
     border-radius: 8px;
     background: white;
@@ -137,7 +144,8 @@ a {
     font-size: 1.3em;
 }
 
-#introduction, #feature {
+#introduction,
+#feature {
     margin-bottom: 40px;
 }
 
@@ -151,23 +159,17 @@ a {
 #feature_grid .icon {
     margin-top: 30px;
     width: 30%;
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #feature_grid .icon img {
-    height: 70%;
-    margin-bottom: 20px;
-}
-
-#feature_grid .icon h4 {
-    color: #4A4A4A;
+    width: 70%;
 }
 
 #values_content {
-    width: 98%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -204,6 +206,8 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 0.8em;
+
+    align-self: flex-end;
 }
 
 #footer div {
@@ -218,12 +222,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 64px;
+    margin-top: 100px;
+    margin-bottom: 40px;
 }
 
 #photowall h1 {
     color: #B75FE6;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -322,21 +326,21 @@ a {
 
 #photowall_photo6 {
     width: 60%;
-    background-image: url("http://www.mindyslaughter.com/uploads/1/4/4/6/14462840/9727637.png?663");
+    background-image: url("https://aholdencirm.files.wordpress.com/2011/11/25828-p1000352.jpg");
 }
 
 #photowall_photo7 {
     width: 40%;
-    background-image: url("http://www.mindyslaughter.com/uploads/1/4/4/6/14462840/9727637.png?663");
+    background-image: url("http://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/assets/v3/editorial/9/2c/92c1a469-05dc-5a6f-8dc3-f4fb5187830c/55b02620a0129.image.jpg");
 }
 
 
 /*About*/
 
 #about {
-    width: 70%;
+    width: 60%;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 #about h1 {
@@ -348,20 +352,23 @@ a {
 }
 
 #about a {
+    color: #44D9E6;
+}
+
+#about_btn {
     border-color: #44D9E6;
     color: #44D9E6;
     border-width: 2px;
     border-style: solid;
     border-radius: 20px;
     height: 40px;
-
     box-sizing: border-box;
     padding: 8px 20px;
 }
 
 #location {
     width: 70%;
-    margin: 30px 0;
+    margin: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,7 +409,10 @@ a {
     color: #44D9E6;
 }
 
-#location_content_info p,
-#location_content_info div {
+#location_content_info p {
     margin: 10px 0;
+}
+
+#location_facebook {
+    margin-top: 20px;
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="205px" height="242px" viewBox="0 0 205 242" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="260px" height="260px" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
     <title>icon/robot</title>
     <desc>Created with Sketch.</desc>
@@ -10,62 +10,53 @@
             <use xlink:href="#path-1" fill="black"></use>
         </mask>
     </defs>
-    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home" transform="translate(-253.000000, -1300.000000)">
-            <g id="feature" transform="translate(253.000000, 1079.000000)">
-                <g id="Group-2" transform="translate(0.000000, 211.000000)">
-                    <g id="robot">
-                        <g id="icon/robot">
-                            <g>
-                                <rect id="Rectangle-9" fill="#3A4652" x="101.244898" y="21.7142857" width="5.02040816" height="17.5714286"></rect>
-                                <ellipse id="Oval-3" fill="#FF583D" cx="103.755102" cy="18.3673469" rx="8.36734694" ry="8.36734694"></ellipse>
-                                <ellipse id="Oval-4-Copy-3" fill="#00AA9E" cx="104.591837" cy="56.8571429" rx="25.9387755" ry="25.9387755"></ellipse>
-                                <g id="foot/r" transform="translate(115.469388, 210.857143)">
-                                    <rect id="Rectangle-10" fill="#00AA9E" x="13.3877551" y="0" width="16.7346939" height="22.5918367"></rect>
-                                    <path d="M43.5102041,41 C43.5102041,28.9849889 33.7701131,19.244898 21.755102,19.244898 C9.74009095,19.244898 0,28.9849889 0,41" id="Oval-5" fill="#FF583D"></path>
-                                </g>
-                                <g id="foot/l" transform="translate(56.897959, 210.857143)">
-                                    <rect id="Rectangle-10-Copy" fill="#00AA9E" x="13.3877551" y="0" width="16.7346939" height="22.5918367"></rect>
-                                    <path d="M43.5102041,41 C43.5102041,28.9849889 33.7701131,19.244898 21.755102,19.244898 C9.74009095,19.244898 0,28.9849889 0,41" id="Oval-5-Copy" fill="#FF583D"></path>
-                                </g>
-                                <path d="M37.6530612,110.407293 C37.6530612,73.4385085 67.6144433,43.4693878 104.591837,43.4693878 L104.591837,43.4693878 C141.561102,43.4693878 171.530612,73.443253 171.530612,110.407293 L171.530612,190.853275 C171.530612,201.901106 162.577785,210.857143 151.523967,210.857143 L57.6597063,210.857143 C46.6103413,210.857143 37.6530612,201.90205 37.6530612,190.853275 L37.6530612,110.407293 Z" id="body" fill="#FFCD46"></path>
-                                <g id="signal" transform="translate(65.265306, 184.081633)" fill="#3A4652">
-                                    <rect id="Rectangle-11" x="0" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy" x="7.53061224" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-2" x="15.0612245" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-3" x="22.5918367" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-4" x="30.122449" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-5" x="37.6530612" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-6" x="45.1836735" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-7" x="52.7142857" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-8" x="60.244898" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-9" x="67.7755102" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                    <rect id="Rectangle-11-Copy-10" x="75.3061224" y="0" width="3.34693878" height="13.3877551" rx="1.67346939"></rect>
-                                </g>
-                                <g id="eye" transform="translate(78.653061, 71.122449)">
-                                    <ellipse id="Oval-4" fill="#FFFFFF" cx="25.9387755" cy="25.9387755" rx="25.9387755" ry="25.9387755"></ellipse>
-                                    <g id="Oval-4-Copy-2">
-                                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
-                                        <use stroke="#FFCD46" mask="url(#mask-2)" stroke-width="8" xlink:href="#path-1"></use>
-                                    </g>
-                                    <path d="M51.877551,25.9387755 C51.877551,11.6131854 40.2643657,0 25.9387755,0 C11.6131854,0 0,11.6131854 0,25.9387755" id="Oval-4-Copy" fill="#00AA9E"></path>
-                                </g>
-                                <g id="arm/l" transform="translate(0.000000, 153.959184)">
-                                    <polyline id="Path-2" stroke="#3A4652" stroke-width="6" points="33.4693878 0 12.5510204 36.8163265 12.5510204 63.5918367"></polyline>
-                                    <path d="M0.0274487091,72.7959184 C0.00924537774,72.5193578 0,72.2403504 0,71.9591837 C0,65.0274465 5.61928324,59.4081633 12.5510204,59.4081633 C19.4827576,59.4081633 25.1020408,65.0274465 25.1020408,71.9591837 C25.1020408,72.2403504 25.0927954,72.5193578 25.0745921,72.7959184 L20.8770534,72.7959184 C20.9043776,72.5207111 20.9183673,72.2415811 20.9183673,71.9591837 C20.9183673,67.3380256 17.1721785,63.5918367 12.5510204,63.5918367 C7.9298623,63.5918367 4.18367347,67.3380256 4.18367347,71.9591837 C4.18367347,72.2415811 4.19766321,72.5207111 4.22498745,72.7959184 L0.0274487091,72.7959184 Z" id="Combined-Shape" fill="#FF583D"></path>
-                                    <ellipse id="Oval-2" fill="#00AA9E" cx="13.3877551" cy="35.9795918" rx="8.36734694" ry="8.36734694"></ellipse>
-                                </g>
-                                <g id="arm/r" transform="translate(171.530612, 153.959184)">
-                                    <polyline id="Path-2-Copy" stroke="#3A4652" stroke-width="6" transform="translate(10.459184, 31.795918) scale(-1, 1) translate(-10.459184, -31.795918) " points="20.9183673 0 0 36.8163265 0 63.5918367"></polyline>
-                                    <path d="M8.39479565,72.7959184 C8.37659232,72.5193578 8.36734694,72.2403504 8.36734694,71.9591837 C8.36734694,65.0274465 13.9866302,59.4081633 20.9183673,59.4081633 C27.8501045,59.4081633 33.4693878,65.0274465 33.4693878,71.9591837 C33.4693878,72.2403504 33.4601424,72.5193578 33.441939,72.7959184 L29.2444003,72.7959184 C29.2717245,72.5207111 29.2857143,72.2415811 29.2857143,71.9591837 C29.2857143,67.3380256 25.5395255,63.5918367 20.9183673,63.5918367 C16.2972092,63.5918367 12.5510204,67.3380256 12.5510204,71.9591837 C12.5510204,72.2415811 12.5650101,72.5207111 12.5923344,72.7959184 L8.39479565,72.7959184 Z" id="Combined-Shape-Copy" fill="#FF583D" transform="translate(20.918367, 66.102041) scale(-1, 1) translate(-20.918367, -66.102041) "></path>
-                                    <circle id="Oval-2-Copy" fill="#00AA9E" cx="20.0816327" cy="35.9795918" r="8.36734694"></circle>
-                                </g>
-                                <rect id="Rectangle-7-Copy" fill="#00AA9E" x="25.1020408" y="144.755102" width="158.979592" height="25.1020408" rx="12.5510204"></rect>
-                                <rect id="Rectangle-7" fill="#FF583D" x="33.4693878" y="141.408163" width="142.244898" height="33.4693878" rx="4"></rect>
-                            </g>
-                        </g>
-                    </g>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/robot">
+            <g transform="translate(27.000000, 22.000000)">
+                <rect id="Rectangle-9" fill="#3A4652" x="101" y="11" width="5" height="17"></rect>
+                <ellipse id="Oval-3" fill="#FF583D" cx="103" cy="8" rx="8" ry="8"></ellipse>
+                <ellipse id="Oval-4-Copy-3" fill="#00AA9E" cx="103" cy="45" rx="25" ry="25"></ellipse>
+                <g id="foot/r" transform="translate(111.469388, 182.857143)">
+                    <rect id="Rectangle-10" fill="#00AA9E" x="14.5306122" y="0.142857143" width="16" height="22"></rect>
+                    <path d="M44.5306122,36.1428571 C44.5306122,23.9925926 34.6808767,14.1428571 22.5306122,14.1428571 C10.3803477,14.1428571 0.530612245,23.9925926 0.530612245,36.1428571" id="Oval-5" fill="#FF583D"></path>
                 </g>
+                <g id="foot/l" transform="translate(51.897959, 182.857143)">
+                    <rect id="Rectangle-10-Copy" fill="#00AA9E" x="14.1020408" y="0.142857143" width="16" height="22"></rect>
+                    <path d="M44.1020408,36.1428571 C44.1020408,23.9925926 34.2523053,14.1428571 22.1020408,14.1428571 C9.95177632,14.1428571 0.102040816,23.9925926 0.102040816,36.1428571" id="Oval-5-Copy" fill="#FF583D"></path>
+                </g>
+                <path d="M39,95.0056794 C39,59.104034 68.0935982,30 104,30 L104,30 C139.898509,30 169,59.094668 169,95.0056794 L169,172.9933 C169,181.281271 162.284383,188 153.992139,188 L54.0078608,188 C45.7192482,188 39,181.28669 39,172.9933 L39,95.0056794 Z" id="body" fill="#FFCD46"></path>
+                <g id="signal" transform="translate(67.000000, 161.000000)" fill="#3A4652">
+                    <rect id="Rectangle-11" x="0" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy" x="8" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-2" x="16" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-3" x="24" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-4" x="32" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-5" x="40" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-6" x="48" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-7" x="56" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-8" x="64" y="0" width="3" height="14" rx="1.5"></rect>
+                    <rect id="Rectangle-11-Copy-9" x="72" y="0" width="3" height="14" rx="1.5"></rect>
+                </g>
+                <g id="eye" transform="translate(79.653061, 48.122449)">
+                    <ellipse id="Oval-4" fill="#FFFFFF" cx="25.9387755" cy="25.9387755" rx="25.9387755" ry="25.9387755"></ellipse>
+                    <g id="Oval-4-Copy-2">
+                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use stroke="#FFCD46" mask="url(#mask-2)" stroke-width="8" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M51.877551,25.9387755 C51.877551,11.6131854 40.2643657,0 25.9387755,0 C11.6131854,0 0,11.6131854 0,25.9387755" id="Oval-4-Copy" fill="#00AA9E"></path>
+                </g>
+                <g id="arm/l" transform="translate(0.000000, 129.959184)">
+                    <polyline id="Path-2" stroke="#3A4652" stroke-width="6" points="33 0.0408163265 13 36.4651922 13 55.0408163"></polyline>
+                    <path d="M0,67 C0,59.8202983 5.82029825,54 13,54 C20.1797017,54 26,59.8202983 26,67 L21,67 C21,62.581722 17.418278,59 13,59 C8.581722,59 5,62.581722 5,67 L0,67 Z" id="Combined-Shape" fill="#FF583D"></path>
+                    <ellipse id="Oval-2" fill="#00AA9E" cx="14" cy="36.0408163" rx="8" ry="8"></ellipse>
+                </g>
+                <g id="arm/r" transform="translate(171.530612, 129.959184)">
+                    <polyline id="Path-2-Copy" stroke="#3A4652" stroke-width="6" transform="translate(10.469388, 27.540816) scale(-1, 1) translate(-10.469388, -27.540816) " points="20.4693878 0.0408163265 0.469387755 36.4651922 0.469387755 55.0408163"></polyline>
+                    <path d="M8,67 C8,59.8202983 13.8202983,54 21,54 C28.1797017,54 34,59.8202983 34,67 L29,67 C29,62.581722 25.418278,59 21,59 C16.581722,59 13,62.581722 13,67 L8,67 Z" id="Combined-Shape" fill="#FF583D"></path>
+                    <circle id="Oval-2-Copy" fill="#00AA9E" cx="19.4693878" cy="36.0408163" r="8"></circle>
+                </g>
+                <rect id="Rectangle-7-Copy" fill="#00AA9E" x="25" y="121" width="158" height="25" rx="12.5"></rect>
+                <rect id="Rectangle-7" fill="#FF583D" x="34" y="118" width="140" height="33" rx="4"></rect>
             </g>
         </g>
     </g>
