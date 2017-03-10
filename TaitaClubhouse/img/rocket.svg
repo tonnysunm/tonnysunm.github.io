@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="86px" viewBox="0 0 49 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/rocket</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,59.9981155 C0,62.2147869 1.79170204,64 4.00187852,64 L24.9981215,64 C27.2078053,64 29,62.2082953 29,59.9981155 C29,59.9981155 28.9402146,25.2064471 28.8290139,24.8385753 C28.6897148,24.1342416 28.2808343,18.0387631 26.6404171,14.5193816 C25,11 18.8595829,2.48061845 18.8595829,2.48061845 C16.4565332,-0.540358242 12.5481483,-0.546243541 10.1404171,2.48061845 C10.1404171,2.48061845 4.00187852,11 2.35958286,14.5193816 C0.717287186,18.0387631 0.311665657,24.1323551 0.172335279,24.8366367 L0,59.9981155 Z" id="path-1"></path>
+        <circle id="path-3" cx="25" cy="29" r="8"></circle>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="16" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="visaul" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-1287.000000, -2796.000000)">
+            <g id="icon/rocket" transform="translate(1287.000000, 2796.000000)">
+                <g>
+                    <path d="M0.355561231,69.6090756 C0.121799394,68.1112949 0,66.5713227 0,65 C0,50.0883118 10.9690236,38 24.5,38 C38.0309764,38 49,50.0883118 49,65 C49,66.5713227 48.8782006,68.1112949 48.6444388,69.6090756 C43.3064715,61.3782118 34.4822418,56 24.5,56 C14.5177582,56 5.69352846,61.3782118 0.355561231,69.6090756 Z" id="Combined-Shape" fill="#0CADE3"></path>
+                    <g id="Rectangle-3-Copy" transform="translate(10.000000, 0.000000)">
+                        <path d="M15,86 C15,86 23,78.1944204 23,73.5 C23,68.8055796 19.418278,65 15,65 C10.581722,65 7,68.8055796 7,73.5 C7,78.1944204 15,86 15,86 Z" id="Oval" fill="#FFCD46"></path>
+                        <path d="M15,80 C15,80 19,75.9113631 19,73.452381 C19,70.9933989 17.209139,69 15,69 C12.790861,69 11,70.9933989 11,73.452381 C11,75.9113631 15,80 15,80 Z" id="Oval-Copy" fill="#FF583D"></path>
+                        <path d="M13.209962,50.5800761 C14.1985727,48.6028547 15.7966468,48.5932936 16.790038,50.5800761 L25.209962,67.4199239 C26.1985727,69.3971453 25.2157067,71 23.009947,71 L6.99005301,71 C4.78640758,71 3.79664681,69.4067064 4.79003805,67.4199239 L13.209962,50.5800761 Z" id="Triangle" fill="#0CADE3"></path>
+                        <g id="Rectangle-3">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                            <rect fill="#FF583D" mask="url(#mask-2)" x="0" y="-7" width="29" height="22"></rect>
+                            <rect id="Rectangle-3-Copy" fill="#0CADE3" mask="url(#mask-2)" x="13" y="43" width="4" height="31" rx="2"></rect>
+                        </g>
+                    </g>
+                    <use id="Oval-2" stroke="#979797" mask="url(#mask-4)" stroke-width="8" fill="#D8D8D8" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
