@@ -9,7 +9,7 @@
 <body>
     <div id="header">
         <div id="header_container">
-            <a href="#"><img src="img/logo.svg"/></a>
+            <a href="#"><img src="img/logo.svg" /></a>
             <div id="header_links">
                 <div class="header_item header_item-active">
                     <a id="header_home" href="index.html">Home</a>
@@ -32,7 +32,8 @@
     <div class="card" id="introduction">
         <h1>Out of school class</h1>
         <p>Taita Clubhouse is creative technology space for people aged 10-18 and are totally free to use!
-        </p><p>Our mission is to provide a creative and safe out-of-school learning environment where young people work with adult mentors to explore their own ideas, develop new skills, and build confidence in themselves through the use of technology.</p>
+        </p>
+        <p>Our mission is to provide a creative and safe out-of-school learning environment where young people work with adult mentors to explore their own ideas, develop new skills, and build confidence in themselves through the use of technology.</p>
     </div>
     <div class="card" id="feature">
         <h1>What's on Taita Clubhouse</h1>
@@ -100,6 +101,36 @@
         <div>Where Creativity Meets Imagination.</div>
         <div>2010-2017</div>
     </div>
+    <a href="javascript:void(0);" id="rocketmeluncur" class="showrocket" ><i></i></a>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    jQuery(window).scroll(function() {
+        if (jQuery(window).scrollTop() < 50) {
+            jQuery('#rocketmeluncur').slideUp(500);
+        } else {
+            jQuery('#rocketmeluncur').slideDown(500);
+        }
+    })
+
+    jQuery('#rocketmeluncur').click(function() {
+        jQuery("html, body").animate({
+            scrollTop: '0px',
+            display: 'none'
+        }, {
+            duration: 600,
+            easing: 'linear'
+        });
+
+        var self = this;
+        this.className += ' ' + "launchrocket";
+        setTimeout(function() {
+            self.className = 'showrocket';
+        }, 800)
+    });
+    </script>
 </body>
 
 </html>
