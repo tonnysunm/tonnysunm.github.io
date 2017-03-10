@@ -101,35 +101,50 @@
         <div>Where Creativity Meets Imagination.</div>
         <div>2010-2017</div>
     </div>
-    <a href="javascript:void(0);" id="rocketmeluncur" class="showrocket" ><i></i></a>
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+    <a href="javascript:void(0);" id="rocket">
+        <img src="img/rocket.svg" />
+    </a>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript">
-    jQuery(window).scroll(function() {
-        if (jQuery(window).scrollTop() < 50) {
-            jQuery('#rocketmeluncur').slideUp(500);
-        } else {
-            jQuery('#rocketmeluncur').slideDown(500);
-        }
-    })
+    $(document).ready(function() {
+        let isLaunching = false;
+        let rocket = $('#rocket');
+        $(window).scroll(function() {
+            if (isLaunching) {
+                return;
+            }
 
-    jQuery('#rocketmeluncur').click(function() {
-        jQuery("html, body").animate({
-            scrollTop: '0px',
-            display: 'none'
-        }, {
-            duration: 600,
-            easing: 'linear'
+            showOrHideRocket()
+        })
+
+        function showOrHideRocket() {
+            if ($(window).scrollTop() < 400) {
+                rocket.css({
+                    opacity: 0,
+                })
+            } else {
+                rocket.css({
+                    opacity: 1,
+                    bottom: '100px'
+                })
+            }
+        }
+
+        rocket.click(function() {
+            isLaunching = true
+            $("html, body").animate({
+                scrollTop: '0px'
+            });
+
+            rocket.animate({
+                bottom: screen.height + 'px'
+            }, function() {
+                isLaunching = false
+            });
         });
 
-        var self = this;
-        this.className += ' ' + "launchrocket";
-        setTimeout(function() {
-            self.className = 'showrocket';
-        }, 800)
-    });
+        showOrHideRocket();
+    })
     </script>
 </body>
 
