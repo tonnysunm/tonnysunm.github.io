@@ -1,0 +1,2233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Collection Types
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating an Empty Array
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID500" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var someInts = [Int]()
+
+print("someInts is of type [Int] with \(someInts.count) items.")
+
+// Prints "someInts is of type [Int] with 0 items."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var someInts = [Int]()
+
+println("someInts is of type [Int] with ${someInts.count} items.")
+
+// Prints "someInts is of type [Int] with 0 items."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">someInts.append(3)
+
+// someInts now contains 1 value of type Int
+
+someInts = []
+
+// someInts is now an empty array, but is still of type [Int]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">someInts.append(3)
+
+// someInts now contains 1 value of type Int
+
+someInts = []
+
+// someInts is now an empty array, but is still of type [Int]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating an Array with a Default Value
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID501" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var threeDoubles = Array(repeating: 0.0, count: 3)
+
+// threeDoubles is of type [Double], and equals [0.0, 0.0, 0.0]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var threeDoubles = Array(repeating: 0.0, count: 3)
+
+// threeDoubles is of type [Double], and equals [0.0, 0.0, 0.0]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating an Array by Adding Two Arrays Together
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID502" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+
+// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
+
+
+
+var sixDoubles = threeDoubles + anotherThreeDoubles
+
+// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+
+// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
+
+
+
+var sixDoubles = threeDoubles + anotherThreeDoubles
+
+// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating an Array with an Array Literal
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID109" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">[value 1, value 2, value 3]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">[value 1, value 2, value 3]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var shoppingList: [String] = ["Eggs", "Milk"]
+
+// shoppingList has been initialized with two initial items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var shoppingList: [String] = ["Eggs", "Milk"]
+
+// shoppingList has been initialized with two initial items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var shoppingList = ["Eggs", "Milk"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var shoppingList = ["Eggs", "Milk"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Accessing and Modifying an Array
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID110" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print("The shopping list contains \(shoppingList.count) items.")
+
+// Prints "The shopping list contains 2 items."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println("The shopping list contains ${shoppingList.count} items.")
+
+// Prints "The shopping list contains 2 items."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if shoppingList.isEmpty {
+
+    print("The shopping list is empty.")
+
+} else {
+
+    print("The shopping list is not empty.")
+
+}
+
+// Prints "The shopping list is not empty."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if shoppingList.isEmpty {
+
+    println("The shopping list is empty.")
+
+} else {
+
+    println("The shopping list is not empty.")
+
+}
+
+// Prints "The shopping list is not empty."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList.append("Flour")
+
+// shoppingList now contains 3 items, and someone is making pancakes</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList.append("Flour")
+
+// shoppingList now contains 3 items, and someone is making pancakes</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList += ["Baking Powder"]
+
+// shoppingList now contains 4 items
+
+shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
+
+// shoppingList now contains 7 items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList += ["Baking Powder"]
+
+// shoppingList now contains 4 items
+
+shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
+
+// shoppingList now contains 7 items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var firstItem = shoppingList[0]
+
+// firstItem is equal to "Eggs"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var firstItem = shoppingList[0]
+
+// firstItem is equal to "Eggs"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList[0] = "Six eggs"
+
+// the first item in the list is now equal to "Six eggs" rather than "Eggs"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList[0] = "Six eggs"
+
+// the first item in the list is now equal to "Six eggs" rather than "Eggs"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList[4...6] = ["Bananas", "Apples"]
+
+// shoppingList now contains 6 items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList[4...6] = ["Bananas", "Apples"]
+
+// shoppingList now contains 6 items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList.insert("Maple Syrup", at: 0)
+
+// shoppingList now contains 7 items
+
+// "Maple Syrup" is now the first item in the list</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList.insert("Maple Syrup", at: 0)
+
+// shoppingList now contains 7 items
+
+// "Maple Syrup" is now the first item in the list</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let mapleSyrup = shoppingList.remove(at: 0)
+
+// the item that was at index 0 has just been removed
+
+// shoppingList now contains 6 items, and no Maple Syrup
+
+// the mapleSyrup constant is now equal to the removed "Maple Syrup" string</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val mapleSyrup = shoppingList.remove(at: 0)
+
+// the item that was at index 0 has just been removed
+
+// shoppingList now contains 6 items, and no Maple Syrup
+
+// the mapleSyrup constant is now equal to the removed "Maple Syrup" string</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">firstItem = shoppingList[0]
+
+// firstItem is now equal to "Six eggs"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">firstItem = shoppingList[0]
+
+// firstItem is now equal to "Six eggs"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let apples = shoppingList.removeLast()
+
+// the last item in the array has just been removed
+
+// shoppingList now contains 5 items, and no apples
+
+// the apples constant is now equal to the removed "Apples" string</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val apples = shoppingList.removeLast()
+
+// the last item in the array has just been removed
+
+// shoppingList now contains 5 items, and no apples
+
+// the apples constant is now equal to the removed "Apples" string</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Iterating Over an Array
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID111" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for item in shoppingList {
+
+    print(item)
+
+}
+
+// Six eggs
+
+// Milk
+
+// Flour
+
+// Baking Powder
+
+// Bananas</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for item in shoppingList {
+
+    println(item)
+
+}
+
+// Six eggs
+
+// Milk
+
+// Flour
+
+// Baking Powder
+
+// Bananas</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for (index, value) in shoppingList.enumerated() {
+
+    print("Item \(index + 1): \(value)")
+
+}
+
+// Item 1: Six eggs
+
+// Item 2: Milk
+
+// Item 3: Flour
+
+// Item 4: Baking Powder
+
+// Item 5: Bananas</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for (index, value) in shoppingList.enumerated() {
+
+    println("Item ${index + 1}: ${value}")
+
+}
+
+// Item 1: Six eggs
+
+// Item 2: Milk
+
+// Item 3: Flour
+
+// Item 4: Baking Powder
+
+// Item 5: Bananas
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating and Initializing an Empty Set
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID503" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var letters = Set&#60;Character&#62;()
+
+print("letters is of type Set&#60;Character&#62; with \(letters.count) items.")
+
+// Prints "letters is of type Set&#60;Character&#62; with 0 items."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var letters = Set&#60;Character&#62;()
+
+println("letters is of type Set&#60;Character&#62; with ${letters.count} items.")
+
+// Prints "letters is of type Set&#60;Character&#62; with 0 items."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">letters.insert("a")
+
+// letters now contains 1 value of type Character
+
+letters = []
+
+// letters is now an empty set, but is still of type Set&#60;Character&#62;</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">letters.insert("a")
+
+// letters now contains 1 value of type Character
+
+letters = []
+
+// letters is now an empty set, but is still of type Set&#60;Character&#62;</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating a Set with an Array Literal
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID504" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var favoriteGenres: Set&#60;String&#62; = ["Rock", "Classical", "Hip hop"]
+
+// favoriteGenres has been initialized with three initial items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var favoriteGenres: Set&#60;String&#62; = ["Rock", "Classical", "Hip hop"]
+
+// favoriteGenres has been initialized with three initial items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Accessing and Modifying a Set
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID488" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print("I have \(favoriteGenres.count) favorite music genres.")
+
+// Prints "I have 3 favorite music genres."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println("I have ${favoriteGenres.count} favorite music genres.")
+
+// Prints "I have 3 favorite music genres."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if favoriteGenres.isEmpty {
+
+    print("As far as music goes, I'm not picky.")
+
+} else {
+
+    print("I have particular music preferences.")
+
+}
+
+// Prints "I have particular music preferences."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if favoriteGenres.isEmpty {
+
+    println("As far as music goes, I'm not picky.")
+
+} else {
+
+    println("I have particular music preferences.")
+
+}
+
+// Prints "I have particular music preferences."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">favoriteGenres.insert("Jazz")
+
+// favoriteGenres now contains 4 items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">favoriteGenres.insert("Jazz")
+
+// favoriteGenres now contains 4 items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let removedGenre = favoriteGenres.remove("Rock") {
+
+    print("\(removedGenre)? I'm over it.")
+
+} else {
+
+    print("I never much cared for that.")
+
+}
+
+// Prints "Rock? I'm over it."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val removedGenre = favoriteGenres.remove("Rock") {
+
+    println("${removedGenre}? I'm over it.")
+
+} else {
+
+    println("I never much cared for that.")
+
+}
+
+// Prints "Rock? I'm over it."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if favoriteGenres.contains("Funk") {
+
+    print("I get up on the good foot.")
+
+} else {
+
+    print("It's too funky in here.")
+
+}
+
+// Prints "It's too funky in here."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if favoriteGenres.contains("Funk") {
+
+    println("I get up on the good foot.")
+
+} else {
+
+    println("It's too funky in here.")
+
+}
+
+// Prints "It's too funky in here."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Iterating Over a Set
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID489" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for genre in favoriteGenres {
+
+    print("\(genre)")
+
+}
+
+// Classical
+
+// Jazz
+
+// Hip hop</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for genre in favoriteGenres {
+
+    println("${genre}")
+
+}
+
+// Classical
+
+// Jazz
+
+// Hip hop
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for genre in favoriteGenres.sorted() {
+
+    print("\(genre)")
+
+}
+
+// Classical
+
+// Hip hop
+
+// Jazz</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for genre in favoriteGenres.sorted() {
+
+    println("${genre}")
+
+}
+
+// Classical
+
+// Hip hop
+
+// Jazz
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Fundamental Set Operations
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID505" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let oddDigits: Set = [1, 3, 5, 7, 9]
+
+let evenDigits: Set = [0, 2, 4, 6, 8]
+
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+
+
+
+oddDigits.union(evenDigits).sorted()
+
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+oddDigits.intersection(evenDigits).sorted()
+
+// []
+
+oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+
+// [1, 9]
+
+oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+
+// [1, 2, 9]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val oddDigits: Set = [1, 3, 5, 7, 9]
+
+val evenDigits: Set = [0, 2, 4, 6, 8]
+
+val singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+
+
+
+oddDigits.union(evenDigits).sorted()
+
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+oddDigits.intersection(evenDigits).sorted()
+
+// []
+
+oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+
+// [1, 9]
+
+oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
+
+// [1, 2, 9]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Set Membership and Equality
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID506" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let houseAnimals: Set = ["🐶", "🐱"]
+
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+
+let cityAnimals: Set = ["🐦", "🐭"]
+
+
+
+houseAnimals.isSubset(of: farmAnimals)
+
+// true
+
+farmAnimals.isSuperset(of: houseAnimals)
+
+// true
+
+farmAnimals.isDisjoint(with: cityAnimals)
+
+// true</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let houseAnimals: Set = ["🐶", "🐱"]
+
+let farmAnimals: Set = ["🐮", "🐔", "🐑", "🐶", "🐱"]
+
+let cityAnimals: Set = ["🐦", "🐭"]
+
+
+
+houseAnimals.isSubset(of: farmAnimals)
+
+// true
+
+farmAnimals.isSuperset(of: houseAnimals)
+
+// true
+
+farmAnimals.isDisjoint(with: cityAnimals)
+
+// true</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating an Empty Dictionary
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID118" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var namesOfIntegers = [Int: String]()
+
+// namesOfIntegers is an empty [Int: String] dictionary</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var namesOfIntegers = [Int: String]()
+
+// namesOfIntegers is an empty [Int: String] dictionary</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">namesOfIntegers[16] = "sixteen"
+
+// namesOfIntegers now contains 1 key-value pair
+
+namesOfIntegers = [:]
+
+// namesOfIntegers is once again an empty dictionary of type [Int: String]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">namesOfIntegers[16] = "sixteen"
+
+// namesOfIntegers now contains 1 key-value pair
+
+namesOfIntegers = [:]
+
+// namesOfIntegers is once again an empty dictionary of type [Int: String]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating a Dictionary with a Dictionary Literal
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID507" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">[key 1: value 1, key 2: value 2, key 3: value 3]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">[key 1: value 1, key 2: value 2, key 3: value 3]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Accessing and Modifying a Dictionary
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID116" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print("The airports dictionary contains \(airports.count) items.")
+
+// Prints "The airports dictionary contains 2 items."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println("The airports dictionary contains ${airports.count} items.")
+
+// Prints "The airports dictionary contains 2 items."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if airports.isEmpty {
+
+    print("The airports dictionary is empty.")
+
+} else {
+
+    print("The airports dictionary is not empty.")
+
+}
+
+// Prints "The airports dictionary is not empty."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if airports.isEmpty {
+
+    println("The airports dictionary is empty.")
+
+} else {
+
+    println("The airports dictionary is not empty.")
+
+}
+
+// Prints "The airports dictionary is not empty."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">airports["LHR"] = "London"
+
+// the airports dictionary now contains 3 items</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">airports["LHR"] = "London"
+
+// the airports dictionary now contains 3 items</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">airports["LHR"] = "London Heathrow"
+
+// the value for "LHR" has been changed to "London Heathrow"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">airports["LHR"] = "London Heathrow"
+
+// the value for "LHR" has been changed to "London Heathrow"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+
+    print("The old value for DUB was \(oldValue).")
+
+}
+
+// Prints "The old value for DUB was Dublin."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+
+    println("The old value for DUB was ${oldValue}.")
+
+}
+
+// Prints "The old value for DUB was Dublin."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let airportName = airports["DUB"] {
+
+    print("The name of the airport is \(airportName).")
+
+} else {
+
+    print("That airport is not in the airports dictionary.")
+
+}
+
+// Prints "The name of the airport is Dublin Airport."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val airportName = airports["DUB"] {
+
+    println("The name of the airport is ${airportName}.")
+
+} else {
+
+    println("That airport is not in the airports dictionary.")
+
+}
+
+// Prints "The name of the airport is Dublin Airport."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">airports["APL"] = "Apple International"
+
+// "Apple International" is not the real airport for APL, so delete it
+
+airports["APL"] = nil
+
+// APL has now been removed from the dictionary</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">airports["APL"] = "Apple International"
+
+// "Apple International" is not the real airport for APL, so delete it
+
+airports["APL"] = nil
+
+// APL has now been removed from the dictionary</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let removedValue = airports.removeValue(forKey: "DUB") {
+
+    print("The removed airport's name is \(removedValue).")
+
+} else {
+
+    print("The airports dictionary does not contain a value for DUB.")
+
+}
+
+// Prints "The removed airport's name is Dublin Airport."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val removedValue = airports.removeValue(forKey: "DUB") {
+
+    println("The removed airport's name is ${removedValue).")
+
+} else {
+
+    println("The airports dictionary does not contain a value for DUB.")
+
+}
+
+// Prints "The removed airport's name is Dublin Airport."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Iterating Over a Dictionary
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID117" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for (airportCode, airportName) in airports {
+
+    print("\(airportCode): \(airportName)")
+
+}
+
+// LHR: London Heathrow
+
+// YYZ: Toronto Pearson</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for (airportCode, airportName) in airports {
+
+    println("${airportCode): ${airportName}")
+
+}
+
+// LHR: London Heathrow
+
+// YYZ: Toronto Pearson
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for airportCode in airports.keys {
+
+    print("Airport code: \(airportCode)")
+
+}
+
+// Airport code: LHR
+
+// Airport code: YYZ
+
+
+
+for airportName in airports.values {
+
+    print("Airport name: \(airportName)")
+
+}
+
+// Airport name: London Heathrow
+
+// Airport name: Toronto Pearson</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for airportCode in airports.keys {
+
+    println("Airport code: ${airportCode)")
+
+}
+
+// Airport code: LHR
+
+// Airport code: YYZ
+
+
+
+for airportName in airports.values {
+
+    println("Airport name: ${airportName)")
+
+}
+
+// Airport name: London Heathrow
+
+// Airport name: Toronto Pearson</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let airportCodes = [String](airports.keys)
+
+// airportCodes is ["LHR", "YYZ"]
+
+
+
+let airportNames = [String](airports.values)
+
+// airportNames is ["London Heathrow", "Toronto Pearson"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val airportCodes = [String](airports.keys)
+
+// airportCodes is ["LHR", "YYZ"]
+
+
+
+val airportNames = [String](airports.values)
+
+// airportNames is ["London Heathrow", "Toronto Pearson"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

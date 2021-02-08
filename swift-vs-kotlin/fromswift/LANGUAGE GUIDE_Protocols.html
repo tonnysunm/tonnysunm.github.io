@@ -1,0 +1,3387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Protocols
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocol Syntax
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID268" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SomeStructure: FirstProtocol, AnotherProtocol {
+
+    // structure definition goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SomeStructure: FirstProtocol, AnotherProtocol {
+
+    // structure definition goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
+
+    // class definition goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
+
+    // class definition goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Property Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID269" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    var mustBeSettable: Int { get set }
+
+    var doesNotNeedToBeSettable: Int { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    var mustBeSettable: Int { get set }
+
+    var doesNotNeedToBeSettable: Int { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol AnotherProtocol {
+
+    static var someTypeProperty: Int { get set }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol AnotherProtocol {
+
+    static var someTypeProperty: Int { get set }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol FullyNamed {
+
+    var fullName: String { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol FullyNamed {
+
+    var fullName: String { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Person: FullyNamed {
+
+    var fullName: String
+
+}
+
+let john = Person(fullName: "John Appleseed")
+
+// john.fullName is "John Appleseed"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Person: FullyNamed {
+
+    var fullName: String
+
+}
+
+val john = Person(fullName: "John Appleseed")
+
+// john.fullName is "John Appleseed"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Starship: FullyNamed {
+
+    var prefix: String?
+
+    var name: String
+
+    init(name: String, prefix: String? = nil) {
+
+        self.name = name
+
+        self.prefix = prefix
+
+    }
+
+    var fullName: String {
+
+        return (prefix != nil ? prefix! + " " : "") + name
+
+    }
+
+}
+
+var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
+
+// ncc1701.fullName is "USS Enterprise"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Starship: FullyNamed {
+
+    var prefix: String?
+
+    var name: String
+
+    init(name: String, prefix: String? = nil) {
+
+        self.name = name
+
+        self.prefix = prefix
+
+    }
+
+    var fullName: String {
+
+        return (prefix != nil ? prefix! + " " : "") + name
+
+    }
+
+}
+
+var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
+
+// ncc1701.fullName is "USS Enterprise"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Method Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID270" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    static func someTypeMethod()
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    static func someTypeMethod()
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol RandomNumberGenerator {
+
+    func random() -&#62; Double
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol RandomNumberGenerator {
+
+    func random(): Double
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class LinearCongruentialGenerator: RandomNumberGenerator {
+
+    var lastRandom = 42.0
+
+    let m = 139968.0
+
+    let a = 3877.0
+
+    let c = 29573.0
+
+    func random() -&#62; Double {
+
+        lastRandom = ((lastRandom * a + c)
+
+            .truncatingRemainder(dividingBy:m))
+
+        return lastRandom / m
+
+    }
+
+}
+
+let generator = LinearCongruentialGenerator()
+
+print("Here's a random number: \(generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+print("And another one: \(generator.random())")
+
+// Prints "And another one: 0.729023776863283"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class LinearCongruentialGenerator: RandomNumberGenerator {
+
+    var lastRandom = 42.0
+
+    val m = 139968.0
+
+    val a = 3877.0
+
+    val c = 29573.0
+
+    func random(): Double {
+
+        lastRandom = ((lastRandom * a + c)
+
+            .truncatingRemainder(dividingBy:m))
+
+        return lastRandom / m
+
+    }
+
+}
+
+val generator = LinearCongruentialGenerator()
+
+println("Here's a random number: ${generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+println("And another one: ${generator.random())")
+
+// Prints "And another one: 0.729023776863283"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Mutating Method Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID271" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol Togglable {
+
+    mutating func toggle()
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol Togglable {
+
+    mutating func toggle()
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum OnOffSwitch: Togglable {
+
+    case off, on
+
+    mutating func toggle() {
+
+        switch self {
+
+        case .off:
+
+            self = .on
+
+        case .on:
+
+            self = .off
+
+        }
+
+    }
+
+}
+
+var lightSwitch = OnOffSwitch.off
+
+lightSwitch.toggle()
+
+// lightSwitch is now equal to .on</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum OnOffSwitch: Togglable {
+
+    case off, on
+
+    mutating func toggle() {
+
+        switch self {
+
+        case .off:
+
+            self = .on
+
+        case .on:
+
+            self = .off
+
+        }
+
+    }
+
+}
+
+var lightSwitch = OnOffSwitch.off
+
+lightSwitch.toggle()
+
+// lightSwitch is now equal to .on</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Initializer Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID272" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    init(someParameter: Int)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    init(someParameter: Int)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Class Implementations of Protocol Initializer Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID273" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SomeClass: SomeProtocol {
+
+    required init(someParameter: Int) {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SomeClass: SomeProtocol {
+
+    required init(someParameter: Int) {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    init()
+
+}
+
+
+
+class SomeSuperClass {
+
+    init() {
+
+        // initializer implementation goes here
+
+    }
+
+}
+
+
+
+class SomeSubClass: SomeSuperClass, SomeProtocol {
+
+    // "required" from SomeProtocol conformance; "override" from SomeSuperClass
+
+    required override init() {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    init()
+
+}
+
+
+
+class SomeSuperClass {
+
+    init() {
+
+        // initializer implementation goes here
+
+    }
+
+}
+
+
+
+class SomeSubClass: SomeSuperClass, SomeProtocol {
+
+    // "required" from SomeProtocol conformance; "override" from SomeSuperClass
+
+    required override init() {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocols as Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID275" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Dice {
+
+    let sides: Int
+
+    let generator: RandomNumberGenerator
+
+    init(sides: Int, generator: RandomNumberGenerator) {
+
+        self.sides = sides
+
+        self.generator = generator
+
+    }
+
+    func roll() -&#62; Int {
+
+        return Int(generator.random() * Double(sides)) + 1
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Dice {
+
+    val sides: Int
+
+    val generator: RandomNumberGenerator
+
+    init(sides: Int, generator: RandomNumberGenerator) {
+
+        self.sides = sides
+
+        self.generator = generator
+
+    }
+
+    func roll(): Int {
+
+        return Int(generator.random() * Double(sides)) + 1
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+for _ in 1...5 {
+
+    print("Random dice roll is \(d6.roll())")
+
+}
+
+// Random dice roll is 3
+
+// Random dice roll is 5
+
+// Random dice roll is 4
+
+// Random dice roll is 5
+
+// Random dice roll is 4</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+for _ in 1...5 {
+
+    println("Random dice roll is ${d6.roll())")
+
+}
+
+// Random dice roll is 3
+
+// Random dice roll is 5
+
+// Random dice roll is 4
+
+// Random dice roll is 5
+
+// Random dice roll is 4</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Delegation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID276" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol DiceGame {
+
+    var dice: Dice { get }
+
+    func play()
+
+}
+
+protocol DiceGameDelegate: AnyObject {
+
+    func gameDidStart(_ game: DiceGame)
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)
+
+    func gameDidEnd(_ game: DiceGame)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol DiceGame {
+
+    var dice: Dice { get }
+
+    func play()
+
+}
+
+protocol DiceGameDelegate: AnyObject {
+
+    func gameDidStart(_ game: DiceGame)
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)
+
+    func gameDidEnd(_ game: DiceGame)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SnakesAndLadders: DiceGame {
+
+    let finalSquare = 25
+
+    let dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+    var square = 0
+
+    var board: [Int]
+
+    init() {
+
+        board = Array(repeating: 0, count: finalSquare + 1)
+
+        board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+        board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+    }
+
+    weak var delegate: DiceGameDelegate?
+
+    func play() {
+
+        square = 0
+
+        delegate?.gameDidStart(self)
+
+        gameLoop: while square != finalSquare {
+
+            let diceRoll = dice.roll()
+
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
+
+            switch square + diceRoll {
+
+            case finalSquare:
+
+                break gameLoop
+
+            case let newSquare where newSquare &#62; finalSquare:
+
+                continue gameLoop
+
+            default:
+
+                square += diceRoll
+
+                square += board[square]
+
+            }
+
+        }
+
+        delegate?.gameDidEnd(self)
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SnakesAndLadders: DiceGame {
+
+    val finalSquare = 25
+
+    val dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+    var square = 0
+
+    var board: [Int]
+
+    init() {
+
+        board = Array(repeating: 0, count: finalSquare + 1)
+
+        board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+        board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+    }
+
+    weak var delegate: DiceGameDelegate?
+
+    func play() {
+
+        square = 0
+
+        delegate?.gameDidStart(self)
+
+        gameLoop: while square != finalSquare {
+
+            val diceRoll = dice.roll()
+
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
+
+            switch square + diceRoll {
+
+            case finalSquare:
+
+                break gameLoop
+
+            case val newSquare where newSquare &#62; finalSquare:
+
+                continue gameLoop
+
+            default:
+
+                square += diceRoll
+
+                square += board[square]
+
+            }
+
+        }
+
+        delegate?.gameDidEnd(self)
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class DiceGameTracker: DiceGameDelegate {
+
+    var numberOfTurns = 0
+
+    func gameDidStart(_ game: DiceGame) {
+
+        numberOfTurns = 0
+
+        if game is SnakesAndLadders {
+
+            print("Started a new game of Snakes and Ladders")
+
+        }
+
+        print("The game is using a \(game.dice.sides)-sided dice")
+
+    }
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+
+        numberOfTurns += 1
+
+        print("Rolled a \(diceRoll)")
+
+    }
+
+    func gameDidEnd(_ game: DiceGame) {
+
+        print("The game lasted for \(numberOfTurns) turns")
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class DiceGameTracker: DiceGameDelegate {
+
+    var numberOfTurns = 0
+
+    func gameDidStart(_ game: DiceGame) {
+
+        numberOfTurns = 0
+
+        if game is SnakesAndLadders {
+
+            println("Started a new game of Snakes and Ladders")
+
+        }
+
+        println("The game is using a ${game.dice.sides)-sided dice")
+
+    }
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+
+        numberOfTurns += 1
+
+        println("Rolled a ${diceRoll)")
+
+    }
+
+    func gameDidEnd(_ game: DiceGame) {
+
+        println("The game lasted for ${numberOfTurns) turns")
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let tracker = DiceGameTracker()
+
+let game = SnakesAndLadders()
+
+game.delegate = tracker
+
+game.play()
+
+// Started a new game of Snakes and Ladders
+
+// The game is using a 6-sided dice
+
+// Rolled a 3
+
+// Rolled a 5
+
+// Rolled a 4
+
+// Rolled a 5
+
+// The game lasted for 4 turns</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val tracker = DiceGameTracker()
+
+val game = SnakesAndLadders()
+
+game.delegate = tracker
+
+game.play()
+
+// Started a new game of Snakes and Ladders
+
+// The game is using a 6-sided dice
+
+// Rolled a 3
+
+// Rolled a 5
+
+// Rolled a 4
+
+// Rolled a 5
+
+// The game lasted for 4 turns</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Adding Protocol Conformance with an Extension
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID277" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol TextRepresentable {
+
+    var textualDescription: String { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol TextRepresentable {
+
+    var textualDescription: String { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension Dice: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A \(sides)-sided dice"
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension Dice: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A ${sides)-sided dice"
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let d12 = Dice(sides: 12, generator: LinearCongruentialGenerator())
+
+print(d12.textualDescription)
+
+// Prints "A 12-sided dice"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val d12 = Dice(sides: 12, generator: LinearCongruentialGenerator())
+
+println(d12.textualDescription)
+
+// Prints "A 12-sided dice"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension SnakesAndLadders: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A game of Snakes and Ladders with \(finalSquare) squares"
+
+    }
+
+}
+
+print(game.textualDescription)
+
+// Prints "A game of Snakes and Ladders with 25 squares"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension SnakesAndLadders: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A game of Snakes and Ladders with ${finalSquare) squares"
+
+    }
+
+}
+
+println(game.textualDescription)
+
+// Prints "A game of Snakes and Ladders with 25 squares"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Conditionally Conforming to a Protocol
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID574" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension Array: TextRepresentable where Element: TextRepresentable {
+
+    var textualDescription: String {
+
+        let itemsAsText = self.map { $0.textualDescription }
+
+        return "[" + itemsAsText.joined(separator: ", ") + "]"
+
+    }
+
+}
+
+let myDice = [d6, d12]
+
+print(myDice.textualDescription)
+
+// Prints "[A 6-sided dice, A 12-sided dice]"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension Array: TextRepresentable where Element: TextRepresentable {
+
+    var textualDescription: String {
+
+        val itemsAsText = self.map { $0.textualDescription }
+
+        return "[" + itemsAsText.joined(separator: ", ") + "]"
+
+    }
+
+}
+
+val myDice = [d6, d12]
+
+println(myDice.textualDescription)
+
+// Prints "[A 6-sided dice, A 12-sided dice]"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Declaring Protocol Adoption with an Extension
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID278" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Hamster {
+
+    var name: String
+
+    var textualDescription: String {
+
+        return "A hamster named \(name)"
+
+    }
+
+}
+
+extension Hamster: TextRepresentable {}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Hamster {
+
+    var name: String
+
+    var textualDescription: String {
+
+        return "A hamster named ${name)"
+
+    }
+
+}
+
+extension Hamster: TextRepresentable {}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let simonTheHamster = Hamster(name: "Simon")
+
+let somethingTextRepresentable: TextRepresentable = simonTheHamster
+
+print(somethingTextRepresentable.textualDescription)
+
+// Prints "A hamster named Simon"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val simonTheHamster = Hamster(name: "Simon")
+
+val somethingTextRepresentable: TextRepresentable = simonTheHamster
+
+println(somethingTextRepresentable.textualDescription)
+
+// Prints "A hamster named Simon"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Adopting a Protocol Using a Synthesized Implementation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID627" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Vector3D: Equatable {
+
+    var x = 0.0, y = 0.0, z = 0.0
+
+}
+
+
+
+let twoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+let anotherTwoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+if twoThreeFour == anotherTwoThreeFour {
+
+    print("These two vectors are also equivalent.")
+
+}
+
+// Prints "These two vectors are also equivalent."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Vector3D: Equatable {
+
+    var x = 0.0, y = 0.0, z = 0.0
+
+}
+
+
+
+val twoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+val anotherTwoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+if twoThreeFour == anotherTwoThreeFour {
+
+    println("These two vectors are also equivalent.")
+
+}
+
+// Prints "These two vectors are also equivalent."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum SkillLevel: Comparable {
+
+    case beginner
+
+    case intermediate
+
+    case expert(stars: Int)
+
+}
+
+var levels = [SkillLevel.intermediate, SkillLevel.beginner,
+
+              SkillLevel.expert(stars: 5), SkillLevel.expert(stars: 3)]
+
+for level in levels.sorted() {
+
+    print(level)
+
+}
+
+// Prints "beginner"
+
+// Prints "intermediate"
+
+// Prints "expert(stars: 3)"
+
+// Prints "expert(stars: 5)"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum SkillLevel: Comparable {
+
+    case beginner
+
+    case intermediate
+
+    case expert(stars: Int)
+
+}
+
+var levels = [SkillLevel.intermediate, SkillLevel.beginner,
+
+              SkillLevel.expert(stars: 5), SkillLevel.expert(stars: 3)]
+
+for level in levels.sorted() {
+
+    println(level)
+
+}
+
+// Prints "beginner"
+
+// Prints "intermediate"
+
+// Prints "expert(stars: 3)"
+
+// Prints "expert(stars: 5)"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Collections of Protocol Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID279" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let things: [TextRepresentable] = [game, d12, simonTheHamster]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val things: [TextRepresentable] = [game, d12, simonTheHamster]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for thing in things {
+
+    print(thing.textualDescription)
+
+}
+
+// A game of Snakes and Ladders with 25 squares
+
+// A 12-sided dice
+
+// A hamster named Simon</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for thing in things {
+
+    println(thing.textualDescription)
+
+}
+
+// A game of Snakes and Ladders with 25 squares
+
+// A 12-sided dice
+
+// A hamster named Simon</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocol Inheritance
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID280" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol PrettyTextRepresentable: TextRepresentable {
+
+    var prettyTextualDescription: String { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol PrettyTextRepresentable: TextRepresentable {
+
+    var prettyTextualDescription: String { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension SnakesAndLadders: PrettyTextRepresentable {
+
+    var prettyTextualDescription: String {
+
+        var output = textualDescription + ":\n"
+
+        for index in 1...finalSquare {
+
+            switch board[index] {
+
+            case let ladder where ladder &#62; 0:
+
+                output += "&#9650; "
+
+            case let snake where snake &#60; 0:
+
+                output += "&#9660; "
+
+            default:
+
+                output += "&#9675; "
+
+            }
+
+        }
+
+        return output
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension SnakesAndLadders: PrettyTextRepresentable {
+
+    var prettyTextualDescription: String {
+
+        var output = textualDescription + ":\n"
+
+        for index in 1...finalSquare {
+
+            switch board[index] {
+
+            case val ladder where ladder &#62; 0:
+
+                output += "&#9650; "
+
+            case val snake where snake &#60; 0:
+
+                output += "&#9660; "
+
+            default:
+
+                output += "&#9675; "
+
+            }
+
+        }
+
+        return output
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(game.prettyTextualDescription)
+
+// A game of Snakes and Ladders with 25 squares:
+
+// &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9650; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9660; &#9675; &#9660; &#9675;</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(game.prettyTextualDescription)
+
+// A game of Snakes and Ladders with 25 squares:
+
+// &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9650; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9660; &#9675; &#9660; &#9675;</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Class-Only Protocols
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID281" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+
+    // class-only protocol definition goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+
+    // class-only protocol definition goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocol Composition
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID282" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol Named {
+
+    var name: String { get }
+
+}
+
+protocol Aged {
+
+    var age: Int { get }
+
+}
+
+struct Person: Named, Aged {
+
+    var name: String
+
+    var age: Int
+
+}
+
+func wishHappyBirthday(to celebrator: Named &#38; Aged) {
+
+    print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
+
+}
+
+let birthdayPerson = Person(name: "Malcolm", age: 21)
+
+wishHappyBirthday(to: birthdayPerson)
+
+// Prints "Happy birthday, Malcolm, you're 21!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol Named {
+
+    var name: String { get }
+
+}
+
+protocol Aged {
+
+    var age: Int { get }
+
+}
+
+struct Person: Named, Aged {
+
+    var name: String
+
+    var age: Int
+
+}
+
+func wishHappyBirthday(to celebrator: Named &#38; Aged) {
+
+    println("Happy birthday, ${celebrator.name), you're ${celebrator.age)!")
+
+}
+
+val birthdayPerson = Person(name: "Malcolm", age: 21)
+
+wishHappyBirthday(to: birthdayPerson)
+
+// Prints "Happy birthday, Malcolm, you're 21!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Location {
+
+    var latitude: Double
+
+    var longitude: Double
+
+    init(latitude: Double, longitude: Double) {
+
+        self.latitude = latitude
+
+        self.longitude = longitude
+
+    }
+
+}
+
+class City: Location, Named {
+
+    var name: String
+
+    init(name: String, latitude: Double, longitude: Double) {
+
+        self.name = name
+
+        super.init(latitude: latitude, longitude: longitude)
+
+    }
+
+}
+
+func beginConcert(in location: Location &#38; Named) {
+
+    print("Hello, \(location.name)!")
+
+}
+
+
+
+let seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+
+beginConcert(in: seattle)
+
+// Prints "Hello, Seattle!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Location {
+
+    var latitude: Double
+
+    var longitude: Double
+
+    init(latitude: Double, longitude: Double) {
+
+        self.latitude = latitude
+
+        self.longitude = longitude
+
+    }
+
+}
+
+class City: Location, Named {
+
+    var name: String
+
+    init(name: String, latitude: Double, longitude: Double) {
+
+        self.name = name
+
+        super.init(latitude: latitude, longitude: longitude)
+
+    }
+
+}
+
+func beginConcert(in location: Location &#38; Named) {
+
+    println("Hello, ${location.name)!")
+
+}
+
+
+
+val seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+
+beginConcert(in: seattle)
+
+// Prints "Hello, Seattle!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Checking for Protocol Conformance
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID283" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol HasArea {
+
+    var area: Double { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol HasArea {
+
+    var area: Double { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Circle: HasArea {
+
+    let pi = 3.1415927
+
+    var radius: Double
+
+    var area: Double { return pi * radius * radius }
+
+    init(radius: Double) { self.radius = radius }
+
+}
+
+class Country: HasArea {
+
+    var area: Double
+
+    init(area: Double) { self.area = area }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Circle: HasArea {
+
+    val pi = 3.1415927
+
+    var radius: Double
+
+    var area: Double { return pi * radius * radius }
+
+    init(radius: Double) { self.radius = radius }
+
+}
+
+class Country: HasArea {
+
+    var area: Double
+
+    init(area: Double) { self.area = area }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Animal {
+
+    var legs: Int
+
+    init(legs: Int) { self.legs = legs }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Animal {
+
+    var legs: Int
+
+    init(legs: Int) { self.legs = legs }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let objects: [AnyObject] = [
+
+    Circle(radius: 2.0),
+
+    Country(area: 243_610),
+
+    Animal(legs: 4)
+
+]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val objects: [AnyObject] = [
+
+    Circle(radius: 2.0),
+
+    Country(area: 243_610),
+
+    Animal(legs: 4)
+
+]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for object in objects {
+
+    if let objectWithArea = object as? HasArea {
+
+        print("Area is \(objectWithArea.area)")
+
+    } else {
+
+        print("Something that doesn't have an area")
+
+    }
+
+}
+
+// Area is 12.5663708
+
+// Area is 243610.0
+
+// Something that doesn't have an area</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for object in objects {
+
+    if val objectWithArea = object as? HasArea {
+
+        println("Area is ${objectWithArea.area)")
+
+    } else {
+
+        println("Something that doesn't have an area")
+
+    }
+
+}
+
+// Area is 12.5663708
+
+// Area is 243610.0
+
+// Something that doesn't have an area</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Optional Protocol Requirements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID284" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">@objc protocol CounterDataSource {
+
+    @objc optional func increment(forCount count: Int) -&#62; Int
+
+    @objc optional var fixedIncrement: Int { get }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">@objc protocol CounterDataSource {
+
+    @objc optional func increment(forCount count: Int): Int
+
+    @objc optional var fixedIncrement: Int { get }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Counter {
+
+    var count = 0
+
+    var dataSource: CounterDataSource?
+
+    func increment() {
+
+        if let amount = dataSource?.increment?(forCount: count) {
+
+            count += amount
+
+        } else if let amount = dataSource?.fixedIncrement {
+
+            count += amount
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Counter {
+
+    var count = 0
+
+    var dataSource: CounterDataSource?
+
+    func increment() {
+
+        if val amount = dataSource?.increment?(forCount: count) {
+
+            count += amount
+
+        } else if val amount = dataSource?.fixedIncrement {
+
+            count += amount
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class ThreeSource: NSObject, CounterDataSource {
+
+    let fixedIncrement = 3
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class ThreeSource: NSObject, CounterDataSource {
+
+    val fixedIncrement = 3
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var counter = Counter()
+
+counter.dataSource = ThreeSource()
+
+for _ in 1...4 {
+
+    counter.increment()
+
+    print(counter.count)
+
+}
+
+// 3
+
+// 6
+
+// 9
+
+// 12</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var counter = Counter()
+
+counter.dataSource = ThreeSource()
+
+for _ in 1...4 {
+
+    counter.increment()
+
+    println(counter.count)
+
+}
+
+// 3
+
+// 6
+
+// 9
+
+// 12</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class TowardsZeroSource: NSObject, CounterDataSource {
+
+    func increment(forCount count: Int) -&#62; Int {
+
+        if count == 0 {
+
+            return 0
+
+        } else if count &#60; 0 {
+
+            return 1
+
+        } else {
+
+            return -1
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class TowardsZeroSource: NSObject, CounterDataSource {
+
+    func increment(forCount count: Int): Int {
+
+        if count == 0 {
+
+            return 0
+
+        } else if count &#60; 0 {
+
+            return 1
+
+        } else {
+
+            return -1
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">counter.count = -4
+
+counter.dataSource = TowardsZeroSource()
+
+for _ in 1...5 {
+
+    counter.increment()
+
+    print(counter.count)
+
+}
+
+// -3
+
+// -2
+
+// -1
+
+// 0
+
+// 0</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">counter.count = -4
+
+counter.dataSource = TowardsZeroSource()
+
+for _ in 1...5 {
+
+    counter.increment()
+
+    println(counter.count)
+
+}
+
+// -3
+
+// -2
+
+// -1
+
+// 0
+
+// 0</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocol Extensions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID521" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension RandomNumberGenerator {
+
+    func randomBool() -&#62; Bool {
+
+        return random() &#62; 0.5
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension RandomNumberGenerator {
+
+    func randomBool(): Bool {
+
+        return random() &#62; 0.5
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let generator = LinearCongruentialGenerator()
+
+print("Here's a random number: \(generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+print("And here's a random Boolean: \(generator.randomBool())")
+
+// Prints "And here's a random Boolean: true"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val generator = LinearCongruentialGenerator()
+
+println("Here's a random number: ${generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+println("And here's a random Boolean: ${generator.randomBool())")
+
+// Prints "And here's a random Boolean: true"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Providing Default Implementations
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID529" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension PrettyTextRepresentable  {
+
+    var prettyTextualDescription: String {
+
+        return textualDescription
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension PrettyTextRepresentable  {
+
+    var prettyTextualDescription: String {
+
+        return textualDescription
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Adding Constraints to Protocol Extensions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID527" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension Collection where Element: Equatable {
+
+    func allEqual() -&#62; Bool {
+
+        for element in self {
+
+            if element != self.first {
+
+                return false
+
+            }
+
+        }
+
+        return true
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension Collection where Element: Equatable {
+
+    func allEqual(): Bool {
+
+        for element in self {
+
+            if element != self.first {
+
+                return false
+
+            }
+
+        }
+
+        return true
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let equalNumbers = [100, 100, 100, 100, 100]
+
+let differentNumbers = [100, 100, 200, 100, 200]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val equalNumbers = [100, 100, 100, 100, 100]
+
+val differentNumbers = [100, 100, 200, 100, 200]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(equalNumbers.allEqual())
+
+// Prints "true"
+
+print(differentNumbers.allEqual())
+
+// Prints "false"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(equalNumbers.allEqual())
+
+// Prints "true"
+
+println(differentNumbers.allEqual())
+
+// Prints "false"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

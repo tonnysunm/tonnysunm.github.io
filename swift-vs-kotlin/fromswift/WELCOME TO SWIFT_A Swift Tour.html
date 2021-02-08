@@ -1,0 +1,3150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    A Swift Tour
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print("Hello, world!")
+
+// Prints "Hello, world!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println("Hello, world!")
+
+// Prints "Hello, world!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Simple Values
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID461" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var myVariable = 42
+
+myVariable = 50
+
+let myConstant = 42</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var myVariable = 42
+
+myVariable = 50
+
+val myConstant = 42</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let implicitInteger = 70
+
+let implicitDouble = 70.0
+
+let explicitDouble: Double = 70</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val implicitInteger = 70
+
+val implicitDouble = 70.0
+
+val explicitDouble: Double = 70</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let label = "The width is "
+
+let width = 94
+
+let widthLabel = label + String(width)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val label = "The width is "
+
+val width = 94
+
+val widthLabel = label + width.toString()
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let apples = 3
+
+let oranges = 5
+
+let appleSummary = "I have \(apples) apples."
+
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val apples = 3
+
+val oranges = 5
+
+val appleSummary = "I have ${apples} apples."
+
+val fruitSummary = "I have ${apples + oranges} pieces of fruit."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let quotation = """
+
+I said "I have \(apples) apples."
+
+And then I said "I have \(apples + oranges) pieces of fruit."
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val quotation = """
+
+I said "I have ${apples} apples."
+
+And then I said "I have ${apples + oranges} pieces of fruit."
+
+"""
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var shoppingList = ["catfish", "water", "tulips"]
+
+shoppingList[1] = "bottle of water"
+
+
+
+var occupations = [
+
+    "Malcolm": "Captain",
+
+    "Kaylee": "Mechanic",
+
+]
+
+occupations["Jayne"] = "Public Relations"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var shoppingList = ["catfish", "water", "tulips"]
+
+shoppingList[1] = "bottle of water"
+
+
+
+var occupations = [
+
+    "Malcolm": "Captain",
+
+    "Kaylee": "Mechanic",
+
+]
+
+occupations["Jayne"] = "Public Relations"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList.append("blue paint")
+
+print(shoppingList)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList.append("blue paint")
+
+println(shoppingList)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let emptyArray = [String]()
+
+let emptyDictionary = [String: Float]()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val emptyArray = [String]()
+
+val emptyDictionary = [String: Float]()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">shoppingList = []
+
+occupations = [:]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">shoppingList = []
+
+occupations = [:]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Control Flow
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID462" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let individualScores = [75, 43, 103, 87, 12]
+
+var teamScore = 0
+
+for score in individualScores {
+
+    if score &#62; 50 {
+
+        teamScore += 3
+
+    } else {
+
+        teamScore += 1
+
+    }
+
+}
+
+print(teamScore)
+
+// Prints "11"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val individualScores = [75, 43, 103, 87, 12]
+
+var teamScore = 0
+
+for score in individualScores {
+
+    if score &#62; 50 {
+
+        teamScore += 3
+
+    } else {
+
+        teamScore += 1
+
+    }
+
+}
+
+println(teamScore)
+
+// Prints "11"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var optionalString: String? = "Hello"
+
+print(optionalString == nil)
+
+// Prints "false"
+
+
+
+var optionalName: String? = "John Appleseed"
+
+var greeting = "Hello!"
+
+if let name = optionalName {
+
+    greeting = "Hello, \(name)"
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var optionalString: String? = "Hello"
+
+println(optionalString == nil)
+
+// Prints "false"
+
+
+
+var optionalName: String? = "John Appleseed"
+
+var greeting = "Hello!"
+
+if val name = optionalName {
+
+    greeting = "Hello, ${name)"
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let nickname: String? = nil
+
+let fullName: String = "John Appleseed"
+
+let informalGreeting = "Hi \(nickname ?? fullName)"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val nickname: String? = nil
+
+val fullName: String = "John Appleseed"
+
+val informalGreeting = "Hi ${nickname ?: fullName)"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let vegetable = "red pepper"
+
+switch vegetable {
+
+case "celery":
+
+    print("Add some raisins and make ants on a log.")
+
+case "cucumber", "watercress":
+
+    print("That would make a good tea sandwich.")
+
+case let x where x.hasSuffix("pepper"):
+
+    print("Is it a spicy \(x)?")
+
+default:
+
+    print("Everything tastes good in soup.")
+
+}
+
+// Prints "Is it a spicy red pepper?"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val vegetable = "red pepper"
+
+switch vegetable {
+
+case "celery":
+
+    println("Add some raisins and make ants on a log.")
+
+case "cucumber", "watercress":
+
+    println("That would make a good tea sandwich.")
+
+case val x where x.hasSuffix("pepper"):
+
+    println("Is it a spicy ${x)?")
+
+default:
+
+    println("Everything tastes good in soup.")
+
+}
+
+// Prints "Is it a spicy red pepper?"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let interestingNumbers = [
+
+    "Prime": [2, 3, 5, 7, 11, 13],
+
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+
+    "Square": [1, 4, 9, 16, 25],
+
+]
+
+var largest = 0
+
+for (kind, numbers) in interestingNumbers {
+
+    for number in numbers {
+
+        if number &#62; largest {
+
+            largest = number
+
+        }
+
+    }
+
+}
+
+print(largest)
+
+// Prints "25"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val interestingNumbers = [
+
+    "Prime": [2, 3, 5, 7, 11, 13],
+
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+
+    "Square": [1, 4, 9, 16, 25],
+
+]
+
+var largest = 0
+
+for (kind, numbers) in interestingNumbers {
+
+    for number in numbers {
+
+        if number &#62; largest {
+
+            largest = number
+
+        }
+
+    }
+
+}
+
+println(largest)
+
+// Prints "25"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var n = 2
+
+while n &#60; 100 {
+
+    n *= 2
+
+}
+
+print(n)
+
+// Prints "128"
+
+
+
+var m = 2
+
+repeat {
+
+    m *= 2
+
+} while m &#60; 100
+
+print(m)
+
+// Prints "128"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var n = 2
+
+while n &#60; 100 {
+
+    n *= 2
+
+}
+
+println(n)
+
+// Prints "128"
+
+
+
+var m = 2
+
+repeat {
+
+    m *= 2
+
+} while m &#60; 100
+
+println(m)
+
+// Prints "128"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var total = 0
+
+for i in 0..&#60;4 {
+
+    total += i
+
+}
+
+print(total)
+
+// Prints "6"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var total = 0
+
+for i in 0..&#60;4 {
+
+    total += i
+
+}
+
+println(total)
+
+// Prints "6"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Functions and Closures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID463" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func greet(person: String, day: String) -&#62; String {
+
+    return "Hello \(person), today is \(day)."
+
+}
+
+greet(person: "Bob", day: "Tuesday")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func greet(person: String, day: String): String {
+
+    return "Hello ${person), today is ${day)."
+
+}
+
+greet(person: "Bob", day: "Tuesday")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func greet(_ person: String, on day: String) -&#62; String {
+
+    return "Hello \(person), today is \(day)."
+
+}
+
+greet("John", on: "Wednesday")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func greet(_ person: String, on day: String): String {
+
+    return "Hello ${person), today is ${day)."
+
+}
+
+greet("John", on: "Wednesday")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func calculateStatistics(scores: [Int]) -&#62; (min: Int, max: Int, sum: Int) {
+
+    var min = scores[0]
+
+    var max = scores[0]
+
+    var sum = 0
+
+
+
+    for score in scores {
+
+        if score &#62; max {
+
+            max = score
+
+        } else if score &#60; min {
+
+            min = score
+
+        }
+
+        sum += score
+
+    }
+
+
+
+    return (min, max, sum)
+
+}
+
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+
+print(statistics.sum)
+
+// Prints "120"
+
+print(statistics.2)
+
+// Prints "120"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func calculateStatistics(scores: [Int]): (min: Int, max: Int, sum: Int) {
+
+    var min = scores[0]
+
+    var max = scores[0]
+
+    var sum = 0
+
+
+
+    for score in scores {
+
+        if score &#62; max {
+
+            max = score
+
+        } else if score &#60; min {
+
+            min = score
+
+        }
+
+        sum += score
+
+    }
+
+
+
+    return (min, max, sum)
+
+}
+
+val statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+
+println(statistics.sum)
+
+// Prints "120"
+
+println(statistics.2)
+
+// Prints "120"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func returnFifteen() -&#62; Int {
+
+    var y = 10
+
+    func add() {
+
+        y += 5
+
+    }
+
+    add()
+
+    return y
+
+}
+
+returnFifteen()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func returnFifteen(): Int {
+
+    var y = 10
+
+    func add() {
+
+        y += 5
+
+    }
+
+    add()
+
+    return y
+
+}
+
+returnFifteen()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func makeIncrementer() -&#62; ((Int) -&#62; Int) {
+
+    func addOne(number: Int) -&#62; Int {
+
+        return 1 + number
+
+    }
+
+    return addOne
+
+}
+
+var increment = makeIncrementer()
+
+increment(7)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func makeIncrementer(): ((Int): Int) {
+
+    func addOne(number: Int): Int {
+
+        return 1 + number
+
+    }
+
+    return addOne
+
+}
+
+var increment = makeIncrementer()
+
+increment(7)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func hasAnyMatches(list: [Int], condition: (Int) -&#62; Bool) -&#62; Bool {
+
+    for item in list {
+
+        if condition(item) {
+
+            return true
+
+        }
+
+    }
+
+    return false
+
+}
+
+func lessThanTen(number: Int) -&#62; Bool {
+
+    return number &#60; 10
+
+}
+
+var numbers = [20, 19, 7, 12]
+
+hasAnyMatches(list: numbers, condition: lessThanTen)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func hasAnyMatches(list: [Int], condition: (Int): Bool): Bool {
+
+    for item in list {
+
+        if condition(item) {
+
+            return true
+
+        }
+
+    }
+
+    return false
+
+}
+
+func lessThanTen(number: Int): Bool {
+
+    return number &#60; 10
+
+}
+
+var numbers = [20, 19, 7, 12]
+
+hasAnyMatches(list: numbers, condition: lessThanTen)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">numbers.map({ (number: Int) -&#62; Int in
+
+    let result = 3 * number
+
+    return result
+
+})</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">numbers.map({ (number: Int): Int in
+
+    val result = 3 * number
+
+    return result
+
+})</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let mappedNumbers = numbers.map({ number in 3 * number })
+
+print(mappedNumbers)
+
+// Prints "[60, 57, 21, 36]"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val mappedNumbers = numbers.map({ number in 3 * number })
+
+println(mappedNumbers)
+
+// Prints "[60, 57, 21, 36]"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let sortedNumbers = numbers.sorted { $0 &#62; $1 }
+
+print(sortedNumbers)
+
+// Prints "[20, 19, 12, 7]"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val sortedNumbers = numbers.sorted { $0 &#62; $1 }
+
+println(sortedNumbers)
+
+// Prints "[20, 19, 12, 7]"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Objects and Classes
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID464" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Shape {
+
+    var numberOfSides = 0
+
+    func simpleDescription() -&#62; String {
+
+        return "A shape with \(numberOfSides) sides."
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Shape {
+
+    var numberOfSides = 0
+
+    func simpleDescription(): String {
+
+        return "A shape with ${numberOfSides) sides."
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var shape = Shape()
+
+shape.numberOfSides = 7
+
+var shapeDescription = shape.simpleDescription()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var shape = Shape()
+
+shape.numberOfSides = 7
+
+var shapeDescription = shape.simpleDescription()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class NamedShape {
+
+    var numberOfSides: Int = 0
+
+    var name: String
+
+
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+
+
+    func simpleDescription() -&#62; String {
+
+        return "A shape with \(numberOfSides) sides."
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class NamedShape {
+
+    var numberOfSides: Int = 0
+
+    var name: String
+
+
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+
+
+    func simpleDescription(): String {
+
+        return "A shape with ${numberOfSides) sides."
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Square: NamedShape {
+
+    var sideLength: Double
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 4
+
+    }
+
+
+
+    func area() -&#62; Double {
+
+        return sideLength * sideLength
+
+    }
+
+
+
+    override func simpleDescription() -&#62; String {
+
+        return "A square with sides of length \(sideLength)."
+
+    }
+
+}
+
+let test = Square(sideLength: 5.2, name: "my test square")
+
+test.area()
+
+test.simpleDescription()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Square: NamedShape {
+
+    var sideLength: Double
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 4
+
+    }
+
+
+
+    func area(): Double {
+
+        return sideLength * sideLength
+
+    }
+
+
+
+    override func simpleDescription(): String {
+
+        return "A square with sides of length ${sideLength)."
+
+    }
+
+}
+
+val test = Square(sideLength: 5.2, name: "my test square")
+
+test.area()
+
+test.simpleDescription()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class EquilateralTriangle: NamedShape {
+
+    var sideLength: Double = 0.0
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 3
+
+    }
+
+
+
+    var perimeter: Double {
+
+        get {
+
+            return 3.0 * sideLength
+
+        }
+
+        set {
+
+            sideLength = newValue / 3.0
+
+        }
+
+    }
+
+
+
+    override func simpleDescription() -&#62; String {
+
+        return "An equilateral triangle with sides of length \(sideLength)."
+
+    }
+
+}
+
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+
+print(triangle.perimeter)
+
+// Prints "9.3"
+
+triangle.perimeter = 9.9
+
+print(triangle.sideLength)
+
+// Prints "3.3000000000000003"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class EquilateralTriangle: NamedShape {
+
+    var sideLength: Double = 0.0
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 3
+
+    }
+
+
+
+    var perimeter: Double {
+
+        get {
+
+            return 3.0 * sideLength
+
+        }
+
+        set {
+
+            sideLength = newValue / 3.0
+
+        }
+
+    }
+
+
+
+    override func simpleDescription(): String {
+
+        return "An equilateral triangle with sides of length ${sideLength)."
+
+    }
+
+}
+
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+
+println(triangle.perimeter)
+
+// Prints "9.3"
+
+triangle.perimeter = 9.9
+
+println(triangle.sideLength)
+
+// Prints "3.3000000000000003"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class TriangleAndSquare {
+
+    var triangle: EquilateralTriangle {
+
+        willSet {
+
+            square.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    var square: Square {
+
+        willSet {
+
+            triangle.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    init(size: Double, name: String) {
+
+        square = Square(sideLength: size, name: name)
+
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+
+    }
+
+}
+
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+
+print(triangleAndSquare.square.sideLength)
+
+// Prints "10.0"
+
+print(triangleAndSquare.triangle.sideLength)
+
+// Prints "10.0"
+
+triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+
+print(triangleAndSquare.triangle.sideLength)
+
+// Prints "50.0"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class TriangleAndSquare {
+
+    var triangle: EquilateralTriangle {
+
+        willSet {
+
+            square.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    var square: Square {
+
+        willSet {
+
+            triangle.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    init(size: Double, name: String) {
+
+        square = Square(sideLength: size, name: name)
+
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+
+    }
+
+}
+
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+
+println(triangleAndSquare.square.sideLength)
+
+// Prints "10.0"
+
+println(triangleAndSquare.triangle.sideLength)
+
+// Prints "10.0"
+
+triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+
+println(triangleAndSquare.triangle.sideLength)
+
+// Prints "50.0"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+
+let sideLength = optionalSquare?.sideLength</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+
+val sideLength = optionalSquare?.sideLength</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Enumerations and Structures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID465" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum Rank: Int {
+
+    case ace = 1
+
+    case two, three, four, five, six, seven, eight, nine, ten
+
+    case jack, queen, king
+
+
+
+    func simpleDescription() -&#62; String {
+
+        switch self {
+
+        case .ace:
+
+            return "ace"
+
+        case .jack:
+
+            return "jack"
+
+        case .queen:
+
+            return "queen"
+
+        case .king:
+
+            return "king"
+
+        default:
+
+            return String(self.rawValue)
+
+        }
+
+    }
+
+}
+
+let ace = Rank.ace
+
+let aceRawValue = ace.rawValue</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum Rank: Int {
+
+    case ace = 1
+
+    case two, three, four, five, six, seven, eight, nine, ten
+
+    case jack, queen, king
+
+
+
+    func simpleDescription(): String {
+
+        switch self {
+
+        case .ace:
+
+            return "ace"
+
+        case .jack:
+
+            return "jack"
+
+        case .queen:
+
+            return "queen"
+
+        case .king:
+
+            return "king"
+
+        default:
+
+            return String(self.rawValue)
+
+        }
+
+    }
+
+}
+
+val ace = Rank.ace
+
+val aceRawValue = ace.rawValue</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let convertedRank = Rank(rawValue: 3) {
+
+    let threeDescription = convertedRank.simpleDescription()
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val convertedRank = Rank(rawValue: 3) {
+
+    val threeDescription = convertedRank.simpleDescription()
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum Suit {
+
+    case spades, hearts, diamonds, clubs
+
+
+
+    func simpleDescription() -&#62; String {
+
+        switch self {
+
+        case .spades:
+
+            return "spades"
+
+        case .hearts:
+
+            return "hearts"
+
+        case .diamonds:
+
+            return "diamonds"
+
+        case .clubs:
+
+            return "clubs"
+
+        }
+
+    }
+
+}
+
+let hearts = Suit.hearts
+
+let heartsDescription = hearts.simpleDescription()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum Suit {
+
+    case spades, hearts, diamonds, clubs
+
+
+
+    func simpleDescription(): String {
+
+        switch self {
+
+        case .spades:
+
+            return "spades"
+
+        case .hearts:
+
+            return "hearts"
+
+        case .diamonds:
+
+            return "diamonds"
+
+        case .clubs:
+
+            return "clubs"
+
+        }
+
+    }
+
+}
+
+val hearts = Suit.hearts
+
+val heartsDescription = hearts.simpleDescription()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum ServerResponse {
+
+    case result(String, String)
+
+    case failure(String)
+
+}
+
+
+
+let success = ServerResponse.result("6:00 am", "8:09 pm")
+
+let failure = ServerResponse.failure("Out of cheese.")
+
+
+
+switch success {
+
+case let .result(sunrise, sunset):
+
+    print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+
+case let .failure(message):
+
+    print("Failure...  \(message)")
+
+}
+
+// Prints "Sunrise is at 6:00 am and sunset is at 8:09 pm."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum ServerResponse {
+
+    case result(String, String)
+
+    case failure(String)
+
+}
+
+
+
+val success = ServerResponse.result("6:00 am", "8:09 pm")
+
+val failure = ServerResponse.failure("Out of cheese.")
+
+
+
+switch success {
+
+case val .result(sunrise, sunset):
+
+    println("Sunrise is at ${sunrise) and sunset is at ${sunset).")
+
+case val .failure(message):
+
+    println("Failure...  ${message}")
+
+}
+
+// Prints "Sunrise is at 6:00 am and sunset is at 8:09 pm."
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Card {
+
+    var rank: Rank
+
+    var suit: Suit
+
+    func simpleDescription() -&#62; String {
+
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+
+    }
+
+}
+
+let threeOfSpades = Card(rank: .three, suit: .spades)
+
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Card {
+
+    var rank: Rank
+
+    var suit: Suit
+
+    func simpleDescription(): String {
+
+        return "The ${rank.simpleDescription()} of ${suit.simpleDescription()}"
+
+    }
+
+}
+
+val threeOfSpades = Card(rank: .three, suit: .spades)
+
+val threeOfSpadesDescription = threeOfSpades.simpleDescription()
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Protocols and Extensions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID466" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol ExampleProtocol {
+
+    var simpleDescription: String { get }
+
+    mutating func adjust()
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol ExampleProtocol {
+
+    var simpleDescription: String { get }
+
+    mutating func adjust()
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SimpleClass: ExampleProtocol {
+
+    var simpleDescription: String = "A very simple class."
+
+    var anotherProperty: Int = 69105
+
+    func adjust() {
+
+        simpleDescription += "  Now 100% adjusted."
+
+    }
+
+}
+
+var a = SimpleClass()
+
+a.adjust()
+
+let aDescription = a.simpleDescription
+
+
+
+struct SimpleStructure: ExampleProtocol {
+
+    var simpleDescription: String = "A simple structure"
+
+    mutating func adjust() {
+
+        simpleDescription += " (adjusted)"
+
+    }
+
+}
+
+var b = SimpleStructure()
+
+b.adjust()
+
+let bDescription = b.simpleDescription</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SimpleClass: ExampleProtocol {
+
+    var simpleDescription: String = "A very simple class."
+
+    var anotherProperty: Int = 69105
+
+    func adjust() {
+
+        simpleDescription += "  Now 100% adjusted."
+
+    }
+
+}
+
+var a = SimpleClass()
+
+a.adjust()
+
+val aDescription = a.simpleDescription
+
+
+
+struct SimpleStructure: ExampleProtocol {
+
+    var simpleDescription: String = "A simple structure"
+
+    mutating func adjust() {
+
+        simpleDescription += " (adjusted)"
+
+    }
+
+}
+
+var b = SimpleStructure()
+
+b.adjust()
+
+val bDescription = b.simpleDescription</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">extension Int: ExampleProtocol {
+
+    var simpleDescription: String {
+
+        return "The number \(self)"
+
+    }
+
+    mutating func adjust() {
+
+        self += 42
+
+    }
+
+}
+
+print(7.simpleDescription)
+
+// Prints "The number 7"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension Int: ExampleProtocol {
+
+    var simpleDescription: String {
+
+        return "The number ${self}"
+
+    }
+
+    mutating func adjust() {
+
+        self += 42
+
+    }
+
+}
+
+println(7.simpleDescription)
+
+// Prints "The number 7"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let protocolValue: ExampleProtocol = a
+
+print(protocolValue.simpleDescription)
+
+// Prints "A very simple class.  Now 100% adjusted."
+
+// print(protocolValue.anotherProperty)  // Uncomment to see the error</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val protocolValue: ExampleProtocol = a
+
+println(protocolValue.simpleDescription)
+
+// Prints "A very simple class.  Now 100% adjusted."
+
+// println(protocolValue.anotherProperty)  // Uncomment to see the error</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Error Handling
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID623" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum PrinterError: Error {
+
+    case outOfPaper
+
+    case noToner
+
+    case onFire
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum PrinterError: Error {
+
+    case outOfPaper
+
+    case noToner
+
+    case onFire
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func send(job: Int, toPrinter printerName: String) throws -&#62; String {
+
+    if printerName == "Never Has Toner" {
+
+        throw PrinterError.noToner
+
+    }
+
+    return "Job sent"
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func send(job: Int, toPrinter printerName: String) throws -&#62; String {
+
+    if printerName == "Never Has Toner" {
+
+        throw PrinterError.noToner
+
+    }
+
+    return "Job sent"
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">do {
+
+    let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+
+    print(printerResponse)
+
+} catch {
+
+    print(error)
+
+}
+
+// Prints "Job sent"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">do {
+
+    val printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+
+    println(printerResponse)
+
+} catch {
+
+    println(error)
+
+}
+
+// Prints "Job sent"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">do {
+
+    let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+
+    print(printerResponse)
+
+} catch PrinterError.onFire {
+
+    print("I'll just put this over here, with the rest of the fire.")
+
+} catch let printerError as PrinterError {
+
+    print("Printer error: \(printerError).")
+
+} catch {
+
+    print(error)
+
+}
+
+// Prints "Job sent"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">do {
+
+    val printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+
+    println(printerResponse)
+
+} catch PrinterError.onFire {
+
+    println("I'll just put this over here, with the rest of the fire.")
+
+} catch val printerError as PrinterError {
+
+    println("Printer error: ${printerError}.")
+
+} catch {
+
+    println(error)
+
+}
+
+// Prints "Job sent"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+
+let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+
+val printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var fridgeIsOpen = false
+
+let fridgeContent = ["milk", "eggs", "leftovers"]
+
+
+
+func fridgeContains(_ food: String) -&#62; Bool {
+
+    fridgeIsOpen = true
+
+    defer {
+
+        fridgeIsOpen = false
+
+    }
+
+
+
+    let result = fridgeContent.contains(food)
+
+    return result
+
+}
+
+fridgeContains("banana")
+
+print(fridgeIsOpen)
+
+// Prints "false"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var fridgeIsOpen = false
+
+val fridgeContent = ["milk", "eggs", "leftovers"]
+
+
+
+func fridgeContains(_ food: String): Bool {
+
+    fridgeIsOpen = true
+
+    defer {
+
+        fridgeIsOpen = false
+
+    }
+
+
+
+    val result = fridgeContent.contains(food)
+
+    return result
+
+}
+
+fridgeContains("banana")
+
+println(fridgeIsOpen)
+
+// Prints "false"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Generics
+                <a class="anchor" href="#https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html#ID624" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func makeArray&#60;Item&#62;(repeating item: Item, numberOfTimes: Int) -&#62; [Item] {
+
+    var result = [Item]()
+
+    for _ in 0..&#60;numberOfTimes {
+
+        result.append(item)
+
+    }
+
+    return result
+
+}
+
+makeArray(repeating: "knock", numberOfTimes: 4)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func makeArray&#60;Item&#62;(repeating item: Item, numberOfTimes: Int): [Item] {
+
+    var result = [Item]()
+
+    for _ in 0..&#60;numberOfTimes {
+
+        result.append(item)
+
+    }
+
+    return result
+
+}
+
+makeArray(repeating: "knock", numberOfTimes: 4)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">// Reimplement the Swift standard library's optional type
+
+enum OptionalValue&#60;Wrapped&#62; {
+
+    case none
+
+    case some(Wrapped)
+
+}
+
+var possibleInteger: OptionalValue&#60;Int&#62; = .none
+
+possibleInteger = .some(100)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">// Reimplement the Swift standard library's optional type
+
+enum OptionalValue&#60;Wrapped&#62; {
+
+    case none
+
+    case some(Wrapped)
+
+}
+
+var possibleInteger: OptionalValue&#60;Int&#62; = .none
+
+possibleInteger = .some(100)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func anyCommonElements&#60;T: Sequence, U: Sequence&#62;(_ lhs: T, _ rhs: U) -&#62; Bool
+
+    where T.Element: Equatable, T.Element == U.Element
+
+{
+
+    for lhsItem in lhs {
+
+        for rhsItem in rhs {
+
+            if lhsItem == rhsItem {
+
+                return true
+
+            }
+
+        }
+
+    }
+
+    return false
+
+}
+
+anyCommonElements([1, 2, 3], [3])</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func anyCommonElements&#60;T: Sequence, U: Sequence&#62;(_ lhs: T, _ rhs: U): Bool
+
+    where T.Element: Equatable, T.Element == U.Element
+
+{
+
+    for lhsItem in lhs {
+
+        for rhsItem in rhs {
+
+            if lhsItem == rhsItem {
+
+                return true
+
+            }
+
+        }
+
+    }
+
+    return false
+
+}
+
+anyCommonElements([1, 2, 3], [3])</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

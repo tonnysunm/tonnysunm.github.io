@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Access Control
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Access Control Syntax
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID10" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public class SomePublicClass {}
+
+internal class SomeInternalClass {}
+
+fileprivate class SomeFilePrivateClass {}
+
+private class SomePrivateClass {}
+
+
+
+public var somePublicVariable = 0
+
+internal let someInternalConstant = 0
+
+fileprivate func someFilePrivateFunction() {}
+
+private func somePrivateFunction() {}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public class SomePublicClass {}
+
+internal class SomeInternalClass {}
+
+fileprivate class SomeFilePrivateClass {}
+
+private class SomePrivateClass {}
+
+
+
+public var somePublicVariable = 0
+
+internal val someInternalConstant = 0
+
+fileprivate func someFilePrivateFunction() {}
+
+private func somePrivateFunction() {}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SomeInternalClass {}              // implicitly internal
+
+let someInternalConstant = 0            // implicitly internal</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SomeInternalClass {}              // implicitly internal
+
+val someInternalConstant = 0            // implicitly internal</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Custom Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID11" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public class SomePublicClass {                  // explicitly public class
+
+    public var somePublicProperty = 0            // explicitly public class member
+
+    var someInternalProperty = 0                 // implicitly internal class member
+
+    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+class SomeInternalClass {                       // implicitly internal class
+
+    var someInternalProperty = 0                 // implicitly internal class member
+
+    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+fileprivate class SomeFilePrivateClass {        // explicitly file-private class
+
+    func someFilePrivateMethod() {}              // implicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+private class SomePrivateClass {                // explicitly private class
+
+    func somePrivateMethod() {}                  // implicitly private class member
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public class SomePublicClass {                  // explicitly public class
+
+    public var somePublicProperty = 0            // explicitly public class member
+
+    var someInternalProperty = 0                 // implicitly internal class member
+
+    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+class SomeInternalClass {                       // implicitly internal class
+
+    var someInternalProperty = 0                 // implicitly internal class member
+
+    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+fileprivate class SomeFilePrivateClass {        // explicitly file-private class
+
+    func someFilePrivateMethod() {}              // implicitly file-private class member
+
+    private func somePrivateMethod() {}          // explicitly private class member
+
+}
+
+
+
+private class SomePrivateClass {                // explicitly private class
+
+    func somePrivateMethod() {}                  // implicitly private class member
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Function Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID13" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func someFunction() -&#62; (SomeInternalClass, SomePrivateClass) {
+
+    // function implementation goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func someFunction(): (SomeInternalClass, SomePrivateClass) {
+
+    // function implementation goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">private func someFunction() -&#62; (SomeInternalClass, SomePrivateClass) {
+
+    // function implementation goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">private func someFunction(): (SomeInternalClass, SomePrivateClass) {
+
+    // function implementation goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Enumeration Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID14" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public enum CompassPoint {
+
+    case north
+
+    case south
+
+    case east
+
+    case west
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public enum CompassPoint {
+
+    case north
+
+    case south
+
+    case east
+
+    case west
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Subclassing
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID16" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public class A {
+
+    fileprivate func someMethod() {}
+
+}
+
+
+
+internal class B: A {
+
+    override internal func someMethod() {}
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public class A {
+
+    fileprivate func someMethod() {}
+
+}
+
+
+
+internal class B: A {
+
+    override internal func someMethod() {}
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public class A {
+
+    fileprivate func someMethod() {}
+
+}
+
+
+
+internal class B: A {
+
+    override internal func someMethod() {
+
+        super.someMethod()
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public class A {
+
+    fileprivate func someMethod() {}
+
+}
+
+
+
+internal class B: A {
+
+    override internal func someMethod() {
+
+        super.someMethod()
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Constants, Variables, Properties, and Subscripts
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID17" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">private var privateInstance = SomePrivateClass()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">private var privateInstance = SomePrivateClass()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Getters and Setters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID18" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct TrackedString {
+
+    private(set) var numberOfEdits = 0
+
+    var value: String = "" {
+
+        didSet {
+
+            numberOfEdits += 1
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct TrackedString {
+
+    private(set) var numberOfEdits = 0
+
+    var value: String = "" {
+
+        didSet {
+
+            numberOfEdits += 1
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var stringToEdit = TrackedString()
+
+stringToEdit.value = "This string will be tracked."
+
+stringToEdit.value += " This edit will increment numberOfEdits."
+
+stringToEdit.value += " So will this one."
+
+print("The number of edits is \(stringToEdit.numberOfEdits)")
+
+// Prints "The number of edits is 3"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var stringToEdit = TrackedString()
+
+stringToEdit.value = "This string will be tracked."
+
+stringToEdit.value += " This edit will increment numberOfEdits."
+
+stringToEdit.value += " So will this one."
+
+println("The number of edits is ${stringToEdit.numberOfEdits}")
+
+// Prints "The number of edits is 3"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">public struct TrackedString {
+
+    public private(set) var numberOfEdits = 0
+
+    public var value: String = "" {
+
+        didSet {
+
+            numberOfEdits += 1
+
+        }
+
+    }
+
+    public init() {}
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">public struct TrackedString {
+
+    public private(set) var numberOfEdits = 0
+
+    public var value: String = "" {
+
+        didSet {
+
+            numberOfEdits += 1
+
+        }
+
+    }
+
+    public init() {}
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Private Members in Extensions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID559" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">protocol SomeProtocol {
+
+    func doSomething()
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    func doSomething()
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SomeStruct {
+
+    private var privateVariable = 12
+
+}
+
+
+
+extension SomeStruct: SomeProtocol {
+
+    func doSomething() {
+
+        print(privateVariable)
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SomeStruct {
+
+    private var privateVariable = 12
+
+}
+
+
+
+extension SomeStruct: SomeProtocol {
+
+    func doSomething() {
+
+        println(privateVariable)
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

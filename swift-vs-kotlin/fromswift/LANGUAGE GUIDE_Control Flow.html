@@ -1,0 +1,2523 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Control Flow
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                For-In Loops
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID121" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let names = ["Anna", "Alex", "Brian", "Jack"]
+
+for name in names {
+
+    print("Hello, \(name)!")
+
+}
+
+// Hello, Anna!
+
+// Hello, Alex!
+
+// Hello, Brian!
+
+// Hello, Jack!</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val names = ["Anna", "Alex", "Brian", "Jack"]
+
+for name in names {
+
+    println("Hello, ${name)!")
+
+}
+
+// Hello, Anna!
+
+// Hello, Alex!
+
+// Hello, Brian!
+
+// Hello, Jack!</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+
+for (animalName, legCount) in numberOfLegs {
+
+    print("\(animalName)s have \(legCount) legs")
+
+}
+
+// cats have 4 legs
+
+// ants have 6 legs
+
+// spiders have 8 legs</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+
+for (animalName, legCount) in numberOfLegs {
+
+    println("${animalName)s have ${legCount) legs")
+
+}
+
+// cats have 4 legs
+
+// ants have 6 legs
+
+// spiders have 8 legs</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for index in 1...5 {
+
+    print("\(index) times 5 is \(index * 5)")
+
+}
+
+// 1 times 5 is 5
+
+// 2 times 5 is 10
+
+// 3 times 5 is 15
+
+// 4 times 5 is 20
+
+// 5 times 5 is 25</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for index in 1...5 {
+
+    println("${index) times 5 is ${index * 5)")
+
+}
+
+// 1 times 5 is 5
+
+// 2 times 5 is 10
+
+// 3 times 5 is 15
+
+// 4 times 5 is 20
+
+// 5 times 5 is 25</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let base = 3
+
+let power = 10
+
+var answer = 1
+
+for _ in 1...power {
+
+    answer *= base
+
+}
+
+print("\(base) to the power of \(power) is \(answer)")
+
+// Prints "3 to the power of 10 is 59049"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val base = 3
+
+val power = 10
+
+var answer = 1
+
+for _ in 1...power {
+
+    answer *= base
+
+}
+
+println("${base) to the power of ${power) is ${answer)")
+
+// Prints "3 to the power of 10 is 59049"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let minutes = 60
+
+for tickMark in 0..&#60;minutes {
+
+    // render the tick mark each minute (60 times)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val minutes = 60
+
+for tickMark in 0..&#60;minutes {
+
+    // render the tick mark each minute (60 times)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let minuteInterval = 5
+
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+
+    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val minuteInterval = 5
+
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+
+    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let hours = 12
+
+let hourInterval = 3
+
+for tickMark in stride(from: 3, through: hours, by: hourInterval) {
+
+    // render the tick mark every 3 hours (3, 6, 9, 12)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val hours = 12
+
+val hourInterval = 3
+
+for tickMark in stride(from: 3, through: hours, by: hourInterval) {
+
+    // render the tick mark every 3 hours (3, 6, 9, 12)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                While
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID125" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">while condition {
+
+    statements
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">while condition {
+
+    statements
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var square = 0
+
+var diceRoll = 0
+
+while square &#60; finalSquare {
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+    if square &#60; board.count {
+
+        // if we're still on the board, move up or down for a snake or a ladder
+
+        square += board[square]
+
+    }
+
+}
+
+print("Game over!")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var square = 0
+
+var diceRoll = 0
+
+while square &#60; finalSquare {
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+    if square &#60; board.count {
+
+        // if we're still on the board, move up or down for a snake or a ladder
+
+        square += board[square]
+
+    }
+
+}
+
+println("Game over!")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Repeat-While
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID126" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">repeat {
+
+    statements
+
+} while condition</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">repeat {
+
+    statements
+
+} while condition</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">repeat {
+
+    // move up or down for a snake or ladder
+
+    square += board[square]
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+} while square &#60; finalSquare
+
+print("Game over!")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">repeat {
+
+    // move up or down for a snake or ladder
+
+    square += board[square]
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+} while square &#60; finalSquare
+
+println("Game over!")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                If
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID128" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var temperatureInFahrenheit = 30
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    print("It's very cold. Consider wearing a scarf.")
+
+}
+
+// Prints "It's very cold. Consider wearing a scarf."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var temperatureInFahrenheit = 30
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+}
+
+// Prints "It's very cold. Consider wearing a scarf."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">temperatureInFahrenheit = 40
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    print("It's very cold. Consider wearing a scarf.")
+
+} else {
+
+    print("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's not that cold. Wear a t-shirt."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 40
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else {
+
+    println("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's not that cold. Wear a t-shirt."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">temperatureInFahrenheit = 90
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    print("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    print("It's really warm. Don't forget to wear sunscreen.")
+
+} else {
+
+    print("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's really warm. Don't forget to wear sunscreen."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 90
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    println("It's really warm. Don't forget to wear sunscreen.")
+
+} else {
+
+    println("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's really warm. Don't forget to wear sunscreen."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">temperatureInFahrenheit = 72
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    print("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    print("It's really warm. Don't forget to wear sunscreen.")
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 72
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    println("It's really warm. Don't forget to wear sunscreen.")
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Switch
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID129" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">switch some value to consider {
+
+case value 1:
+
+    respond to value 1
+
+case value 2,
+
+     value 3:
+
+    respond to value 2 or 3
+
+default:
+
+    otherwise, do something else
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">switch some value to consider {
+
+case value 1:
+
+    respond to value 1
+
+case value 2,
+
+     value 3:
+
+    respond to value 2 or 3
+
+default:
+
+    otherwise, do something else
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let someCharacter: Character = "z"
+
+switch someCharacter {
+
+case "a":
+
+    print("The first letter of the alphabet")
+
+case "z":
+
+    print("The last letter of the alphabet")
+
+default:
+
+    print("Some other character")
+
+}
+
+// Prints "The last letter of the alphabet"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val someCharacter: Character = "z"
+
+switch someCharacter {
+
+case "a":
+
+    println("The first letter of the alphabet")
+
+case "z":
+
+    println("The last letter of the alphabet")
+
+default:
+
+    println("Some other character")
+
+}
+
+// Prints "The last letter of the alphabet"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                No Implicit Fallthrough
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID130" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a": // Invalid, the case has an empty body
+
+case "A":
+
+    print("The letter A")
+
+default:
+
+    print("Not the letter A")
+
+}
+
+// This will report a compile-time error.</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a": // Invalid, the case has an empty body
+
+case "A":
+
+    println("The letter A")
+
+default:
+
+    println("Not the letter A")
+
+}
+
+// This will report a compile-time error.</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a", "A":
+
+    print("The letter A")
+
+default:
+
+    print("Not the letter A")
+
+}
+
+// Prints "The letter A"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a", "A":
+
+    println("The letter A")
+
+default:
+
+    println("Not the letter A")
+
+}
+
+// Prints "The letter A"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Interval Matching
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID131" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let approximateCount = 62
+
+let countedThings = "moons orbiting Saturn"
+
+let naturalCount: String
+
+switch approximateCount {
+
+case 0:
+
+    naturalCount = "no"
+
+case 1..&#60;5:
+
+    naturalCount = "a few"
+
+case 5..&#60;12:
+
+    naturalCount = "several"
+
+case 12..&#60;100:
+
+    naturalCount = "dozens of"
+
+case 100..&#60;1000:
+
+    naturalCount = "hundreds of"
+
+default:
+
+    naturalCount = "many"
+
+}
+
+print("There are \(naturalCount) \(countedThings).")
+
+// Prints "There are dozens of moons orbiting Saturn."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val approximateCount = 62
+
+val countedThings = "moons orbiting Saturn"
+
+val naturalCount: String
+
+switch approximateCount {
+
+case 0:
+
+    naturalCount = "no"
+
+case 1..&#60;5:
+
+    naturalCount = "a few"
+
+case 5..&#60;12:
+
+    naturalCount = "several"
+
+case 12..&#60;100:
+
+    naturalCount = "dozens of"
+
+case 100..&#60;1000:
+
+    naturalCount = "hundreds of"
+
+default:
+
+    naturalCount = "many"
+
+}
+
+println("There are ${naturalCount) ${countedThings).")
+
+// Prints "There are dozens of moons orbiting Saturn."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Tuples
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID132" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let somePoint = (1, 1)
+
+switch somePoint {
+
+case (0, 0):
+
+    print("\(somePoint) is at the origin")
+
+case (_, 0):
+
+    print("\(somePoint) is on the x-axis")
+
+case (0, _):
+
+    print("\(somePoint) is on the y-axis")
+
+case (-2...2, -2...2):
+
+    print("\(somePoint) is inside the box")
+
+default:
+
+    print("\(somePoint) is outside of the box")
+
+}
+
+// Prints "(1, 1) is inside the box"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val somePoint = (1, 1)
+
+switch somePoint {
+
+case (0, 0):
+
+    println("${somePoint) is at the origin")
+
+case (_, 0):
+
+    println("${somePoint) is on the x-axis")
+
+case (0, _):
+
+    println("${somePoint) is on the y-axis")
+
+case (-2...2, -2...2):
+
+    println("${somePoint) is inside the box")
+
+default:
+
+    println("${somePoint) is outside of the box")
+
+}
+
+// Prints "(1, 1) is inside the box"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Value Bindings
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID133" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let anotherPoint = (2, 0)
+
+switch anotherPoint {
+
+case (let x, 0):
+
+    print("on the x-axis with an x value of \(x)")
+
+case (0, let y):
+
+    print("on the y-axis with a y value of \(y)")
+
+case let (x, y):
+
+    print("somewhere else at (\(x), \(y))")
+
+}
+
+// Prints "on the x-axis with an x value of 2"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val anotherPoint = (2, 0)
+
+switch anotherPoint {
+
+case (val x, 0):
+
+    println("on the x-axis with an x value of ${x)")
+
+case (0, val y):
+
+    println("on the y-axis with a y value of ${y)")
+
+case val (x, y):
+
+    println("somewhere else at (${x), ${y))")
+
+}
+
+// Prints "on the x-axis with an x value of 2"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Where
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID134" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let yetAnotherPoint = (1, -1)
+
+switch yetAnotherPoint {
+
+case let (x, y) where x == y:
+
+    print("(\(x), \(y)) is on the line x == y")
+
+case let (x, y) where x == -y:
+
+    print("(\(x), \(y)) is on the line x == -y")
+
+case let (x, y):
+
+    print("(\(x), \(y)) is just some arbitrary point")
+
+}
+
+// Prints "(1, -1) is on the line x == -y"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val yetAnotherPoint = (1, -1)
+
+switch yetAnotherPoint {
+
+case val (x, y) where x == y:
+
+    println("(${x), ${y)) is on the line x == y")
+
+case val (x, y) where x == -y:
+
+    println("(${x), ${y)) is on the line x == -y")
+
+case val (x, y):
+
+    println("(${x), ${y)) is just some arbitrary point")
+
+}
+
+// Prints "(1, -1) is on the line x == -y"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Compound Cases
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID548" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let someCharacter: Character = "e"
+
+switch someCharacter {
+
+case "a", "e", "i", "o", "u":
+
+    print("\(someCharacter) is a vowel")
+
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+
+     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+
+    print("\(someCharacter) is a consonant")
+
+default:
+
+    print("\(someCharacter) is not a vowel or a consonant")
+
+}
+
+// Prints "e is a vowel"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val someCharacter: Character = "e"
+
+switch someCharacter {
+
+case "a", "e", "i", "o", "u":
+
+    println("${someCharacter) is a vowel")
+
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+
+     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+
+    println("${someCharacter) is a consonant")
+
+default:
+
+    println("${someCharacter) is not a vowel or a consonant")
+
+}
+
+// Prints "e is a vowel"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let stillAnotherPoint = (9, 0)
+
+switch stillAnotherPoint {
+
+case (let distance, 0), (0, let distance):
+
+    print("On an axis, \(distance) from the origin")
+
+default:
+
+    print("Not on an axis")
+
+}
+
+// Prints "On an axis, 9 from the origin"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val stillAnotherPoint = (9, 0)
+
+switch stillAnotherPoint {
+
+case (val distance, 0), (0, val distance):
+
+    println("On an axis, ${distance) from the origin")
+
+default:
+
+    println("Not on an axis")
+
+}
+
+// Prints "On an axis, 9 from the origin"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Continue
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID136" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let puzzleInput = "great minds think alike"
+
+var puzzleOutput = ""
+
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+
+for character in puzzleInput {
+
+    if charactersToRemove.contains(character) {
+
+        continue
+
+    }
+
+    puzzleOutput.append(character)
+
+}
+
+print(puzzleOutput)
+
+// Prints "grtmndsthnklk"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val puzzleInput = "great minds think alike"
+
+var puzzleOutput = ""
+
+val charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+
+for character in puzzleInput {
+
+    if charactersToRemove.contains(character) {
+
+        continue
+
+    }
+
+    puzzleOutput.append(character)
+
+}
+
+println(puzzleOutput)
+
+// Prints "grtmndsthnklk"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Break in a Switch Statement
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID139" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let numberSymbol: Character = "&#19977;"  // Chinese symbol for the number 3
+
+var possibleIntegerValue: Int?
+
+switch numberSymbol {
+
+case "1", "&#1633;", "&#19968;", "&#3665;":
+
+    possibleIntegerValue = 1
+
+case "2", "&#1634;", "&#20108;", "&#3666;":
+
+    possibleIntegerValue = 2
+
+case "3", "&#1635;", "&#19977;", "&#3667;":
+
+    possibleIntegerValue = 3
+
+case "4", "&#1636;", "&#22235;", "&#3668;":
+
+    possibleIntegerValue = 4
+
+default:
+
+    break
+
+}
+
+if let integerValue = possibleIntegerValue {
+
+    print("The integer value of \(numberSymbol) is \(integerValue).")
+
+} else {
+
+    print("An integer value could not be found for \(numberSymbol).")
+
+}
+
+// Prints "The integer value of &#19977; is 3."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val numberSymbol: Character = "&#19977;"  // Chinese symbol for the number 3
+
+var possibleIntegerValue: Int?
+
+switch numberSymbol {
+
+case "1", "&#1633;", "&#19968;", "&#3665;":
+
+    possibleIntegerValue = 1
+
+case "2", "&#1634;", "&#20108;", "&#3666;":
+
+    possibleIntegerValue = 2
+
+case "3", "&#1635;", "&#19977;", "&#3667;":
+
+    possibleIntegerValue = 3
+
+case "4", "&#1636;", "&#22235;", "&#3668;":
+
+    possibleIntegerValue = 4
+
+default:
+
+    break
+
+}
+
+if val integerValue = possibleIntegerValue {
+
+    println("The integer value of ${numberSymbol) is ${integerValue).")
+
+} else {
+
+    println("An integer value could not be found for ${numberSymbol).")
+
+}
+
+// Prints "The integer value of &#19977; is 3."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Fallthrough
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID140" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let integerToDescribe = 5
+
+var description = "The number \(integerToDescribe) is"
+
+switch integerToDescribe {
+
+case 2, 3, 5, 7, 11, 13, 17, 19:
+
+    description += " a prime number, and also"
+
+    fallthrough
+
+default:
+
+    description += " an integer."
+
+}
+
+print(description)
+
+// Prints "The number 5 is a prime number, and also an integer."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val integerToDescribe = 5
+
+var description = "The number ${integerToDescribe) is"
+
+switch integerToDescribe {
+
+case 2, 3, 5, 7, 11, 13, 17, 19:
+
+    description += " a prime number, and also"
+
+    fallthrough
+
+default:
+
+    description += " an integer."
+
+}
+
+println(description)
+
+// Prints "The number 5 is a prime number, and also an integer."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Labeled Statements
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID141" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">label name: while condition {
+
+    statements
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">label name: while condition {
+
+    statements
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">gameLoop: while square != finalSquare {
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    switch square + diceRoll {
+
+    case finalSquare:
+
+        // diceRoll will move us to the final square, so the game is over
+
+        break gameLoop
+
+    case let newSquare where newSquare &#62; finalSquare:
+
+        // diceRoll will move us beyond the final square, so roll again
+
+        continue gameLoop
+
+    default:
+
+        // this is a valid move, so find out its effect
+
+        square += diceRoll
+
+        square += board[square]
+
+    }
+
+}
+
+print("Game over!")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">gameLoop: while square != finalSquare {
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    switch square + diceRoll {
+
+    case finalSquare:
+
+        // diceRoll will move us to the final square, so the game is over
+
+        break gameLoop
+
+    case val newSquare where newSquare &#62; finalSquare:
+
+        // diceRoll will move us beyond the final square, so roll again
+
+        continue gameLoop
+
+    default:
+
+        // this is a valid move, so find out its effect
+
+        square += diceRoll
+
+        square += board[square]
+
+    }
+
+}
+
+println("Game over!")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Early Exit
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID525" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func greet(person: [String: String]) {
+
+    guard let name = person["name"] else {
+
+        return
+
+    }
+
+
+
+    print("Hello \(name)!")
+
+
+
+    guard let location = person["location"] else {
+
+        print("I hope the weather is nice near you.")
+
+        return
+
+    }
+
+
+
+    print("I hope the weather is nice in \(location).")
+
+}
+
+
+
+greet(person: ["name": "John"])
+
+// Prints "Hello John!"
+
+// Prints "I hope the weather is nice near you."
+
+greet(person: ["name": "Jane", "location": "Cupertino"])
+
+// Prints "Hello Jane!"
+
+// Prints "I hope the weather is nice in Cupertino."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func greet(person: [String: String]) {
+
+    guard val name = person["name"] else {
+
+        return
+
+    }
+
+
+
+    println("Hello ${name)!")
+
+
+
+    guard val location = person["location"] else {
+
+        println("I hope the weather is nice near you.")
+
+        return
+
+    }
+
+
+
+    println("I hope the weather is nice in ${location).")
+
+}
+
+
+
+greet(person: ["name": "John"])
+
+// Prints "Hello John!"
+
+// Prints "I hope the weather is nice near you."
+
+greet(person: ["name": "Jane", "location": "Cupertino"])
+
+// Prints "Hello Jane!"
+
+// Prints "I hope the weather is nice in Cupertino."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Checking API Availability
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID523" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if #available(iOS 10, macOS 10.12, *) {
+
+    // Use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
+
+} else {
+
+    // Fall back to earlier iOS and macOS APIs
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if #available(iOS 10, macOS 10.12, *) {
+
+    // Use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
+
+} else {
+
+    // Fall back to earlier iOS and macOS APIs
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if #available(platform name version, ..., *) {
+
+    statements to execute if the APIs are available
+
+} else {
+
+    fallback statements to execute if the APIs are unavailable
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if #available(platform name version, ..., *) {
+
+    statements to execute if the APIs are available
+
+} else {
+
+    fallback statements to execute if the APIs are unavailable
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

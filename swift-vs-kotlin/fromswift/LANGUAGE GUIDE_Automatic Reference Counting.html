@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Automatic Reference Counting
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                ARC in Action
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID50" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Person {
+
+    let name: String
+
+    init(name: String) {
+
+        self.name = name
+
+        print("\(name) is being initialized")
+
+    }
+
+    deinit {
+
+        print("\(name) is being deinitialized")
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Person {
+
+    val name: String
+
+    init(name: String) {
+
+        self.name = name
+
+        println("${name} is being initialized")
+
+    }
+
+    deinit {
+
+        println("${name} is being deinitialized")
+
+    }
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var reference1: Person?
+
+var reference2: Person?
+
+var reference3: Person?</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var reference1: Person?
+
+var reference2: Person?
+
+var reference3: Person?</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reference1 = Person(name: "John Appleseed")
+
+// Prints "John Appleseed is being initialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reference1 = Person(name: "John Appleseed")
+
+// Prints "John Appleseed is being initialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reference2 = reference1
+
+reference3 = reference1</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reference2 = reference1
+
+reference3 = reference1</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reference1 = nil
+
+reference2 = nil</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reference1 = nil
+
+reference2 = nil</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reference3 = nil
+
+// Prints "John Appleseed is being deinitialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reference3 = nil
+
+// Prints "John Appleseed is being deinitialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Strong Reference Cycles Between Class Instances
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID51" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Person {
+
+    let name: String
+
+    init(name: String) { self.name = name }
+
+    var apartment: Apartment?
+
+    deinit { print("\(name) is being deinitialized") }
+
+}
+
+
+
+class Apartment {
+
+    let unit: String
+
+    init(unit: String) { self.unit = unit }
+
+    var tenant: Person?
+
+    deinit { print("Apartment \(unit) is being deinitialized") }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Person {
+
+    val name: String
+
+    init(name: String) { self.name = name }
+
+    var apartment: Apartment?
+
+    deinit { println("${name} is being deinitialized") }
+
+}
+
+
+
+class Apartment {
+
+    val unit: String
+
+    init(unit: String) { self.unit = unit }
+
+    var tenant: Person?
+
+    deinit { println("Apartment ${unit} is being deinitialized") }
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var john: Person?
+
+var unit4A: Apartment?</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var john: Person?
+
+var unit4A: Apartment?</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john = Person(name: "John Appleseed")
+
+unit4A = Apartment(unit: "4A")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john = Person(name: "John Appleseed")
+
+unit4A = Apartment(unit: "4A")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john!.apartment = unit4A
+
+unit4A!.tenant = john</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john!.apartment = unit4A
+
+unit4A!.tenant = john</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john = nil
+
+unit4A = nil</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john = nil
+
+unit4A = nil</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Weak References
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID53" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Person {
+
+    let name: String
+
+    init(name: String) { self.name = name }
+
+    var apartment: Apartment?
+
+    deinit { print("\(name) is being deinitialized") }
+
+}
+
+
+
+class Apartment {
+
+    let unit: String
+
+    init(unit: String) { self.unit = unit }
+
+    weak var tenant: Person?
+
+    deinit { print("Apartment \(unit) is being deinitialized") }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Person {
+
+    val name: String
+
+    init(name: String) { self.name = name }
+
+    var apartment: Apartment?
+
+    deinit { println("${name} is being deinitialized") }
+
+}
+
+
+
+class Apartment {
+
+    val unit: String
+
+    init(unit: String) { self.unit = unit }
+
+    weak var tenant: Person?
+
+    deinit { println("Apartment ${unit} is being deinitialized") }
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var john: Person?
+
+var unit4A: Apartment?
+
+
+
+john = Person(name: "John Appleseed")
+
+unit4A = Apartment(unit: "4A")
+
+
+
+john!.apartment = unit4A
+
+unit4A!.tenant = john</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var john: Person?
+
+var unit4A: Apartment?
+
+
+
+john = Person(name: "John Appleseed")
+
+unit4A = Apartment(unit: "4A")
+
+
+
+john!.apartment = unit4A
+
+unit4A!.tenant = john</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john = nil
+
+// Prints "John Appleseed is being deinitialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john = nil
+
+// Prints "John Appleseed is being deinitialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">unit4A = nil
+
+// Prints "Apartment 4A is being deinitialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">unit4A = nil
+
+// Prints "Apartment 4A is being deinitialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unowned References
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID54" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Customer {
+
+    let name: String
+
+    var card: CreditCard?
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+    deinit { print("\(name) is being deinitialized") }
+
+}
+
+
+
+class CreditCard {
+
+    let number: UInt64
+
+    unowned let customer: Customer
+
+    init(number: UInt64, customer: Customer) {
+
+        self.number = number
+
+        self.customer = customer
+
+    }
+
+    deinit { print("Card #\(number) is being deinitialized") }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Customer {
+
+    val name: String
+
+    var card: CreditCard?
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+    deinit { println("${name} is being deinitialized") }
+
+}
+
+
+
+class CreditCard {
+
+    val number: UInt64
+
+    unowned val customer: Customer
+
+    init(number: UInt64, customer: Customer) {
+
+        self.number = number
+
+        self.customer = customer
+
+    }
+
+    deinit { println("Card #${number} is being deinitialized") }
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var john: Customer?</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var john: Customer?</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john = Customer(name: "John Appleseed")
+
+john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john = Customer(name: "John Appleseed")
+
+john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john = nil
+
+// Prints "John Appleseed is being deinitialized"
+
+// Prints "Card #1234567890123456 is being deinitialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john = nil
+
+// Prints "John Appleseed is being deinitialized"
+
+// Prints "Card #1234567890123456 is being deinitialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unowned Optional References
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID625" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Department {
+
+    var name: String
+
+    var courses: [Course]
+
+    init(name: String) {
+
+        self.name = name
+
+        self.courses = []
+
+    }
+
+}
+
+
+
+class Course {
+
+    var name: String
+
+    unowned var department: Department
+
+    unowned var nextCourse: Course?
+
+    init(name: String, in department: Department) {
+
+        self.name = name
+
+        self.department = department
+
+        self.nextCourse = nil
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Department {
+
+    var name: String
+
+    var courses: [Course]
+
+    init(name: String) {
+
+        self.name = name
+
+        self.courses = []
+
+    }
+
+}
+
+
+
+class Course {
+
+    var name: String
+
+    unowned var department: Department
+
+    unowned var nextCourse: Course?
+
+    init(name: String, in department: Department) {
+
+        self.name = name
+
+        self.department = department
+
+        self.nextCourse = nil
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let department = Department(name: "Horticulture")
+
+
+
+let intro = Course(name: "Survey of Plants", in: department)
+
+let intermediate = Course(name: "Growing Common Herbs", in: department)
+
+let advanced = Course(name: "Caring for Tropical Plants", in: department)
+
+
+
+intro.nextCourse = intermediate
+
+intermediate.nextCourse = advanced
+
+department.courses = [intro, intermediate, advanced]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val department = Department(name: "Horticulture")
+
+
+
+val intro = Course(name: "Survey of Plants", in: department)
+
+val intermediate = Course(name: "Growing Common Herbs", in: department)
+
+val advanced = Course(name: "Caring for Tropical Plants", in: department)
+
+
+
+intro.nextCourse = intermediate
+
+intermediate.nextCourse = advanced
+
+department.courses = [intro, intermediate, advanced]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unowned References and Implicitly Unwrapped Optional Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID55" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Country {
+
+    let name: String
+
+    var capitalCity: City!
+
+    init(name: String, capitalName: String) {
+
+        self.name = name
+
+        self.capitalCity = City(name: capitalName, country: self)
+
+    }
+
+}
+
+
+
+class City {
+
+    let name: String
+
+    unowned let country: Country
+
+    init(name: String, country: Country) {
+
+        self.name = name
+
+        self.country = country
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Country {
+
+    val name: String
+
+    var capitalCity: City!
+
+    init(name: String, capitalName: String) {
+
+        self.name = name
+
+        self.capitalCity = City(name: capitalName, country: self)
+
+    }
+
+}
+
+
+
+class City {
+
+    val name: String
+
+    unowned val country: Country
+
+    init(name: String, country: Country) {
+
+        self.name = name
+
+        self.country = country
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var country = Country(name: "Canada", capitalName: "Ottawa")
+
+print("\(country.name)'s capital city is called \(country.capitalCity.name)")
+
+// Prints "Canada's capital city is called Ottawa"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var country = Country(name: "Canada", capitalName: "Ottawa")
+
+println("${country.name}'s capital city is called ${country.capitalCity.name}")
+
+// Prints "Canada's capital city is called Ottawa"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Strong Reference Cycles for Closures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID56" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class HTMLElement {
+
+
+
+    let name: String
+
+    let text: String?
+
+
+
+    lazy var asHTML: () -&#62; String = {
+
+        if let text = self.text {
+
+            return "&#60;\(self.name)&#62;\(text)&#60;/\(self.name)&#62;"
+
+        } else {
+
+            return "&#60;\(self.name) /&#62;"
+
+        }
+
+    }
+
+
+
+    init(name: String, text: String? = nil) {
+
+        self.name = name
+
+        self.text = text
+
+    }
+
+
+
+    deinit {
+
+        print("\(name) is being deinitialized")
+
+    }
+
+
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class HTMLElement {
+
+
+
+    val name: String
+
+    val text: String?
+
+
+
+    lazy var asHTML: (): String = {
+
+        if val text = self.text {
+
+            return "&#60;${self.name}&#62;${text}&#60;/${self.name}&#62;"
+
+        } else {
+
+            return "&#60;${self.name} /&#62;"
+
+        }
+
+    }
+
+
+
+    init(name: String, text: String? = nil) {
+
+        self.name = name
+
+        self.text = text
+
+    }
+
+
+
+    deinit {
+
+        println("${name} is being deinitialized")
+
+    }
+
+
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let heading = HTMLElement(name: "h1")
+
+let defaultText = "some default text"
+
+heading.asHTML = {
+
+    return "&#60;\(heading.name)&#62;\(heading.text ?? defaultText)&#60;/\(heading.name)&#62;"
+
+}
+
+print(heading.asHTML())
+
+// Prints "&#60;h1&#62;some default text&#60;/h1&#62;"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val heading = HTMLElement(name: "h1")
+
+val defaultText = "some default text"
+
+heading.asHTML = {
+
+    return "&#60;${heading.name}&#62;${heading.text ?: defaultText}&#60;/${heading.name}&#62;"
+
+}
+
+println(heading.asHTML())
+
+// Prints "&#60;h1&#62;some default text&#60;/h1&#62;"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+
+print(paragraph!.asHTML())
+
+// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+
+println(paragraph!.asHTML())
+
+// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">paragraph = nil</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">paragraph = nil</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Defining a Capture List
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID58" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">lazy var someClosure = {
+
+    [unowned self, weak delegate = self.delegate]
+
+    (index: Int, stringToProcess: String) -&#62; String in
+
+    // closure body goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">lazy var someClosure = {
+
+    [unowned self, weak delegate = self.delegate]
+
+    (index: Int, stringToProcess: String): String in
+
+    // closure body goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">lazy var someClosure = {
+
+    [unowned self, weak delegate = self.delegate] in
+
+    // closure body goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">lazy var someClosure = {
+
+    [unowned self, weak delegate = self.delegate] in
+
+    // closure body goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Weak and Unowned References
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID59" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class HTMLElement {
+
+
+
+    let name: String
+
+    let text: String?
+
+
+
+    lazy var asHTML: () -&#62; String = {
+
+        [unowned self] in
+
+        if let text = self.text {
+
+            return "&#60;\(self.name)&#62;\(text)&#60;/\(self.name)&#62;"
+
+        } else {
+
+            return "&#60;\(self.name) /&#62;"
+
+        }
+
+    }
+
+
+
+    init(name: String, text: String? = nil) {
+
+        self.name = name
+
+        self.text = text
+
+    }
+
+
+
+    deinit {
+
+        print("\(name) is being deinitialized")
+
+    }
+
+
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class HTMLElement {
+
+
+
+    val name: String
+
+    val text: String?
+
+
+
+    lazy var asHTML: (): String = {
+
+        [unowned self] in
+
+        if val text = self.text {
+
+            return "&#60;${self.name}&#62;${text}&#60;/${self.name}&#62;"
+
+        } else {
+
+            return "&#60;${self.name} /&#62;"
+
+        }
+
+    }
+
+
+
+    init(name: String, text: String? = nil) {
+
+        self.name = name
+
+        self.text = text
+
+    }
+
+
+
+    deinit {
+
+        println("${name} is being deinitialized")
+
+    }
+
+
+
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+
+print(paragraph!.asHTML())
+
+// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+
+println(paragraph!.asHTML())
+
+// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">paragraph = nil
+
+// Prints "p is being deinitialized"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">paragraph = nil
+
+// Prints "p is being deinitialized"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

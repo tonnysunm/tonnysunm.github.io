@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Basic Operators
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Assignment Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID62" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let b = 10
+
+var a = 5
+
+a = b
+
+// a is now equal to 10</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val b = 10
+
+var a = 5
+
+a = b
+
+// a is now equal to 10</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let (x, y) = (1, 2)
+
+// x is equal to 1, and y is equal to 2</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val (x, y) = (1, 2)
+
+// x is equal to 1, and y is equal to 2</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if x = y {
+
+    // This is not valid, because x = y does not return a value.
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if x = y {
+
+    // This is not valid, because x = y does not return a value.
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Arithmetic Operators
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID63" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">1 + 2       // equals 3
+
+5 - 3       // equals 2
+
+2 * 3       // equals 6
+
+10.0 / 2.5  // equals 4.0</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">1 + 2       // equals 3
+
+5 - 3       // equals 2
+
+2 * 3       // equals 6
+
+10.0 / 2.5  // equals 4.0</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">"hello, " + "world"  // equals "hello, world"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">"hello, " + "world"  // equals "hello, world"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Remainder Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID64" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">9 % 4    // equals 1</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">9 % 4    // equals 1</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">-9 % 4   // equals -1</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">-9 % 4   // equals -1</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unary Minus Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID67" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let three = 3
+
+let minusThree = -three       // minusThree equals -3
+
+let plusThree = -minusThree   // plusThree equals 3, or "minus minus three"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val three = 3
+
+val minusThree = -three       // minusThree equals -3
+
+val plusThree = -minusThree   // plusThree equals 3, or "minus minus three"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unary Plus Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID68" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let minusSix = -6
+
+let alsoMinusSix = +minusSix  // alsoMinusSix equals -6</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val minusSix = -6
+
+val alsoMinusSix = +minusSix  // alsoMinusSix equals -6</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Compound Assignment Operators
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID69" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var a = 1
+
+a += 2
+
+// a is now equal to 3</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var a = 1
+
+a += 2
+
+// a is now equal to 3</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Comparison Operators
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID70" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">1 == 1   // true because 1 is equal to 1
+
+2 != 1   // true because 2 is not equal to 1
+
+2 &#62; 1    // true because 2 is greater than 1
+
+1 &#60; 2    // true because 1 is less than 2
+
+1 &#62;= 1   // true because 1 is greater than or equal to 1
+
+2 &#60;= 1   // false because 2 is not less than or equal to 1</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">1 == 1   // true because 1 is equal to 1
+
+2 != 1   // true because 2 is not equal to 1
+
+2 &#62; 1    // true because 2 is greater than 1
+
+1 &#60; 2    // true because 1 is less than 2
+
+1 &#62;= 1   // true because 1 is greater than or equal to 1
+
+2 &#60;= 1   // false because 2 is not less than or equal to 1</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let name = "world"
+
+if name == "world" {
+
+    print("hello, world")
+
+} else {
+
+    print("I'm sorry \(name), but I don't recognize you")
+
+}
+
+// Prints "hello, world", because name is indeed equal to "world".</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val name = "world"
+
+if name == "world" {
+
+    println("hello, world")
+
+} else {
+
+    println("I'm sorry ${name}, but I don't recognize you")
+
+}
+
+// Prints "hello, world", because name is indeed equal to "world".
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">(1, "zebra") &#60; (2, "apple")   // true because 1 is less than 2; "zebra" and "apple" are not compared
+
+(3, "apple") &#60; (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
+
+(4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">(1, "zebra") &#60; (2, "apple")   // true because 1 is less than 2; "zebra" and "apple" are not compared
+
+(3, "apple") &#60; (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
+
+(4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">("blue", -1) &#60; ("purple", 1)        // OK, evaluates to true
+
+("blue", false) &#60; ("purple", true)  // Error because &#60; can't compare Boolean values</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">("blue", -1) &#60; ("purple", 1)        // OK, evaluates to true
+
+("blue", false) &#60; ("purple", true)  // Error because &#60; can't compare Boolean values</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Ternary Conditional Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID71" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if question {
+
+    answer1
+
+} else {
+
+    answer2
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if question {
+
+    answer1
+
+} else {
+
+    answer2
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let contentHeight = 40
+
+let hasHeader = true
+
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
+
+// rowHeight is equal to 90</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val contentHeight = 40
+
+val hasHeader = true
+
+val rowHeight = contentHeight + (hasHeader ? 50 : 20)
+
+// rowHeight is equal to 90</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let contentHeight = 40
+
+let hasHeader = true
+
+let rowHeight: Int
+
+if hasHeader {
+
+    rowHeight = contentHeight + 50
+
+} else {
+
+    rowHeight = contentHeight + 20
+
+}
+
+// rowHeight is equal to 90</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val contentHeight = 40
+
+val hasHeader = true
+
+val rowHeight: Int
+
+if hasHeader {
+
+    rowHeight = contentHeight + 50
+
+} else {
+
+    rowHeight = contentHeight + 20
+
+}
+
+// rowHeight is equal to 90</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Nil-Coalescing Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID72" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">a != nil ? a! : b</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">a != nil ? a! : b</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let defaultColorName = "red"
+
+var userDefinedColorName: String?   // defaults to nil
+
+
+
+var colorNameToUse = userDefinedColorName ?? defaultColorName
+
+// userDefinedColorName is nil, so colorNameToUse is set to the default of "red"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val defaultColorName = "red"
+
+var userDefinedColorName: String?   // defaults to nil
+
+
+
+var colorNameToUse = userDefinedColorName ?: defaultColorName
+
+// userDefinedColorName is nil, so colorNameToUse is set to the default of "red"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">userDefinedColorName = "green"
+
+colorNameToUse = userDefinedColorName ?? defaultColorName
+
+// userDefinedColorName is not nil, so colorNameToUse is set to "green"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">userDefinedColorName = "green"
+
+colorNameToUse = userDefinedColorName ?: defaultColorName
+
+// userDefinedColorName is not nil, so colorNameToUse is set to "green"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Closed Range Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID74" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for index in 1...5 {
+
+    print("\(index) times 5 is \(index * 5)")
+
+}
+
+// 1 times 5 is 5
+
+// 2 times 5 is 10
+
+// 3 times 5 is 15
+
+// 4 times 5 is 20
+
+// 5 times 5 is 25</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for index in 1...5 {
+
+    println("${index} times 5 is ${index * 5}")
+
+}
+
+// 1 times 5 is 5
+
+// 2 times 5 is 10
+
+// 3 times 5 is 15
+
+// 4 times 5 is 20
+
+// 5 times 5 is 25
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Half-Open Range Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID75" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let names = ["Anna", "Alex", "Brian", "Jack"]
+
+let count = names.count
+
+for i in 0..&#60;count {
+
+    print("Person \(i + 1) is called \(names[i])")
+
+}
+
+// Person 1 is called Anna
+
+// Person 2 is called Alex
+
+// Person 3 is called Brian
+
+// Person 4 is called Jack</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val names = ["Anna", "Alex", "Brian", "Jack"]
+
+val count = names.count
+
+for i in 0..&#60;count {
+
+    println("Person ${i + 1} is called ${names[i]}")
+
+}
+
+// Person 1 is called Anna
+
+// Person 2 is called Alex
+
+// Person 3 is called Brian
+
+// Person 4 is called Jack
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                One-Sided Ranges
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID562" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for name in names[2...] {
+
+    print(name)
+
+}
+
+// Brian
+
+// Jack
+
+
+
+for name in names[...2] {
+
+    print(name)
+
+}
+
+// Anna
+
+// Alex
+
+// Brian</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for name in names[2...] {
+
+    println(name)
+
+}
+
+// Brian
+
+// Jack
+
+
+
+for name in names[...2] {
+
+    println(name)
+
+}
+
+// Anna
+
+// Alex
+
+// Brian</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for name in names[..&#60;2] {
+
+    print(name)
+
+}
+
+// Anna
+
+// Alex</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for name in names[..&#60;2] {
+
+    println(name)
+
+}
+
+// Anna
+
+// Alex</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let range = ...5
+
+range.contains(7)   // false
+
+range.contains(4)   // true
+
+range.contains(-1)  // true</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val range = ...5
+
+range.contains(7)   // false
+
+range.contains(4)   // true
+
+range.contains(-1)  // true</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Logical NOT Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID77" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let allowedEntry = false
+
+if !allowedEntry {
+
+    print("ACCESS DENIED")
+
+}
+
+// Prints "ACCESS DENIED"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val allowedEntry = false
+
+if !allowedEntry {
+
+    println("ACCESS DENIED")
+
+}
+
+// Prints "ACCESS DENIED"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Logical AND Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID78" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let enteredDoorCode = true
+
+let passedRetinaScan = false
+
+if enteredDoorCode &#38;&#38; passedRetinaScan {
+
+    print("Welcome!")
+
+} else {
+
+    print("ACCESS DENIED")
+
+}
+
+// Prints "ACCESS DENIED"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val enteredDoorCode = true
+
+val passedRetinaScan = false
+
+if enteredDoorCode &#38;&#38; passedRetinaScan {
+
+    println("Welcome!")
+
+} else {
+
+    println("ACCESS DENIED")
+
+}
+
+// Prints "ACCESS DENIED"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Logical OR Operator
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID79" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let hasDoorKey = false
+
+let knowsOverridePassword = true
+
+if hasDoorKey || knowsOverridePassword {
+
+    print("Welcome!")
+
+} else {
+
+    print("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val hasDoorKey = false
+
+val knowsOverridePassword = true
+
+if hasDoorKey || knowsOverridePassword {
+
+    println("Welcome!")
+
+} else {
+
+    println("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Combining Logical Operators
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID80" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if enteredDoorCode &#38;&#38; passedRetinaScan || hasDoorKey || knowsOverridePassword {
+
+    print("Welcome!")
+
+} else {
+
+    print("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if enteredDoorCode &#38;&#38; passedRetinaScan || hasDoorKey || knowsOverridePassword {
+
+    println("Welcome!")
+
+} else {
+
+    println("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Explicit Parentheses
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID81" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if (enteredDoorCode &#38;&#38; passedRetinaScan) || hasDoorKey || knowsOverridePassword {
+
+    print("Welcome!")
+
+} else {
+
+    print("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if (enteredDoorCode &#38;&#38; passedRetinaScan) || hasDoorKey || knowsOverridePassword {
+
+    println("Welcome!")
+
+} else {
+
+    println("ACCESS DENIED")
+
+}
+
+// Prints "Welcome!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Properties
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Stored Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID255" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct FixedLengthRange {
+
+    var firstValue: Int
+
+    let length: Int
+
+}
+
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+
+// the range represents integer values 0, 1, and 2
+
+rangeOfThreeItems.firstValue = 6
+
+// the range now represents integer values 6, 7, and 8</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct FixedLengthRange {
+
+    var firstValue: Int
+
+    val length: Int
+
+}
+
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+
+// the range represents integer values 0, 1, and 2
+
+rangeOfThreeItems.firstValue = 6
+
+// the range now represents integer values 6, 7, and 8</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Stored Properties of Constant Structure Instances
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID256" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+
+// this range represents integer values 0, 1, 2, and 3
+
+rangeOfFourItems.firstValue = 6
+
+// this will report an error, even though firstValue is a variable property</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+
+// this range represents integer values 0, 1, 2, and 3
+
+rangeOfFourItems.firstValue = 6
+
+// this will report an error, even though firstValue is a variable property</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Lazy Stored Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID257" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class DataImporter {
+
+    /*
+
+    DataImporter is a class to import data from an external file.
+
+    The class is assumed to take a nontrivial amount of time to initialize.
+
+    */
+
+    var filename = "data.txt"
+
+    // the DataImporter class would provide data importing functionality here
+
+}
+
+
+
+class DataManager {
+
+    lazy var importer = DataImporter()
+
+    var data = [String]()
+
+    // the DataManager class would provide data management functionality here
+
+}
+
+
+
+let manager = DataManager()
+
+manager.data.append("Some data")
+
+manager.data.append("Some more data")
+
+// the DataImporter instance for the importer property has not yet been created</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class DataImporter {
+
+    /*
+
+    DataImporter is a class to import data from an external file.
+
+    The class is assumed to take a nontrivial amount of time to initialize.
+
+    */
+
+    var filename = "data.txt"
+
+    // the DataImporter class would provide data importing functionality here
+
+}
+
+
+
+class DataManager {
+
+    lazy var importer = DataImporter()
+
+    var data = [String]()
+
+    // the DataManager class would provide data management functionality here
+
+}
+
+
+
+val manager = DataManager()
+
+manager.data.append("Some data")
+
+manager.data.append("Some more data")
+
+// the DataImporter instance for the importer property has not yet been created</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(manager.importer.filename)
+
+// the DataImporter instance for the importer property has now been created
+
+// Prints "data.txt"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(manager.importer.filename)
+
+// the DataImporter instance for the importer property has now been created
+
+// Prints "data.txt"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Computed Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID259" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Point {
+
+    var x = 0.0, y = 0.0
+
+}
+
+struct Size {
+
+    var width = 0.0, height = 0.0
+
+}
+
+struct Rect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            let centerX = origin.x + (size.width / 2)
+
+            let centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set(newCenter) {
+
+            origin.x = newCenter.x - (size.width / 2)
+
+            origin.y = newCenter.y - (size.height / 2)
+
+        }
+
+    }
+
+}
+
+var square = Rect(origin: Point(x: 0.0, y: 0.0),
+
+                  size: Size(width: 10.0, height: 10.0))
+
+let initialSquareCenter = square.center
+
+square.center = Point(x: 15.0, y: 15.0)
+
+print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
+
+// Prints "square.origin is now at (10.0, 10.0)"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Point {
+
+    var x = 0.0, y = 0.0
+
+}
+
+struct Size {
+
+    var width = 0.0, height = 0.0
+
+}
+
+struct Rect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            val centerX = origin.x + (size.width / 2)
+
+            val centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set(newCenter) {
+
+            origin.x = newCenter.x - (size.width / 2)
+
+            origin.y = newCenter.y - (size.height / 2)
+
+        }
+
+    }
+
+}
+
+var square = Rect(origin: Point(x: 0.0, y: 0.0),
+
+                  size: Size(width: 10.0, height: 10.0))
+
+val initialSquareCenter = square.center
+
+square.center = Point(x: 15.0, y: 15.0)
+
+println("square.origin is now at (${square.origin.x), ${square.origin.y))")
+
+// Prints "square.origin is now at (10.0, 10.0)"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Shorthand Setter Declaration
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID260" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct AlternativeRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            let centerX = origin.x + (size.width / 2)
+
+            let centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct AlternativeRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            val centerX = origin.x + (size.width / 2)
+
+            val centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Shorthand Getter Declaration
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID608" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct CompactRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            Point(x: origin.x + (size.width / 2),
+
+                  y: origin.y + (size.height / 2))
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct CompactRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            Point(x: origin.x + (size.width / 2),
+
+                  y: origin.y + (size.height / 2))
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Read-Only Computed Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID261" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Cuboid {
+
+    var width = 0.0, height = 0.0, depth = 0.0
+
+    var volume: Double {
+
+        return width * height * depth
+
+    }
+
+}
+
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+
+print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
+
+// Prints "the volume of fourByFiveByTwo is 40.0"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Cuboid {
+
+    var width = 0.0, height = 0.0, depth = 0.0
+
+    var volume: Double {
+
+        return width * height * depth
+
+    }
+
+}
+
+val fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+
+println("the volume of fourByFiveByTwo is ${fourByFiveByTwo.volume)")
+
+// Prints "the volume of fourByFiveByTwo is 40.0"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Property Observers
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID262" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class StepCounter {
+
+    var totalSteps: Int = 0 {
+
+        willSet(newTotalSteps) {
+
+            print("About to set totalSteps to \(newTotalSteps)")
+
+        }
+
+        didSet {
+
+            if totalSteps &#62; oldValue  {
+
+                print("Added \(totalSteps - oldValue) steps")
+
+            }
+
+        }
+
+    }
+
+}
+
+let stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+
+// About to set totalSteps to 200
+
+// Added 200 steps
+
+stepCounter.totalSteps = 360
+
+// About to set totalSteps to 360
+
+// Added 160 steps
+
+stepCounter.totalSteps = 896
+
+// About to set totalSteps to 896
+
+// Added 536 steps</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class StepCounter {
+
+    var totalSteps: Int = 0 {
+
+        willSet(newTotalSteps) {
+
+            println("About to set totalSteps to ${newTotalSteps)")
+
+        }
+
+        didSet {
+
+            if totalSteps &#62; oldValue  {
+
+                println("Added ${totalSteps - oldValue) steps")
+
+            }
+
+        }
+
+    }
+
+}
+
+val stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+
+// About to set totalSteps to 200
+
+// Added 200 steps
+
+stepCounter.totalSteps = 360
+
+// About to set totalSteps to 360
+
+// Added 160 steps
+
+stepCounter.totalSteps = 896
+
+// About to set totalSteps to 896
+
+// Added 536 steps</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Property Wrappers
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID617" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">@propertyWrapper
+
+struct TwelveOrLess {
+
+    private var number: Int
+
+    init() { self.number = 0 }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, 12) }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct TwelveOrLess {
+
+    private var number: Int
+
+    init() { self.number = 0 }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, 12) }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SmallRectangle {
+
+    @TwelveOrLess var height: Int
+
+    @TwelveOrLess var width: Int
+
+}
+
+
+
+var rectangle = SmallRectangle()
+
+print(rectangle.height)
+
+// Prints "0"
+
+
+
+rectangle.height = 10
+
+print(rectangle.height)
+
+// Prints "10"
+
+
+
+rectangle.height = 24
+
+print(rectangle.height)
+
+// Prints "12"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SmallRectangle {
+
+    @TwelveOrLess var height: Int
+
+    @TwelveOrLess var width: Int
+
+}
+
+
+
+var rectangle = SmallRectangle()
+
+println(rectangle.height)
+
+// Prints "0"
+
+
+
+rectangle.height = 10
+
+println(rectangle.height)
+
+// Prints "10"
+
+
+
+rectangle.height = 24
+
+println(rectangle.height)
+
+// Prints "12"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SmallRectangle {
+
+    private var _height = TwelveOrLess()
+
+    private var _width = TwelveOrLess()
+
+    var height: Int {
+
+        get { return _height.wrappedValue }
+
+        set { _height.wrappedValue = newValue }
+
+    }
+
+    var width: Int {
+
+        get { return _width.wrappedValue }
+
+        set { _width.wrappedValue = newValue }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SmallRectangle {
+
+    private var _height = TwelveOrLess()
+
+    private var _width = TwelveOrLess()
+
+    var height: Int {
+
+        get { return _height.wrappedValue }
+
+        set { _height.wrappedValue = newValue }
+
+    }
+
+    var width: Int {
+
+        get { return _width.wrappedValue }
+
+        set { _width.wrappedValue = newValue }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Setting Initial Values for Wrapped Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID618" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">@propertyWrapper
+
+struct SmallNumber {
+
+    private var maximum: Int
+
+    private var number: Int
+
+
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, maximum) }
+
+    }
+
+
+
+    init() {
+
+        maximum = 12
+
+        number = 0
+
+    }
+
+    init(wrappedValue: Int) {
+
+        maximum = 12
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+    init(wrappedValue: Int, maximum: Int) {
+
+        self.maximum = maximum
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct SmallNumber {
+
+    private var maximum: Int
+
+    private var number: Int
+
+
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, maximum) }
+
+    }
+
+
+
+    init() {
+
+        maximum = 12
+
+        number = 0
+
+    }
+
+    init(wrappedValue: Int) {
+
+        maximum = 12
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+    init(wrappedValue: Int, maximum: Int) {
+
+        self.maximum = maximum
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct ZeroRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+}
+
+
+
+var zeroRectangle = ZeroRectangle()
+
+print(zeroRectangle.height, zeroRectangle.width)
+
+// Prints "0 0"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct ZeroRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+}
+
+
+
+var zeroRectangle = ZeroRectangle()
+
+println(zeroRectangle.height, zeroRectangle.width)
+
+// Prints "0 0"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct UnitRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber var width: Int = 1
+
+}
+
+
+
+var unitRectangle = UnitRectangle()
+
+print(unitRectangle.height, unitRectangle.width)
+
+// Prints "1 1"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct UnitRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber var width: Int = 1
+
+}
+
+
+
+var unitRectangle = UnitRectangle()
+
+println(unitRectangle.height, unitRectangle.width)
+
+// Prints "1 1"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct NarrowRectangle {
+
+    @SmallNumber(wrappedValue: 2, maximum: 5) var height: Int
+
+    @SmallNumber(wrappedValue: 3, maximum: 4) var width: Int
+
+}
+
+
+
+var narrowRectangle = NarrowRectangle()
+
+print(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "2 3"
+
+
+
+narrowRectangle.height = 100
+
+narrowRectangle.width = 100
+
+print(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "5 4"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct NarrowRectangle {
+
+    @SmallNumber(wrappedValue: 2, maximum: 5) var height: Int
+
+    @SmallNumber(wrappedValue: 3, maximum: 4) var width: Int
+
+}
+
+
+
+var narrowRectangle = NarrowRectangle()
+
+println(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "2 3"
+
+
+
+narrowRectangle.height = 100
+
+narrowRectangle.width = 100
+
+println(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "5 4"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct MixedRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber(maximum: 9) var width: Int = 2
+
+}
+
+
+
+var mixedRectangle = MixedRectangle()
+
+print(mixedRectangle.height)
+
+// Prints "1"
+
+
+
+mixedRectangle.height = 20
+
+print(mixedRectangle.height)
+
+// Prints "12"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct MixedRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber(maximum: 9) var width: Int = 2
+
+}
+
+
+
+var mixedRectangle = MixedRectangle()
+
+println(mixedRectangle.height)
+
+// Prints "1"
+
+
+
+mixedRectangle.height = 20
+
+println(mixedRectangle.height)
+
+// Prints "12"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Projecting a Value From a Property Wrapper
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID619" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">@propertyWrapper
+
+struct SmallNumber {
+
+    private var number: Int
+
+    var projectedValue: Bool
+
+    init() {
+
+        self.number = 0
+
+        self.projectedValue = false
+
+    }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set {
+
+            if newValue &#62; 12 {
+
+                number = 12
+
+                projectedValue = true
+
+            } else {
+
+                number = newValue
+
+                projectedValue = false
+
+            }
+
+        }
+
+    }
+
+}
+
+struct SomeStructure {
+
+    @SmallNumber var someNumber: Int
+
+}
+
+var someStructure = SomeStructure()
+
+
+
+someStructure.someNumber = 4
+
+print(someStructure.$someNumber)
+
+// Prints "false"
+
+
+
+someStructure.someNumber = 55
+
+print(someStructure.$someNumber)
+
+// Prints "true"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct SmallNumber {
+
+    private var number: Int
+
+    var projectedValue: Bool
+
+    init() {
+
+        self.number = 0
+
+        self.projectedValue = false
+
+    }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set {
+
+            if newValue &#62; 12 {
+
+                number = 12
+
+                projectedValue = true
+
+            } else {
+
+                number = newValue
+
+                projectedValue = false
+
+            }
+
+        }
+
+    }
+
+}
+
+struct SomeStructure {
+
+    @SmallNumber var someNumber: Int
+
+}
+
+var someStructure = SomeStructure()
+
+
+
+someStructure.someNumber = 4
+
+println(someStructure.$someNumber)
+
+// Prints "false"
+
+
+
+someStructure.someNumber = 55
+
+println(someStructure.$someNumber)
+
+// Prints "true"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum Size {
+
+    case small, large
+
+}
+
+
+
+struct SizedRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+
+
+    mutating func resize(to size: Size) -&#62; Bool {
+
+        switch size {
+
+        case .small:
+
+            height = 10
+
+            width = 20
+
+        case .large:
+
+            height = 100
+
+            width = 100
+
+        }
+
+        return $height || $width
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum Size {
+
+    case small, large
+
+}
+
+
+
+struct SizedRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+
+
+    mutating func resize(to size: Size): Bool {
+
+        switch size {
+
+        case .small:
+
+            height = 10
+
+            width = 20
+
+        case .large:
+
+            height = 100
+
+            width = 100
+
+        }
+
+        return $height || $width
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Type Property Syntax
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID265" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SomeStructure {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 1
+
+    }
+
+}
+
+enum SomeEnumeration {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 6
+
+    }
+
+}
+
+class SomeClass {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 27
+
+    }
+
+    class var overrideableComputedTypeProperty: Int {
+
+        return 107
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SomeStructure {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 1
+
+    }
+
+}
+
+enum SomeEnumeration {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 6
+
+    }
+
+}
+
+class SomeClass {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 27
+
+    }
+
+    class var overrideableComputedTypeProperty: Int {
+
+        return 107
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Querying and Setting Type Properties
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID266" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(SomeStructure.storedTypeProperty)
+
+// Prints "Some value."
+
+SomeStructure.storedTypeProperty = "Another value."
+
+print(SomeStructure.storedTypeProperty)
+
+// Prints "Another value."
+
+print(SomeEnumeration.computedTypeProperty)
+
+// Prints "6"
+
+print(SomeClass.computedTypeProperty)
+
+// Prints "27"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(SomeStructure.storedTypeProperty)
+
+// Prints "Some value."
+
+SomeStructure.storedTypeProperty = "Another value."
+
+println(SomeStructure.storedTypeProperty)
+
+// Prints "Another value."
+
+println(SomeEnumeration.computedTypeProperty)
+
+// Prints "6"
+
+println(SomeClass.computedTypeProperty)
+
+// Prints "27"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct AudioChannel {
+
+    static let thresholdLevel = 10
+
+    static var maxInputLevelForAllChannels = 0
+
+    var currentLevel: Int = 0 {
+
+        didSet {
+
+            if currentLevel &#62; AudioChannel.thresholdLevel {
+
+                // cap the new audio level to the threshold level
+
+                currentLevel = AudioChannel.thresholdLevel
+
+            }
+
+            if currentLevel &#62; AudioChannel.maxInputLevelForAllChannels {
+
+                // store this as the new overall maximum input level
+
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+
+            }
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct AudioChannel {
+
+    static val thresholdLevel = 10
+
+    static var maxInputLevelForAllChannels = 0
+
+    var currentLevel: Int = 0 {
+
+        didSet {
+
+            if currentLevel &#62; AudioChannel.thresholdLevel {
+
+                // cap the new audio level to the threshold level
+
+                currentLevel = AudioChannel.thresholdLevel
+
+            }
+
+            if currentLevel &#62; AudioChannel.maxInputLevelForAllChannels {
+
+                // store this as the new overall maximum input level
+
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+
+            }
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var leftChannel = AudioChannel()
+
+var rightChannel = AudioChannel()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var leftChannel = AudioChannel()
+
+var rightChannel = AudioChannel()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">leftChannel.currentLevel = 7
+
+print(leftChannel.currentLevel)
+
+// Prints "7"
+
+print(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "7"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">leftChannel.currentLevel = 7
+
+println(leftChannel.currentLevel)
+
+// Prints "7"
+
+println(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "7"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">rightChannel.currentLevel = 11
+
+print(rightChannel.currentLevel)
+
+// Prints "10"
+
+print(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "10"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">rightChannel.currentLevel = 11
+
+println(rightChannel.currentLevel)
+
+// Prints "10"
+
+println(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "10"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

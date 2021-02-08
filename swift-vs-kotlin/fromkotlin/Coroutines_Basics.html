@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> Getting Started </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">
+                  Basic Syntax
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Idioms.html">
+                  Idioms
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Coding Conventions.html">
+                  Coding Conventions
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Basics </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Basic Types.html">
+                  Basic Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Packages and Imports.html">
+                  Packages and Imports
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
+                  Returns and Jumps
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Classes and Objects </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
+                  Classes and Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
+                  Properties and Fields
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Interfaces.html">
+                  Interfaces
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
+                  Functional (SAM) Interfaces
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
+                  Visibility Modifiers
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Data Classes.html">
+                  Data Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
+                  Sealed Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Nested Classes.html">
+                  Nested Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Enum Classes.html">
+                  Enum Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
+                  Objects
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
+                  Type Aliases
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Inline Classes.html">
+                  Inline Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
+                  Delegation
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegated Properties.html">
+                  Delegated Properties
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Functions and Lambdas </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Functions and Lambdas_Lambdas.html">
+                  Lambdas
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Functions and Lambdas_Inline Functions.html">
+                  Inline Functions
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Collections </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Collections Overview.html">
+                  Collections Overview
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Constructing Collections.html">
+                  Constructing Collections
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Iterators.html">
+                  Iterators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Ranges and Progressions.html">
+                  Ranges and Progressions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Sequences.html">
+                  Sequences
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Operations Overview.html">
+                  Operations Overview
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Transformations.html">
+                  Transformations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
+                  Filtering
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Plus and Minus Operators.html">
+                  Plus and Minus Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Grouping.html">
+                  Grouping
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Retrieving Collection Parts.html">
+                  Retrieving Collection Parts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Retrieving Single Elements.html">
+                  Retrieving Single Elements
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Ordering.html">
+                  Ordering
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Aggregate Operations.html">
+                  Aggregate Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Collection Write Operations.html">
+                  Collection Write Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_List Specific Operations.html">
+                  List Specific Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Set Specific Operations.html">
+                  Set Specific Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Map Specific Operations.html">
+                  Map Specific Operations
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Coroutines </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Basics.html">
+                  Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Cancellation and Timeouts.html">
+                  Cancellation and Timeouts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Composing Suspending Functions.html">
+                  Composing Suspending Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Coroutine Context and Dispatchers.html">
+                  Coroutine Context and Dispatchers
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Asynchronous Flow.html">
+                  Asynchronous Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Channels.html">
+                  Channels
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Exception Handling and Supervision.html">
+                  Exception Handling and Supervision
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Shared Mutable State and Concurrency.html">
+                  Shared Mutable State and Concurrency
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Select Expression (experimental).html">
+                  Select Expression (experimental)
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> More Language Constructs </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Destructuring Declarations.html">
+                  Destructuring Declarations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Type Checks and Casts.html">
+                  Type Checks and Casts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_This expressions.html">
+                  This expressions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Equality.html">
+                  Equality
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Operator overloading.html">
+                  Operator overloading
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Null Safety.html">
+                  Null Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Exceptions.html">
+                  Exceptions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Annotations.html">
+                  Annotations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Reflection.html">
+                  Reflection
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Serialization.html">
+                  Serialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Scope Functions.html">
+                  Scope Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Type-Safe Builders.html">
+                  Type-Safe Builders
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Your first coroutine
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#your-first-coroutine" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() {
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+        println("World!") // print after delay
+    }
+    println("Hello,") // main thread continues while coroutine is delayed
+    Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() {
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
+        print("World!") // print after delay
+    }
+    print("Hello,") // main thread continues while coroutine is delayed
+    Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Bridging blocking and non-blocking worlds
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#bridging-blocking-and-non-blocking-worlds" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() { 
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L)
+        println("World!")
+    }
+    println("Hello,") // main thread continues here immediately
+    runBlocking {     // but this expression blocks the main thread
+        delay(2000L)  // ... while we delay for 2 seconds to keep JVM alive
+    } 
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() { 
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L)
+        print("World!")
+    }
+    print("Hello,") // main thread continues here immediately
+    runBlocking {     // but this expression blocks the main thread
+        delay(2000L)  // ... while we delay for 2 seconds to keep JVM alive
+    } 
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() = runBlocking&#60;Unit&#62; { // start main coroutine
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L)
+        println("World!")
+    }
+    println("Hello,") // main coroutine continues here immediately
+    delay(2000L)      // delaying for 2 seconds to keep JVM alive
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() = runBlocking&#60;Unit&#62; { // start main coroutine
+    GlobalScope.launch { // launch a new coroutine in background and continue
+        delay(1000L)
+        print("World!")
+    }
+    print("Hello,") // main coroutine continues here immediately
+    delay(2000L)      // delaying for 2 seconds to keep JVM alive
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class MyTest {
+    @Test
+    fun testMySuspendingFunction() = runBlocking&#60;Unit&#62; {
+        // here we can use suspending functions using any assertion style that we like
+    }
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class MyTest {
+    @Test
+    func testMySuspendingFunction() = runBlocking&#60;Unit&#62; {
+        // here we can use suspending functions using any assertion style that we like
+    }
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Waiting for a job
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#waiting-for-a-job" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val job = GlobalScope.launch { // launch a new coroutine and keep a reference to its Job
+    delay(1000L)
+    println("World!")
+}
+println("Hello,")
+job.join() // wait until child coroutine completes</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let job = GlobalScope.launch { // launch a new coroutine and keep a reference to its Job
+    delay(1000L)
+    print("World!")
+}
+print("Hello,")
+job.join() // wait until child coroutine completes</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Structured concurrency
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#structured-concurrency" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() = runBlocking { // this: CoroutineScope
+    launch { // launch a new coroutine in the scope of runBlocking
+        delay(1000L)
+        println("World!")
+    }
+    println("Hello,")
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() = runBlocking { // this: CoroutineScope
+    launch { // launch a new coroutine in the scope of runBlocking
+        delay(1000L)
+        print("World!")
+    }
+    print("Hello,")
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Scope builder
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#scope-builder" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() = runBlocking { // this: CoroutineScope
+    launch { 
+        delay(200L)
+        println("Task from runBlocking")
+    }
+    
+    coroutineScope { // Creates a coroutine scope
+        launch {
+            delay(500L) 
+            println("Task from nested launch")
+        }
+    
+        delay(100L)
+        println("Task from coroutine scope") // This line will be printed before the nested launch
+    }
+    
+    println("Coroutine scope is over") // This line is not printed until the nested launch completes
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() = runBlocking { // this: CoroutineScope
+    launch { 
+        delay(200L)
+        print("Task from runBlocking")
+    }
+    
+    coroutineScope { // Creates a coroutine scope
+        launch {
+            delay(500L) 
+            print("Task from nested launch")
+        }
+    
+        delay(100L)
+        print("Task from coroutine scope") // This line will be printed before the nested launch
+    }
+    
+    print("Coroutine scope is over") // This line is not printed until the nested launch completes
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Extract function refactoring
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#extract-function-refactoring" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() = runBlocking {
+    launch { doWorld() }
+    println("Hello,")
+}
+&#8203;
+// this is your first suspending function
+suspend fun doWorld() {
+    delay(1000L)
+    println("World!")
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() = runBlocking {
+    launch { doWorld() }
+    print("Hello,")
+}
+&#8203;
+// this is your first suspending function
+suspend func doWorld() {
+    delay(1000L)
+    print("World!")
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Coroutines ARE light-weight
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#coroutines-are-light-weight" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">import kotlinx.coroutines.*
+&#8203;
+fun main() = runBlocking {
+    repeat(100_000) { // launch a lot of coroutines
+        launch {
+            delay(5000L)
+            print(".")
+        }
+    }
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">import kotlinx.coroutines.*
+&#8203;
+func main() = runBlocking {
+    repeat(100_000) { // launch a lot of coroutines
+        launch {
+            delay(5000L)
+            print(".")
+        }
+    }
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Global coroutines are like daemon threads
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/basics.html#global-coroutines-are-like-daemon-threads" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">GlobalScope.launch {
+    repeat(1000) { i -&#62;
+        println("I'm sleeping $i ...")
+        delay(500L)
+    }
+}
+delay(1300L) // just quit after delay</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">GlobalScope.launch {
+    repeat(1000) { i -&#62;
+        print("I'm sleeping $i ...")
+        delay(500L)
+    }
+}
+delay(1300L) // just quit after delay</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

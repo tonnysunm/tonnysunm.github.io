@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> Getting Started </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">
+                  Basic Syntax
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Idioms.html">
+                  Idioms
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Coding Conventions.html">
+                  Coding Conventions
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Basics </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Basic Types.html">
+                  Basic Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Packages and Imports.html">
+                  Packages and Imports
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
+                  Returns and Jumps
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Classes and Objects </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
+                  Classes and Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
+                  Properties and Fields
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Interfaces.html">
+                  Interfaces
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
+                  Functional (SAM) Interfaces
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
+                  Visibility Modifiers
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Data Classes.html">
+                  Data Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
+                  Sealed Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Nested Classes.html">
+                  Nested Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Enum Classes.html">
+                  Enum Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
+                  Objects
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
+                  Type Aliases
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Inline Classes.html">
+                  Inline Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
+                  Delegation
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegated Properties.html">
+                  Delegated Properties
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Functions and Lambdas </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Functions and Lambdas_Lambdas.html">
+                  Lambdas
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Functions and Lambdas_Inline Functions.html">
+                  Inline Functions
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Collections </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Collections Overview.html">
+                  Collections Overview
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Constructing Collections.html">
+                  Constructing Collections
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Iterators.html">
+                  Iterators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Ranges and Progressions.html">
+                  Ranges and Progressions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Sequences.html">
+                  Sequences
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Operations Overview.html">
+                  Operations Overview
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Transformations.html">
+                  Transformations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
+                  Filtering
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Plus and Minus Operators.html">
+                  Plus and Minus Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Grouping.html">
+                  Grouping
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Retrieving Collection Parts.html">
+                  Retrieving Collection Parts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Retrieving Single Elements.html">
+                  Retrieving Single Elements
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Ordering.html">
+                  Ordering
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Aggregate Operations.html">
+                  Aggregate Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Collection Write Operations.html">
+                  Collection Write Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_List Specific Operations.html">
+                  List Specific Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Set Specific Operations.html">
+                  Set Specific Operations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Collections_Map Specific Operations.html">
+                  Map Specific Operations
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> Coroutines </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Basics.html">
+                  Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Cancellation and Timeouts.html">
+                  Cancellation and Timeouts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Composing Suspending Functions.html">
+                  Composing Suspending Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Coroutine Context and Dispatchers.html">
+                  Coroutine Context and Dispatchers
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Asynchronous Flow.html">
+                  Asynchronous Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Channels.html">
+                  Channels
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Exception Handling and Supervision.html">
+                  Exception Handling and Supervision
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Shared Mutable State and Concurrency.html">
+                  Shared Mutable State and Concurrency
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/Coroutines_Select Expression (experimental).html">
+                  Select Expression (experimental)
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> More Language Constructs </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Destructuring Declarations.html">
+                  Destructuring Declarations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Type Checks and Casts.html">
+                  Type Checks and Casts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_This expressions.html">
+                  This expressions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Equality.html">
+                  Equality
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Operator overloading.html">
+                  Operator overloading
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Null Safety.html">
+                  Null Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Exceptions.html">
+                  Exceptions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Annotations.html">
+                  Annotations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Reflection.html">
+                  Reflection
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Serialization.html">
+                  Serialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Scope Functions.html">
+                  Scope Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromkotlin/More Language Constructs_Type-Safe Builders.html">
+                  Type-Safe Builders
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Kotlin</div>
+                  <h2 style="text-align:center;">
+                    Idioms
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Swift</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating DTOs (POJOs/POCOs)
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#creating-dtos-pojospocos" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">data class Customer(val name: String, val email: String)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <div>❌
+</div>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Default values for function parameters
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#default-values-for-function-parameters" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun foo(a: Int = 0, b: String = "") { ... }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func foo(a: Int = 0, b: String = "") { ... }
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Filtering a list
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#filtering-a-list" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val positives = list.filter { x -&#62; x &#62; 0 }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let positives = list.filter { x in x &#62; 0 }
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val positives = list.filter { it &#62; 0 }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let positives = list.filter { $0 &#62; 0 }
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Checking element presence in a collection.
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#checking-element-presence-in-a-collection" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if ("john@example.com" in emailsList) { ... }
+&#8203;
+if ("jane@example.com" !in emailsList) { ... }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if emailsList.contains("john@example.com") { ... }
+&#8203;
+if !emailsList.contains("jane@example.com") { ... }
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                String Interpolation
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#string-interpolation" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">println("Name $name")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">print("Name \(name)")
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Instance Checks
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#instance-checks" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">when (x) {
+    is Foo -&#62; ...
+    is Bar -&#62; ...
+    else   -&#62; ...
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">switch x {
+case is Foo: ...
+case is Bar: ...
+default: ...
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Traversing a map/list of pairs
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#traversing-a-maplist-of-pairs" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for ((k, v) in map) {
+    println("$k -&#62; $v")
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for (k, v) in map.enumerated {
+    print("\(k) -&#62; \(v)")
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Using ranges
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#using-ranges" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for (i in 1..100) { ... }  // closed range: includes 100
+for (i in 1 until 100) { ... } // half-open range: does not include 100
+for (x in 2..10 step 2) { ... }
+for (x in 10 downTo 1) { ... }
+if (x in 1..10) { ... }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for i in 1...100 { ... }  // closed range: includes 100
+for i in 1..&#60;100 { ... } // half-open range: does not include 100
+for x in stride(from: 2, to: 12, by: 2) { ... }
+for x in stride(from: 10, to: 0, by: -1) { ... }
+if (1...10).contains(x) { ... }
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Read-only list
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#read-only-list" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val list = listOf("a", "b", "c")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let list = ["a", "b", "c"]
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Read-only map
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#read-only-map" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val map = mapOf("a" to 1, "b" to 2, "c" to 3)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let map = ["a": 1, "b": 2, "c": 3]
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Accessing a map
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#accessing-a-map" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">println(map["key"])
+map["key"] = value</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">print(map["key"])
+map["key"] = value
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Lazy property
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#lazy-property" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val p: String by lazy {
+    // compute the string
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">lazy var p: String {
+    // compute the string
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Extension Functions
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#extension-functions" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun String.spaceToCamelCase() { ... }
+&#8203;
+"Convert this to camelcase".spaceToCamelCase()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">extension String {
+    func spaceToCamelCase() { ... }
+}
+&#8203;
+"Convert this to camelcase".spaceToCamelCase()
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Creating a singleton
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#creating-a-singleton" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">object Resource {
+    val name = "Name"
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <div>❌
+</div>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Instantiate an abstract class
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#instantiate-an-abstract-class" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">abstract class MyAbstractClass {
+    abstract fun doSomething()
+    abstract fun sleep()
+}
+&#8203;
+fun main() {
+    val myObject = object : MyAbstractClass() {
+        override fun doSomething() {
+            // ...
+        }
+&#8203;
+        override fun sleep() { // ...
+        }
+    }
+    myObject.doSomething()
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <div>❌
+</div>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                If not null shorthand
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#if-not-null-shorthand" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val files = File("Test").listFiles()
+&#8203;
+println(files?.size)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let files = File("Test").listFiles()
+&#8203;
+print(files?.count)
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                If not null and else shorthand
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#if-not-null-and-else-shorthand" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val files = File("Test").listFiles()
+&#8203;
+println(files?.size ?: "empty")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let files = File("Test").listFiles()
+&#8203;
+print(files?.count ?? 0)
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Executing a statement if null
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#executing-a-statement-if-null" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val values = ...
+val email = values["email"] ?: throw IllegalStateException("Email is missing!")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let values = ...
+guard let email = values["email"] else {
+    throw IllegalStateException("Email is missing!")
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Get first item of a possibly empty collection
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#get-first-item-of-a-possibly-empty-collection" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val emails = ... // might be empty
+val mainEmail = emails.firstOrNull() ?: ""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let emails = ... // might be empty
+let mainEmail = emails.first ?? ""
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Execute if not null
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#execute-if-not-null" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val value = ...
+&#8203;
+value?.let {
+    ... // execute this block if not null
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let value = ...
+&#8203;
+if let value = value {
+    ... // execute this block if not null
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Map nullable value if not null
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#map-nullable-value-if-not-null" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val value = ...
+&#8203;
+val mapped = value?.let { transformValue(it) } ?: defaultValue 
+// defaultValue is returned if the value or the transform result is null.</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let value: Int? = 1
+&#8203;
+let mapped = value.flatMap { transformValue($0) } ?? defaultValue
+// defaultValue is returned if the value or the transform result is null.
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Return on when statement
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#return-on-when-statement" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun transform(color: String): Int {
+    return when (color) {
+        "Red" -&#62; 0
+        "Green" -&#62; 1
+        "Blue" -&#62; 2
+        else -&#62; throw IllegalArgumentException("Invalid color param value")
+    }
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum Error: Swift.Error {
+    case illegalArgumentException(String)
+}
+func transform(color: String) throws -&#62; Int {
+    switch (color) {
+    case "Red": return 0
+    case "Green": return 1
+    case "Blue": return 2
+    default: throw Error.illegalArgumentException("Invalid color param value")
+    }
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                &#39;try/catch&#39; expression
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#trycatch-expression" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun test() {
+    val result = try {
+        count()
+    } catch (e: ArithmeticException) {
+        throw IllegalStateException(e)
+    }
+&#8203;
+    // Working with result
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">indirect enum Error: Swift.Error {
+    case arithmeticException
+    case llegalStateException(Error)
+}
+
+func count() throws -&#62; Int { ... }
+
+func test() throws {
+    let result: Int
+
+    do {
+        result = try count()
+    } catch Error.arithmeticException {
+        throw Error.llegalStateException(.arithmeticException)
+    }
+    
+    // Working with result
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                &#39;if&#39; expression
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#if-expression" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun foo(param: Int) {
+    val result = if (param == 1) {
+        "one"
+    } else if (param == 2) {
+        "two"
+    } else {
+        "three"
+    }
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func foo(param: Int) {
+    let result: String
+    if param == 1 {
+        result = "one"
+    } else if param == 2 {
+        result = "two"
+    } else {
+        result = "three"
+    }
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Builder-style usage of methods that return Unit
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#builder-style-usage-of-methods-that-return-unit" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun arrayOfMinusOnes(size: Int): IntArray {
+    return IntArray(size).apply { fill(-1) }
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func arrayOfMinusOnes(size: Int) -&#62; [Int] {
+    return [Int](repeating: -1, count: size)
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Single-expression functions
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#single-expression-functions" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun theAnswer() = 42</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func theAnswer() -&#62; Int {
+    42
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun theAnswer(): Int {
+    return 42
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func theAnswer() -&#62; Int {
+    return 42
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">fun transform(color: String): Int = when (color) {
+    "Red" -&#62; 0
+    "Green" -&#62; 1
+    "Blue" -&#62; 2
+    else -&#62; throw IllegalArgumentException("Invalid color param value")
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func transform(color: String) throws -&#62; Int {
+    switch color {
+    case "Red": return 0
+    case "Green": return 1
+    case "Blue": return 2
+    default: throw Error.illegalArgumentException("Invalid color param value")
+    }
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Calling multiple methods on an object instance (with)
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#calling-multiple-methods-on-an-object-instance-with" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Turtle {
+    fun penDown()
+    fun penUp()
+    fun turn(degrees: Double)
+    fun forward(pixels: Double)
+}
+&#8203;
+val myTurtle = Turtle()
+with(myTurtle) { //draw a 100 pix square
+    penDown()
+    for (i in 1..4) {
+        forward(100.0)
+        turn(90.0)
+    }
+    penUp()
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <div>❌
+</div>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Configuring properties of an object (apply)
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#configuring-properties-of-an-object-apply" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val myRectangle = Rectangle().apply {
+    length = 4
+    breadth = 5
+    color = 0xFAFAFA
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <div>❌
+</div>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Java 7&#39;s try with resources
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#java-7s-try-with-resources" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val stream = Files.newInputStream(Paths.get("/some/file.txt"))
+stream.buffered().reader().use { reader -&#62;
+    println(reader.readText())
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Convenient form for a generic function that requires the generic type information
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#convenient-form-for-a-generic-function-that-requires-the-generic-type-information" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">//  public final class Gson {
+//     ...
+//     public &#60;T&#62; T fromJson(JsonElement json, Class&#60;T&#62; classOfT) throws JsonSyntaxException {
+//     ...
+&#8203;
+inline fun &#60;reified T: Any&#62; Gson.fromJson(json: JsonElement): T = this.fromJson(json, T::class.java)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Consuming a nullable Boolean
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#consuming-a-nullable-boolean" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">val b: Boolean? = ...
+if (b == true) {
+    ...
+} else {
+    // `b` is false or null
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let b: Boolean? = ...
+if b == true {
+    ...
+} else {
+    // `b` is false or null
+}
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Swapping two variables
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/idioms.html#swapping-two-variables" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var a = 1
+var b = 2
+a = b.also { b = a }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var a = 1
+var b = 2
+(a, b) = (b, a)
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

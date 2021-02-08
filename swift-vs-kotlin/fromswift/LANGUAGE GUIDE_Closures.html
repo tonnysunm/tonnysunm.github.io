@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Closures
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                The Sorted Method
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID96" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func backward(_ s1: String, _ s2: String) -&#62; Bool {
+
+    return s1 &#62; s2
+
+}
+
+var reversedNames = names.sorted(by: backward)
+
+// reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func backward(_ s1: String, _ s2: String): Bool {
+
+    return s1 &#62; s2
+
+}
+
+var reversedNames = names.sorted(by: backward)
+
+// reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Closure Expression Syntax
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID97" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">{ (parameters) -&#62; return type in
+
+    statements
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">{ (parameters): return type in
+
+    statements
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: { (s1: String, s2: String) -&#62; Bool in
+
+    return s1 &#62; s2
+
+})</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: { (s1: String, s2: String): Bool in
+
+    return s1 &#62; s2
+
+})</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: { (s1: String, s2: String) -&#62; Bool in return s1 &#62; s2 } )</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: { (s1: String, s2: String): Bool in return s1 &#62; s2 } )</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Inferring Type From Context
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID98" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: { s1, s2 in return s1 &#62; s2 } )</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: { s1, s2 in return s1 &#62; s2 } )</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Implicit Returns from Single-Expression Closures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID99" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: { s1, s2 in s1 &#62; s2 } )</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: { s1, s2 in s1 &#62; s2 } )</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Shorthand Argument Names
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID100" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: { $0 &#62; $1 } )</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: { $0 &#62; $1 } )</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Operator Methods
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID101" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted(by: &#62;)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted(by: &#62;)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Trailing Closures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID102" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func someFunctionThatTakesAClosure(closure: () -&#62; Void) {
+
+    // function body goes here
+
+}
+
+
+
+// Here's how you call this function without using a trailing closure:
+
+
+
+someFunctionThatTakesAClosure(closure: {
+
+    // closure's body goes here
+
+})
+
+
+
+// Here's how you call this function with a trailing closure instead:
+
+
+
+someFunctionThatTakesAClosure() {
+
+    // trailing closure's body goes here
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func someFunctionThatTakesAClosure(closure: (): Void) {
+
+    // function body goes here
+
+}
+
+
+
+// Here's how you call this function without using a trailing closure:
+
+
+
+someFunctionThatTakesAClosure(closure: {
+
+    // closure's body goes here
+
+})
+
+
+
+// Here's how you call this function with a trailing closure instead:
+
+
+
+someFunctionThatTakesAClosure() {
+
+    // trailing closure's body goes here
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted() { $0 &#62; $1 }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted() { $0 &#62; $1 }</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">reversedNames = names.sorted { $0 &#62; $1 }</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">reversedNames = names.sorted { $0 &#62; $1 }</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let digitNames = [
+
+    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
+
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+
+]
+
+let numbers = [16, 58, 510]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val digitNames = [
+
+    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
+
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+
+]
+
+val numbers = [16, 58, 510]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let strings = numbers.map { (number) -&#62; String in
+
+    var number = number
+
+    var output = ""
+
+    repeat {
+
+        output = digitNames[number % 10]! + output
+
+        number /= 10
+
+    } while number &#62; 0
+
+    return output
+
+}
+
+// strings is inferred to be of type [String]
+
+// its value is ["OneSix", "FiveEight", "FiveOneZero"]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val strings = numbers.map { (number): String in
+
+    var number = number
+
+    var output = ""
+
+    repeat {
+
+        output = digitNames[number % 10]! + output
+
+        number /= 10
+
+    } while number &#62; 0
+
+    return output
+
+}
+
+// strings is inferred to be of type [String]
+
+// its value is ["OneSix", "FiveEight", "FiveOneZero"]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func loadPicture(from server: Server, completion: (Picture) -&#62; Void, onFailure: () -&#62; Void) {
+
+    if let picture = download("photo.jpg", from: server) {
+
+        completion(picture)
+
+    } else {
+
+        onFailure()
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func loadPicture(from server: Server, completion: (Picture): Void, onFailure: (): Void) {
+
+    if val picture = download("photo.jpg", from: server) {
+
+        completion(picture)
+
+    } else {
+
+        onFailure()
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">loadPicture(from: someServer) { picture in
+
+    someView.currentPicture = picture
+
+} onFailure: {
+
+    print("Couldn't download the next picture.")
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">loadPicture(from: someServer) { picture in
+
+    someView.currentPicture = picture
+
+} onFailure: {
+
+    println("Couldn't download the next picture.")
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Capturing Values
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID103" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func makeIncrementer(forIncrement amount: Int) -&#62; () -&#62; Int {
+
+    var runningTotal = 0
+
+    func incrementer() -&#62; Int {
+
+        runningTotal += amount
+
+        return runningTotal
+
+    }
+
+    return incrementer
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func makeIncrementer(forIncrement amount: Int): (): Int {
+
+    var runningTotal = 0
+
+    func incrementer(): Int {
+
+        runningTotal += amount
+
+        return runningTotal
+
+    }
+
+    return incrementer
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func incrementer() -&#62; Int {
+
+    runningTotal += amount
+
+    return runningTotal
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func incrementer(): Int {
+
+    runningTotal += amount
+
+    return runningTotal
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let incrementByTen = makeIncrementer(forIncrement: 10)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val incrementByTen = makeIncrementer(forIncrement: 10)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">incrementByTen()
+
+// returns a value of 10
+
+incrementByTen()
+
+// returns a value of 20
+
+incrementByTen()
+
+// returns a value of 30</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">incrementByTen()
+
+// returns a value of 10
+
+incrementByTen()
+
+// returns a value of 20
+
+incrementByTen()
+
+// returns a value of 30</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let incrementBySeven = makeIncrementer(forIncrement: 7)
+
+incrementBySeven()
+
+// returns a value of 7</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val incrementBySeven = makeIncrementer(forIncrement: 7)
+
+incrementBySeven()
+
+// returns a value of 7</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">incrementByTen()
+
+// returns a value of 40</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">incrementByTen()
+
+// returns a value of 40</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Closures Are Reference Types
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID104" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let alsoIncrementByTen = incrementByTen
+
+alsoIncrementByTen()
+
+// returns a value of 50
+
+
+
+incrementByTen()
+
+// returns a value of 60</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val alsoIncrementByTen = incrementByTen
+
+alsoIncrementByTen()
+
+// returns a value of 50
+
+
+
+incrementByTen()
+
+// returns a value of 60</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Escaping Closures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID546" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var completionHandlers = [() -&#62; Void]()
+
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -&#62; Void) {
+
+    completionHandlers.append(completionHandler)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var completionHandlers = [(): Void]()
+
+func someFunctionWithEscapingClosure(completionHandler: @escaping (): Void) {
+
+    completionHandlers.append(completionHandler)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func someFunctionWithNonescapingClosure(closure: () -&#62; Void) {
+
+    closure()
+
+}
+
+
+
+class SomeClass {
+
+    var x = 10
+
+    func doSomething() {
+
+        someFunctionWithEscapingClosure { self.x = 100 }
+
+        someFunctionWithNonescapingClosure { x = 200 }
+
+    }
+
+}
+
+
+
+let instance = SomeClass()
+
+instance.doSomething()
+
+print(instance.x)
+
+// Prints "200"
+
+
+
+completionHandlers.first?()
+
+print(instance.x)
+
+// Prints "100"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func someFunctionWithNonescapingClosure(closure: (): Void) {
+
+    closure()
+
+}
+
+
+
+class SomeClass {
+
+    var x = 10
+
+    func doSomething() {
+
+        someFunctionWithEscapingClosure { self.x = 100 }
+
+        someFunctionWithNonescapingClosure { x = 200 }
+
+    }
+
+}
+
+
+
+val instance = SomeClass()
+
+instance.doSomething()
+
+println(instance.x)
+
+// Prints "200"
+
+
+
+completionHandlers.first?()
+
+println(instance.x)
+
+// Prints "100"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class SomeOtherClass {
+
+    var x = 10
+
+    func doSomething() {
+
+        someFunctionWithEscapingClosure { [self] in x = 100 }
+
+        someFunctionWithNonescapingClosure { x = 200 }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class SomeOtherClass {
+
+    var x = 10
+
+    func doSomething() {
+
+        someFunctionWithEscapingClosure { [self] in x = 100 }
+
+        someFunctionWithNonescapingClosure { x = 200 }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct SomeStruct {
+
+    var x = 10
+
+    mutating func doSomething() {
+
+        someFunctionWithNonescapingClosure { x = 200 }  // Ok
+
+        someFunctionWithEscapingClosure { x = 100 }     // Error
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct SomeStruct {
+
+    var x = 10
+
+    mutating func doSomething() {
+
+        someFunctionWithNonescapingClosure { x = 200 }  // Ok
+
+        someFunctionWithEscapingClosure { x = 100 }     // Error
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Autoclosures
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID543" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+print(customersInLine.count)
+
+// Prints "5"
+
+
+
+let customerProvider = { customersInLine.remove(at: 0) }
+
+print(customersInLine.count)
+
+// Prints "5"
+
+
+
+print("Now serving \(customerProvider())!")
+
+// Prints "Now serving Chris!"
+
+print(customersInLine.count)
+
+// Prints "4"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+println(customersInLine.count)
+
+// Prints "5"
+
+
+
+val customerProvider = { customersInLine.remove(at: 0) }
+
+println(customersInLine.count)
+
+// Prints "5"
+
+
+
+println("Now serving ${customerProvider()}!")
+
+// Prints "Now serving Chris!"
+
+println(customersInLine.count)
+
+// Prints "4"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">// customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
+
+func serve(customer customerProvider: () -&#62; String) {
+
+    print("Now serving \(customerProvider())!")
+
+}
+
+serve(customer: { customersInLine.remove(at: 0) } )
+
+// Prints "Now serving Alex!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">// customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
+
+func serve(customer customerProvider: (): String) {
+
+    println("Now serving ${customerProvider()}!")
+
+}
+
+serve(customer: { customersInLine.remove(at: 0) } )
+
+// Prints "Now serving Alex!"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">// customersInLine is ["Ewa", "Barry", "Daniella"]
+
+func serve(customer customerProvider: @autoclosure () -&#62; String) {
+
+    print("Now serving \(customerProvider())!")
+
+}
+
+serve(customer: customersInLine.remove(at: 0))
+
+// Prints "Now serving Ewa!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">// customersInLine is ["Ewa", "Barry", "Daniella"]
+
+func serve(customer customerProvider: @autoclosure (): String) {
+
+    println("Now serving ${customerProvider()}!")
+
+}
+
+serve(customer: customersInLine.remove(at: 0))
+
+// Prints "Now serving Ewa!"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">// customersInLine is ["Barry", "Daniella"]
+
+var customerProviders: [() -&#62; String] = []
+
+func collectCustomerProviders(_ customerProvider: @autoclosure @escaping () -&#62; String) {
+
+    customerProviders.append(customerProvider)
+
+}
+
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+
+
+print("Collected \(customerProviders.count) closures.")
+
+// Prints "Collected 2 closures."
+
+for customerProvider in customerProviders {
+
+    print("Now serving \(customerProvider())!")
+
+}
+
+// Prints "Now serving Barry!"
+
+// Prints "Now serving Daniella!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">// customersInLine is ["Barry", "Daniella"]
+
+var customerProviders: [(): String] = []
+
+func collectCustomerProviders(_ customerProvider: @autoclosure @escaping (): String) {
+
+    customerProviders.append(customerProvider)
+
+}
+
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+
+
+println("Collected ${customerProviders.count} closures.")
+
+// Prints "Collected 2 closures."
+
+for customerProvider in customerProviders {
+
+    println("Now serving ${customerProvider()}!")
+
+}
+
+// Prints "Now serving Barry!"
+
+// Prints "Now serving Daniella!"
+</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

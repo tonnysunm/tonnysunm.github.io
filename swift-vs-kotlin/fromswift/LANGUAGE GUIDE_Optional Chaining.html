@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Optional Chaining
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Optional Chaining as an Alternative to Forced Unwrapping
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID246" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Person {
+
+    var residence: Residence?
+
+}
+
+
+
+class Residence {
+
+    var numberOfRooms = 1
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Person {
+
+    var residence: Residence?
+
+}
+
+
+
+class Residence {
+
+    var numberOfRooms = 1
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let john = Person()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val john = Person()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let roomCount = john.residence!.numberOfRooms
+
+// this triggers a runtime error</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val roomCount = john.residence!.numberOfRooms
+
+// this triggers a runtime error</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let roomCount = john.residence?.numberOfRooms {
+
+    print("John's residence has \(roomCount) room(s).")
+
+} else {
+
+    print("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "Unable to retrieve the number of rooms."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val roomCount = john.residence?.numberOfRooms {
+
+    println("John's residence has ${roomCount) room(s).")
+
+} else {
+
+    println("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "Unable to retrieve the number of rooms."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john.residence = Residence()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john.residence = Residence()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let roomCount = john.residence?.numberOfRooms {
+
+    print("John's residence has \(roomCount) room(s).")
+
+} else {
+
+    print("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "John's residence has 1 room(s)."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val roomCount = john.residence?.numberOfRooms {
+
+    println("John's residence has ${roomCount) room(s).")
+
+} else {
+
+    println("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "John's residence has 1 room(s)."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Defining Model Classes for Optional Chaining
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID247" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Person {
+
+    var residence: Residence?
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Person {
+
+    var residence: Residence?
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Residence {
+
+    var rooms = [Room]()
+
+    var numberOfRooms: Int {
+
+        return rooms.count
+
+    }
+
+    subscript(i: Int) -&#62; Room {
+
+        get {
+
+            return rooms[i]
+
+        }
+
+        set {
+
+            rooms[i] = newValue
+
+        }
+
+    }
+
+    func printNumberOfRooms() {
+
+        print("The number of rooms is \(numberOfRooms)")
+
+    }
+
+    var address: Address?
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Residence {
+
+    var rooms = [Room]()
+
+    var numberOfRooms: Int {
+
+        return rooms.count
+
+    }
+
+    subscript(i: Int): Room {
+
+        get {
+
+            return rooms[i]
+
+        }
+
+        set {
+
+            rooms[i] = newValue
+
+        }
+
+    }
+
+    func printNumberOfRooms() {
+
+        println("The number of rooms is ${numberOfRooms)")
+
+    }
+
+    var address: Address?
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Room {
+
+    let name: String
+
+    init(name: String) { self.name = name }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Room {
+
+    val name: String
+
+    init(name: String) { self.name = name }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Address {
+
+    var buildingName: String?
+
+    var buildingNumber: String?
+
+    var street: String?
+
+    func buildingIdentifier() -&#62; String? {
+
+        if let buildingNumber = buildingNumber, let street = street {
+
+            return "\(buildingNumber) \(street)"
+
+        } else if buildingName != nil {
+
+            return buildingName
+
+        } else {
+
+            return nil
+
+        }
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Address {
+
+    var buildingName: String?
+
+    var buildingNumber: String?
+
+    var street: String?
+
+    func buildingIdentifier(): String? {
+
+        if val buildingNumber = buildingNumber, val street = street {
+
+            return "${buildingNumber) ${street)"
+
+        } else if buildingName != nil {
+
+            return buildingName
+
+        } else {
+
+            return nil
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Accessing Properties Through Optional Chaining
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID248" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let john = Person()
+
+if let roomCount = john.residence?.numberOfRooms {
+
+    print("John's residence has \(roomCount) room(s).")
+
+} else {
+
+    print("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "Unable to retrieve the number of rooms."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val john = Person()
+
+if val roomCount = john.residence?.numberOfRooms {
+
+    println("John's residence has ${roomCount) room(s).")
+
+} else {
+
+    println("Unable to retrieve the number of rooms.")
+
+}
+
+// Prints "Unable to retrieve the number of rooms."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let someAddress = Address()
+
+someAddress.buildingNumber = "29"
+
+someAddress.street = "Acacia Road"
+
+john.residence?.address = someAddress</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val someAddress = Address()
+
+someAddress.buildingNumber = "29"
+
+someAddress.street = "Acacia Road"
+
+john.residence?.address = someAddress</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func createAddress() -&#62; Address {
+
+    print("Function was called.")
+
+
+
+    let someAddress = Address()
+
+    someAddress.buildingNumber = "29"
+
+    someAddress.street = "Acacia Road"
+
+
+
+    return someAddress
+
+}
+
+john.residence?.address = createAddress()</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func createAddress(): Address {
+
+    println("Function was called.")
+
+
+
+    val someAddress = Address()
+
+    someAddress.buildingNumber = "29"
+
+    someAddress.street = "Acacia Road"
+
+
+
+    return someAddress
+
+}
+
+john.residence?.address = createAddress()</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Calling Methods Through Optional Chaining
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID249" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func printNumberOfRooms() {
+
+    print("The number of rooms is \(numberOfRooms)")
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func printNumberOfRooms() {
+
+    println("The number of rooms is ${numberOfRooms)")
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if john.residence?.printNumberOfRooms() != nil {
+
+    print("It was possible to print the number of rooms.")
+
+} else {
+
+    print("It was not possible to print the number of rooms.")
+
+}
+
+// Prints "It was not possible to print the number of rooms."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if john.residence?.printNumberOfRooms() != nil {
+
+    println("It was possible to print the number of rooms.")
+
+} else {
+
+    println("It was not possible to print the number of rooms.")
+
+}
+
+// Prints "It was not possible to print the number of rooms."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if (john.residence?.address = someAddress) != nil {
+
+    print("It was possible to set the address.")
+
+} else {
+
+    print("It was not possible to set the address.")
+
+}
+
+// Prints "It was not possible to set the address."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if (john.residence?.address = someAddress) != nil {
+
+    println("It was possible to set the address.")
+
+} else {
+
+    println("It was not possible to set the address.")
+
+}
+
+// Prints "It was not possible to set the address."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Accessing Subscripts Through Optional Chaining
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID250" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let firstRoomName = john.residence?[0].name {
+
+    print("The first room name is \(firstRoomName).")
+
+} else {
+
+    print("Unable to retrieve the first room name.")
+
+}
+
+// Prints "Unable to retrieve the first room name."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val firstRoomName = john.residence?[0].name {
+
+    println("The first room name is ${firstRoomName).")
+
+} else {
+
+    println("Unable to retrieve the first room name.")
+
+}
+
+// Prints "Unable to retrieve the first room name."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">john.residence?[0] = Room(name: "Bathroom")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">john.residence?[0] = Room(name: "Bathroom")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let johnsHouse = Residence()
+
+johnsHouse.rooms.append(Room(name: "Living Room"))
+
+johnsHouse.rooms.append(Room(name: "Kitchen"))
+
+john.residence = johnsHouse
+
+
+
+if let firstRoomName = john.residence?[0].name {
+
+    print("The first room name is \(firstRoomName).")
+
+} else {
+
+    print("Unable to retrieve the first room name.")
+
+}
+
+// Prints "The first room name is Living Room."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val johnsHouse = Residence()
+
+johnsHouse.rooms.append(Room(name: "Living Room"))
+
+johnsHouse.rooms.append(Room(name: "Kitchen"))
+
+john.residence = johnsHouse
+
+
+
+if val firstRoomName = john.residence?[0].name {
+
+    println("The first room name is ${firstRoomName).")
+
+} else {
+
+    println("Unable to retrieve the first room name.")
+
+}
+
+// Prints "The first room name is Living Room."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Accessing Subscripts of Optional Type
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID251" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+
+testScores["Dave"]?[0] = 91
+
+testScores["Bev"]?[0] += 1
+
+testScores["Brian"]?[0] = 72
+
+// the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+
+testScores["Dave"]?[0] = 91
+
+testScores["Bev"]?[0] += 1
+
+testScores["Brian"]?[0] = 72
+
+// the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Linking Multiple Levels of Chaining
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID252" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let johnsStreet = john.residence?.address?.street {
+
+    print("John's street name is \(johnsStreet).")
+
+} else {
+
+    print("Unable to retrieve the address.")
+
+}
+
+// Prints "Unable to retrieve the address."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val johnsStreet = john.residence?.address?.street {
+
+    println("John's street name is ${johnsStreet).")
+
+} else {
+
+    println("Unable to retrieve the address.")
+
+}
+
+// Prints "Unable to retrieve the address."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let johnsAddress = Address()
+
+johnsAddress.buildingName = "The Larches"
+
+johnsAddress.street = "Laurel Street"
+
+john.residence?.address = johnsAddress
+
+
+
+if let johnsStreet = john.residence?.address?.street {
+
+    print("John's street name is \(johnsStreet).")
+
+} else {
+
+    print("Unable to retrieve the address.")
+
+}
+
+// Prints "John's street name is Laurel Street."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val johnsAddress = Address()
+
+johnsAddress.buildingName = "The Larches"
+
+johnsAddress.street = "Laurel Street"
+
+john.residence?.address = johnsAddress
+
+
+
+if val johnsStreet = john.residence?.address?.street {
+
+    println("John's street name is ${johnsStreet).")
+
+} else {
+
+    println("Unable to retrieve the address.")
+
+}
+
+// Prints "John's street name is Laurel Street."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Chaining on Methods with Optional Return Values
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID253" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
+
+    print("John's building identifier is \(buildingIdentifier).")
+
+}
+
+// Prints "John's building identifier is The Larches."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val buildingIdentifier = john.residence?.address?.buildingIdentifier() {
+
+    println("John's building identifier is ${buildingIdentifier).")
+
+}
+
+// Prints "John's building identifier is The Larches."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if let beginsWithThe =
+
+    john.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
+
+    if beginsWithThe {
+
+        print("John's building identifier begins with \"The\".")
+
+    } else {
+
+        print("John's building identifier does not begin with \"The\".")
+
+    }
+
+}
+
+// Prints "John's building identifier begins with "The"."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if val beginsWithThe =
+
+    john.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
+
+    if beginsWithThe {
+
+        println("John's building identifier begins with \"The\".")
+
+    } else {
+
+        println("John's building identifier does not begin with \"The\".")
+
+    }
+
+}
+
+// Prints "John's building identifier begins with "The"."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Error Handling
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Representing and Throwing Errors
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID509" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">enum VendingMachineError: Error {
+
+    case invalidSelection
+
+    case insufficientFunds(coinsNeeded: Int)
+
+    case outOfStock
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">enum VendingMachineError: Error {
+
+    case invalidSelection
+
+    case insufficientFunds(coinsNeeded: Int)
+
+    case outOfStock
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">throw VendingMachineError.insufficientFunds(coinsNeeded: 5)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">throw VendingMachineError.insufficientFunds(coinsNeeded: 5)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Propagating Errors Using Throwing Functions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID510" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func canThrowErrors() throws -&#62; String
+
+
+
+func cannotThrowErrors() -&#62; String</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func canThrowErrors() throws -&#62; String
+
+
+
+func cannotThrowErrors(): String</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct Item {
+
+    var price: Int
+
+    var count: Int
+
+}
+
+
+
+class VendingMachine {
+
+    var inventory = [
+
+        "Candy Bar": Item(price: 12, count: 7),
+
+        "Chips": Item(price: 10, count: 4),
+
+        "Pretzels": Item(price: 7, count: 11)
+
+    ]
+
+    var coinsDeposited = 0
+
+
+
+    func vend(itemNamed name: String) throws {
+
+        guard let item = inventory[name] else {
+
+            throw VendingMachineError.invalidSelection
+
+        }
+
+
+
+        guard item.count &#62; 0 else {
+
+            throw VendingMachineError.outOfStock
+
+        }
+
+
+
+        guard item.price &#60;= coinsDeposited else {
+
+            throw VendingMachineError.insufficientFunds(coinsNeeded: item.price - coinsDeposited)
+
+        }
+
+
+
+        coinsDeposited -= item.price
+
+
+
+        var newItem = item
+
+        newItem.count -= 1
+
+        inventory[name] = newItem
+
+
+
+        print("Dispensing \(name)")
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct Item {
+
+    var price: Int
+
+    var count: Int
+
+}
+
+
+
+class VendingMachine {
+
+    var inventory = [
+
+        "Candy Bar": Item(price: 12, count: 7),
+
+        "Chips": Item(price: 10, count: 4),
+
+        "Pretzels": Item(price: 7, count: 11)
+
+    ]
+
+    var coinsDeposited = 0
+
+
+
+    func vend(itemNamed name: String) throws {
+
+        guard val item = inventory[name] else {
+
+            throw VendingMachineError.invalidSelection
+
+        }
+
+
+
+        guard item.count &#62; 0 else {
+
+            throw VendingMachineError.outOfStock
+
+        }
+
+
+
+        guard item.price &#60;= coinsDeposited else {
+
+            throw VendingMachineError.insufficientFunds(coinsNeeded: item.price - coinsDeposited)
+
+        }
+
+
+
+        coinsDeposited -= item.price
+
+
+
+        var newItem = item
+
+        newItem.count -= 1
+
+        inventory[name] = newItem
+
+
+
+        println("Dispensing ${name)")
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let favoriteSnacks = [
+
+    "Alice": "Chips",
+
+    "Bob": "Licorice",
+
+    "Eve": "Pretzels",
+
+]
+
+func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
+
+    let snackName = favoriteSnacks[person] ?? "Candy Bar"
+
+    try vendingMachine.vend(itemNamed: snackName)
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val favoriteSnacks = [
+
+    "Alice": "Chips",
+
+    "Bob": "Licorice",
+
+    "Eve": "Pretzels",
+
+]
+
+func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
+
+    val snackName = favoriteSnacks[person] ?: "Candy Bar"
+
+    try vendingMachine.vend(itemNamed: snackName)
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">struct PurchasedSnack {
+
+    let name: String
+
+    init(name: String, vendingMachine: VendingMachine) throws {
+
+        try vendingMachine.vend(itemNamed: name)
+
+        self.name = name
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">struct PurchasedSnack {
+
+    val name: String
+
+    init(name: String, vendingMachine: VendingMachine) throws {
+
+        try vendingMachine.vend(itemNamed: name)
+
+        self.name = name
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Handling Errors Using Do-Catch
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID541" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">do {
+
+    try expression
+
+    statements
+
+} catch pattern 1 {
+
+    statements
+
+} catch pattern 2 where condition {
+
+    statements
+
+} catch pattern 3, pattern 4 where condition {
+
+    statements
+
+} catch {
+
+    statements
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">do {
+
+    try expression
+
+    statements
+
+} catch pattern 1 {
+
+    statements
+
+} catch pattern 2 where condition {
+
+    statements
+
+} catch pattern 3, pattern 4 where condition {
+
+    statements
+
+} catch {
+
+    statements
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var vendingMachine = VendingMachine()
+
+vendingMachine.coinsDeposited = 8
+
+do {
+
+    try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+
+    print("Success! Yum.")
+
+} catch VendingMachineError.invalidSelection {
+
+    print("Invalid Selection.")
+
+} catch VendingMachineError.outOfStock {
+
+    print("Out of Stock.")
+
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
+
+    print("Insufficient funds. Please insert an additional \(coinsNeeded) coins.")
+
+} catch {
+
+    print("Unexpected error: \(error).")
+
+}
+
+// Prints "Insufficient funds. Please insert an additional 2 coins."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var vendingMachine = VendingMachine()
+
+vendingMachine.coinsDeposited = 8
+
+do {
+
+    try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+
+    println("Success! Yum.")
+
+} catch VendingMachineError.invalidSelection {
+
+    println("Invalid Selection.")
+
+} catch VendingMachineError.outOfStock {
+
+    println("Out of Stock.")
+
+} catch VendingMachineError.insufficientFunds(val coinsNeeded) {
+
+    println("Insufficient funds. Please insert an additional ${coinsNeeded) coins.")
+
+} catch {
+
+    println("Unexpected error: ${error).")
+
+}
+
+// Prints "Insufficient funds. Please insert an additional 2 coins."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func nourish(with item: String) throws {
+
+    do {
+
+        try vendingMachine.vend(itemNamed: item)
+
+    } catch is VendingMachineError {
+
+        print("Couldn't buy that from the vending machine.")
+
+    }
+
+}
+
+
+
+do {
+
+    try nourish(with: "Beet-Flavored Chips")
+
+} catch {
+
+    print("Unexpected non-vending-machine-related error: \(error)")
+
+}
+
+// Prints "Couldn't buy that from the vending machine."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func nourish(with item: String) throws {
+
+    do {
+
+        try vendingMachine.vend(itemNamed: item)
+
+    } catch is VendingMachineError {
+
+        println("Couldn't buy that from the vending machine.")
+
+    }
+
+}
+
+
+
+do {
+
+    try nourish(with: "Beet-Flavored Chips")
+
+} catch {
+
+    println("Unexpected non-vending-machine-related error: ${error)")
+
+}
+
+// Prints "Couldn't buy that from the vending machine."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func eat(item: String) throws {
+
+    do {
+
+        try vendingMachine.vend(itemNamed: item)
+
+    } catch VendingMachineError.invalidSelection, VendingMachineError.insufficientFunds, VendingMachineError.outOfStock {
+
+        print("Invalid selection, out of stock, or not enough money.")
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func eat(item: String) throws {
+
+    do {
+
+        try vendingMachine.vend(itemNamed: item)
+
+    } catch VendingMachineError.invalidSelection, VendingMachineError.insufficientFunds, VendingMachineError.outOfStock {
+
+        println("Invalid selection, out of stock, or not enough money.")
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Converting Errors to Optional Values
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID542" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func someThrowingFunction() throws -&#62; Int {
+
+    // ...
+
+}
+
+
+
+let x = try? someThrowingFunction()
+
+
+
+let y: Int?
+
+do {
+
+    y = try someThrowingFunction()
+
+} catch {
+
+    y = nil
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func someThrowingFunction() throws -&#62; Int {
+
+    // ...
+
+}
+
+
+
+val x = try? someThrowingFunction()
+
+
+
+val y: Int?
+
+do {
+
+    y = try someThrowingFunction()
+
+} catch {
+
+    y = nil
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func fetchData() -&#62; Data? {
+
+    if let data = try? fetchDataFromDisk() { return data }
+
+    if let data = try? fetchDataFromServer() { return data }
+
+    return nil
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func fetchData(): Data? {
+
+    if val data = try? fetchDataFromDisk() { return data }
+
+    if val data = try? fetchDataFromServer() { return data }
+
+    return nil
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Disabling Error Propagation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID513" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Specifying Cleanup Actions
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID514" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">func processFile(filename: String) throws {
+
+    if exists(filename) {
+
+        let file = open(filename)
+
+        defer {
+
+            close(file)
+
+        }
+
+        while let line = try file.readline() {
+
+            // Work with the file.
+
+        }
+
+        // close(file) is called here, at the end of the scope.
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">func processFile(filename: String) throws {
+
+    if exists(filename) {
+
+        val file = open(filename)
+
+        defer {
+
+            close(file)
+
+        }
+
+        while val line = try file.readline() {
+
+            // Work with the file.
+
+        }
+
+        // close(file) is called here, at the end of the scope.
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

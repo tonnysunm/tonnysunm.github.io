@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Type Casting
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Defining a Class Hierarchy for Type Casting
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID339" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class MediaItem {
+
+    var name: String
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class MediaItem {
+
+    var name: String
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">class Movie: MediaItem {
+
+    var director: String
+
+    init(name: String, director: String) {
+
+        self.director = director
+
+        super.init(name: name)
+
+    }
+
+}
+
+
+
+class Song: MediaItem {
+
+    var artist: String
+
+    init(name: String, artist: String) {
+
+        self.artist = artist
+
+        super.init(name: name)
+
+    }
+
+}</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">class Movie: MediaItem {
+
+    var director: String
+
+    init(name: String, director: String) {
+
+        self.director = director
+
+        super.init(name: name)
+
+    }
+
+}
+
+
+
+class Song: MediaItem {
+
+    var artist: String
+
+    init(name: String, artist: String) {
+
+        self.artist = artist
+
+        super.init(name: name)
+
+    }
+
+}</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let library = [
+
+    Movie(name: "Casablanca", director: "Michael Curtiz"),
+
+    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+
+    Movie(name: "Citizen Kane", director: "Orson Welles"),
+
+    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+
+]
+
+// the type of "library" is inferred to be [MediaItem]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val library = [
+
+    Movie(name: "Casablanca", director: "Michael Curtiz"),
+
+    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+
+    Movie(name: "Citizen Kane", director: "Orson Welles"),
+
+    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+
+]
+
+// the type of "library" is inferred to be [MediaItem]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Checking Type
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID340" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var movieCount = 0
+
+var songCount = 0
+
+
+
+for item in library {
+
+    if item is Movie {
+
+        movieCount += 1
+
+    } else if item is Song {
+
+        songCount += 1
+
+    }
+
+}
+
+
+
+print("Media library contains \(movieCount) movies and \(songCount) songs")
+
+// Prints "Media library contains 2 movies and 3 songs"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var movieCount = 0
+
+var songCount = 0
+
+
+
+for item in library {
+
+    if item is Movie {
+
+        movieCount += 1
+
+    } else if item is Song {
+
+        songCount += 1
+
+    }
+
+}
+
+
+
+println("Media library contains ${movieCount) movies and ${songCount) songs")
+
+// Prints "Media library contains 2 movies and 3 songs"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Downcasting
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID341" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for item in library {
+
+    if let movie = item as? Movie {
+
+        print("Movie: \(movie.name), dir. \(movie.director)")
+
+    } else if let song = item as? Song {
+
+        print("Song: \(song.name), by \(song.artist)")
+
+    }
+
+}
+
+
+
+// Movie: Casablanca, dir. Michael Curtiz
+
+// Song: Blue Suede Shoes, by Elvis Presley
+
+// Movie: Citizen Kane, dir. Orson Welles
+
+// Song: The One And Only, by Chesney Hawkes
+
+// Song: Never Gonna Give You Up, by Rick Astley</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for item in library {
+
+    if val movie = item as? Movie {
+
+        println("Movie: ${movie.name), dir. ${movie.director)")
+
+    } else if val song = item as? Song {
+
+        println("Song: ${song.name), by ${song.artist)")
+
+    }
+
+}
+
+
+
+// Movie: Casablanca, dir. Michael Curtiz
+
+// Song: Blue Suede Shoes, by Elvis Presley
+
+// Movie: Citizen Kane, dir. Orson Welles
+
+// Song: The One And Only, by Chesney Hawkes
+
+// Song: Never Gonna Give You Up, by Rick Astley</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Type Casting for Any and AnyObject
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID342" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var things = [Any]()
+
+
+
+things.append(0)
+
+things.append(0.0)
+
+things.append(42)
+
+things.append(3.14159)
+
+things.append("hello")
+
+things.append((3.0, 5.0))
+
+things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
+
+things.append({ (name: String) -&#62; String in "Hello, \(name)" })</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var things = [Any]()
+
+
+
+things.append(0)
+
+things.append(0.0)
+
+things.append(42)
+
+things.append(3.14159)
+
+things.append("hello")
+
+things.append((3.0, 5.0))
+
+things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
+
+things.append({ (name: String): String in "Hello, ${name)" })</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for thing in things {
+
+    switch thing {
+
+    case 0 as Int:
+
+        print("zero as an Int")
+
+    case 0 as Double:
+
+        print("zero as a Double")
+
+    case let someInt as Int:
+
+        print("an integer value of \(someInt)")
+
+    case let someDouble as Double where someDouble &#62; 0:
+
+        print("a positive double value of \(someDouble)")
+
+    case is Double:
+
+        print("some other double value that I don't want to print")
+
+    case let someString as String:
+
+        print("a string value of \"\(someString)\"")
+
+    case let (x, y) as (Double, Double):
+
+        print("an (x, y) point at \(x), \(y)")
+
+    case let movie as Movie:
+
+        print("a movie called \(movie.name), dir. \(movie.director)")
+
+    case let stringConverter as (String) -&#62; String:
+
+        print(stringConverter("Michael"))
+
+    default:
+
+        print("something else")
+
+    }
+
+}
+
+
+
+// zero as an Int
+
+// zero as a Double
+
+// an integer value of 42
+
+// a positive double value of 3.14159
+
+// a string value of "hello"
+
+// an (x, y) point at 3.0, 5.0
+
+// a movie called Ghostbusters, dir. Ivan Reitman
+
+// Hello, Michael</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for thing in things {
+
+    switch thing {
+
+    case 0 as Int:
+
+        println("zero as an Int")
+
+    case 0 as Double:
+
+        println("zero as a Double")
+
+    case val someInt as Int:
+
+        println("an integer value of ${someInt)")
+
+    case val someDouble as Double where someDouble &#62; 0:
+
+        println("a positive double value of ${someDouble)")
+
+    case is Double:
+
+        println("some other double value that I don't want to print")
+
+    case val someString as String:
+
+        println("a string value of \"${someString)\"")
+
+    case val (x, y) as (Double, Double):
+
+        println("an (x, y) point at ${x), ${y)")
+
+    case val movie as Movie:
+
+        println("a movie called ${movie.name), dir. ${movie.director)")
+
+    case val stringConverter as (String): String:
+
+        println(stringConverter("Michael"))
+
+    default:
+
+        println("something else")
+
+    }
+
+}
+
+
+
+// zero as an Int
+
+// zero as a Double
+
+// an integer value of 42
+
+// a positive double value of 3.14159
+
+// a string value of "hello"
+
+// an (x, y) point at 3.0, 5.0
+
+// a movie called Ghostbusters, dir. Ivan Reitman
+
+// Hello, Michael</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let optionalNumber: Int? = 3
+
+things.append(optionalNumber)        // Warning
+
+things.append(optionalNumber as Any) // No warning</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val optionalNumber: Int? = 3
+
+things.append(optionalNumber)        // Warning
+
+things.append(optionalNumber as Any) // No warning</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>

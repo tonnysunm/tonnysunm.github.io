@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swift vs Kotlin</title>
+
+  <link rel="stylesheet" href="../github.css">
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1;
+      /* Stay on top */
+      top: 0;
+      /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3,
+    h4,
+    h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a,
+    nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+
+    .from-aspect a {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
+
+    <div class="from-aspect">
+      <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+    </div>
+    <div class="capters">
+      <ul>
+      
+          <ol class="chapter-1"> WELCOME TO SWIFT </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">
+                  A Swift Tour
+                </a>
+              </ol>
+            
+          </ul>
+      
+          <ol class="chapter-1"> LANGUAGE GUIDE </ol>
+          <ul>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_The Basics.html">
+                  The Basics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Basic Operators.html">
+                  Basic Operators
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Strings and Characters.html">
+                  Strings and Characters
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Collection Types.html">
+                  Collection Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Control Flow.html">
+                  Control Flow
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Functions.html">
+                  Functions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Closures.html">
+                  Closures
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Enumerations.html">
+                  Enumerations
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Structures and Classes.html">
+                  Structures and Classes
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Properties.html">
+                  Properties
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Methods.html">
+                  Methods
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Subscripts.html">
+                  Subscripts
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Inheritance.html">
+                  Inheritance
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Initialization.html">
+                  Initialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Deinitialization.html">
+                  Deinitialization
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Optional Chaining.html">
+                  Optional Chaining
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Error Handling.html">
+                  Error Handling
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Type Casting.html">
+                  Type Casting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Nested Types.html">
+                  Nested Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Extensions.html">
+                  Extensions
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Protocols.html">
+                  Protocols
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Generics.html">
+                  Generics
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Opaque Types.html">
+                  Opaque Types
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Automatic Reference Counting.html">
+                  Automatic Reference Counting
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Memory Safety.html">
+                  Memory Safety
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Access Control.html">
+                  Access Control
+                </a>
+              </ol>
+            
+              <ol class="chapter-2">-&nbsp
+                <a href="/swift-vs-kotlin/fromswift/LANGUAGE GUIDE_Advanced Operators.html">
+                  Advanced Operators
+                </a>
+              </ol>
+            
+          </ul>
+      
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="right-cnt">
+      <table>
+
+        
+          
+          
+
+          
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Swift</div>
+                  <h2 style="text-align:center;">
+                    Strings and Characters
+                    <a class="anchor" target="_blank"></a>
+                  </h2>
+                  <div>Kotlin</div>
+                </div>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                String Literals
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID286" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let someString = "Some string literal value"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val someString = "Some string literal value"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Multiline String Literals
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID564" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let quotation = """
+
+The White Rabbit put on his spectacles.  "Where shall I begin,
+
+please your Majesty?" he asked.
+
+
+
+"Begin at the beginning," the King said gravely, "and go on
+
+till you come to the end; then stop."
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val quotation = """
+
+The White Rabbit put on his spectacles.  "Where shall I begin,
+
+please your Majesty?" he asked.
+
+
+
+"Begin at the beginning," the King said gravely, "and go on
+
+till you come to the end; then stop."
+
+"""</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let singleLineString = "These are the same."
+
+let multilineString = """
+
+These are the same.
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val singleLineString = "These are the same."
+
+val multilineString = """
+
+These are the same.
+
+"""</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let softWrappedQuotation = """
+
+The White Rabbit put on his spectacles.  "Where shall I begin, \
+
+please your Majesty?" he asked.
+
+
+
+"Begin at the beginning," the King said gravely, "and go on \
+
+till you come to the end; then stop."
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val softWrappedQuotation = """
+
+The White Rabbit put on his spectacles.  "Where shall I begin, \
+
+please your Majesty?" he asked.
+
+
+
+"Begin at the beginning," the King said gravely, "and go on \
+
+till you come to the end; then stop."
+
+"""</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let lineBreaks = """
+
+
+
+This string starts with a line break.
+
+It also ends with a line break.
+
+
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val lineBreaks = """
+
+
+
+This string starts with a line break.
+
+It also ends with a line break.
+
+
+
+"""</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Special Characters in String Literals
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID295" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+
+// "Imagination is more important than knowledge" - Einstein
+
+let dollarSign = "\u{24}"        // $,  Unicode scalar U+0024
+
+let blackHeart = "\u{2665}"      // &#9829;,  Unicode scalar U+2665
+
+let sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+
+// "Imagination is more important than knowledge" - Einstein
+
+val dollarSign = "\u{24}"        // $,  Unicode scalar U+0024
+
+val blackHeart = "\u{2665}"      // &#9829;,  Unicode scalar U+2665
+
+val sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let threeDoubleQuotationMarks = """
+
+Escaping the first quotation mark \"""
+
+Escaping all three quotation marks \"\"\"
+
+"""</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val threeDoubleQuotationMarks = """
+
+Escaping the first quotation mark \"""
+
+Escaping all three quotation marks \"\"\"
+
+"""</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Extended String Delimiters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID606" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let threeMoreDoubleQuotationMarks = #"""
+
+Here are three more double quotes: """
+
+"""#</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val threeMoreDoubleQuotationMarks = #"""
+
+Here are three more double quotes: """
+
+"""#</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Initializing an Empty String
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID287" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var emptyString = ""               // empty string literal
+
+var anotherEmptyString = String()  // initializer syntax
+
+// these two strings are both empty, and are equivalent to each other</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var emptyString = ""               // empty string literal
+
+var anotherEmptyString = String()  // initializer syntax
+
+// these two strings are both empty, and are equivalent to each other</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">if emptyString.isEmpty {
+
+    print("Nothing to see here")
+
+}
+
+// Prints "Nothing to see here"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">if emptyString.isEmpty {
+
+    println("Nothing to see here")
+
+}
+
+// Prints "Nothing to see here"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                String Mutability
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID288" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var variableString = "Horse"
+
+variableString += " and carriage"
+
+// variableString is now "Horse and carriage"
+
+
+
+let constantString = "Highlander"
+
+constantString += " and another Highlander"
+
+// this reports a compile-time error - a constant string cannot be modified</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var variableString = "Horse"
+
+variableString += " and carriage"
+
+// variableString is now "Horse and carriage"
+
+
+
+val constantString = "Highlander"
+
+constantString += " and another Highlander"
+
+// this reports a compile-time error - a constant string cannot be modified</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Working with Characters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID290" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for character in "Dog!🐶" {
+
+    print(character)
+
+}
+
+// D
+
+// o
+
+// g
+
+// !
+
+// 🐶</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for character in "Dog!🐶" {
+
+    println(character)
+
+}
+
+// D
+
+// o
+
+// g
+
+// !
+
+// 🐶</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let exclamationMark: Character = "!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val exclamationMark: Character = "!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+
+let catString = String(catCharacters)
+
+print(catString)
+
+// Prints "Cat!🐱"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+
+val catString = String(catCharacters)
+
+println(catString)
+
+// Prints "Cat!🐱"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Concatenating Strings and Characters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID291" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let string1 = "hello"
+
+let string2 = " there"
+
+var welcome = string1 + string2
+
+// welcome now equals "hello there"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val string1 = "hello"
+
+val string2 = " there"
+
+var welcome = string1 + string2
+
+// welcome now equals "hello there"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var instruction = "look over"
+
+instruction += string2
+
+// instruction now equals "look over there"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var instruction = "look over"
+
+instruction += string2
+
+// instruction now equals "look over there"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let exclamationMark: Character = "!"
+
+welcome.append(exclamationMark)
+
+// welcome now equals "hello there!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val exclamationMark: Character = "!"
+
+welcome.append(exclamationMark)
+
+// welcome now equals "hello there!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let badStart = """
+
+one
+
+two
+
+"""
+
+let end = """
+
+three
+
+"""
+
+print(badStart + end)
+
+// Prints two lines:
+
+// one
+
+// twothree
+
+
+
+let goodStart = """
+
+one
+
+two
+
+
+
+"""
+
+print(goodStart + end)
+
+// Prints three lines:
+
+// one
+
+// two
+
+// three</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val badStart = """
+
+one
+
+two
+
+"""
+
+val end = """
+
+three
+
+"""
+
+println(badStart + end)
+
+// Prints two lines:
+
+// one
+
+// twothree
+
+
+
+val goodStart = """
+
+one
+
+two
+
+
+
+"""
+
+println(goodStart + end)
+
+// Prints three lines:
+
+// one
+
+// two
+
+// three</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                String Interpolation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID292" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let multiplier = 3
+
+let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
+
+// message is "3 times 2.5 is 7.5"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val multiplier = 3
+
+val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
+
+// message is "3 times 2.5 is 7.5"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(#"Write an interpolated string in Swift using \(multiplier)."#)
+
+// Prints "Write an interpolated string in Swift using \(multiplier)."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(#"Write an interpolated string in Swift using ${multiplier)."#)
+
+// Prints "Write an interpolated string in Swift using ${multiplier)."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">print(#"6 times 7 is \#(6 * 7)."#)
+
+// Prints "6 times 7 is 42."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">println(#"6 times 7 is \#(6 * 7)."#)
+
+// Prints "6 times 7 is 42."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Extended Grapheme Clusters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID296" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let eAcute: Character = "\u{E9}"                         // &#233;
+
+let combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
+
+// eAcute is &#233;, combinedEAcute is e&#769;</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val eAcute: Character = "\u{E9}"                         // &#233;
+
+val combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
+
+// eAcute is &#233;, combinedEAcute is e&#769;</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let precomposed: Character = "\u{D55C}"                  // 한
+
+let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#4523;
+
+// precomposed is 한, decomposed is &#4370;&#4449;&#4523;</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val precomposed: Character = "\u{D55C}"                  // 한
+
+val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#4523;
+
+// precomposed is 한, decomposed is &#4370;&#4449;&#4523;</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let enclosedEAcute: Character = "\u{E9}\u{20DD}"
+
+// enclosedEAcute is &#233;&#8413;</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val enclosedEAcute: Character = "\u{E9}\u{20DD}"
+
+// enclosedEAcute is &#233;&#8413;</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
+
+// regionalIndicatorForUS is 🇺🇸</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
+
+// regionalIndicatorForUS is 🇺🇸</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Counting Characters
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID297" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
+
+print("unusualMenagerie has \(unusualMenagerie.count) characters")
+
+// Prints "unusualMenagerie has 40 characters"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
+
+println("unusualMenagerie has ${unusualMenagerie.count) characters")
+
+// Prints "unusualMenagerie has 40 characters"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var word = "cafe"
+
+print("the number of characters in \(word) is \(word.count)")
+
+// Prints "the number of characters in cafe is 4"
+
+
+
+word += "\u{301}"    // COMBINING ACUTE ACCENT, U+0301
+
+
+
+print("the number of characters in \(word) is \(word.count)")
+
+// Prints "the number of characters in cafe&#769; is 4"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var word = "cafe"
+
+println("the number of characters in ${word) is ${word.count)")
+
+// Prints "the number of characters in cafe is 4"
+
+
+
+word += "\u{301}"    // COMBINING ACUTE ACCENT, U+0301
+
+
+
+println("the number of characters in ${word) is ${word.count)")
+
+// Prints "the number of characters in cafe&#769; is 4"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                String Indices
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID534" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let greeting = "Guten Tag!"
+
+greeting[greeting.startIndex]
+
+// G
+
+greeting[greeting.index(before: greeting.endIndex)]
+
+// !
+
+greeting[greeting.index(after: greeting.startIndex)]
+
+// u
+
+let index = greeting.index(greeting.startIndex, offsetBy: 7)
+
+greeting[index]
+
+// a</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val greeting = "Guten Tag!"
+
+greeting[greeting.startIndex]
+
+// G
+
+greeting[greeting.index(before: greeting.endIndex)]
+
+// !
+
+greeting[greeting.index(after: greeting.startIndex)]
+
+// u
+
+val index = greeting.index(greeting.startIndex, offsetBy: 7)
+
+greeting[index]
+
+// a</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">greeting[greeting.endIndex] // Error
+
+greeting.index(after: greeting.endIndex) // Error</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">greeting[greeting.endIndex] // Error
+
+greeting.index(after: greeting.endIndex) // Error</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for index in greeting.indices {
+
+    print("\(greeting[index]) ", terminator: "")
+
+}
+
+// Prints "G u t e n   T a g ! "</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for index in greeting.indices {
+
+    println("${greeting[index]) ", terminator: "")
+
+}
+
+// Prints "G u t e n   T a g ! "</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Inserting and Removing
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID496" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var welcome = "hello"
+
+welcome.insert("!", at: welcome.endIndex)
+
+// welcome now equals "hello!"
+
+
+
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+
+// welcome now equals "hello there!"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var welcome = "hello"
+
+welcome.insert("!", at: welcome.endIndex)
+
+// welcome now equals "hello!"
+
+
+
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+
+// welcome now equals "hello there!"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">welcome.remove(at: welcome.index(before: welcome.endIndex))
+
+// welcome now equals "hello there"
+
+
+
+let range = welcome.index(welcome.endIndex, offsetBy: -6)..&#60;welcome.endIndex
+
+welcome.removeSubrange(range)
+
+// welcome now equals "hello"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">welcome.remove(at: welcome.index(before: welcome.endIndex))
+
+// welcome now equals "hello there"
+
+
+
+val range = welcome.index(welcome.endIndex, offsetBy: -6)..&#60;welcome.endIndex
+
+welcome.removeSubrange(range)
+
+// welcome now equals "hello"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Substrings
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID555" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let greeting = "Hello, world!"
+
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+
+let beginning = greeting[..&#60;index]
+
+// beginning is "Hello"
+
+
+
+// Convert the result to a String for long-term storage.
+
+let newString = String(beginning)</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val greeting = "Hello, world!"
+
+val index = greeting.firstIndex(of: ",") ?: greeting.endIndex
+
+val beginning = greeting[..&#60;index]
+
+// beginning is "Hello"
+
+
+
+// Convert the result to a String for long-term storage.
+
+val newString = String(beginning)</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                String and Character Equality
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID299" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let quotation = "We're a lot alike, you and I."
+
+let sameQuotation = "We're a lot alike, you and I."
+
+if quotation == sameQuotation {
+
+    print("These two strings are considered equal")
+
+}
+
+// Prints "These two strings are considered equal"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val quotation = "We're a lot alike, you and I."
+
+val sameQuotation = "We're a lot alike, you and I."
+
+if quotation == sameQuotation {
+
+    println("These two strings are considered equal")
+
+}
+
+// Prints "These two strings are considered equal"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">// "Voulez-vous un caf&#233;?" using LATIN SMALL LETTER E WITH ACUTE
+
+let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
+
+
+
+// "Voulez-vous un cafe&#769;?" using LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
+
+let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
+
+
+
+if eAcuteQuestion == combinedEAcuteQuestion {
+
+    print("These two strings are considered equal")
+
+}
+
+// Prints "These two strings are considered equal"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">// "Voulez-vous un caf&#233;?" using LATIN SMALL LETTER E WITH ACUTE
+
+val eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
+
+
+
+// "Voulez-vous un cafe&#769;?" using LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
+
+val combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
+
+
+
+if eAcuteQuestion == combinedEAcuteQuestion {
+
+    println("These two strings are considered equal")
+
+}
+
+// Prints "These two strings are considered equal"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let latinCapitalLetterA: Character = "\u{41}"
+
+
+
+let cyrillicCapitalLetterA: Character = "\u{0410}"
+
+
+
+if latinCapitalLetterA != cyrillicCapitalLetterA {
+
+    print("These two characters are not equivalent.")
+
+}
+
+// Prints "These two characters are not equivalent."</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val latinCapitalLetterA: Character = "\u{41}"
+
+
+
+val cyrillicCapitalLetterA: Character = "\u{0410}"
+
+
+
+if latinCapitalLetterA != cyrillicCapitalLetterA {
+
+    println("These two characters are not equivalent.")
+
+}
+
+// Prints "These two characters are not equivalent."</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Prefix and Suffix Equality
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID300" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let romeoAndJuliet = [
+
+    "Act 1 Scene 1: Verona, A public place",
+
+    "Act 1 Scene 2: Capulet's mansion",
+
+    "Act 1 Scene 3: A room in Capulet's mansion",
+
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+
+    "Act 2 Scene 1: Outside Capulet's mansion",
+
+    "Act 2 Scene 2: Capulet's orchard",
+
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+
+    "Act 2 Scene 4: A street in Verona",
+
+    "Act 2 Scene 5: Capulet's mansion",
+
+    "Act 2 Scene 6: Friar Lawrence's cell"
+
+]</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">val romeoAndJuliet = [
+
+    "Act 1 Scene 1: Verona, A public place",
+
+    "Act 1 Scene 2: Capulet's mansion",
+
+    "Act 1 Scene 3: A room in Capulet's mansion",
+
+    "Act 1 Scene 4: A street outside Capulet's mansion",
+
+    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+
+    "Act 2 Scene 1: Outside Capulet's mansion",
+
+    "Act 2 Scene 2: Capulet's orchard",
+
+    "Act 2 Scene 3: Outside Friar Lawrence's cell",
+
+    "Act 2 Scene 4: A street in Verona",
+
+    "Act 2 Scene 5: Capulet's mansion",
+
+    "Act 2 Scene 6: Friar Lawrence's cell"
+
+]</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var act1SceneCount = 0
+
+for scene in romeoAndJuliet {
+
+    if scene.hasPrefix("Act 1 ") {
+
+        act1SceneCount += 1
+
+    }
+
+}
+
+print("There are \(act1SceneCount) scenes in Act 1")
+
+// Prints "There are 5 scenes in Act 1"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var act1SceneCount = 0
+
+for scene in romeoAndJuliet {
+
+    if scene.hasPrefix("Act 1 ") {
+
+        act1SceneCount += 1
+
+    }
+
+}
+
+println("There are ${act1SceneCount) scenes in Act 1")
+
+// Prints "There are 5 scenes in Act 1"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">var mansionCount = 0
+
+var cellCount = 0
+
+for scene in romeoAndJuliet {
+
+    if scene.hasSuffix("Capulet's mansion") {
+
+        mansionCount += 1
+
+    } else if scene.hasSuffix("Friar Lawrence's cell") {
+
+        cellCount += 1
+
+    }
+
+}
+
+print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
+
+// Prints "6 mansion scenes; 2 cell scenes"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">var mansionCount = 0
+
+var cellCount = 0
+
+for scene in romeoAndJuliet {
+
+    if scene.hasSuffix("Capulet's mansion") {
+
+        mansionCount += 1
+
+    } else if scene.hasSuffix("Friar Lawrence's cell") {
+
+        cellCount += 1
+
+    }
+
+}
+
+println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
+
+// Prints "6 mansion scenes; 2 cell scenes"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h3>
+                Unicode Representations of Strings
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID301" target="_blank"></a>
+              </h3>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">let dogString = "Dog&#8252;🐶"</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">let dogString = "Dog&#8252;🐶"</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                UTF-8 Representation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID302" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for codeUnit in dogString.utf8 {
+
+    print("\(codeUnit) ", terminator: "")
+
+}
+
+print("")
+
+// Prints "68 111 103 226 128 188 240 159 144 182 "</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for codeUnit in dogString.utf8 {
+
+    println("${codeUnit) ", terminator: "")
+
+}
+
+println("")
+
+// Prints "68 111 103 226 128 188 240 159 144 182 "</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                UTF-16 Representation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID303" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for codeUnit in dogString.utf16 {
+
+    print("\(codeUnit) ", terminator: "")
+
+}
+
+print("")
+
+// Prints "68 111 103 8252 55357 56374 "</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for codeUnit in dogString.utf16 {
+
+    println("${codeUnit) ", terminator: "")
+
+}
+
+println("")
+
+// Prints "68 111 103 8252 55357 56374 "</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td colspan="2" style="text-align: center;">
+              <h4>
+                Unicode Scalar Representation
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID304" target="_blank"></a>
+              </h4>
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for scalar in dogString.unicodeScalars {
+
+    print("\(scalar.value) ", terminator: "")
+
+}
+
+print("")
+
+// Prints "68 111 103 8252 128054 "</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for scalar in dogString.unicodeScalars {
+
+    println("${scalar.value) ", terminator: "")
+
+}
+
+println("")
+
+// Prints "68 111 103 8252 128054 "</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+          
+          
+
+          
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px">
+                <pre>
+                  <code class="kotlin">for scalar in dogString.unicodeScalars {
+
+    print("\(scalar) ")
+
+}
+
+// D
+
+// o
+
+// g
+
+// &#8252;
+
+// 🐶</code>
+                </pre>
+              </td>
+
+              <td style="padding-left:10px;padding-bottom:10px">
+              
+                  <pre>
+                    <code class="swift">for scalar in dogString.unicodeScalars {
+
+    println("${scalar) ")
+
+}
+
+// D
+
+// o
+
+// g
+
+// &#8252;
+
+// 🐶</code>
+                  </pre>
+              
+              </td>
+            </tr>
+          
+        
+
+      </table>
+    </div>
+  </div>
+
+  <script src="../highlight.site.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
