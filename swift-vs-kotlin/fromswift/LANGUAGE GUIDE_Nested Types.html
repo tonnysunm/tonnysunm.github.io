@@ -488,7 +488,82 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct BlackjackCard {
+
+
+
+    // nested Suit enumeration
+
+    enum Suit: Character {
+
+        case spades = "&#9824;", hearts = "&#9825;", diamonds = "&#9826;", clubs = "&#9827;"
+
+    }
+
+
+
+    // nested Rank enumeration
+
+    enum Rank: Int {
+
+        case two = 2, three, four, five, six, seven, eight, nine, ten
+
+        case jack, queen, king, ace
+
+        struct Values {
+
+            val first: Int, second: Int?
+
+        }
+
+        var values: Values {
+
+            switch self {
+
+            case .ace:
+
+                return Values(first: 1, second: 11)
+
+            case .jack, .queen, .king:
+
+                return Values(first: 10, second: nil)
+
+            default:
+
+                return Values(first: self.rawValue, second: nil)
+
+            }
+
+        }
+
+    }
+
+
+
+    // BlackjackCard properties and methods
+
+    val rank: Rank, suit: Suit
+
+    var description: String {
+
+        var output = "suit is ${suit.rawValue),"
+
+        output += " value is ${rank.values.first)"
+
+        if val second = rank.values.second {
+
+            output += " or ${second)"
+
+        }
+
+        return output
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -512,7 +587,14 @@ print("theAceOfSpades: \(theAceOfSpades.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
+
+println("theAceOfSpades: ${theAceOfSpades.description)")
+
+// Prints "theAceOfSpades: suit is &#9824;, value is 1 or 11"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -548,7 +630,12 @@ print("theAceOfSpades: \(theAceOfSpades.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val heartsSymbol = BlackjackCard.Suit.hearts.rawValue
+
+// heartsSymbol is "&#9825;"</code>
+                  </pre>
+                  
               
               </td>
             </tr>

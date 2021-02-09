@@ -420,7 +420,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -444,7 +451,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct SomeStructure: FirstProtocol, AnotherProtocol {
+
+    // structure definition goes here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -468,7 +482,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
+
+    // class definition goes here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -508,7 +529,16 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    var mustBeSettable: Int { get set }
+
+    var doesNotNeedToBeSettable: Int { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -532,7 +562,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol AnotherProtocol {
+
+    static var someTypeProperty: Int { get set }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -556,7 +593,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol FullyNamed {
+
+    var fullName: String { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -584,7 +628,18 @@ let john = Person(fullName: "John Appleseed")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Person: FullyNamed {
+
+    var fullName: String
+
+}
+
+val john = Person(fullName: "John Appleseed")
+
+// john.fullName is "John Appleseed"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -628,7 +683,34 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Starship: FullyNamed {
+
+    var prefix: String?
+
+    var name: String
+
+    init(name: String, prefix: String? = nil) {
+
+        self.name = name
+
+        self.prefix = prefix
+
+    }
+
+    var fullName: String {
+
+        return (prefix != nil ? prefix! + " " : "") + name
+
+    }
+
+}
+
+var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
+
+// ncc1701.fullName is "USS Enterprise"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -666,7 +748,14 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    static func someTypeMethod()
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -690,7 +779,14 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol RandomNumberGenerator {
+
+    func random(): Double
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -740,7 +836,40 @@ print("And another one: \(generator.random())")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class LinearCongruentialGenerator: RandomNumberGenerator {
+
+    var lastRandom = 42.0
+
+    val m = 139968.0
+
+    val a = 3877.0
+
+    val c = 29573.0
+
+    func random(): Double {
+
+        lastRandom = ((lastRandom * a + c)
+
+            .truncatingRemainder(dividingBy:m))
+
+        return lastRandom / m
+
+    }
+
+}
+
+val generator = LinearCongruentialGenerator()
+
+println("Here's a random number: ${generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+println("And another one: ${generator.random())")
+
+// Prints "And another one: 0.729023776863283"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -778,7 +907,14 @@ print("And another one: \(generator.random())")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol Togglable {
+
+    mutating func toggle()
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -824,7 +960,36 @@ lightSwitch.toggle()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum OnOffSwitch: Togglable {
+
+    case off, on
+
+    mutating func toggle() {
+
+        switch self {
+
+        case .off:
+
+            self = .on
+
+        case .on:
+
+            self = .off
+
+        }
+
+    }
+
+}
+
+var lightSwitch = OnOffSwitch.off
+
+lightSwitch.toggle()
+
+// lightSwitch is now equal to .on</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -862,7 +1027,14 @@ lightSwitch.toggle()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    init(someParameter: Int)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -904,7 +1076,18 @@ lightSwitch.toggle()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SomeClass: SomeProtocol {
+
+    required init(someParameter: Int) {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -954,7 +1137,40 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeProtocol {
+
+    init()
+
+}
+
+
+
+class SomeSuperClass {
+
+    init() {
+
+        // initializer implementation goes here
+
+    }
+
+}
+
+
+
+class SomeSubClass: SomeSuperClass, SomeProtocol {
+
+    // "required" from SomeProtocol conformance; "override" from SomeSuperClass
+
+    required override init() {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1008,7 +1224,30 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Dice {
+
+    val sides: Int
+
+    val generator: RandomNumberGenerator
+
+    init(sides: Int, generator: RandomNumberGenerator) {
+
+        self.sides = sides
+
+        self.generator = generator
+
+    }
+
+    func roll(): Int {
+
+        return Int(generator.random() * Double(sides)) + 1
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1044,7 +1283,26 @@ for _ in 1...5 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var d6 = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+for _ in 1...5 {
+
+    println("Random dice roll is ${d6.roll())")
+
+}
+
+// Random dice roll is 3
+
+// Random dice roll is 5
+
+// Random dice roll is 4
+
+// Random dice roll is 5
+
+// Random dice roll is 4</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1094,7 +1352,26 @@ protocol DiceGameDelegate: AnyObject {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol DiceGame {
+
+    var dice: Dice { get }
+
+    func play()
+
+}
+
+protocol DiceGameDelegate: AnyObject {
+
+    func gameDidStart(_ game: DiceGame)
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)
+
+    func gameDidEnd(_ game: DiceGame)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1172,7 +1449,68 @@ protocol DiceGameDelegate: AnyObject {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SnakesAndLadders: DiceGame {
+
+    val finalSquare = 25
+
+    val dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+
+    var square = 0
+
+    var board: [Int]
+
+    init() {
+
+        board = Array(repeating: 0, count: finalSquare + 1)
+
+        board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+        board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+    }
+
+    weak var delegate: DiceGameDelegate?
+
+    func play() {
+
+        square = 0
+
+        delegate?.gameDidStart(self)
+
+        gameLoop: while square != finalSquare {
+
+            val diceRoll = dice.roll()
+
+            delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
+
+            switch square + diceRoll {
+
+            case finalSquare:
+
+                break gameLoop
+
+            case val newSquare where newSquare &#62; finalSquare:
+
+                continue gameLoop
+
+            default:
+
+                square += diceRoll
+
+                square += board[square]
+
+            }
+
+        }
+
+        delegate?.gameDidEnd(self)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1224,7 +1562,42 @@ protocol DiceGameDelegate: AnyObject {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class DiceGameTracker: DiceGameDelegate {
+
+    var numberOfTurns = 0
+
+    func gameDidStart(_ game: DiceGame) {
+
+        numberOfTurns = 0
+
+        if game is SnakesAndLadders {
+
+            println("Started a new game of Snakes and Ladders")
+
+        }
+
+        println("The game is using a ${game.dice.sides)-sided dice")
+
+    }
+
+    func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+
+        numberOfTurns += 1
+
+        println("Rolled a ${diceRoll)")
+
+    }
+
+    func gameDidEnd(_ game: DiceGame) {
+
+        println("The game lasted for ${numberOfTurns) turns")
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1264,7 +1637,30 @@ game.play()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val tracker = DiceGameTracker()
+
+val game = SnakesAndLadders()
+
+game.delegate = tracker
+
+game.play()
+
+// Started a new game of Snakes and Ladders
+
+// The game is using a 6-sided dice
+
+// Rolled a 3
+
+// Rolled a 5
+
+// Rolled a 4
+
+// Rolled a 5
+
+// The game lasted for 4 turns</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1302,7 +1698,14 @@ game.play()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol TextRepresentable {
+
+    var textualDescription: String { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1330,7 +1733,18 @@ game.play()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Dice: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A ${sides)-sided dice"
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1354,7 +1768,14 @@ print(d12.textualDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val d12 = Dice(sides: 12, generator: LinearCongruentialGenerator())
+
+println(d12.textualDescription)
+
+// Prints "A 12-sided dice"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1386,7 +1807,22 @@ print(game.textualDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension SnakesAndLadders: TextRepresentable {
+
+    var textualDescription: String {
+
+        return "A game of Snakes and Ladders with ${finalSquare) squares"
+
+    }
+
+}
+
+println(game.textualDescription)
+
+// Prints "A game of Snakes and Ladders with 25 squares"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1436,7 +1872,26 @@ print(myDice.textualDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Array: TextRepresentable where Element: TextRepresentable {
+
+    var textualDescription: String {
+
+        val itemsAsText = self.map { $0.textualDescription }
+
+        return "[" + itemsAsText.joined(separator: ", ") + "]"
+
+    }
+
+}
+
+val myDice = [d6, d12]
+
+println(myDice.textualDescription)
+
+// Prints "[A 6-sided dice, A 12-sided dice]"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1482,7 +1937,22 @@ extension Hamster: TextRepresentable {}</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Hamster {
+
+    var name: String
+
+    var textualDescription: String {
+
+        return "A hamster named ${name)"
+
+    }
+
+}
+
+extension Hamster: TextRepresentable {}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1508,7 +1978,16 @@ print(somethingTextRepresentable.textualDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val simonTheHamster = Hamster(name: "Simon")
+
+val somethingTextRepresentable: TextRepresentable = simonTheHamster
+
+println(somethingTextRepresentable.textualDescription)
+
+// Prints "A hamster named Simon"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1560,7 +2039,28 @@ if twoThreeFour == anotherTwoThreeFour {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Vector3D: Equatable {
+
+    var x = 0.0, y = 0.0, z = 0.0
+
+}
+
+
+
+val twoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+val anotherTwoThreeFour = Vector3D(x: 2.0, y: 3.0, z: 4.0)
+
+if twoThreeFour == anotherTwoThreeFour {
+
+    println("These two vectors are also equivalent.")
+
+}
+
+// Prints "These two vectors are also equivalent."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1606,7 +2106,36 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum SkillLevel: Comparable {
+
+    case beginner
+
+    case intermediate
+
+    case expert(stars: Int)
+
+}
+
+var levels = [SkillLevel.intermediate, SkillLevel.beginner,
+
+              SkillLevel.expert(stars: 5), SkillLevel.expert(stars: 3)]
+
+for level in levels.sorted() {
+
+    println(level)
+
+}
+
+// Prints "beginner"
+
+// Prints "intermediate"
+
+// Prints "expert(stars: 3)"
+
+// Prints "expert(stars: 5)"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1640,7 +2169,10 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val things: [TextRepresentable] = [game, d12, simonTheHamster]</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1670,7 +2202,20 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">for thing in things {
+
+    println(thing.textualDescription)
+
+}
+
+// A game of Snakes and Ladders with 25 squares
+
+// A 12-sided dice
+
+// A hamster named Simon</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1708,7 +2253,14 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+
+    // protocol definition goes here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1732,7 +2284,14 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol PrettyTextRepresentable: TextRepresentable {
+
+    var prettyTextualDescription: String { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1782,7 +2341,40 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension SnakesAndLadders: PrettyTextRepresentable {
+
+    var prettyTextualDescription: String {
+
+        var output = textualDescription + ":\n"
+
+        for index in 1...finalSquare {
+
+            switch board[index] {
+
+            case val ladder where ladder &#62; 0:
+
+                output += "&#9650; "
+
+            case val snake where snake &#60; 0:
+
+                output += "&#9660; "
+
+            default:
+
+                output += "&#9675; "
+
+            }
+
+        }
+
+        return output
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1806,7 +2398,14 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">println(game.prettyTextualDescription)
+
+// A game of Snakes and Ladders with 25 squares:
+
+// &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9675; &#9675; &#9650; &#9650; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9675; &#9675; &#9660; &#9675; &#9675; &#9660; &#9675; &#9660; &#9675;</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1844,7 +2443,14 @@ for level in levels.sorted() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol {
+
+    // class-only protocol definition goes here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1908,7 +2514,40 @@ wishHappyBirthday(to: birthdayPerson)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol Named {
+
+    var name: String { get }
+
+}
+
+protocol Aged {
+
+    var age: Int { get }
+
+}
+
+struct Person: Named, Aged {
+
+    var name: String
+
+    var age: Int
+
+}
+
+func wishHappyBirthday(to celebrator: Named &#38; Aged) {
+
+    println("Happy birthday, ${celebrator.name), you're ${celebrator.age)!")
+
+}
+
+val birthdayPerson = Person(name: "Malcolm", age: 21)
+
+wishHappyBirthday(to: birthdayPerson)
+
+// Prints "Happy birthday, Malcolm, you're 21!"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1970,7 +2609,52 @@ beginConcert(in: seattle)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Location {
+
+    var latitude: Double
+
+    var longitude: Double
+
+    init(latitude: Double, longitude: Double) {
+
+        self.latitude = latitude
+
+        self.longitude = longitude
+
+    }
+
+}
+
+class City: Location, Named {
+
+    var name: String
+
+    init(name: String, latitude: Double, longitude: Double) {
+
+        self.name = name
+
+        super.init(latitude: latitude, longitude: longitude)
+
+    }
+
+}
+
+func beginConcert(in location: Location &#38; Named) {
+
+    println("Hello, ${location.name)!")
+
+}
+
+
+
+val seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+
+beginConcert(in: seattle)
+
+// Prints "Hello, Seattle!"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2008,7 +2692,14 @@ beginConcert(in: seattle)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol HasArea {
+
+    var area: Double { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2046,7 +2737,28 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Circle: HasArea {
+
+    val pi = 3.1415927
+
+    var radius: Double
+
+    var area: Double { return pi * radius * radius }
+
+    init(radius: Double) { self.radius = radius }
+
+}
+
+class Country: HasArea {
+
+    var area: Double
+
+    init(area: Double) { self.area = area }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2072,7 +2784,16 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Animal {
+
+    var legs: Int
+
+    init(legs: Int) { self.legs = legs }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2100,7 +2821,18 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val objects: [AnyObject] = [
+
+    Circle(radius: 2.0),
+
+    Country(area: 243_610),
+
+    Animal(legs: 4)
+
+]</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2138,7 +2870,28 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">for object in objects {
+
+    if val objectWithArea = object as? HasArea {
+
+        println("Area is ${objectWithArea.area)")
+
+    } else {
+
+        println("Something that doesn't have an area")
+
+    }
+
+}
+
+// Area is 12.5663708
+
+// Area is 243610.0
+
+// Something that doesn't have an area</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2178,7 +2931,16 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">@objc protocol CounterDataSource {
+
+    @objc optional func increment(forCount count: Int): Int
+
+    @objc optional var fixedIncrement: Int { get }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2218,7 +2980,30 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Counter {
+
+    var count = 0
+
+    var dataSource: CounterDataSource?
+
+    func increment() {
+
+        if val amount = dataSource?.increment?(forCount: count) {
+
+            count += amount
+
+        } else if val amount = dataSource?.fixedIncrement {
+
+            count += amount
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2242,7 +3027,14 @@ class Country: HasArea {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class ThreeSource: NSObject, CounterDataSource {
+
+    val fixedIncrement = 3
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2280,7 +3072,28 @@ for _ in 1...4 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var counter = Counter()
+
+counter.dataSource = ThreeSource()
+
+for _ in 1...4 {
+
+    counter.increment()
+
+    println(counter.count)
+
+}
+
+// 3
+
+// 6
+
+// 9
+
+// 12</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2320,7 +3133,30 @@ for _ in 1...4 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class TowardsZeroSource: NSObject, CounterDataSource {
+
+    func increment(forCount count: Int): Int {
+
+        if count == 0 {
+
+            return 0
+
+        } else if count &#60; 0 {
+
+            return 1
+
+        } else {
+
+            return -1
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2360,7 +3196,30 @@ for _ in 1...5 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">counter.count = -4
+
+counter.dataSource = TowardsZeroSource()
+
+for _ in 1...5 {
+
+    counter.increment()
+
+    println(counter.count)
+
+}
+
+// -3
+
+// -2
+
+// -1
+
+// 0
+
+// 0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2402,7 +3261,18 @@ for _ in 1...5 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension RandomNumberGenerator {
+
+    func randomBool(): Bool {
+
+        return random() &#62; 0.5
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2430,7 +3300,18 @@ print("And here's a random Boolean: \(generator.randomBool())")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val generator = LinearCongruentialGenerator()
+
+println("Here's a random number: ${generator.random())")
+
+// Prints "Here's a random number: 0.3746499199817101"
+
+println("And here's a random Boolean: ${generator.randomBool())")
+
+// Prints "And here's a random Boolean: true"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2472,7 +3353,18 @@ print("And here's a random Boolean: \(generator.randomBool())")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension PrettyTextRepresentable  {
+
+    var prettyTextualDescription: String {
+
+        return textualDescription
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2524,7 +3416,28 @@ print("And here's a random Boolean: \(generator.randomBool())")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Collection where Element: Equatable {
+
+    func allEqual(): Bool {
+
+        for element in self {
+
+            if element != self.first {
+
+                return false
+
+            }
+
+        }
+
+        return true
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2546,7 +3459,12 @@ let differentNumbers = [100, 100, 200, 100, 200]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val equalNumbers = [100, 100, 100, 100, 100]
+
+val differentNumbers = [100, 100, 200, 100, 200]</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2572,7 +3490,16 @@ print(differentNumbers.allEqual())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">println(equalNumbers.allEqual())
+
+// Prints "true"
+
+println(differentNumbers.allEqual())
+
+// Prints "false"</code>
+                  </pre>
+                  
               
               </td>
             </tr>

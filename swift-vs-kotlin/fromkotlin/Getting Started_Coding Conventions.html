@@ -903,7 +903,7 @@ val USER_NAME_FIELD = "UserName"</code>
                   <pre>
                     <code class="swift">class C {
     private var _elementList = [Int]()
-    
+
     var elementList: [Int] {
         get { return _elementList }
     }
@@ -1062,9 +1062,9 @@ protocol Foo: IFoo {
 
 class FooImpl: Foo {
     init(x: String) { /*...*/ }
-    
+
     func foo(a: Int) -&#62; String { /*...*/ }
-    
+
     let x: IFoo = AImpl()
 }
 </code>
@@ -1138,7 +1138,7 @@ class FooImpl: Foo {
                     <code class="swift">class Human {
     var id: Int = 0
     var name: String = ""
-    
+
     init(id: Int, name: String) {
         self.id = id
         self.name = name
@@ -1147,7 +1147,7 @@ class FooImpl: Foo {
 
 class Person: Human {
     var surname: String = ""
-    
+
     init(id: Int, name: String, surname: String) {
         super.init(id: id, name: name)
     }
@@ -1182,11 +1182,11 @@ class Person: Human {
                   <pre>
                     <code class="swift">class Person: Human, KotlinMaker {
     var surname: String = ""
-    
+
     init(id: Int, name: String, surname: String) {
         super.init(id: id, name: name)
     }
-    
+
     /*...*/
 }
 </code>
@@ -1222,7 +1222,7 @@ class Person: Human {
     MyLongHolder,
     SomeOtherInterface,
     AndAnotherOne {
-    &#8203;   &#8203;   
+    &#8203;   &#8203;
     typealias Type = MyFavouriteVeryLongClass
     func foo() { /*...*/ }
 }
@@ -1260,7 +1260,7 @@ class Person: Human {
     SomeOtherInterface,
     AndAnotherOne
 {
-    &#8203;   &#8203;   
+    &#8203;   &#8203;
     typealias Type = MyFavouriteVeryLongClass
     func foo() { /*...*/ }
 }
@@ -1557,7 +1557,7 @@ fun foo() = 1        // good</code>
               
                   <pre>
                     <code class="swift">func foo() -&#62; Int {
-    return 1 
+    return 1
 }
 &#8203;
 </code>
@@ -2727,11 +2727,7 @@ printMeanValue()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -3178,7 +3174,7 @@ when(x) {
 }else {
     return bar()
 }
-    
+
 switch x {
 case 0:
     return "zero"
@@ -3369,7 +3365,7 @@ let a = """
                   <pre>
                     <code class="swift">class Point {
     let x, y: Double = 0
-    
+
     static func fromPolar(angle: Double, radius: Double) {
         Point(...)
     }
@@ -3410,11 +3406,7 @@ let a = """
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

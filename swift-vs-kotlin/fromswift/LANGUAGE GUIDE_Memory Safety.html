@@ -424,7 +424,18 @@ print("We're number \(one)!")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">// A write access to the memory where one is stored.
+
+var one = 1
+
+
+
+// A read access from the memory where one is stored.
+
+println("We're number ${one)!")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -472,7 +483,24 @@ print(myNumber)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func oneMore(than number: Int): Int {
+
+    return number + 1
+
+}
+
+
+
+var myNumber = 1
+
+myNumber = oneMore(than: myNumber)
+
+println(myNumber)
+
+// Prints "2"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -520,7 +548,24 @@ increment(&#38;stepSize)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var stepSize = 1
+
+
+
+func increment(_ number: inout Int) {
+
+    number += stepSize
+
+}
+
+
+
+increment(&#38;stepSize)
+
+// Error: conflicting accesses to stepSize</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -552,7 +597,22 @@ stepSize = copyOfStepSize
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">// Make an explicit copy.
+
+var copyOfStepSize = stepSize
+
+increment(&#38;copyOfStepSize)
+
+
+
+// Update the original.
+
+stepSize = copyOfStepSize
+
+// stepSize is now 2</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -590,7 +650,28 @@ balance(&#38;playerOneScore, &#38;playerOneScore)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func balance(_ x: inout Int, _ y: inout Int) {
+
+    val sum = x + y
+
+    x = sum / 2
+
+    y = sum - x
+
+}
+
+var playerOneScore = 42
+
+var playerTwoScore = 30
+
+balance(&#38;playerOneScore, &#38;playerTwoScore)  // OK
+
+balance(&#38;playerOneScore, &#38;playerOneScore)
+
+// Error: conflicting accesses to playerOneScore</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -642,7 +723,28 @@ balance(&#38;playerOneScore, &#38;playerOneScore)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Player {
+
+    var name: String
+
+    var health: Int
+
+    var energy: Int
+
+
+
+    static val maxHealth = 10
+
+    mutating func restoreHealth() {
+
+        health = Player.maxHealth
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -678,7 +780,26 @@ oscar.shareHealth(with: &#38;maria)  // OK</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Player {
+
+    mutating func shareHealth(with teammate: inout Player) {
+
+        balance(&#38;teammate.health, &#38;health)
+
+    }
+
+}
+
+
+
+var oscar = Player(name: "Oscar", health: 10, energy: 10)
+
+var maria = Player(name: "Maria", health: 5, energy: 10)
+
+oscar.shareHealth(with: &#38;maria)  // OK</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -700,7 +821,12 @@ oscar.shareHealth(with: &#38;maria)  // OK</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">oscar.shareHealth(with: &#38;oscar)
+
+// Error: conflicting accesses to oscar</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -738,7 +864,14 @@ balance(&#38;playerInformation.health, &#38;playerInformation.energy)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var playerInformation = (health: 10, energy: 20)
+
+balance(&#38;playerInformation.health, &#38;playerInformation.energy)
+
+// Error: conflicting access to properties of playerInformation</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -760,7 +893,12 @@ balance(&#38;holly.health, &#38;holly.energy)  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var holly = Player(name: "Holly", health: 10, energy: 10)
+
+balance(&#38;holly.health, &#38;holly.energy)  // Error</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -786,7 +924,16 @@ balance(&#38;holly.health, &#38;holly.energy)  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func someFunction() {
+
+    var oscar = Player(name: "Oscar", health: 10, energy: 10)
+
+    balance(&#38;oscar.health, &#38;oscar.energy)  // OK
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>

@@ -656,9 +656,9 @@ val oneByte: Byte = 1</code>
               
                   <pre>
                     <code class="swift">let one = 1 // Int
-//&#10060;
+let threeBillion = 3000000000 //Int (Int64)
 let oneDouble = 1.0 // Double
-let oneByte: Byte = 1
+let oneByte: UInt8 = 1
 </code>
                   </pre>
                   
@@ -721,16 +721,17 @@ let eFloat: Float = 2.7182818284 // Float, actual value is 2.71828175
               
                   <pre>
                     <code class="swift">func main() {
-    func printDouble(d: Double) { print(d) }
-&#8203;
-    let i = 1    
+    func printDouble(_ d: Double) { print(d) }
+    
+    let i = 1
     let d = 1.1
-    let f = 1.1f 
-&#8203;
+    let f: Float = 1.1
+    
     printDouble(d)
-//    printDouble(i) // Error: Type mismatch
-//    printDouble(f) // Error: Type mismatch
-}</code>
+//    printDouble(i) // Error: Cannot convert value of type 'Int' to expected argument type 'Double'
+//    printDouble(f) // Error: Cannot convert value of type 'Float' to expected argument type 'Double'
+}
+</code>
                   </pre>
                   
               
@@ -772,10 +773,11 @@ val bytes = 0b11010010_01101001_10010100_10010010</code>
               
                   <pre>
                     <code class="swift">let oneMillion = 1_000_000
-let creditCardNumber = 1234_5678_9012_3456L
-let socialSecurityNumber = 999_99_9999L
+let creditCardNumber = 1234_5678_9012_3456
+let socialSecurityNumber = 999_99_9999
 let hexBytes = 0xFF_EC_DE_5E
-let bytes = 0b11010010_01101001_10010100_10010010</code>
+let bytes = 0b11010010_01101001_10010100_10010010
+</code>
                   </pre>
                   
               
@@ -824,13 +826,14 @@ println(boxedB === anotherBoxedB) // false</code>
                     <code class="swift">let a: Int = 100
 let boxedA: Int? = a
 let anotherBoxedA: Int? = a
-&#8203;
+
 let b: Int = 10000
 let boxedB: Int? = b
 let anotherBoxedB: Int? = b
-&#8203;
-print(boxedA === anotherBoxedA) // true
-print(boxedB === anotherBoxedB) // false</code>
+
+print(boxedA == anotherBoxedA) // true
+print(boxedB == anotherBoxedB) // true
+</code>
                   </pre>
                   
               
@@ -903,7 +906,7 @@ print(b == a) // Surprise! This prints "false" as Long's equals() checks whether
                   <pre>
                     <code class="swift">let a: Int? = 1 // Optional
 let b: Double? = Double(a!)
-print(b == a) //Compiler Error: Binary operator '==' cannot be applied to operands of type 'Double?' and 'Int?'
+print(b == a) //Error: Binary operator '==' cannot be applied to operands of type 'Double?' and 'Int?'
 </code>
                   </pre>
                   
@@ -928,7 +931,7 @@ val i: Int = b // ERROR</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let b: Byte = 1 // OK, literals are checked statically
+                    <code class="swift">let b: Int8 = 1 // OK, literals are checked statically
 let i: Int = b // ERROR
 </code>
                   </pre>
@@ -1048,7 +1051,7 @@ println(x == 2L)</code>
               
                   <pre>
                     <code class="swift">let x = 5.0 / 2
-print(x == 2.0)
+print(x == 2.0) //false
 </code>
                   </pre>
                   
@@ -1074,7 +1077,7 @@ println(x == 2.5)</code>
               
                   <pre>
                     <code class="swift">let x = 5 / 2.0
-print(x == 2.5)
+print(x == 2.5) //true
 </code>
                   </pre>
                   
@@ -1154,8 +1157,8 @@ print(x == 2.5)
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func check(c: Char) {
-    if (c == 1) { // ERROR: incompatible types
+                    <code class="swift">func check(c: Character) {
+    if c == 1 { // ERROR: incompatible types
         // ...
     }
 }
@@ -1191,11 +1194,11 @@ print(x == 2.5)
 }
 
 func decimalDigitValue(c: Character) throws -&#62; Int? {
-    guard c &#62;= "0" &#38;&#38; c &#60;= "9" else {
+    guard let int = Int(String(c)), 0...9 ~= int else {
         throw Error.illegalArgumentException
     }
     
-    return Int(String(c))
+    return int
 }
 </code>
                   </pre>
@@ -1241,14 +1244,14 @@ func decimalDigitValue(c: Character) throws -&#62; Int? {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Array&#60;T&#62; {
-    private Array()
+                    <code class="swift">struct Array&#60;Element&#62; {
+    private init() {}
     
     let size: Int
-    func get(index: Int): T
-    func set(index: Int, value: T)
-&#8203;
-    func iterator(): Iterator&#60;T&#62;
+    func get(index: Int) -&#62; Element { /*...*/ }
+    func set(index: Int, value: Element) { /*...*/ }
+    
+    func iterator() -&#62; Iterator&#60;Element&#62; { /*...*/ }
     // ...
 }
 </code>
@@ -1403,12 +1406,12 @@ val a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let b: UByte = 1u  // UByte, expected type provided
-let s: UShort = 1u // UShort, expected type provided
-let l: ULong = 1u  // ULong, expected type provided
+                    <code class="swift">let b: UInt8 = 1  // UInt8, expected type provided
+let s: UInt32 = 1 // UInt32, expected type provided
+let l: UInt64 = 1  // UInt64, expected type provided
 &#8203;
-let a1 = 42u // UInt: no expected type provided, constant fits in UInt
-let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt
+let a1: UInt = 42 // UInt, expected type provided
+let a2: UInt64 = 0xFFFF_FFFF_FFFF // UInt64, expected type provided
 </code>
                   </pre>
                   
@@ -1432,7 +1435,8 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let a = 1UL // ULong, even though no expected type provided and constant fits into UInt</code>
+                    <code class="swift">let a: UInt64 = 1
+</code>
                   </pre>
                   
               
@@ -1498,8 +1502,9 @@ println(s + "def")</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let s = "abc" + 1
-print(s + "def")</code>
+                    <code class="swift">let s = "abc" + String(1)
+print(s + "def")
+</code>
                   </pre>
                   
               
@@ -1596,11 +1601,12 @@ print(s + "def")</code>
               
                   <pre>
                     <code class="swift">let text = """
-    |Tell me and I forget.
-    |Teach me and I remember.
-    |Involve me and I learn.
-    |(Benjamin Franklin)
-    """.trimMargin()</code>
+    Tell me and I forget.
+    Teach me and I remember.
+    Involve me and I learn.
+    (Benjamin Franklin)
+    """
+</code>
                   </pre>
                   
               

@@ -430,7 +430,24 @@ rangeOfThreeItems.firstValue = 6
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct FixedLengthRange {
+
+    var firstValue: Int
+
+    val length: Int
+
+}
+
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+
+// the range represents integer values 0, 1, and 2
+
+rangeOfThreeItems.firstValue = 6
+
+// the range now represents integer values 6, 7, and 8</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -470,7 +487,16 @@ rangeOfFourItems.firstValue = 6
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+
+// this range represents integer values 0, 1, 2, and 3
+
+rangeOfFourItems.firstValue = 6
+
+// this will report an error, even though firstValue is a variable property</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -540,7 +566,46 @@ manager.data.append("Some more data")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class DataImporter {
+
+    /*
+
+    DataImporter is a class to import data from an external file.
+
+    The class is assumed to take a nontrivial amount of time to initialize.
+
+    */
+
+    var filename = "data.txt"
+
+    // the DataImporter class would provide data importing functionality here
+
+}
+
+
+
+class DataManager {
+
+    lazy var importer = DataImporter()
+
+    var data = [String]()
+
+    // the DataManager class would provide data management functionality here
+
+}
+
+
+
+val manager = DataManager()
+
+manager.data.append("Some data")
+
+manager.data.append("Some more data")
+
+// the DataImporter instance for the importer property has not yet been created</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -564,7 +629,14 @@ manager.data.append("Some more data")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">println(manager.importer.filename)
+
+// the DataImporter instance for the importer property has now been created
+
+// Prints "data.txt"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -650,7 +722,62 @@ print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Point {
+
+    var x = 0.0, y = 0.0
+
+}
+
+struct Size {
+
+    var width = 0.0, height = 0.0
+
+}
+
+struct Rect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            val centerX = origin.x + (size.width / 2)
+
+            val centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set(newCenter) {
+
+            origin.x = newCenter.x - (size.width / 2)
+
+            origin.y = newCenter.y - (size.height / 2)
+
+        }
+
+    }
+
+}
+
+var square = Rect(origin: Point(x: 0.0, y: 0.0),
+
+                  size: Size(width: 10.0, height: 10.0))
+
+val initialSquareCenter = square.center
+
+square.center = Point(x: 15.0, y: 15.0)
+
+println("square.origin is now at (${square.origin.x), ${square.origin.y))")
+
+// Prints "square.origin is now at (10.0, 10.0)"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -712,7 +839,38 @@ print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct AlternativeRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            val centerX = origin.x + (size.width / 2)
+
+            val centerY = origin.y + (size.height / 2)
+
+            return Point(x: centerX, y: centerY)
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -772,7 +930,36 @@ print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct CompactRect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    var center: Point {
+
+        get {
+
+            Point(x: origin.x + (size.width / 2),
+
+                  y: origin.y + (size.height / 2))
+
+        }
+
+        set {
+
+            origin.x = newValue.x - (size.width / 2)
+
+            origin.y = newValue.y - (size.height / 2)
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -822,7 +1009,26 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Cuboid {
+
+    var width = 0.0, height = 0.0, depth = 0.0
+
+    var volume: Double {
+
+        return width * height * depth
+
+    }
+
+}
+
+val fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+
+println("the volume of fourByFiveByTwo is ${fourByFiveByTwo.volume)")
+
+// Prints "the volume of fourByFiveByTwo is 40.0"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -898,7 +1104,52 @@ stepCounter.totalSteps = 896
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class StepCounter {
+
+    var totalSteps: Int = 0 {
+
+        willSet(newTotalSteps) {
+
+            println("About to set totalSteps to ${newTotalSteps)")
+
+        }
+
+        didSet {
+
+            if totalSteps &#62; oldValue  {
+
+                println("Added ${totalSteps - oldValue) steps")
+
+            }
+
+        }
+
+    }
+
+}
+
+val stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+
+// About to set totalSteps to 200
+
+// Added 200 steps
+
+stepCounter.totalSteps = 360
+
+// About to set totalSteps to 360
+
+// Added 160 steps
+
+stepCounter.totalSteps = 896
+
+// About to set totalSteps to 896
+
+// Added 536 steps</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -948,7 +1199,26 @@ struct TwelveOrLess {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct TwelveOrLess {
+
+    private var number: Int
+
+    init() { self.number = 0 }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, 12) }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -998,7 +1268,40 @@ print(rectangle.height)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct SmallRectangle {
+
+    @TwelveOrLess var height: Int
+
+    @TwelveOrLess var width: Int
+
+}
+
+
+
+var rectangle = SmallRectangle()
+
+println(rectangle.height)
+
+// Prints "0"
+
+
+
+rectangle.height = 10
+
+println(rectangle.height)
+
+// Prints "10"
+
+
+
+rectangle.height = 24
+
+println(rectangle.height)
+
+// Prints "12"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1040,7 +1343,32 @@ print(rectangle.height)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct SmallRectangle {
+
+    private var _height = TwelveOrLess()
+
+    private var _width = TwelveOrLess()
+
+    var height: Int {
+
+        get { return _height.wrappedValue }
+
+        set { _height.wrappedValue = newValue }
+
+    }
+
+    var width: Int {
+
+        get { return _width.wrappedValue }
+
+        set { _width.wrappedValue = newValue }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1118,7 +1446,54 @@ struct SmallNumber {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct SmallNumber {
+
+    private var maximum: Int
+
+    private var number: Int
+
+
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set { number = min(newValue, maximum) }
+
+    }
+
+
+
+    init() {
+
+        maximum = 12
+
+        number = 0
+
+    }
+
+    init(wrappedValue: Int) {
+
+        maximum = 12
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+    init(wrappedValue: Int, maximum: Int) {
+
+        self.maximum = maximum
+
+        number = min(wrappedValue, maximum)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1152,7 +1527,24 @@ print(zeroRectangle.height, zeroRectangle.width)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct ZeroRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+}
+
+
+
+var zeroRectangle = ZeroRectangle()
+
+println(zeroRectangle.height, zeroRectangle.width)
+
+// Prints "0 0"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1186,7 +1578,24 @@ print(unitRectangle.height, unitRectangle.width)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct UnitRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber var width: Int = 1
+
+}
+
+
+
+var unitRectangle = UnitRectangle()
+
+println(unitRectangle.height, unitRectangle.width)
+
+// Prints "1 1"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1230,7 +1639,34 @@ print(narrowRectangle.height, narrowRectangle.width)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct NarrowRectangle {
+
+    @SmallNumber(wrappedValue: 2, maximum: 5) var height: Int
+
+    @SmallNumber(wrappedValue: 3, maximum: 4) var width: Int
+
+}
+
+
+
+var narrowRectangle = NarrowRectangle()
+
+println(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "2 3"
+
+
+
+narrowRectangle.height = 100
+
+narrowRectangle.width = 100
+
+println(narrowRectangle.height, narrowRectangle.width)
+
+// Prints "5 4"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1272,7 +1708,32 @@ print(mixedRectangle.height)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct MixedRectangle {
+
+    @SmallNumber var height: Int = 1
+
+    @SmallNumber(maximum: 9) var width: Int = 2
+
+}
+
+
+
+var mixedRectangle = MixedRectangle()
+
+println(mixedRectangle.height)
+
+// Prints "1"
+
+
+
+mixedRectangle.height = 20
+
+println(mixedRectangle.height)
+
+// Prints "12"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1370,7 +1831,74 @@ print(someStructure.$someNumber)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">@propertyWrapper
+
+struct SmallNumber {
+
+    private var number: Int
+
+    var projectedValue: Bool
+
+    init() {
+
+        self.number = 0
+
+        self.projectedValue = false
+
+    }
+
+    var wrappedValue: Int {
+
+        get { return number }
+
+        set {
+
+            if newValue &#62; 12 {
+
+                number = 12
+
+                projectedValue = true
+
+            } else {
+
+                number = newValue
+
+                projectedValue = false
+
+            }
+
+        }
+
+    }
+
+}
+
+struct SomeStructure {
+
+    @SmallNumber var someNumber: Int
+
+}
+
+var someStructure = SomeStructure()
+
+
+
+someStructure.someNumber = 4
+
+println(someStructure.$someNumber)
+
+// Prints "false"
+
+
+
+someStructure.someNumber = 55
+
+println(someStructure.$someNumber)
+
+// Prints "true"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1428,7 +1956,48 @@ struct SizedRectangle {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum Size {
+
+    case small, large
+
+}
+
+
+
+struct SizedRectangle {
+
+    @SmallNumber var height: Int
+
+    @SmallNumber var width: Int
+
+
+
+    mutating func resize(to size: Size): Bool {
+
+        switch size {
+
+        case .small:
+
+            height = 10
+
+            width = 20
+
+        case .large:
+
+            height = 100
+
+            width = 100
+
+        }
+
+        return $height || $width
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1502,7 +2071,50 @@ class SomeClass {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct SomeStructure {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 1
+
+    }
+
+}
+
+enum SomeEnumeration {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 6
+
+    }
+
+}
+
+class SomeClass {
+
+    static var storedTypeProperty = "Some value."
+
+    static var computedTypeProperty: Int {
+
+        return 27
+
+    }
+
+    class var overrideableComputedTypeProperty: Int {
+
+        return 107
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1552,7 +2164,26 @@ print(SomeClass.computedTypeProperty)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">println(SomeStructure.storedTypeProperty)
+
+// Prints "Some value."
+
+SomeStructure.storedTypeProperty = "Another value."
+
+println(SomeStructure.storedTypeProperty)
+
+// Prints "Another value."
+
+println(SomeEnumeration.computedTypeProperty)
+
+// Prints "6"
+
+println(SomeClass.computedTypeProperty)
+
+// Prints "27"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1602,7 +2233,40 @@ print(SomeClass.computedTypeProperty)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct AudioChannel {
+
+    static val thresholdLevel = 10
+
+    static var maxInputLevelForAllChannels = 0
+
+    var currentLevel: Int = 0 {
+
+        didSet {
+
+            if currentLevel &#62; AudioChannel.thresholdLevel {
+
+                // cap the new audio level to the threshold level
+
+                currentLevel = AudioChannel.thresholdLevel
+
+            }
+
+            if currentLevel &#62; AudioChannel.maxInputLevelForAllChannels {
+
+                // store this as the new overall maximum input level
+
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+
+            }
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1624,7 +2288,12 @@ var rightChannel = AudioChannel()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var leftChannel = AudioChannel()
+
+var rightChannel = AudioChannel()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1652,7 +2321,18 @@ print(AudioChannel.maxInputLevelForAllChannels)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">leftChannel.currentLevel = 7
+
+println(leftChannel.currentLevel)
+
+// Prints "7"
+
+println(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "7"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1680,7 +2360,18 @@ print(AudioChannel.maxInputLevelForAllChannels)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">rightChannel.currentLevel = 11
+
+println(rightChannel.currentLevel)
+
+// Prints "10"
+
+println(AudioChannel.maxInputLevelForAllChannels)
+
+// Prints "10"</code>
+                  </pre>
+                  
               
               </td>
             </tr>

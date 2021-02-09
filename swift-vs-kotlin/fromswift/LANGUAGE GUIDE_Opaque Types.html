@@ -452,7 +452,46 @@ print(smallTriangle.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol Shape {
+
+    func draw(): String
+
+}
+
+
+
+struct Triangle: Shape {
+
+    var size: Int
+
+    func draw(): String {
+
+        var result = [String]()
+
+        for length in 1...size {
+
+            result.append(String(repeating: "*", count: length))
+
+        }
+
+        return result.joined(separator: "\n")
+
+    }
+
+}
+
+val smallTriangle = Triangle(size: 3)
+
+println(smallTriangle.draw())
+
+// *
+
+// **
+
+// ***</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -494,7 +533,32 @@ print(flippedTriangle.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct FlippedShape&#60;T: Shape&#62;: Shape {
+
+    var shape: T
+
+    func draw(): String {
+
+        val lines = shape.draw().split(separator: "\n")
+
+        return lines.reversed().joined(separator: "\n")
+
+    }
+
+}
+
+val flippedTriangle = FlippedShape(shape: smallTriangle)
+
+println(flippedTriangle.draw())
+
+// ***
+
+// **
+
+// *</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -542,7 +606,38 @@ print(joinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct JoinedShape&#60;T: Shape, U: Shape&#62;: Shape {
+
+    var top: T
+
+    var bottom: U
+
+    func draw(): String {
+
+        return top.draw() + "\n" + bottom.draw()
+
+    }
+
+}
+
+val joinedTriangles = JoinedShape(top: smallTriangle, bottom: flippedTriangle)
+
+println(joinedTriangles.draw())
+
+// *
+
+// **
+
+// ***
+
+// ***
+
+// **
+
+// *</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -576,7 +671,10 @@ print(joinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func max&#60;T&#62;(_ x: T, _ y: T): T where T: Comparable { ... }</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -648,7 +746,62 @@ print(trapezoid.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Square: Shape {
+
+    var size: Int
+
+    func draw(): String {
+
+        val line = String(repeating: "*", count: size)
+
+        val result = Array&#60;String&#62;(repeating: line, count: size)
+
+        return result.joined(separator: "\n")
+
+    }
+
+}
+
+
+
+func makeTrapezoid(): some Shape {
+
+    val top = Triangle(size: 2)
+
+    val middle = Square(size: 2)
+
+    val bottom = FlippedShape(shape: top)
+
+    val trapezoid = JoinedShape(
+
+        top: top,
+
+        bottom: JoinedShape(top: middle, bottom: bottom)
+
+    )
+
+    return trapezoid
+
+}
+
+val trapezoid = makeTrapezoid()
+
+println(trapezoid.draw())
+
+// *
+
+// **
+
+// **
+
+// **
+
+// **
+
+// *</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -696,7 +849,38 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func flip&#60;T: Shape&#62;(_ shape: T): some Shape {
+
+    return FlippedShape(shape: shape)
+
+}
+
+func join&#60;T: Shape, U: Shape&#62;(_ top: T, _ bottom: U): some Shape {
+
+    JoinedShape(top: top, bottom: bottom)
+
+}
+
+
+
+val opaqueJoinedTriangles = join(smallTriangle, flip(smallTriangle))
+
+println(opaqueJoinedTriangles.draw())
+
+// *
+
+// **
+
+// ***
+
+// ***
+
+// **
+
+// *</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -726,7 +910,20 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func invalidFlip&#60;T: Shape&#62;(_ shape: T): some Shape {
+
+    if shape is Square {
+
+        return shape // Error: return types don't match
+
+    }
+
+    return FlippedShape(shape: shape) // Error: return types don't match
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -764,7 +961,28 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct FlippedShape&#60;T: Shape&#62;: Shape {
+
+    var shape: T
+
+    func draw(): String {
+
+        if shape is Square {
+
+            return shape.draw()
+
+        }
+
+        val lines = shape.draw().split(separator: "\n")
+
+        return lines.reversed().joined(separator: "\n")
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -788,7 +1006,14 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func `repeat`&#60;T: Shape&#62;(shape: T, count: Int): some Collection {
+
+    return Array&#60;T&#62;(repeating: shape, count: count)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -826,7 +1051,14 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func protoFlip&#60;T: Shape&#62;(_ shape: T): Shape {
+
+    return FlippedShape(shape: shape)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -858,7 +1090,22 @@ print(opaqueJoinedTriangles.draw())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func protoFlip&#60;T: Shape&#62;(_ shape: T): Shape {
+
+    if shape is Square {
+
+        return shape
+
+    }
+
+
+
+    return FlippedShape(shape: shape)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -882,7 +1129,14 @@ protoFlippedTriangle == sameThing  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val protoFlippedTriangle = protoFlip(smallTriangle)
+
+val sameThing = protoFlip(smallTriangle)
+
+protoFlippedTriangle == sameThing  // Error</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -912,7 +1166,20 @@ extension Array: Container { }</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol Container {
+
+    associatedtype Item
+
+    var count: Int { get }
+
+    subscript(i: Int): Item { get }
+
+}
+
+extension Array: Container { }</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -948,7 +1215,26 @@ func makeProtocolContainer&#60;T, C: Container&#62;(item: T) -&#62; C {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">// Error: Protocol with associated types can't be used as a return type.
+
+func makeProtocolContainer&#60;T&#62;(item: T): Container {
+
+    return [item]
+
+}
+
+
+
+// Error: Not enough information to infer C.
+
+func makeProtocolContainer&#60;T, C: Container&#62;(item: T): C {
+
+    return [item]
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -980,7 +1266,22 @@ print(type(of: twelve))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func makeOpaqueContainer&#60;T&#62;(item: T): some Container {
+
+    return [item]
+
+}
+
+val opaqueContainer = makeOpaqueContainer(item: 12)
+
+val twelve = opaqueContainer[0]
+
+println(type(of: twelve))
+
+// Prints "Int"</code>
+                  </pre>
+                  
               
               </td>
             </tr>

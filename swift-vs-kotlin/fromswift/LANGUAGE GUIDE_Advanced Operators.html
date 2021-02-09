@@ -418,7 +418,12 @@ let invertedBits = ~initialBits  // equals 11110000</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val initialBits: UInt8 = 0b00001111
+
+val invertedBits = ~initialBits  // equals 11110000</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -456,7 +461,14 @@ let middleFourBits = firstSixBits &#38; lastSixBits  // equals 00111100</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val firstSixBits: UInt8 = 0b11111100
+
+val lastSixBits: UInt8  = 0b00111111
+
+val middleFourBits = firstSixBits &#38; lastSixBits  // equals 00111100</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -494,7 +506,14 @@ let combinedbits = someBits | moreBits  // equals 11111110</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val someBits: UInt8 = 0b10110010
+
+val moreBits: UInt8 = 0b01011110
+
+val combinedbits = someBits | moreBits  // equals 11111110</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -532,7 +551,14 @@ let outputBits = firstBits ^ otherBits  // equals 00010001</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val firstBits: UInt8 = 0b00010100
+
+val otherBits: UInt8 = 0b00000101
+
+val outputBits = firstBits ^ otherBits  // equals 00010001</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -576,7 +602,20 @@ shiftBits &#62;&#62; 2             // 00000001</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val shiftBits: UInt8 = 4   // 00000100 in binary
+
+shiftBits &#60;&#60; 1             // 00001000
+
+shiftBits &#60;&#60; 2             // 00010000
+
+shiftBits &#60;&#60; 5             // 10000000
+
+shiftBits &#60;&#60; 6             // 00000000
+
+shiftBits &#62;&#62; 2             // 00000001</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -602,7 +641,16 @@ let blueComponent = pink &#38; 0x0000FF           // blueComponent is 0x99, or 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val pink: UInt32 = 0xCC6699
+
+val redComponent = (pink &#38; 0xFF0000) &#62;&#62; 16    // redComponent is 0xCC, or 204
+
+val greenComponent = (pink &#38; 0x00FF00) &#62;&#62; 8   // greenComponent is 0x66, or 102
+
+val blueComponent = pink &#38; 0x0000FF           // blueComponent is 0x99, or 153</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -642,7 +690,16 @@ potentialOverflow += 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var potentialOverflow = Int16.max
+
+// potentialOverflow equals 32767, which is the maximum value an Int16 can hold
+
+potentialOverflow += 1
+
+// this causes an error</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -682,7 +739,16 @@ unsignedOverflow = unsignedOverflow &#38;+ 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var unsignedOverflow = UInt8.max
+
+// unsignedOverflow equals 255, which is the maximum value a UInt8 can hold
+
+unsignedOverflow = unsignedOverflow &#38;+ 1
+
+// unsignedOverflow is now equal to 0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -708,7 +774,16 @@ unsignedOverflow = unsignedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var unsignedOverflow = UInt8.min
+
+// unsignedOverflow equals 0, which is the minimum value a UInt8 can hold
+
+unsignedOverflow = unsignedOverflow &#38;- 1
+
+// unsignedOverflow is now equal to 255</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -734,7 +809,16 @@ signedOverflow = signedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var signedOverflow = Int8.min
+
+// signedOverflow equals -128, which is the minimum value an Int8 can hold
+
+signedOverflow = signedOverflow &#38;- 1
+
+// signedOverflow is now equal to 127</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -770,7 +854,12 @@ signedOverflow = signedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">2 + 3 % 4 * 5
+
+// this equals 17</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -790,7 +879,10 @@ signedOverflow = signedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">2 + ((3 % 4) * 5)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -810,7 +902,10 @@ signedOverflow = signedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">2 + (3 * 5)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -830,7 +925,10 @@ signedOverflow = signedOverflow &#38;- 1
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">2 + 15</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -880,7 +978,26 @@ extension Vector2D {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Vector2D {
+
+    var x = 0.0, y = 0.0
+
+}
+
+
+
+extension Vector2D {
+
+    static func + (left: Vector2D, right: Vector2D): Vector2D {
+
+        return Vector2D(x: left.x + right.x, y: left.y + right.y)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -906,7 +1023,16 @@ let combinedVector = vector + anotherVector
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val vector = Vector2D(x: 3.0, y: 1.0)
+
+val anotherVector = Vector2D(x: 2.0, y: 4.0)
+
+val combinedVector = vector + anotherVector
+
+// combinedVector is a Vector2D instance with values of (5.0, 5.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -948,7 +1074,18 @@ let combinedVector = vector + anotherVector
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Vector2D {
+
+    static prefix func - (vector: Vector2D): Vector2D {
+
+        return Vector2D(x: -vector.x, y: -vector.y)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -976,7 +1113,18 @@ let alsoPositive = -negative
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val positive = Vector2D(x: 3.0, y: 4.0)
+
+val negative = -positive
+
+// negative is a Vector2D instance with values of (-3.0, -4.0)
+
+val alsoPositive = -negative
+
+// alsoPositive is a Vector2D instance with values of (3.0, 4.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1018,7 +1166,18 @@ let alsoPositive = -negative
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Vector2D {
+
+    static func += (left: inout Vector2D, right: Vector2D) {
+
+        left = left + right
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1044,7 +1203,16 @@ original += vectorToAdd
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var original = Vector2D(x: 1.0, y: 2.0)
+
+val vectorToAdd = Vector2D(x: 3.0, y: 4.0)
+
+original += vectorToAdd
+
+// original now has values of (4.0, 6.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1086,7 +1254,18 @@ original += vectorToAdd
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Vector2D: Equatable {
+
+    static func == (left: Vector2D, right: Vector2D): Bool {
+
+        return (left.x == right.x) &#38;&#38; (left.y == right.y)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1116,7 +1295,20 @@ if twoThree == anotherTwoThree {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val twoThree = Vector2D(x: 2.0, y: 3.0)
+
+val anotherTwoThree = Vector2D(x: 2.0, y: 3.0)
+
+if twoThree == anotherTwoThree {
+
+    println("These two vectors are equivalent.")
+
+}
+
+// Prints "These two vectors are equivalent."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1150,7 +1342,10 @@ if twoThree == anotherTwoThree {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">prefix operator +++</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1190,7 +1385,30 @@ let afterDoubling = +++toBeDoubled
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Vector2D {
+
+    static prefix func +++ (vector: inout Vector2D): Vector2D {
+
+        vector += vector
+
+        return vector
+
+    }
+
+}
+
+
+
+var toBeDoubled = Vector2D(x: 1.0, y: 4.0)
+
+val afterDoubling = +++toBeDoubled
+
+// toBeDoubled now has values of (2.0, 8.0)
+
+// afterDoubling also has values of (2.0, 8.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1242,7 +1460,28 @@ let plusMinusVector = firstVector +- secondVector
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">infix operator +-: AdditionPrecedence
+
+extension Vector2D {
+
+    static func +- (left: Vector2D, right: Vector2D): Vector2D {
+
+        return Vector2D(x: left.x + right.x, y: left.y - right.y)
+
+    }
+
+}
+
+val firstVector = Vector2D(x: 1.0, y: 2.0)
+
+val secondVector = Vector2D(x: 3.0, y: 4.0)
+
+val plusMinusVector = firstVector +- secondVector
+
+// plusMinusVector is a Vector2D instance with values of (4.0, -2.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>

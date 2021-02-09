@@ -420,7 +420,14 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">init() {
+
+    // perform some initialization here
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -456,7 +463,26 @@ print("The default temperature is \(f.temperature)&#176; Fahrenheit")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Fahrenheit {
+
+    var temperature: Double
+
+    init() {
+
+        temperature = 32.0
+
+    }
+
+}
+
+var f = Fahrenheit()
+
+println("The default temperature is ${f.temperature)&#176; Fahrenheit")
+
+// Prints "The default temperature is 32.0&#176; Fahrenheit"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -494,7 +520,14 @@ print("The default temperature is \(f.temperature)&#176; Fahrenheit")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Fahrenheit {
+
+    var temperature = 32.0
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -552,7 +585,34 @@ let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Celsius {
+
+    var temperatureInCelsius: Double
+
+    init(fromFahrenheit fahrenheit: Double) {
+
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+
+    }
+
+    init(fromKelvin kelvin: Double) {
+
+        temperatureInCelsius = kelvin - 273.15
+
+    }
+
+}
+
+val boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+
+// boilingPointOfWater.temperatureInCelsius is 100.0
+
+val freezingPointOfWater = Celsius(fromKelvin: 273.15)
+
+// freezingPointOfWater.temperatureInCelsius is 0.0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -610,7 +670,34 @@ let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Color {
+
+    val red, green, blue: Double
+
+    init(red: Double, green: Double, blue: Double) {
+
+        self.red   = red
+
+        self.green = green
+
+        self.blue  = blue
+
+    }
+
+    init(white: Double) {
+
+        red   = white
+
+        green = white
+
+        blue  = white
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -632,7 +719,12 @@ let halfGray = Color(white: 0.5)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
+
+val halfGray = Color(white: 0.5)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -654,7 +746,12 @@ let halfGray = Color(white: 0.5)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val veryGreen = Color(0.0, 1.0, 0.0)
+
+// this reports a compile-time error - argument labels are required</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -714,7 +811,36 @@ let bodyTemperature = Celsius(37.0)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Celsius {
+
+    var temperatureInCelsius: Double
+
+    init(fromFahrenheit fahrenheit: Double) {
+
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+
+    }
+
+    init(fromKelvin kelvin: Double) {
+
+        temperatureInCelsius = kelvin - 273.15
+
+    }
+
+    init(_ celsius: Double) {
+
+        temperatureInCelsius = celsius
+
+    }
+
+}
+
+val bodyTemperature = Celsius(37.0)
+
+// bodyTemperature.temperatureInCelsius is 37.0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -774,7 +900,36 @@ cheeseQuestion.response = "Yes, I do like cheese."</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SurveyQuestion {
+
+    var text: String
+
+    var response: String?
+
+    init(text: String) {
+
+        self.text = text
+
+    }
+
+    func ask() {
+
+        println(text)
+
+    }
+
+}
+
+val cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
+
+cheeseQuestion.ask()
+
+// Prints "Do you like cheese?"
+
+cheeseQuestion.response = "Yes, I do like cheese."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -834,7 +989,36 @@ beetsQuestion.response = "I also like beets. (But not with cheese.)"</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SurveyQuestion {
+
+    val text: String
+
+    var response: String?
+
+    init(text: String) {
+
+        self.text = text
+
+    }
+
+    func ask() {
+
+        println(text)
+
+    }
+
+}
+
+val beetsQuestion = SurveyQuestion(text: "How about beets?")
+
+beetsQuestion.ask()
+
+// Prints "How about beets?"
+
+beetsQuestion.response = "I also like beets. (But not with cheese.)"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -878,7 +1062,20 @@ var item = ShoppingListItem()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class ShoppingListItem {
+
+    var name: String?
+
+    var quantity = 1
+
+    var purchased = false
+
+}
+
+var item = ShoppingListItem()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -918,7 +1115,16 @@ let twoByTwo = Size(width: 2.0, height: 2.0)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Size {
+
+    var width = 0.0, height = 0.0
+
+}
+
+val twoByTwo = Size(width: 2.0, height: 2.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -950,7 +1156,22 @@ print(zeroByZero.width, zeroByZero.height)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val zeroByTwo = Size(height: 2.0)
+
+println(zeroByTwo.width, zeroByTwo.height)
+
+// Prints "0.0 2.0"
+
+
+
+val zeroByZero = Size()
+
+println(zeroByZero.width, zeroByZero.height)
+
+// Prints "0.0 0.0"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -994,7 +1215,20 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Size {
+
+    var width = 0.0, height = 0.0
+
+}
+
+struct Point {
+
+    var x = 0.0, y = 0.0
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1040,7 +1274,36 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Rect {
+
+    var origin = Point()
+
+    var size = Size()
+
+    init() {}
+
+    init(origin: Point, size: Size) {
+
+        self.origin = origin
+
+        self.size = size
+
+    }
+
+    init(center: Point, size: Size) {
+
+        val originX = center.x - (size.width / 2)
+
+        val originY = center.y - (size.height / 2)
+
+        self.init(origin: Point(x: originX, y: originY), size: size)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1062,7 +1325,12 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val basicRect = Rect()
+
+// basicRect's origin is (0.0, 0.0) and its size is (0.0, 0.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1086,7 +1354,14 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val originRect = Rect(origin: Point(x: 2.0, y: 2.0),
+
+                      size: Size(width: 5.0, height: 5.0))
+
+// originRect's origin is (2.0, 2.0) and its size is (5.0, 5.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1110,7 +1385,14 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val centerRect = Rect(center: Point(x: 4.0, y: 4.0),
+
+                      size: Size(width: 3.0, height: 3.0))
+
+// centerRect's origin is (2.5, 2.5) and its size is (3.0, 3.0)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1148,7 +1430,14 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">init(parameters) {
+
+    statements
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1172,7 +1461,14 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">convenience init(parameters) {
+
+    statements
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1216,7 +1512,20 @@ struct Point {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Vehicle {
+
+    var numberOfWheels = 0
+
+    var description: String {
+
+        return "${numberOfWheels) wheel(s)"
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1240,7 +1549,14 @@ print("Vehicle: \(vehicle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val vehicle = Vehicle()
+
+println("Vehicle: ${vehicle.description)")
+
+// Vehicle: 0 wheel(s)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1270,7 +1586,20 @@ print("Vehicle: \(vehicle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Bicycle: Vehicle {
+
+    override init() {
+
+        super.init()
+
+        numberOfWheels = 2
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1294,7 +1623,14 @@ print("Bicycle: \(bicycle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val bicycle = Bicycle()
+
+println("Bicycle: ${bicycle.description)")
+
+// Bicycle: 2 wheel(s)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1332,7 +1668,28 @@ print("Bicycle: \(bicycle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Hoverboard: Vehicle {
+
+    var color: String
+
+    init(color: String) {
+
+        self.color = color
+
+        // super.init() implicitly called here
+
+    }
+
+    override var description: String {
+
+        return "${super.description) in a beautiful ${color)"
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1356,7 +1713,14 @@ print("Hoverboard: \(hoverboard.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val hoverboard = Hoverboard(color: "silver")
+
+println("Hoverboard: ${hoverboard.description)")
+
+// Hoverboard: 0 wheel(s) in a beautiful silver</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1406,7 +1770,26 @@ print("Hoverboard: \(hoverboard.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Food {
+
+    var name: String
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+    convenience init() {
+
+        self.init(name: "[Unnamed]")
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1428,7 +1811,12 @@ print("Hoverboard: \(hoverboard.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val namedMeat = Food(name: "Bacon")
+
+// namedMeat's name is "Bacon"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1450,7 +1838,12 @@ print("Hoverboard: \(hoverboard.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val mysteryMeat = Food()
+
+// mysteryMeat's name is "[Unnamed]"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1488,7 +1881,28 @@ print("Hoverboard: \(hoverboard.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class RecipeIngredient: Food {
+
+    var quantity: Int
+
+    init(name: String, quantity: Int) {
+
+        self.quantity = quantity
+
+        super.init(name: name)
+
+    }
+
+    override convenience init(name: String) {
+
+        self.init(name: name, quantity: 1)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1512,7 +1926,14 @@ let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val oneMysteryItem = RecipeIngredient()
+
+val oneBacon = RecipeIngredient(name: "Bacon")
+
+val sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1546,7 +1967,24 @@ let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class ShoppingListItem: RecipeIngredient {
+
+    var purchased = false
+
+    var description: String {
+
+        var output = "${quantity) x ${name)"
+
+        output += purchased ? " &#10004;" : " &#10008;"
+
+        return output
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1590,7 +2028,34 @@ for item in breakfastList {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var breakfastList = [
+
+    ShoppingListItem(),
+
+    ShoppingListItem(name: "Bacon"),
+
+    ShoppingListItem(name: "Eggs", quantity: 6),
+
+]
+
+breakfastList[0].name = "Orange juice"
+
+breakfastList[0].purchased = true
+
+for item in breakfastList {
+
+    println(item.description)
+
+}
+
+// 1 x Orange juice &#10004;
+
+// 1 x Bacon &#10008;
+
+// 6 x Eggs &#10008;</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1652,7 +2117,38 @@ if valueChanged == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val wholeNumber: Double = 12345.0
+
+val pi = 3.14159
+
+
+
+if val valueMaintained = Int(exactly: wholeNumber) {
+
+    println("${wholeNumber) conversion to Int maintains value of ${valueMaintained)")
+
+}
+
+// Prints "12345.0 conversion to Int maintains value of 12345"
+
+
+
+val valueChanged = Int(exactly: pi)
+
+// valueChanged is of type Int?, not Int
+
+
+
+if valueChanged == nil {
+
+    println("${pi) conversion to Int does not maintain value")
+
+}
+
+// Prints "3.14159 conversion to Int does not maintain value"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1684,7 +2180,22 @@ if valueChanged == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Animal {
+
+    val species: String
+
+    init?(species: String) {
+
+        if species.isEmpty { return nil }
+
+        self.species = species
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1716,7 +2227,22 @@ if let giraffe = someCreature {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val someCreature = Animal(species: "Giraffe")
+
+// someCreature is of type Animal?, not Animal
+
+
+
+if val giraffe = someCreature {
+
+    println("An animal was initialized with a species of ${giraffe.species)")
+
+}
+
+// Prints "An animal was initialized with a species of Giraffe"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1748,7 +2274,22 @@ if anonymousCreature == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val anonymousCreature = Animal(species: "")
+
+// anonymousCreature is of type Animal?, not Animal
+
+
+
+if anonymousCreature == nil {
+
+    println("The anonymous creature could not be initialized")
+
+}
+
+// Prints "The anonymous creature could not be initialized"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1810,7 +2351,38 @@ if anonymousCreature == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum TemperatureUnit {
+
+    case kelvin, celsius, fahrenheit
+
+    init?(symbol: Character) {
+
+        switch symbol {
+
+        case "K":
+
+            self = .kelvin
+
+        case "C":
+
+            self = .celsius
+
+        case "F":
+
+            self = .fahrenheit
+
+        default:
+
+            return nil
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1850,7 +2422,30 @@ if unknownUnit == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val fahrenheitUnit = TemperatureUnit(symbol: "F")
+
+if fahrenheitUnit != nil {
+
+    println("This is a defined temperature unit, so initialization succeeded.")
+
+}
+
+// Prints "This is a defined temperature unit, so initialization succeeded."
+
+
+
+val unknownUnit = TemperatureUnit(symbol: "X")
+
+if unknownUnit == nil {
+
+    println("This is not a defined temperature unit, so initialization failed.")
+
+}
+
+// Prints "This is not a defined temperature unit, so initialization failed."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1912,7 +2507,38 @@ if unknownUnit == nil {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum TemperatureUnit: Character {
+
+    case kelvin = "K", celsius = "C", fahrenheit = "F"
+
+}
+
+
+
+val fahrenheitUnit = TemperatureUnit(rawValue: "F")
+
+if fahrenheitUnit != nil {
+
+    println("This is a defined temperature unit, so initialization succeeded.")
+
+}
+
+// Prints "This is a defined temperature unit, so initialization succeeded."
+
+
+
+val unknownUnit = TemperatureUnit(rawValue: "X")
+
+if unknownUnit == nil {
+
+    println("This is not a defined temperature unit, so initialization failed.")
+
+}
+
+// Prints "This is not a defined temperature unit, so initialization failed."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1976,7 +2602,40 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Product {
+
+    val name: String
+
+    init?(name: String) {
+
+        if name.isEmpty { return nil }
+
+        self.name = name
+
+    }
+
+}
+
+
+
+class CartItem: Product {
+
+    val quantity: Int
+
+    init?(name: String, quantity: Int) {
+
+        if quantity &#60; 1 { return nil }
+
+        self.quantity = quantity
+
+        super.init(name: name)
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2002,7 +2661,16 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if val twoSocks = CartItem(name: "sock", quantity: 2) {
+
+    println("Item: ${twoSocks.name), quantity: ${twoSocks.quantity)")
+
+}
+
+// Prints "Item: sock, quantity: 2"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2032,7 +2700,20 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if val zeroShirts = CartItem(name: "shirt", quantity: 0) {
+
+    println("Item: ${zeroShirts.name), quantity: ${zeroShirts.quantity)")
+
+} else {
+
+    println("Unable to initialize zero shirts")
+
+}
+
+// Prints "Unable to initialize zero shirts"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2062,7 +2743,20 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if val oneUnnamed = CartItem(name: "", quantity: 1) {
+
+    println("Item: ${oneUnnamed.name), quantity: ${oneUnnamed.quantity)")
+
+} else {
+
+    println("Unable to initialize one unnamed product")
+
+}
+
+// Prints "Unable to initialize one unnamed product"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2114,7 +2808,28 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Document {
+
+    var name: String?
+
+    // this initializer creates a document with a nil name value
+
+    init() {}
+
+    // this initializer creates a document with a nonempty name value
+
+    init?(name: String) {
+
+        if name.isEmpty { return nil }
+
+        self.name = name
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2160,7 +2875,36 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class AutomaticallyNamedDocument: Document {
+
+    override init() {
+
+        super.init()
+
+        self.name = "[Untitled]"
+
+    }
+
+    override init(name: String) {
+
+        super.init()
+
+        if name.isEmpty {
+
+            self.name = "[Untitled]"
+
+        } else {
+
+            self.name = name
+
+        }
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2188,7 +2932,18 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class UntitledDocument: Document {
+
+    override init() {
+
+        super.init(name: "[Untitled]")!
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2230,7 +2985,18 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SomeClass {
+
+    required init() {
+
+        // initializer implementation goes here
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2258,7 +3024,18 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SomeSubclass: SomeClass {
+
+    required init() {
+
+        // subclass implementation of the required initializer goes here
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2304,7 +3081,22 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SomeClass {
+
+    val someProperty: SomeType = {
+
+        // create a default value for someProperty inside this closure
+
+        // someValue must be of the same type as SomeType
+
+        return someValue
+
+    }()
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2356,7 +3148,42 @@ class CartItem: Product {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Chessboard {
+
+    val boardColors: [Bool] = {
+
+        var temporaryBoard = [Bool]()
+
+        var isBlack = false
+
+        for i in 1...8 {
+
+            for j in 1...8 {
+
+                temporaryBoard.append(isBlack)
+
+                isBlack = !isBlack
+
+            }
+
+            isBlack = !isBlack
+
+        }
+
+        return temporaryBoard
+
+    }()
+
+    func squareIsBlackAt(row: Int, column: Int): Bool {
+
+        return boardColors[(row * 8) + column]
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2384,7 +3211,18 @@ print(board.squareIsBlackAt(row: 7, column: 7))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val board = Chessboard()
+
+println(board.squareIsBlackAt(row: 0, column: 1))
+
+// Prints "true"
+
+println(board.squareIsBlackAt(row: 7, column: 7))
+
+// Prints "false"</code>
+                  </pre>
+                  
               
               </td>
             </tr>

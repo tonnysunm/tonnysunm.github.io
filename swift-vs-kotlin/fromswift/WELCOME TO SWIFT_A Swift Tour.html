@@ -543,7 +543,17 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val apples = 3
+
+val oranges = 5
+
+val appleSummary = "I have ${apples} apples."
+
+val fruitSummary = "I have ${apples + oranges} pieces of fruit."
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -569,7 +579,17 @@ And then I said "I have \(apples + oranges) pieces of fruit."
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val quotation = """
+
+I said "I have ${apples} apples."
+
+And then I said "I have ${apples + oranges} pieces of fruit."
+
+"""
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -603,7 +623,24 @@ occupations["Jayne"] = "Public Relations"</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var shoppingList = ["catfish", "water", "tulips"]
+
+shoppingList[1] = "bottle of water"
+
+
+
+var occupations = [
+
+    "Malcolm": "Captain",
+
+    "Kaylee": "Mechanic",
+
+]
+
+occupations["Jayne"] = "Public Relations"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -625,7 +662,12 @@ print(shoppingList)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">shoppingList.append("blue paint")
+
+println(shoppingList)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -647,7 +689,12 @@ let emptyDictionary = [String: Float]()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val emptyArray = [String]()
+
+val emptyDictionary = [String: Float]()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -669,7 +716,12 @@ occupations = [:]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">shoppingList = []
+
+occupations = [:]</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -723,7 +775,30 @@ print(teamScore)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val individualScores = [75, 43, 103, 87, 12]
+
+var teamScore = 0
+
+for score in individualScores {
+
+    if score &#62; 50 {
+
+        teamScore += 3
+
+    } else {
+
+        teamScore += 1
+
+    }
+
+}
+
+println(teamScore)
+
+// Prints "11"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -759,7 +834,26 @@ if let name = optionalName {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var optionalString: String? = "Hello"
+
+println(optionalString == nil)
+
+// Prints "false"
+
+
+
+var optionalName: String? = "John Appleseed"
+
+var greeting = "Hello!"
+
+if val name = optionalName {
+
+    greeting = "Hello, ${name)"
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -783,7 +877,14 @@ let informalGreeting = "Hi \(nickname ?? fullName)"</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val nickname: String? = nil
+
+val fullName: String = "John Appleseed"
+
+val informalGreeting = "Hi ${nickname ?: fullName)"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -825,7 +926,32 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val vegetable = "red pepper"
+
+switch vegetable {
+
+case "celery":
+
+    println("Add some raisins and make ants on a log.")
+
+case "cucumber", "watercress":
+
+    println("That would make a good tea sandwich.")
+
+case val x where x.hasSuffix("pepper"):
+
+    println("Is it a spicy ${x)?")
+
+default:
+
+    println("Everything tastes good in soup.")
+
+}
+
+// Prints "Is it a spicy red pepper?"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -873,7 +999,38 @@ print(largest)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val interestingNumbers = [
+
+    "Prime": [2, 3, 5, 7, 11, 13],
+
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+
+    "Square": [1, 4, 9, 16, 25],
+
+]
+
+var largest = 0
+
+for (kind, numbers) in interestingNumbers {
+
+    for number in numbers {
+
+        if number &#62; largest {
+
+            largest = number
+
+        }
+
+    }
+
+}
+
+println(largest)
+
+// Prints "25"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -917,7 +1074,34 @@ print(m)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var n = 2
+
+while n &#60; 100 {
+
+    n *= 2
+
+}
+
+println(n)
+
+// Prints "128"
+
+
+
+var m = 2
+
+repeat {
+
+    m *= 2
+
+} while m &#60; 100
+
+println(m)
+
+// Prints "128"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -947,7 +1131,20 @@ print(total)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var total = 0
+
+for i in 0..&#60;4 {
+
+    total += i
+
+}
+
+println(total)
+
+// Prints "6"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -987,7 +1184,16 @@ greet(person: "Bob", day: "Tuesday")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func greet(person: String, day: String): String {
+
+    return "Hello ${person), today is ${day)."
+
+}
+
+greet(person: "Bob", day: "Tuesday")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1013,7 +1219,16 @@ greet("John", on: "Wednesday")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func greet(_ person: String, on day: String): String {
+
+    return "Hello ${person), today is ${day)."
+
+}
+
+greet("John", on: "Wednesday")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1073,7 +1288,50 @@ print(statistics.2)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func calculateStatistics(scores: [Int]): (min: Int, max: Int, sum: Int) {
+
+    var min = scores[0]
+
+    var max = scores[0]
+
+    var sum = 0
+
+
+
+    for score in scores {
+
+        if score &#62; max {
+
+            max = score
+
+        } else if score &#60; min {
+
+            min = score
+
+        }
+
+        sum += score
+
+    }
+
+
+
+    return (min, max, sum)
+
+}
+
+val statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+
+println(statistics.sum)
+
+// Prints "120"
+
+println(statistics.2)
+
+// Prints "120"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1109,7 +1367,26 @@ returnFifteen()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func returnFifteen(): Int {
+
+    var y = 10
+
+    func add() {
+
+        y += 5
+
+    }
+
+    add()
+
+    return y
+
+}
+
+returnFifteen()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1143,7 +1420,24 @@ increment(7)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func makeIncrementer(): ((Int): Int) {
+
+    func addOne(number: Int): Int {
+
+        return 1 + number
+
+    }
+
+    return addOne
+
+}
+
+var increment = makeIncrementer()
+
+increment(7)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1187,7 +1481,34 @@ hasAnyMatches(list: numbers, condition: lessThanTen)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func hasAnyMatches(list: [Int], condition: (Int): Bool): Bool {
+
+    for item in list {
+
+        if condition(item) {
+
+            return true
+
+        }
+
+    }
+
+    return false
+
+}
+
+func lessThanTen(number: Int): Bool {
+
+    return number &#60; 10
+
+}
+
+var numbers = [20, 19, 7, 12]
+
+hasAnyMatches(list: numbers, condition: lessThanTen)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1213,7 +1534,16 @@ hasAnyMatches(list: numbers, condition: lessThanTen)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">numbers.map({ (number: Int): Int in
+
+    val result = 3 * number
+
+    return result
+
+})</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1237,7 +1567,14 @@ print(mappedNumbers)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val mappedNumbers = numbers.map({ number in 3 * number })
+
+println(mappedNumbers)
+
+// Prints "[60, 57, 21, 36]"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1261,7 +1598,14 @@ print(sortedNumbers)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val sortedNumbers = numbers.sorted { $0 &#62; $1 }
+
+println(sortedNumbers)
+
+// Prints "[20, 19, 12, 7]"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1305,7 +1649,20 @@ print(sortedNumbers)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Shape {
+
+    var numberOfSides = 0
+
+    func simpleDescription(): String {
+
+        return "A shape with ${numberOfSides) sides."
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1329,7 +1686,14 @@ var shapeDescription = shape.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var shape = Shape()
+
+shape.numberOfSides = 7
+
+var shapeDescription = shape.simpleDescription()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1371,7 +1735,32 @@ var shapeDescription = shape.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class NamedShape {
+
+    var numberOfSides: Int = 0
+
+    var name: String
+
+
+
+    init(name: String) {
+
+        self.name = name
+
+    }
+
+
+
+    func simpleDescription(): String {
+
+        return "A shape with ${numberOfSides) sides."
+
+    }
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1429,7 +1818,48 @@ test.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class Square: NamedShape {
+
+    var sideLength: Double
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 4
+
+    }
+
+
+
+    func area(): Double {
+
+        return sideLength * sideLength
+
+    }
+
+
+
+    override func simpleDescription(): String {
+
+        return "A square with sides of length ${sideLength)."
+
+    }
+
+}
+
+val test = Square(sideLength: 5.2, name: "my test square")
+
+test.area()
+
+test.simpleDescription()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1503,7 +1933,64 @@ print(triangle.sideLength)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class EquilateralTriangle: NamedShape {
+
+    var sideLength: Double = 0.0
+
+
+
+    init(sideLength: Double, name: String) {
+
+        self.sideLength = sideLength
+
+        super.init(name: name)
+
+        numberOfSides = 3
+
+    }
+
+
+
+    var perimeter: Double {
+
+        get {
+
+            return 3.0 * sideLength
+
+        }
+
+        set {
+
+            sideLength = newValue / 3.0
+
+        }
+
+    }
+
+
+
+    override func simpleDescription(): String {
+
+        return "An equilateral triangle with sides of length ${sideLength)."
+
+    }
+
+}
+
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+
+println(triangle.perimeter)
+
+// Prints "9.3"
+
+triangle.perimeter = 9.9
+
+println(triangle.sideLength)
+
+// Prints "3.3000000000000003"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1569,7 +2056,56 @@ print(triangleAndSquare.triangle.sideLength)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class TriangleAndSquare {
+
+    var triangle: EquilateralTriangle {
+
+        willSet {
+
+            square.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    var square: Square {
+
+        willSet {
+
+            triangle.sideLength = newValue.sideLength
+
+        }
+
+    }
+
+    init(size: Double, name: String) {
+
+        square = Square(sideLength: size, name: name)
+
+        triangle = EquilateralTriangle(sideLength: size, name: name)
+
+    }
+
+}
+
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+
+println(triangleAndSquare.square.sideLength)
+
+// Prints "10.0"
+
+println(triangleAndSquare.triangle.sideLength)
+
+// Prints "10.0"
+
+triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+
+println(triangleAndSquare.triangle.sideLength)
+
+// Prints "50.0"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1591,7 +2127,12 @@ let sideLength = optionalSquare?.sideLength</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
+
+val sideLength = optionalSquare?.sideLength</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1667,7 +2208,52 @@ let aceRawValue = ace.rawValue</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum Rank: Int {
+
+    case ace = 1
+
+    case two, three, four, five, six, seven, eight, nine, ten
+
+    case jack, queen, king
+
+
+
+    func simpleDescription(): String {
+
+        switch self {
+
+        case .ace:
+
+            return "ace"
+
+        case .jack:
+
+            return "jack"
+
+        case .queen:
+
+            return "queen"
+
+        case .king:
+
+            return "king"
+
+        default:
+
+            return String(self.rawValue)
+
+        }
+
+    }
+
+}
+
+val ace = Rank.ace
+
+val aceRawValue = ace.rawValue</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1691,7 +2277,14 @@ let aceRawValue = ace.rawValue</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if val convertedRank = Rank(rawValue: 3) {
+
+    val threeDescription = convertedRank.simpleDescription()
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1745,7 +2338,44 @@ let heartsDescription = hearts.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum Suit {
+
+    case spades, hearts, diamonds, clubs
+
+
+
+    func simpleDescription(): String {
+
+        switch self {
+
+        case .spades:
+
+            return "spades"
+
+        case .hearts:
+
+            return "hearts"
+
+        case .diamonds:
+
+            return "diamonds"
+
+        case .clubs:
+
+            return "clubs"
+
+        }
+
+    }
+
+}
+
+val hearts = Suit.hearts
+
+val heartsDescription = hearts.simpleDescription()</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1793,7 +2423,39 @@ case let .failure(message):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum ServerResponse {
+
+    case result(String, String)
+
+    case failure(String)
+
+}
+
+
+
+val success = ServerResponse.result("6:00 am", "8:09 pm")
+
+val failure = ServerResponse.failure("Out of cheese.")
+
+
+
+switch success {
+
+case val .result(sunrise, sunset):
+
+    println("Sunrise is at ${sunrise) and sunset is at ${sunset).")
+
+case val .failure(message):
+
+    println("Failure...  ${message}")
+
+}
+
+// Prints "Sunrise is at 6:00 am and sunset is at 8:09 pm."
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1829,7 +2491,27 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">struct Card {
+
+    var rank: Rank
+
+    var suit: Suit
+
+    func simpleDescription(): String {
+
+        return "The ${rank.simpleDescription()} of ${suit.simpleDescription()}"
+
+    }
+
+}
+
+val threeOfSpades = Card(rank: .three, suit: .spades)
+
+val threeOfSpadesDescription = threeOfSpades.simpleDescription()
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1869,7 +2551,16 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">protocol ExampleProtocol {
+
+    var simpleDescription: String { get }
+
+    mutating func adjust()
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1927,7 +2618,48 @@ let bDescription = b.simpleDescription</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">class SimpleClass: ExampleProtocol {
+
+    var simpleDescription: String = "A very simple class."
+
+    var anotherProperty: Int = 69105
+
+    func adjust() {
+
+        simpleDescription += "  Now 100% adjusted."
+
+    }
+
+}
+
+var a = SimpleClass()
+
+a.adjust()
+
+val aDescription = a.simpleDescription
+
+
+
+struct SimpleStructure: ExampleProtocol {
+
+    var simpleDescription: String = "A simple structure"
+
+    mutating func adjust() {
+
+        simpleDescription += " (adjusted)"
+
+    }
+
+}
+
+var b = SimpleStructure()
+
+b.adjust()
+
+val bDescription = b.simpleDescription</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1965,7 +2697,29 @@ print(7.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">extension Int: ExampleProtocol {
+
+    var simpleDescription: String {
+
+        return "The number ${self}"
+
+    }
+
+    mutating func adjust() {
+
+        self += 42
+
+    }
+
+}
+
+println(7.simpleDescription)
+
+// Prints "The number 7"
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1991,7 +2745,16 @@ print(protocolValue.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val protocolValue: ExampleProtocol = a
+
+println(protocolValue.simpleDescription)
+
+// Prints "A very simple class.  Now 100% adjusted."
+
+// println(protocolValue.anotherProperty)  // Uncomment to see the error</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2033,7 +2796,18 @@ print(protocolValue.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">enum PrinterError: Error {
+
+    case outOfPaper
+
+    case noToner
+
+    case onFire
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2063,7 +2837,20 @@ print(protocolValue.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func send(job: Int, toPrinter printerName: String) throws -&#62; String {
+
+    if printerName == "Never Has Toner" {
+
+        throw PrinterError.noToner
+
+    }
+
+    return "Job sent"
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2095,7 +2882,22 @@ print(protocolValue.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">do {
+
+    val printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
+
+    println(printerResponse)
+
+} catch {
+
+    println(error)
+
+}
+
+// Prints "Job sent"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2135,7 +2937,31 @@ print(protocolValue.simpleDescription)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">do {
+
+    val printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+
+    println(printerResponse)
+
+} catch PrinterError.onFire {
+
+    println("I'll just put this over here, with the rest of the fire.")
+
+} catch val printerError as PrinterError {
+
+    println("Printer error: ${printerError}.")
+
+} catch {
+
+    println(error)
+
+}
+
+// Prints "Job sent"
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2157,7 +2983,12 @@ let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+
+val printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2205,7 +3036,38 @@ print(fridgeIsOpen)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var fridgeIsOpen = false
+
+val fridgeContent = ["milk", "eggs", "leftovers"]
+
+
+
+func fridgeContains(_ food: String): Bool {
+
+    fridgeIsOpen = true
+
+    defer {
+
+        fridgeIsOpen = false
+
+    }
+
+
+
+    val result = fridgeContent.contains(food)
+
+    return result
+
+}
+
+fridgeContains("banana")
+
+println(fridgeIsOpen)
+
+// Prints "false"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2253,7 +3115,24 @@ makeArray(repeating: "knock", numberOfTimes: 4)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func makeArray&#60;Item&#62;(repeating item: Item, numberOfTimes: Int): [Item] {
+
+    var result = [Item]()
+
+    for _ in 0..&#60;numberOfTimes {
+
+        result.append(item)
+
+    }
+
+    return result
+
+}
+
+makeArray(repeating: "knock", numberOfTimes: 4)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2285,7 +3164,22 @@ possibleInteger = .some(100)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">// Reimplement the Swift standard library's optional type
+
+enum OptionalValue&#60;Wrapped&#62; {
+
+    case none
+
+    case some(Wrapped)
+
+}
+
+var possibleInteger: OptionalValue&#60;Int&#62; = .none
+
+possibleInteger = .some(100)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -2329,7 +3223,34 @@ anyCommonElements([1, 2, 3], [3])</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func anyCommonElements&#60;T: Sequence, U: Sequence&#62;(_ lhs: T, _ rhs: U): Bool
+
+    where T.Element: Equatable, T.Element == U.Element
+
+{
+
+    for lhsItem in lhs {
+
+        for rhsItem in rhs {
+
+            if lhsItem == rhsItem {
+
+                return true
+
+            }
+
+        }
+
+    }
+
+    return false
+
+}
+
+anyCommonElements([1, 2, 3], [3])</code>
+                  </pre>
+                  
               
               </td>
             </tr>

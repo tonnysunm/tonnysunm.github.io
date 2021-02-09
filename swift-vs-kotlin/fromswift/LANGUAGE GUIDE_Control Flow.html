@@ -430,7 +430,24 @@ for name in names {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val names = ["Anna", "Alex", "Brian", "Jack"]
+
+for name in names {
+
+    println("Hello, ${name)!")
+
+}
+
+// Hello, Anna!
+
+// Hello, Alex!
+
+// Hello, Brian!
+
+// Hello, Jack!</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -462,7 +479,22 @@ for (animalName, legCount) in numberOfLegs {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+
+for (animalName, legCount) in numberOfLegs {
+
+    println("${animalName)s have ${legCount) legs")
+
+}
+
+// cats have 4 legs
+
+// ants have 6 legs
+
+// spiders have 8 legs</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -496,7 +528,24 @@ for (animalName, legCount) in numberOfLegs {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">for index in 1...5 {
+
+    println("${index) times 5 is ${index * 5)")
+
+}
+
+// 1 times 5 is 5
+
+// 2 times 5 is 10
+
+// 3 times 5 is 15
+
+// 4 times 5 is 20
+
+// 5 times 5 is 25</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -530,7 +579,24 @@ print("\(base) to the power of \(power) is \(answer)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val base = 3
+
+val power = 10
+
+var answer = 1
+
+for _ in 1...power {
+
+    answer *= base
+
+}
+
+println("${base) to the power of ${power) is ${answer)")
+
+// Prints "3 to the power of 10 is 59049"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -556,7 +622,16 @@ for tickMark in 0..&#60;minutes {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val minutes = 60
+
+for tickMark in 0..&#60;minutes {
+
+    // render the tick mark each minute (60 times)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -582,7 +657,16 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val minuteInterval = 5
+
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+
+    // render the tick mark every 5 minutes (0, 5, 10, 15 ... 45, 50, 55)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -610,7 +694,18 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val hours = 12
+
+val hourInterval = 3
+
+for tickMark in stride(from: 3, through: hours, by: hourInterval) {
+
+    // render the tick mark every 3 hours (3, 6, 9, 12)
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -648,7 +743,14 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">while condition {
+
+    statements
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -670,7 +772,12 @@ var board = [Int](repeating: 0, count: finalSquare + 1)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -692,7 +799,12 @@ board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -738,7 +850,36 @@ print("Game over!")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var square = 0
+
+var diceRoll = 0
+
+while square &#60; finalSquare {
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+    if square &#60; board.count {
+
+        // if we're still on the board, move up or down for a snake or a ladder
+
+        square += board[square]
+
+    }
+
+}
+
+println("Game over!")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -776,7 +917,14 @@ print("Game over!")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">repeat {
+
+    statements
+
+} while condition</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -806,7 +954,20 @@ var diceRoll = 0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -844,7 +1005,28 @@ print("Game over!")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">repeat {
+
+    // move up or down for a snake or ladder
+
+    square += board[square]
+
+    // roll the dice
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    // move by the rolled amount
+
+    square += diceRoll
+
+} while square &#60; finalSquare
+
+println("Game over!")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -886,7 +1068,18 @@ if temperatureInFahrenheit &#60;= 32 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">var temperatureInFahrenheit = 30
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+}
+
+// Prints "It's very cold. Consider wearing a scarf."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -918,7 +1111,22 @@ if temperatureInFahrenheit &#60;= 32 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 40
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else {
+
+    println("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's not that cold. Wear a t-shirt."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -954,7 +1162,26 @@ if temperatureInFahrenheit &#60;= 32 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 90
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    println("It's really warm. Don't forget to wear sunscreen.")
+
+} else {
+
+    println("It's not that cold. Wear a t-shirt.")
+
+}
+
+// Prints "It's really warm. Don't forget to wear sunscreen."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -984,7 +1211,20 @@ if temperatureInFahrenheit &#60;= 32 {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">temperatureInFahrenheit = 72
+
+if temperatureInFahrenheit &#60;= 32 {
+
+    println("It's very cold. Consider wearing a scarf.")
+
+} else if temperatureInFahrenheit &#62;= 86 {
+
+    println("It's really warm. Don't forget to wear sunscreen.")
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1034,7 +1274,26 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">switch some value to consider {
+
+case value 1:
+
+    respond to value 1
+
+case value 2,
+
+     value 3:
+
+    respond to value 2 or 3
+
+default:
+
+    otherwise, do something else
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1072,7 +1331,28 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val someCharacter: Character = "z"
+
+switch someCharacter {
+
+case "a":
+
+    println("The first letter of the alphabet")
+
+case "z":
+
+    println("The last letter of the alphabet")
+
+default:
+
+    println("Some other character")
+
+}
+
+// Prints "The last letter of the alphabet"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1122,7 +1402,26 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a": // Invalid, the case has an empty body
+
+case "A":
+
+    println("The letter A")
+
+default:
+
+    println("Not the letter A")
+
+}
+
+// This will report a compile-time error.</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1156,7 +1455,24 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val anotherCharacter: Character = "a"
+
+switch anotherCharacter {
+
+case "a", "A":
+
+    println("The letter A")
+
+default:
+
+    println("Not the letter A")
+
+}
+
+// Prints "The letter A"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1226,7 +1542,46 @@ print("There are \(naturalCount) \(countedThings).")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val approximateCount = 62
+
+val countedThings = "moons orbiting Saturn"
+
+val naturalCount: String
+
+switch approximateCount {
+
+case 0:
+
+    naturalCount = "no"
+
+case 1..&#60;5:
+
+    naturalCount = "a few"
+
+case 5..&#60;12:
+
+    naturalCount = "several"
+
+case 12..&#60;100:
+
+    naturalCount = "dozens of"
+
+case 100..&#60;1000:
+
+    naturalCount = "hundreds of"
+
+default:
+
+    naturalCount = "many"
+
+}
+
+println("There are ${naturalCount) ${countedThings).")
+
+// Prints "There are dozens of moons orbiting Saturn."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1286,7 +1641,36 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val somePoint = (1, 1)
+
+switch somePoint {
+
+case (0, 0):
+
+    println("${somePoint) is at the origin")
+
+case (_, 0):
+
+    println("${somePoint) is on the x-axis")
+
+case (0, _):
+
+    println("${somePoint) is on the y-axis")
+
+case (-2...2, -2...2):
+
+    println("${somePoint) is inside the box")
+
+default:
+
+    println("${somePoint) is outside of the box")
+
+}
+
+// Prints "(1, 1) is inside the box"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1338,7 +1722,28 @@ case let (x, y):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val anotherPoint = (2, 0)
+
+switch anotherPoint {
+
+case (val x, 0):
+
+    println("on the x-axis with an x value of ${x)")
+
+case (0, val y):
+
+    println("on the y-axis with a y value of ${y)")
+
+case val (x, y):
+
+    println("somewhere else at (${x), ${y))")
+
+}
+
+// Prints "on the x-axis with an x value of 2"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1390,7 +1795,28 @@ case let (x, y):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val yetAnotherPoint = (1, -1)
+
+switch yetAnotherPoint {
+
+case val (x, y) where x == y:
+
+    println("(${x), ${y)) is on the line x == y")
+
+case val (x, y) where x == -y:
+
+    println("(${x), ${y)) is on the line x == -y")
+
+case val (x, y):
+
+    println("(${x), ${y)) is just some arbitrary point")
+
+}
+
+// Prints "(1, -1) is on the line x == -y"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1444,7 +1870,30 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val someCharacter: Character = "e"
+
+switch someCharacter {
+
+case "a", "e", "i", "o", "u":
+
+    println("${someCharacter) is a vowel")
+
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+
+     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+
+    println("${someCharacter) is a consonant")
+
+default:
+
+    println("${someCharacter) is not a vowel or a consonant")
+
+}
+
+// Prints "e is a vowel"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1478,7 +1927,24 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val stillAnotherPoint = (9, 0)
+
+switch stillAnotherPoint {
+
+case (val distance, 0), (0, val distance):
+
+    println("On an axis, ${distance) from the origin")
+
+default:
+
+    println("Not on an axis")
+
+}
+
+// Prints "On an axis, 9 from the origin"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1532,7 +1998,30 @@ print(puzzleOutput)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val puzzleInput = "great minds think alike"
+
+var puzzleOutput = ""
+
+val charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+
+for character in puzzleInput {
+
+    if charactersToRemove.contains(character) {
+
+        continue
+
+    }
+
+    puzzleOutput.append(character)
+
+}
+
+println(puzzleOutput)
+
+// Prints "grtmndsthnklk"</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1604,7 +2093,48 @@ if let integerValue = possibleIntegerValue {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val numberSymbol: Character = "&#19977;"  // Chinese symbol for the number 3
+
+var possibleIntegerValue: Int?
+
+switch numberSymbol {
+
+case "1", "&#1633;", "&#19968;", "&#3665;":
+
+    possibleIntegerValue = 1
+
+case "2", "&#1634;", "&#20108;", "&#3666;":
+
+    possibleIntegerValue = 2
+
+case "3", "&#1635;", "&#19977;", "&#3667;":
+
+    possibleIntegerValue = 3
+
+case "4", "&#1636;", "&#22235;", "&#3668;":
+
+    possibleIntegerValue = 4
+
+default:
+
+    break
+
+}
+
+if val integerValue = possibleIntegerValue {
+
+    println("The integer value of ${numberSymbol) is ${integerValue).")
+
+} else {
+
+    println("An integer value could not be found for ${numberSymbol).")
+
+}
+
+// Prints "The integer value of &#19977; is 3."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1658,7 +2188,30 @@ print(description)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val integerToDescribe = 5
+
+var description = "The number ${integerToDescribe) is"
+
+switch integerToDescribe {
+
+case 2, 3, 5, 7, 11, 13, 17, 19:
+
+    description += " a prime number, and also"
+
+    fallthrough
+
+default:
+
+    description += " an integer."
+
+}
+
+println(description)
+
+// Prints "The number 5 is a prime number, and also an integer."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1696,7 +2249,14 @@ print(description)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">label name: while condition {
+
+    statements
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1726,7 +2286,20 @@ var diceRoll = 0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">val finalSquare = 25
+
+var board = [Int](repeating: 0, count: finalSquare + 1)
+
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+var square = 0
+
+var diceRoll = 0</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1778,7 +2351,42 @@ print("Game over!")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">gameLoop: while square != finalSquare {
+
+    diceRoll += 1
+
+    if diceRoll == 7 { diceRoll = 1 }
+
+    switch square + diceRoll {
+
+    case finalSquare:
+
+        // diceRoll will move us to the final square, so the game is over
+
+        break gameLoop
+
+    case val newSquare where newSquare &#62; finalSquare:
+
+        // diceRoll will move us beyond the final square, so roll again
+
+        continue gameLoop
+
+    default:
+
+        // this is a valid move, so find out its effect
+
+        square += diceRoll
+
+        square += board[square]
+
+    }
+
+}
+
+println("Game over!")</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1852,7 +2460,50 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">func greet(person: [String: String]) {
+
+    guard val name = person["name"] else {
+
+        return
+
+    }
+
+
+
+    println("Hello ${name)!")
+
+
+
+    guard val location = person["location"] else {
+
+        println("I hope the weather is nice near you.")
+
+        return
+
+    }
+
+
+
+    println("I hope the weather is nice in ${location).")
+
+}
+
+
+
+greet(person: ["name": "John"])
+
+// Prints "Hello John!"
+
+// Prints "I hope the weather is nice near you."
+
+greet(person: ["name": "Jane", "location": "Cupertino"])
+
+// Prints "Hello Jane!"
+
+// Prints "I hope the weather is nice in Cupertino."</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1894,7 +2545,18 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if #available(iOS 10, macOS 10.12, *) {
+
+    // Use iOS 10 APIs on iOS, and use macOS 10.12 APIs on macOS
+
+} else {
+
+    // Fall back to earlier iOS and macOS APIs
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1922,7 +2584,18 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div></div>
+                  <pre>
+                    <code class="swift">if #available(platform name version, ..., *) {
+
+    statements to execute if the APIs are available
+
+} else {
+
+    fallback statements to execute if the APIs are unavailable
+
+}</code>
+                  </pre>
+                  
               
               </td>
             </tr>
