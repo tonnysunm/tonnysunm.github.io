@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -485,82 +488,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct BlackjackCard {
-
-
-
-    // nested Suit enumeration
-
-    enum Suit: Character {
-
-        case spades = "&#9824;", hearts = "&#9825;", diamonds = "&#9826;", clubs = "&#9827;"
-
-    }
-
-
-
-    // nested Rank enumeration
-
-    enum Rank: Int {
-
-        case two = 2, three, four, five, six, seven, eight, nine, ten
-
-        case jack, queen, king, ace
-
-        struct Values {
-
-            val first: Int, second: Int?
-
-        }
-
-        var values: Values {
-
-            switch self {
-
-            case .ace:
-
-                return Values(first: 1, second: 11)
-
-            case .jack, .queen, .king:
-
-                return Values(first: 10, second: nil)
-
-            default:
-
-                return Values(first: self.rawValue, second: nil)
-
-            }
-
-        }
-
-    }
-
-
-
-    // BlackjackCard properties and methods
-
-    val rank: Rank, suit: Suit
-
-    var description: String {
-
-        var output = "suit is ${suit.rawValue),"
-
-        output += " value is ${rank.values.first)"
-
-        if val second = rank.values.second {
-
-            output += " or ${second)"
-
-        }
-
-        return output
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -584,14 +512,7 @@ print("theAceOfSpades: \(theAceOfSpades.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
-
-println("theAceOfSpades: ${theAceOfSpades.description)")
-
-// Prints "theAceOfSpades: suit is &#9824;, value is 1 or 11"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -627,12 +548,7 @@ println("theAceOfSpades: ${theAceOfSpades.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val heartsSymbol = BlackjackCard.Suit.hearts.rawValue
-
-// heartsSymbol is "&#9825;"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -421,18 +424,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func swapTwoInts(_ a: inout Int, _ b: inout Int) {
-
-    val temporaryA = a
-
-    a = b
-
-    b = temporaryA
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -460,18 +452,7 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var someInt = 3
-
-var anotherInt = 107
-
-swapTwoInts(&#38;someInt, &#38;anotherInt)
-
-println("someInt is now ${someInt), and anotherInt is now ${anotherInt)")
-
-// Prints "someInt is now 107, and anotherInt is now 3"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -511,30 +492,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func swapTwoStrings(_ a: inout String, _ b: inout String) {
-
-    val temporaryA = a
-
-    a = b
-
-    b = temporaryA
-
-}
-
-
-
-func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
-
-    val temporaryA = a
-
-    a = b
-
-    b = temporaryA
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -576,18 +534,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T) {
-
-    val temporaryA = a
-
-    a = b
-
-    b = temporaryA
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -609,12 +556,7 @@ func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func swapTwoInts(_ a: inout Int, _ b: inout Int)
-
-func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -650,26 +592,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var someInt = 3
-
-var anotherInt = 107
-
-swapTwoValues(&#38;someInt, &#38;anotherInt)
-
-// someInt is now 107, and anotherInt is now 3
-
-
-
-var someString = "hello"
-
-var anotherString = "world"
-
-swapTwoValues(&#38;someString, &#38;anotherString)
-
-// someString is now "world", and anotherString is now "hello"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -719,26 +642,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct IntStack {
-
-    var items = [Int]()
-
-    mutating func push(_ item: Int) {
-
-        items.append(item)
-
-    }
-
-    mutating func pop(): Int {
-
-        return items.removeLast()
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -774,26 +678,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct Stack&#60;Element&#62; {
-
-    var items = [Element]()
-
-    mutating func push(_ item: Element) {
-
-        items.append(item)
-
-    }
-
-    mutating func pop(): Element {
-
-        return items.removeLast()
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -823,20 +708,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var stackOfStrings = Stack&#60;String&#62;()
-
-stackOfStrings.push("uno")
-
-stackOfStrings.push("dos")
-
-stackOfStrings.push("tres")
-
-stackOfStrings.push("cuatro")
-
-// the stack now contains 4 strings</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -858,12 +730,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val fromTheTop = stackOfStrings.pop()
-
-// fromTheTop is equal to "cuatro", and the stack now contains 3 strings</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -905,18 +772,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Stack {
-
-    var topItem: Element? {
-
-        return items.isEmpty ? nil : items[items.count - 1]
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -942,16 +798,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val topItem = stackOfStrings.topItem {
-
-    println("The top item on the stack is ${topItem).")
-
-}
-
-// Prints "The top item on the stack is tres."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -989,14 +836,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction&#60;T: SomeClass, U: SomeProtocol&#62;(someT: T, someU: U) {
-
-    // function body goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1044,24 +884,7 @@ stackOfStrings.push("cuatro")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func findIndex(ofString valueToFind: String, in array: [String]): Int? {
-
-    for (index, value) in array.enumerated() {
-
-        if value == valueToFind {
-
-            return index
-
-        }
-
-    }
-
-    return nil
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1089,18 +912,7 @@ if let foundIndex = findIndex(ofString: "llama", in: strings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val strings = ["cat", "dog", "llama", "parakeet", "terrapin"]
-
-if val foundIndex = findIndex(ofString: "llama", in: strings) {
-
-    println("The index of llama is ${foundIndex)")
-
-}
-
-// Prints "The index of llama is 2"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1134,24 +946,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func findIndex&#60;T&#62;(of valueToFind: T, in array:[T]): Int? {
-
-    for (index, value) in array.enumerated() {
-
-        if value == valueToFind {
-
-            return index
-
-        }
-
-    }
-
-    return nil
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1185,24 +980,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func findIndex&#60;T: Equatable&#62;(of valueToFind: T, in array:[T]): Int? {
-
-    for (index, value) in array.enumerated() {
-
-        if value == valueToFind {
-
-            return index
-
-        }
-
-    }
-
-    return nil
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1228,16 +1006,7 @@ let stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val doubleIndex = findIndex(of: 9.3, in: [3.14159, 0.1, 0.25])
-
-// doubleIndex is an optional Int with no value, because 9.3 isn't in the array
-
-val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
-
-// stringIndex is an optional Int containing a value of 2</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1281,20 +1050,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol Container {
-
-    associatedtype Item
-
-    mutating func append(_ item: Item)
-
-    var count: Int { get }
-
-    subscript(i: Int): Item { get }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1354,50 +1110,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct IntStack: Container {
-
-    // original IntStack implementation
-
-    var items = [Int]()
-
-    mutating func push(_ item: Int) {
-
-        items.append(item)
-
-    }
-
-    mutating func pop(): Int {
-
-        return items.removeLast()
-
-    }
-
-    // conformance to the Container protocol
-
-    typealias Item = Int
-
-    mutating func append(_ item: Int) {
-
-        self.push(item)
-
-    }
-
-    var count: Int {
-
-        return items.count
-
-    }
-
-    subscript(i: Int): Int {
-
-        return items[i]
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1455,48 +1168,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct Stack&#60;Element&#62;: Container {
-
-    // original Stack&#60;Element&#62; implementation
-
-    var items = [Element]()
-
-    mutating func push(_ item: Element) {
-
-        items.append(item)
-
-    }
-
-    mutating func pop(): Element {
-
-        return items.removeLast()
-
-    }
-
-    // conformance to the Container protocol
-
-    mutating func append(_ item: Element) {
-
-        self.push(item)
-
-    }
-
-    var count: Int {
-
-        return items.count
-
-    }
-
-    subscript(i: Int): Element {
-
-        return items[i]
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1530,10 +1202,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Array: Container {}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1577,20 +1246,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol Container {
-
-    associatedtype Item: Equatable
-
-    mutating func append(_ item: Item)
-
-    var count: Int { get }
-
-    subscript(i: Int): Item { get }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1630,16 +1286,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol SuffixableContainer: Container {
-
-    associatedtype Suffix: SuffixableContainer where Suffix.Item == Item
-
-    func suffix(_ size: Int): Suffix
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1689,40 +1336,7 @@ let suffix = stackOfInts.suffix(2)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Stack: SuffixableContainer {
-
-    func suffix(_ size: Int): Stack {
-
-        var result = Stack()
-
-        for index in (count-size)..&#60;count {
-
-            result.append(self[index])
-
-        }
-
-        return result
-
-    }
-
-    // Inferred that Suffix is Stack.
-
-}
-
-var stackOfInts = Stack&#60;Int&#62;()
-
-stackOfInts.append(10)
-
-stackOfInts.append(20)
-
-stackOfInts.append(30)
-
-val suffix = stackOfInts.suffix(2)
-
-// suffix contains 20 and 30</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1760,28 +1374,7 @@ val suffix = stackOfInts.suffix(2)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension IntStack: SuffixableContainer {
-
-    func suffix(_ size: Int): Stack&#60;Int&#62; {
-
-        var result = Stack&#60;Int&#62;()
-
-        for index in (count-size)..&#60;count {
-
-            result.append(self[index])
-
-        }
-
-        return result
-
-    }
-
-    // Inferred that Suffix is Stack&#60;Int&#62;.
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1851,46 +1444,7 @@ val suffix = stackOfInts.suffix(2)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func allItemsMatch&#60;C1: Container, C2: Container&#62;
-
-    (_ someContainer: C1, _ anotherContainer: C2): Bool
-
-    where C1.Item == C2.Item, C1.Item: Equatable {
-
-
-
-        // Check that both containers contain the same number of items.
-
-        if someContainer.count != anotherContainer.count {
-
-            return false
-
-        }
-
-
-
-        // Check each pair of items to see if they're equivalent.
-
-        for i in 0..&#60;someContainer.count {
-
-            if someContainer[i] != anotherContainer[i] {
-
-                return false
-
-            }
-
-        }
-
-
-
-        // All items match, so return true.
-
-        return true
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1934,34 +1488,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var stackOfStrings = Stack&#60;String&#62;()
-
-stackOfStrings.push("uno")
-
-stackOfStrings.push("dos")
-
-stackOfStrings.push("tres")
-
-
-
-var arrayOfStrings = ["uno", "dos", "tres"]
-
-
-
-if allItemsMatch(stackOfStrings, arrayOfStrings) {
-
-    println("All items match.")
-
-} else {
-
-    println("Not all items match.")
-
-}
-
-// Prints "All items match."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2009,24 +1536,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Stack where Element: Equatable {
-
-    func isTop(_ item: Element): Bool {
-
-        guard val topItem = items.last else {
-
-            return false
-
-        }
-
-        return topItem == item
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2056,20 +1566,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if stackOfStrings.isTop("tres") {
-
-    println("Top element is tres.")
-
-} else {
-
-    println("Top element is something else.")
-
-}
-
-// Prints "Top element is tres."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2097,18 +1594,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct NotEquatable { }
-
-var notEquatableStack = Stack&#60;NotEquatable&#62;()
-
-val notEquatableValue = NotEquatable()
-
-notEquatableStack.push(notEquatableValue)
-
-notEquatableStack.isTop(notEquatableValue)  // Error</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2136,18 +1622,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Container where Item: Equatable {
-
-    func startsWith(_ item: Item): Bool {
-
-        return count &#62;= 1 &#38;&#38; self[0] == item
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2177,20 +1652,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if [9, 9, 9].startsWith(42) {
-
-    println("Starts with 42.")
-
-} else {
-
-    println("Starts with something else.")
-
-}
-
-// Prints "Starts with something else."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2230,30 +1692,7 @@ print([1260.0, 1200.0, 98.6, 37.0].average())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Container where Item == Double {
-
-    func average(): Double {
-
-        var sum = 0.0
-
-        for index in 0..&#60;count {
-
-            sum += self[index]
-
-        }
-
-        return sum / Double(count)
-
-    }
-
-}
-
-println([1260.0, 1200.0, 98.6, 37.0].average())
-
-// Prints "648.9"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2319,42 +1758,7 @@ print(numbers.endsWith(37))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Container {
-
-    func average(): Double where Item == Int {
-
-        var sum = 0.0
-
-        for index in 0..&#60;count {
-
-            sum += Double(self[index])
-
-        }
-
-        return sum / Double(count)
-
-    }
-
-    func endsWith(_ item: Item): Bool where Item: Equatable {
-
-        return count &#62;= 1 &#38;&#38; self[count-1] == item
-
-    }
-
-}
-
-val numbers = [1260, 1200, 98, 37]
-
-println(numbers.average())
-
-// Prints "648.75"
-
-println(numbers.endsWith(37))
-
-// Prints "true"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2400,36 +1804,7 @@ extension Container where Item: Equatable {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Container where Item == Int {
-
-    func average(): Double {
-
-        var sum = 0.0
-
-        for index in 0..&#60;count {
-
-            sum += Double(self[index])
-
-        }
-
-        return sum / Double(count)
-
-    }
-
-}
-
-extension Container where Item: Equatable {
-
-    func endsWith(_ item: Item): Bool {
-
-        return count &#62;= 1 &#38;&#38; self[count-1] == item
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2479,26 +1854,7 @@ extension Container where Item: Equatable {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol Container {
-
-    associatedtype Item
-
-    mutating func append(_ item: Item)
-
-    var count: Int { get }
-
-    subscript(i: Int): Item { get }
-
-
-
-    associatedtype Iterator: IteratorProtocol where Iterator.Element == Item
-
-    func makeIterator(): Iterator
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2518,10 +1874,7 @@ extension Container where Item: Equatable {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol ComparableContainer: Container where Item: Comparable { }</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2573,28 +1926,7 @@ extension Container where Item: Equatable {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">extension Container {
-
-    subscript&#60;Indices: Sequence&#62;(indices: Indices): [Item]
-
-        where Indices.Iterator.Element == Int {
-
-            var result = [Item]()
-
-            for index in indices {
-
-                result.append(self[index])
-
-            }
-
-            return result
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

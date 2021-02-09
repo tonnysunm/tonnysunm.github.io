@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -429,26 +432,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Vehicle {
-
-    var currentSpeed = 0.0
-
-    var description: String {
-
-        return "traveling at ${currentSpeed) miles per hour"
-
-    }
-
-    func makeNoise() {
-
-        // do nothing - an arbitrary vehicle doesn't necessarily make a noise
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -468,10 +452,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val someVehicle = Vehicle()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -493,12 +474,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("Vehicle: ${someVehicle.description)")
-
-// Vehicle: traveling at 0.0 miles per hour</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -536,14 +512,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class SomeSubclass: SomeSuperclass {
-
-    // subclass definition goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -567,14 +536,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Bicycle: Vehicle {
-
-    var hasBasket = false
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -596,12 +558,7 @@ bicycle.hasBasket = true</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val bicycle = Bicycle()
-
-bicycle.hasBasket = true</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -625,14 +582,7 @@ print("Bicycle: \(bicycle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">bicycle.currentSpeed = 15.0
-
-println("Bicycle: ${bicycle.description)")
-
-// Bicycle: traveling at 15.0 miles per hour</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -656,14 +606,7 @@ println("Bicycle: ${bicycle.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Tandem: Bicycle {
-
-    var currentNumberOfPassengers = 0
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -693,20 +636,7 @@ print("Tandem: \(tandem.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val tandem = Tandem()
-
-tandem.hasBasket = true
-
-tandem.currentNumberOfPassengers = 2
-
-tandem.currentSpeed = 22.0
-
-println("Tandem: ${tandem.description)")
-
-// Tandem: traveling at 22.0 miles per hour</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -748,18 +678,7 @@ println("Tandem: ${tandem.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Train: Vehicle {
-
-    override func makeNoise() {
-
-        println("Choo Choo")
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -783,14 +702,7 @@ train.makeNoise()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val train = Train()
-
-train.makeNoise()
-
-// Prints "Choo Choo"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -834,20 +746,7 @@ train.makeNoise()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Car: Vehicle {
-
-    var gear = 1
-
-    override var description: String {
-
-        return super.description + " in gear ${gear)"
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -875,18 +774,7 @@ print("Car: \(car.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val car = Car()
-
-car.currentSpeed = 25.0
-
-car.gear = 3
-
-println("Car: ${car.description)")
-
-// Car: traveling at 25.0 miles per hour in gear 3</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -932,22 +820,7 @@ println("Car: ${car.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class AutomaticCar: Car {
-
-    override var currentSpeed: Double {
-
-        didSet {
-
-            gear = Int(currentSpeed / 10.0) + 1
-
-        }
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -973,16 +846,7 @@ print("AutomaticCar: \(automatic.description)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val automatic = AutomaticCar()
-
-automatic.currentSpeed = 35.0
-
-println("AutomaticCar: ${automatic.description)")
-
-// AutomaticCar: traveling at 35.0 miles per hour in gear 4</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

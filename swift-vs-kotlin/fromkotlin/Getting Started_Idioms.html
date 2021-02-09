@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -644,12 +647,18 @@
                   <code class="kotlin">data class Customer(val name: String, val email: String)</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">struct Customer: Decodable, Equatable, Hashable {
+    let name: String
+    let email: String
+}
+
 </code>
                   </pre>
                   
@@ -961,9 +970,9 @@ if (x in 1..10) { ... }</code>
                   <pre>
                     <code class="swift">for i in 1...100 { ... }  // closed range: includes 100
 for i in 1..&#60;100 { ... } // half-open range: does not include 100
-for x in stride(from: 2, to: 12, by: 2) { ... }
-for x in stride(from: 10, to: 0, by: -1) { ... }
-if (1...10).contains(x) { ... }
+for x in stride(from: 2, through: 10, by: 2) { ... }
+for x in stride(from: 10, through: 0, by: -1) { ... }
+if 1...10 ~= x { ... }
 </code>
                   </pre>
                   
@@ -1119,8 +1128,10 @@ map["key"] = value
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">lazy var p: String {
-    // compute the string
+                    <code class="swift">struct A {
+    lazy var p: String = {
+        // compute the string
+    }()
 }
 </code>
                   </pre>
@@ -1200,12 +1211,21 @@ map["key"] = value
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">struct Resource {
+    static let shared = Resource()
+    let name: String = "Name"
+
+    private init() { }
+}
+let resource = Resource.shared
+
 </code>
                   </pre>
                   
@@ -1253,12 +1273,28 @@ fun main() {
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">protocol MyAbstractClass {
+    func doSomething()
+    func sleep()
+}
+
+class AClass: MyAbstractClass {
+  func doSomething() { ... }
+  func sleep() { ... }
+}
+&#8203;
+func main() {
+    val myObject = AClass()
+    myObject.doSomething()
+}
+
 </code>
                   </pre>
                   
@@ -1376,6 +1412,8 @@ print(files?.count ?? 0)
 val email = values["email"] ?: throw IllegalStateException("Email is missing!")</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1383,8 +1421,9 @@ val email = values["email"] ?: throw IllegalStateException("Email is missing!")<
                   <pre>
                     <code class="swift">let values = ...
 guard let email = values["email"] else {
-    throw IllegalStateException("Email is missing!")
+    throw Error.illegalStateException("Email is missing!")
 }
+
 </code>
                   </pre>
                   
@@ -1562,6 +1601,7 @@ let mapped = value.flatMap { transformValue($0) } ?? defaultValue
                     <code class="swift">enum Error: Swift.Error {
     case illegalArgumentException(String)
 }
+
 func transform(color: String) throws -&#62; Int {
     switch (color) {
     case "Red": return 0
@@ -1610,6 +1650,8 @@ func transform(color: String) throws -&#62; Int {
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1630,9 +1672,10 @@ func test() throws {
     } catch Error.arithmeticException {
         throw Error.llegalStateException(.arithmeticException)
     }
-    
+
     // Working with result
 }
+
 </code>
                   </pre>
                   
@@ -1673,6 +1716,8 @@ func test() throws {
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1688,6 +1733,7 @@ func test() throws {
         result = "three"
     }
 }
+
 </code>
                   </pre>
                   
@@ -1762,6 +1808,8 @@ func test() throws {
                   <code class="kotlin">fun theAnswer() = 42</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1770,6 +1818,7 @@ func test() throws {
                     <code class="swift">func theAnswer() -&#62; Int {
     42
 }
+
 </code>
                   </pre>
                   
@@ -1821,6 +1870,8 @@ func test() throws {
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1834,6 +1885,7 @@ func test() throws {
     default: throw Error.illegalArgumentException("Invalid color param value")
     }
 }
+
 </code>
                   </pre>
                   
@@ -1881,12 +1933,36 @@ with(myTurtle) { //draw a 100 pix square
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">class Turtle {
+    func penDown() {}
+    func penUp() {}
+    func turn(degrees: Double) {}
+    func forward(pixels: Double) {}
+}
+
+extension Turtle {
+  func with(_ block: (Turtle) -&#62; Void) {
+    block(self)
+  }
+}
+
+let myTurtle = Turtle()
+myTurtle.with { //draw a 100 pix square
+    $0.penDown()
+    for _ in 1...4 {
+        $0.forward(pixels: 100.0)
+        $0.turn(degrees: 90.0)
+    }
+    $0.penUp()
+}
+
 </code>
                   </pre>
                   
@@ -1923,12 +1999,33 @@ with(myTurtle) { //draw a 100 pix square
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">struct Rectangle {
+    var length: Int?
+    var breadth: Int?
+    var color: Int?
+}
+
+extension Rectangle {
+    func apply(_ block: (inout Rectangle) -&#62; Void) -&#62; Rectangle {
+        var rect = self
+        block(&#38;rect)
+        return rect
+    }
+}
+
+let myRectangle = Rectangle().apply {
+    $0.length = 4
+    $0.breadth = 5
+    $0.color = 0xFAFAFA
+}
+
 </code>
                   </pre>
                   
@@ -1968,11 +2065,7 @@ stream.buffered().reader().use { reader -&#62;
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2012,7 +2105,13 @@ inline fun &#60;reified T: Any&#62; Gson.fromJson(json: JsonElement): T = this.f
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">
+                    <code class="swift">extension Decodable {
+
+    func from(_ json: Data) throws -&#62; Self {
+        try JSONDecoder().decode(Self.self, from: json)
+    }
+
+}
 </code>
                   </pre>
                   

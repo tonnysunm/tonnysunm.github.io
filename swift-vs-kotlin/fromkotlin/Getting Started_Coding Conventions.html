@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -653,7 +656,7 @@ object EmptyDeclarationProcessor : DeclarationProcessor() { /*...*/ }</code>
                   <pre>
                     <code class="swift">class DeclarationProcessor { /*...*/ }
 &#8203;
-let emptyDeclarationProcessor : DeclarationProcessor()
+let emptyDeclarationProcessor : DeclarationProcessor.shared()
 </code>
                   </pre>
                   
@@ -722,9 +725,9 @@ fun Foo(): Foo { return FooImpl() }</code>
               
                   <pre>
                     <code class="swift">protocol Foo { /*...*/ }
-&#8203;
+
 class FooImpl : Foo { /*...*/ }
-&#8203;
+
 func foo() -&#62; Foo { return FooImpl() }
 </code>
                   </pre>
@@ -767,7 +770,10 @@ func foo() -&#62; Foo { return FooImpl() }
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">&#10060;
+                    <code class="swift">class MyTestCase: XCTestCase {
+
+    func testLogin() throws { /* */ }
+}
 </code>
                   </pre>
                   
@@ -805,12 +811,9 @@ val USER_NAME_FIELD = "UserName"</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">static let MAX_COUNT = 8
-let USER_NAME_FIELD = "UserName"
-</code>
-                  </pre>
-                  
+                  <div><div class="not-support">Names of types and protocols are UpperCamelCase. Everything else is lowerCamelCase.
+</div>
+</div>
               
               </td>
             </tr>
@@ -831,7 +834,7 @@ let USER_NAME_FIELD = "UserName"
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">var mutableCollection: Set&#60;String&#62; = Set()
+                    <code class="swift">var mutableCollection = Set&#60;String&#62;()
 </code>
                   </pre>
                   
@@ -855,7 +858,7 @@ let USER_NAME_FIELD = "UserName"
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let PersonComparator: Comparator&#60;Person&#62; = /*...*/
+                    <code class="swift">let personComparator: Comparator&#60;Person&#62; = /*...*/
 </code>
                   </pre>
                   
@@ -902,7 +905,7 @@ let USER_NAME_FIELD = "UserName"
     private var _elementList = [Int]()
     
     var elementList: [Int] {
-        _elementList
+        get { return _elementList }
     }
 }
 </code>
@@ -1049,15 +1052,22 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">abstract class Foo&#60;out T : Any&#62; : IFoo {
-    abstract func foo(a: Int): T
+                    <code class="swift">protocol IFoo {}
+class AImpl: IFoo { /*...*/ }
+
+protocol Foo: IFoo {
+    associatedtype T
+    func foo(a: Int) -&#62; T
 }
-&#8203;
-class FooImpl : Foo() {
-    constructor(x: String) : this(x) { /*...*/ }
+
+class FooImpl: Foo {
+    init(x: String) { /*...*/ }
     
-    let x = object : IFoo { /*...*/ } 
-}</code>
+    func foo(a: Int) -&#62; String { /*...*/ }
+    
+    let x: IFoo = AImpl()
+}
+</code>
                   </pre>
                   
               
@@ -1094,7 +1104,11 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(id: Int, name: String)</code>
+                    <code class="swift">class Person {
+    var id: Int = 0
+    var name: String = ""
+}
+</code>
                   </pre>
                   
               
@@ -1121,11 +1135,24 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(
-    id: Int,
-    name: String,
-    surname: String
-) : Human(id, name) { /*...*/ }</code>
+                    <code class="swift">class Human {
+    var id: Int = 0
+    var name: String = ""
+    
+    init(id: Int, name: String) {
+        self.id = id
+        self.name = name
+    }
+}
+
+class Person: Human {
+    var surname: String = ""
+    
+    init(id: Int, name: String, surname: String) {
+        super.init(id: id, name: name)
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1153,12 +1180,16 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(
-    id: Int,
-    name: String,
-    surname: String
-) : Human(id, name),
-    KotlinMaker { /*...*/ }</code>
+                    <code class="swift">class Person: Human, KotlinMaker {
+    var surname: String = ""
+    
+    init(id: Int, name: String, surname: String) {
+        super.init(id: id, name: name)
+    }
+    
+    /*...*/
+}
+</code>
                   </pre>
                   
               
@@ -1187,13 +1218,15 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class MyFavouriteVeryLongClassHolder :
-    MyLongHolder&#60;MyFavouriteVeryLongClass&#62;(),
+                    <code class="swift">class MyFavouriteVeryLongClassHolder:
+    MyLongHolder,
     SomeOtherInterface,
     AndAnotherOne {
-&#8203;
+    &#8203;   &#8203;   
+    typealias Type = MyFavouriteVeryLongClass
     func foo() { /*...*/ }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1222,13 +1255,16 @@ class FooImpl : Foo() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class MyFavouriteVeryLongClassHolder :
-    MyLongHolder&#60;MyFavouriteVeryLongClass&#62;(),
+                    <code class="swift">class MyFavouriteVeryLongClassHolder:
+    MyLongHolder,
     SomeOtherInterface,
-    AndAnotherOne 
+    AndAnotherOne
 {
+    &#8203;   &#8203;   
+    typealias Type = MyFavouriteVeryLongClass
     func foo() { /*...*/ }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1280,22 +1316,12 @@ data</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">public / protected / private / internal
-expect / actual
-final / open / abstract / sealed / const
-external
-override
-lateinit
-tailrec
-vararg
-suspend
-inner
-enum / annotation / func // as a modifier in `func interface`
-companion
-inline
-infix
-operator
-data</code>
+                    <code class="swift">open
+public
+internal
+fileprivate
+private
+</code>
                   </pre>
                   
               
@@ -1319,8 +1345,9 @@ private val foo: Foo</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">@Named("Foo")
-private let foo: Foo</code>
+                    <code class="swift">@propertyWrapper
+struct SomeWrapper { /*...*/ }
+</code>
                   </pre>
                   
               
@@ -1358,8 +1385,11 @@ annotation class JsonExclude</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">@Target(AnnotationTarget.PROPERTY)
-annotation class JsonExclude</code>
+                    <code class="swift">@available(iOS 10.0, macOS 10.12, *)
+class MyClass {
+    // class definition
+}
+</code>
                   </pre>
                   
               
@@ -1383,8 +1413,8 @@ var x: String</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">@JsonExclude @JvmField
-var x: String</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -1407,7 +1437,8 @@ var x: String</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">@Test func foo() { /*...*/ }</code>
+                    <code class="swift">@objc func foo() { /*...*/ }
+</code>
                   </pre>
                   
               
@@ -1447,10 +1478,8 @@ package foo.bar</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">/** License, copyright and whatever */
-@file:JvmName("FooBar")
-&#8203;
-package foo.bar</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -1497,7 +1526,8 @@ package foo.bar</code>
     argument2: AnotherArgumentType,
 ): ReturnType {
     // body
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1519,16 +1549,18 @@ package foo.bar</code>
 fun foo() = 1        // good</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() -&#62; Int {     // bad
+                    <code class="swift">func foo() -&#62; Int {
     return 1 
 }
 &#8203;
-func foo() = 1        // good</code>
+</code>
                   </pre>
                   
               
@@ -1566,8 +1598,10 @@ func foo() = 1        // good</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func f(x: String, y: String, z: String) =
-    veryLongFunctionCallWithManyWords(andLongParametersToo(), x, y, z)</code>
+                    <code class="swift">func f(x: String, y: String, z: String) {
+    veryLongFunctionCallWithManyWords(andLongParametersToo(), x, y, z)
+}
+</code>
                   </pre>
                   
               
@@ -1604,7 +1638,10 @@ func foo() = 1        // good</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let isEmpty: Boolean get() = size == 0</code>
+                    <code class="swift">var isEmpty: Bool {
+    get { size == 0 }
+}
+</code>
                   </pre>
                   
               
@@ -1628,8 +1665,10 @@ func foo() = 1        // good</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let foo: String
-    get() { /*...*/ }</code>
+                    <code class="swift">var foo: String {
+    get { /*...*/ }
+}
+</code>
                   </pre>
                   
               
@@ -1653,8 +1692,10 @@ func foo() = 1        // good</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">private let defaultCharset: Charset? =
-    EncodingRegistry.getInstance().getDefaultCharsetForPropertiesFiles(file)</code>
+                    <code class="swift">private let defaultCharset: Charset? = {
+    EncodingRegistry.getInstance().getDefaultCharsetForPropertiesFiles(file)
+}()
+</code>
                   </pre>
                   
               
@@ -1698,8 +1739,9 @@ func foo() = 1        // good</code>
                     <code class="swift">if (!component.isSyncing &#38;&#38;
     !hasAnyKotlinRuntimeInScope(module)
 ) {
-    return createKotlinNotConfiguredPanel(module)
-}</code>
+    createKotlinNotConfiguredPanel(module)
+}
+</code>
                   </pre>
                   
               
@@ -1732,17 +1774,21 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">if (condition) {
+                    <code class="swift">if condition {
     // body
 } else {
     // else part
 }
-&#8203;
-try {
-    // body
-} finally {
+
+defer {
     // cleanup
-}</code>
+}
+
+do {
+    try foo()
+} catch {
+}
+</code>
                   </pre>
                   
               
@@ -1774,14 +1820,13 @@ try {
               
                   <pre>
                     <code class="swift">private func parsePropertyValue(propName: String, token: Token) {
-    when (token) {
-        is Token.ValueToken -&#62;
-            callback.visitValue(propName, token.value)
-&#8203;
-        Token.LBRACE -&#62; { // ...
-        }
+    switch token {
+    case .valueToken:
+        callback.visitValue(propName, token.value)
+    case .lbrance: // ...
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1807,10 +1852,12 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (foo) {
-    true -&#62; bar() // good
-    false -&#62; { baz() } // bad
-}</code>
+                    <code class="swift">if foo {
+    bar()
+}else {
+    baz()
+}
+</code>
                   </pre>
                   
               
@@ -1852,10 +1899,11 @@ try {
               
                   <pre>
                     <code class="swift">drawSquare(
-    x = 10, y = 10,
-    width = 100, height = 100,
-    fill = true
-)</code>
+    x: 10, y: 10,
+    width: 100, height: 100,
+    fill: true
+)
+</code>
                   </pre>
                   
               
@@ -1896,8 +1944,8 @@ try {
               
                   <pre>
                     <code class="swift">let anchor = owner
-    ?.firstChild!!
-    .siblings(forward = true)
+    ?.firstChild!
+    .siblings(forward: true)
     .dropWhile { $0 is PsiComment || $0 is PsiWhiteSpace }
 </code>
                   </pre>
@@ -1936,7 +1984,8 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">list.filter { $0 &#62; 10 }</code>
+                    <code class="swift">list.filter { $0 &#62; 10 }
+</code>
                   </pre>
                   
               
@@ -1963,11 +2012,8 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() {
-    ints.forEach lit@{
-        // ...
-    }
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -1992,9 +2038,10 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">appendCommaSeparated(properties) { prop -&#62;
+                    <code class="swift">appendCommaSeparated(properties) { prop in
     let propertyValue = prop.get(obj)  // ...
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -2022,12 +2069,10 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">foo {
-   context: Context,
-   environment: Env
-   -&#62;
+                    <code class="swift">foo { context, environment in
    context.configureEnv(environment)
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -2068,11 +2113,12 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(
-    let firstName: String,
-    let lastName: String,
-    let age: Int, // trailing comma
-)</code>
+                    <code class="swift">class Person {
+    var firstName: String = ""
+    var lastName: String = ""
+    var age: Int = 0
+}
+</code>
                   </pre>
                   
               
@@ -2114,12 +2160,13 @@ try {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">enum class Direction {
-    NORTH,
-    SOUTH,
-    WEST,
-    EAST, // trailing comma
-}</code>
+                    <code class="swift">enum Direction {
+    case north
+    case south
+    case west
+    case east
+}
+</code>
                   </pre>
                   
               
@@ -2168,17 +2215,18 @@ val colors = listOf(
               
                   <pre>
                     <code class="swift">func shift(x: Int, y: Int) { /*...*/ }
-&#8203;
+
 shift(
-    25,
-    20, // trailing comma
+    x: 25,
+    y: 20
 )
-&#8203;
-let colors = listOf(
+
+let colors = [
     "red",
     "green",
     "blue", // trailing comma
-)</code>
+]
+</code>
                   </pre>
                   
               
@@ -2223,15 +2271,11 @@ class Customer(
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Customer(
-    let name: String,
-    let lastName: String, // trailing comma
-)
-&#8203;
-class Customer(
-    let name: String,
-    lastName: String, // trailing comma
-)</code>
+                    <code class="swift">class Customer {
+    var name: String?
+    var lastName: String?
+}
+</code>
                   </pre>
                   
               
@@ -2282,19 +2326,20 @@ fun print(
               
                   <pre>
                     <code class="swift">func powerOf(
-    number: Int, 
-    exponent: Int, // trailing comma
+    number: Int,
+    exponent: Int
 ) { /*...*/ }
-&#8203;
-constructor(
+
+init(
     x: Comparable&#60;Number&#62;,
-    y: Iterable&#60;Number&#62;, // trailing comma
+    y: Iterable&#60;Number&#62;
 ) {}
-&#8203;
+
 func print(
-    vararg quantity: Int,
-    description: String, // trailing comma
-) {}</code>
+    quantity: Int...,
+    description: String
+) {}
+</code>
                   </pre>
                   
               
@@ -2338,14 +2383,10 @@ println(sum(8, 8, 8))</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let sum: (Int, Int, Int) -&#62; Int = fun(
-    x,
-    y,
-    z, // trailing comma
-) -&#62; Int {
-    return x + y + x
-}
-print(sum(8, 8, 8))</code>
+                    <code class="swift">let sum: (Int, Int, Int) -&#62; Int = { $0 + $1 + $2 }
+
+print(sum(8, 8, 8))
+</code>
                   </pre>
                   
               
@@ -2390,13 +2431,17 @@ fun getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
               
                   <pre>
                     <code class="swift">class Surface {
-    operator func get(x: Int, y: Int) = 2 * x + 4 * y - 10
+    subscript(x: Int, y: Int) -&#62; Int {
+        2 * x + 4 * y - 10
+    }
 }
-func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
+func getZValue(mySurface: Surface, xValue: Int, yValue: Int) -&#62; Int {
     mySurface[
         xValue,
-        yValue, // trailing comma
-    ]</code>
+        yValue
+    ]
+}
+</code>
                   </pre>
                   
               
@@ -2443,15 +2488,13 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
               
                   <pre>
                     <code class="swift">func main() {
-    let x = {
-            x: Comparable&#60;Number&#62;,
-            y: Iterable&#60;Number&#62;, // trailing comma
-        -&#62;
+    let x: (Comparable&#60;Number&#62;, Iterable&#60;Number&#62;) = { x, y in
         print("1")
     }
 &#8203;
     print(x)
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -2494,13 +2537,8 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func isReferenceApplicable(myReference: KClass&#60;*&#62;) = when (myReference) {
-    Comparable::class,
-    Iterable::class,
-    String::class, // trailing comma
-        -&#62; true
-    else -&#62; false
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2545,15 +2583,8 @@ fun run() {}</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">annotation class ApplicableFor(let services: Array&#60;String&#62;)
-&#8203;
-@ApplicableFor([
-    "serializer",
-    "balancer",
-    "database",
-    "inMemoryCache", // trailing comma
-])
-func run() {}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2597,14 +2628,8 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func &#60;T1, T2&#62; foo() {}
-&#8203;
-func main() {
-    foo&#60;
-            Comparable&#60;Number&#62;,
-            Iterable&#60;Number&#62;, // trailing comma
-            &#62;()
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2644,10 +2669,8 @@ func main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class MyMap&#60;
-        MyKey,
-        MyValue, // trailing comma
-        &#62; {}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2705,28 +2728,8 @@ printMeanValue()</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">data class Car(let manufacturer: String, let model: String, let year: Int)
-let myCar = Car("Tesla", "Y", 2019)
-&#8203;
-let (
-    manufacturer,
-    model,
-    year, // trailing comma
-) = myCar
-&#8203;
-let cars = listOf&#60;Car&#62;()
-func printMeanValue() {
-    var meanValue: Int = 0
-    for ((
-        _,
-        _,
-        year, // trailing comma
-    ) in cars) {
-        meanValue += year
-    }
-    print(meanValue/cars.size)
-}
-printMeanValue()</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2769,7 +2772,8 @@ printMeanValue()</code>
                     <code class="swift">/**
  * This is a documentation comment
  * on multiple lines.
- */</code>
+ */
+</code>
                   </pre>
                   
               
@@ -2829,21 +2833,8 @@ fun abs(number: Int) { /*...*/ }</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">// Avoid doing this:
-&#8203;
-/**
- * Returns the absolute value of the given number.
- * @param number The number to return the absolute value for.
- * @return The absolute value.
- */
-func abs(number: Int) { /*...*/ }
-&#8203;
-// Do this instead:
-&#8203;
-/**
- * Returns the absolute value of the given [number].
- */
-func abs(number: Int) { /*...*/ }</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -2882,9 +2873,10 @@ func abs(number: Int) { /*...*/ }</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() { // ": Unit" is omitted here
+                    <code class="swift">func foo() { // ": Void" is omitted here
 &#8203;
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -2921,7 +2913,8 @@ func abs(number: Int) { /*...*/ }</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">print("$name has ${children.size} children")</code>
+                    <code class="swift">print("\(name) has \(children.size) children")
+</code>
                   </pre>
                   
               
@@ -2968,17 +2961,10 @@ val allowedValues = listOf("a", "b", "c")</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">// Bad: use of mutable collection type for value which will not be mutated
-func validateValue(actualValue: String, allowedValues: HashSet&#60;String&#62;) { ... }
+                    <code class="swift">func validateValue(actualValue: String, allowedValues: Set&#60;String&#62;) { ... }
 &#8203;
-// Good: immutable collection type used instead
-func validateValue(actualValue: String, allowedValues: Set&#60;String&#62;) { ... }
-&#8203;
-// Bad: arrayListOf() returns ArrayList&#60;T&#62;, which is a mutable collection type
-let allowedValues = arrayListOf("a", "b", "c")
-&#8203;
-// Good: listOf() returns List&#60;T&#62;
-let allowedValues = listOf("a", "b", "c")</code>
+let allowedValues = ["a", "b", "c"]
+</code>
                   </pre>
                   
               
@@ -3021,11 +3007,14 @@ fun foo(a: String = "a") { /*...*/ }</code>
               
                   <pre>
                     <code class="swift">// Bad
-func foo() = foo("a")
+func foo() {
+    foo(a: "a")
+}
 func foo(a: String) { /*...*/ }
 &#8203;
 // Good
-func foo(a: String = "a") { /*...*/ }</code>
+func foo(a: String = "a") { /*...*/ }
+</code>
                   </pre>
                   
               
@@ -3063,8 +3052,9 @@ typealias PersonIndex = Map&#60;String, Person&#62;</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">typealias MouseClickHandler = (Any, MouseEvent) -&#62; Unit
-typealias PersonIndex = Map&#60;String, Person&#62;</code>
+                    <code class="swift">typealias MouseClickHandler = (Any, MouseEvent) -&#62; Void
+typealias PersonIndex = Map&#60;String, Person&#62;
+</code>
                   </pre>
                   
               
@@ -3101,7 +3091,8 @@ typealias PersonIndex = Map&#60;String, Person&#62;</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">drawSquare(x = 10, y = 10, width = 100, height = 100, fill = true)</code>
+                    <code class="swift">drawSquare(x: 10, y: 10, width: 100, height: 100, fill: true)
+</code>
                   </pre>
                   
               
@@ -3143,12 +3134,15 @@ return when(x) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">return if (x) foo() else bar()
+                    <code class="swift">return x ? foo() : bar()
 &#8203;
-return when(x) {
-    0 -&#62; "zero"
-    else -&#62; "nonzero"
-}</code>
+switch x {
+case 0:
+    return "zero"
+default:
+    return "nonzero"
+}
+</code>
                   </pre>
                   
               
@@ -3179,15 +3173,19 @@ when(x) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">if (x)
+                    <code class="swift">if x {
     return foo()
-else
+}else {
     return bar()
+}
     
-when(x) {
-    0 -&#62; return "zero"
-    else -&#62; return "nonzero"
-}</code>
+switch x {
+case 0:
+    return "zero"
+default:
+    return "nonzero"
+}
+</code>
                   </pre>
                   
               
@@ -3227,10 +3225,11 @@ when(x) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (x) {
-    null -&#62; // ...
-    else -&#62; // ...
-}</code>
+                    <code class="swift">switch x {
+case nil: // ...
+default: // ...
+}
+</code>
                   </pre>
                   
               
@@ -3268,8 +3267,9 @@ for (i in 0 until n) { /*...*/ }  // good</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for (i in 0..n - 1) { /*...*/ }  // bad
-for (i in 0 until n) { /*...*/ }  // good</code>
+                    <code class="swift">for i in 0...n-1 { /*...*/ }  // bad
+for i in 0..&#60;n) { /*...*/ }  // good
+</code>
                   </pre>
                   
               
@@ -3316,17 +3316,17 @@ val a = """if(a &#62; 1) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">assertEquals(
-    """
+                    <code class="swift">assert("""
     Foo
     Bar
-    """.trimIndent(), 
-    value
-)
-&#8203;
-let a = """if(a &#62; 1) {
-          |    return a
-          |}""".trimMargin()</code>
+    """ == "Foo\nBar")
+
+let a = """
+        if(a &#62; 1) {
+            return a
+        }
+        """
+</code>
                   </pre>
                   
               
@@ -3367,11 +3367,14 @@ let a = """if(a &#62; 1) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Point(let x: Double, let y: Double) {
-    companion object {
-        func fromPolar(angle: Double, radius: Double) = Point(...)
+                    <code class="swift">class Point {
+    let x, y: Double = 0
+    
+    static func fromPolar(angle: Double, radius: Double) {
+        Point(...)
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -3408,7 +3411,8 @@ let a = """if(a &#62; 1) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func apiCall() -&#62; String = MyJavaApi.getProperty("name")</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -3433,9 +3437,8 @@ let a = """if(a &#62; 1) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person {
-    let name: String = MyJavaApi.getProperty("name")
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -3461,10 +3464,8 @@ let a = """if(a &#62; 1) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func main() {
-    let name = MyJavaApi.getProperty("name")
-    print(name)
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               

@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -421,18 +424,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum VendingMachineError: Error {
-
-    case invalidSelection
-
-    case insufficientFunds(coinsNeeded: Int)
-
-    case outOfStock
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -452,10 +444,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">throw VendingMachineError.insufficientFunds(coinsNeeded: 5)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -493,14 +482,7 @@ func cannotThrowErrors() -&#62; String</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func canThrowErrors() throws -&#62; String
-
-
-
-func cannotThrowErrors(): String</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -588,78 +570,7 @@ class VendingMachine {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct Item {
-
-    var price: Int
-
-    var count: Int
-
-}
-
-
-
-class VendingMachine {
-
-    var inventory = [
-
-        "Candy Bar": Item(price: 12, count: 7),
-
-        "Chips": Item(price: 10, count: 4),
-
-        "Pretzels": Item(price: 7, count: 11)
-
-    ]
-
-    var coinsDeposited = 0
-
-
-
-    func vend(itemNamed name: String) throws {
-
-        guard val item = inventory[name] else {
-
-            throw VendingMachineError.invalidSelection
-
-        }
-
-
-
-        guard item.count &#62; 0 else {
-
-            throw VendingMachineError.outOfStock
-
-        }
-
-
-
-        guard item.price &#60;= coinsDeposited else {
-
-            throw VendingMachineError.insufficientFunds(coinsNeeded: item.price - coinsDeposited)
-
-        }
-
-
-
-        coinsDeposited -= item.price
-
-
-
-        var newItem = item
-
-        newItem.count -= 1
-
-        inventory[name] = newItem
-
-
-
-        println("Dispensing ${name)")
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -695,26 +606,7 @@ func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val favoriteSnacks = [
-
-    "Alice": "Chips",
-
-    "Bob": "Licorice",
-
-    "Eve": "Pretzels",
-
-]
-
-func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
-
-    val snackName = favoriteSnacks[person] ?: "Candy Bar"
-
-    try vendingMachine.vend(itemNamed: snackName)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -746,22 +638,7 @@ func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct PurchasedSnack {
-
-    val name: String
-
-    init(name: String, vendingMachine: VendingMachine) throws {
-
-        try vendingMachine.vend(itemNamed: name)
-
-        self.name = name
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -817,32 +694,7 @@ func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">do {
-
-    try expression
-
-    statements
-
-} catch pattern 1 {
-
-    statements
-
-} catch pattern 2 where condition {
-
-    statements
-
-} catch pattern 3, pattern 4 where condition {
-
-    statements
-
-} catch {
-
-    statements
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -890,38 +742,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var vendingMachine = VendingMachine()
-
-vendingMachine.coinsDeposited = 8
-
-do {
-
-    try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
-
-    println("Success! Yum.")
-
-} catch VendingMachineError.invalidSelection {
-
-    println("Invalid Selection.")
-
-} catch VendingMachineError.outOfStock {
-
-    println("Out of Stock.")
-
-} catch VendingMachineError.insufficientFunds(val coinsNeeded) {
-
-    println("Insufficient funds. Please insert an additional ${coinsNeeded) coins.")
-
-} catch {
-
-    println("Unexpected error: ${error).")
-
-}
-
-// Prints "Insufficient funds. Please insert an additional 2 coins."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -967,36 +788,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func nourish(with item: String) throws {
-
-    do {
-
-        try vendingMachine.vend(itemNamed: item)
-
-    } catch is VendingMachineError {
-
-        println("Couldn't buy that from the vending machine.")
-
-    }
-
-}
-
-
-
-do {
-
-    try nourish(with: "Beet-Flavored Chips")
-
-} catch {
-
-    println("Unexpected non-vending-machine-related error: ${error)")
-
-}
-
-// Prints "Couldn't buy that from the vending machine."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1028,22 +820,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func eat(item: String) throws {
-
-    do {
-
-        try vendingMachine.vend(itemNamed: item)
-
-    } catch VendingMachineError.invalidSelection, VendingMachineError.insufficientFunds, VendingMachineError.outOfStock {
-
-        println("Invalid selection, out of stock, or not enough money.")
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1099,32 +876,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someThrowingFunction() throws -&#62; Int {
-
-    // ...
-
-}
-
-
-
-val x = try? someThrowingFunction()
-
-
-
-val y: Int?
-
-do {
-
-    y = try someThrowingFunction()
-
-} catch {
-
-    y = nil
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1152,18 +904,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func fetchData(): Data? {
-
-    if val data = try? fetchDataFromDisk() { return data }
-
-    if val data = try? fetchDataFromServer() { return data }
-
-    return nil
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1197,10 +938,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1256,32 +994,7 @@ do {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func processFile(filename: String) throws {
-
-    if exists(filename) {
-
-        val file = open(filename)
-
-        defer {
-
-            close(file)
-
-        }
-
-        while val line = try file.readline() {
-
-            // Work with the file.
-
-        }
-
-        // close(file) is called here, at the end of the scope.
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -423,20 +426,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class MediaItem {
-
-    var name: String
-
-    init(name: String) {
-
-        self.name = name
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -484,38 +474,7 @@ class Song: MediaItem {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Movie: MediaItem {
-
-    var director: String
-
-    init(name: String, director: String) {
-
-        self.director = director
-
-        super.init(name: name)
-
-    }
-
-}
-
-
-
-class Song: MediaItem {
-
-    var artist: String
-
-    init(name: String, artist: String) {
-
-        self.artist = artist
-
-        super.init(name: name)
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -549,24 +508,7 @@ class Song: MediaItem {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val library = [
-
-    Movie(name: "Casablanca", director: "Michael Curtiz"),
-
-    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
-
-    Movie(name: "Citizen Kane", director: "Orson Welles"),
-
-    Song(name: "The One And Only", artist: "Chesney Hawkes"),
-
-    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
-
-]
-
-// the type of "library" is inferred to be [MediaItem]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -624,34 +566,7 @@ print("Media library contains \(movieCount) movies and \(songCount) songs")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var movieCount = 0
-
-var songCount = 0
-
-
-
-for item in library {
-
-    if item is Movie {
-
-        movieCount += 1
-
-    } else if item is Song {
-
-        songCount += 1
-
-    }
-
-}
-
-
-
-println("Media library contains ${movieCount) movies and ${songCount) songs")
-
-// Prints "Media library contains 2 movies and 3 songs"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -709,34 +624,7 @@ println("Media library contains ${movieCount) movies and ${songCount) songs")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for item in library {
-
-    if val movie = item as? Movie {
-
-        println("Movie: ${movie.name), dir. ${movie.director)")
-
-    } else if val song = item as? Song {
-
-        println("Song: ${song.name), by ${song.artist)")
-
-    }
-
-}
-
-
-
-// Movie: Casablanca, dir. Michael Curtiz
-
-// Song: Blue Suede Shoes, by Elvis Presley
-
-// Movie: Citizen Kane, dir. Orson Welles
-
-// Song: The One And Only, by Chesney Hawkes
-
-// Song: Never Gonna Give You Up, by Rick Astley</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -788,28 +676,7 @@ things.append({ (name: String) -&#62; String in "Hello, \(name)" })</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var things = [Any]()
-
-
-
-things.append(0)
-
-things.append(0.0)
-
-things.append(42)
-
-things.append(3.14159)
-
-things.append("hello")
-
-things.append((3.0, 5.0))
-
-things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
-
-things.append({ (name: String): String in "Hello, ${name)" })</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -893,74 +760,7 @@ things.append({ (name: String): String in "Hello, ${name)" })</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for thing in things {
-
-    switch thing {
-
-    case 0 as Int:
-
-        println("zero as an Int")
-
-    case 0 as Double:
-
-        println("zero as a Double")
-
-    case val someInt as Int:
-
-        println("an integer value of ${someInt)")
-
-    case val someDouble as Double where someDouble &#62; 0:
-
-        println("a positive double value of ${someDouble)")
-
-    case is Double:
-
-        println("some other double value that I don't want to print")
-
-    case val someString as String:
-
-        println("a string value of \"${someString)\"")
-
-    case val (x, y) as (Double, Double):
-
-        println("an (x, y) point at ${x), ${y)")
-
-    case val movie as Movie:
-
-        println("a movie called ${movie.name), dir. ${movie.director)")
-
-    case val stringConverter as (String): String:
-
-        println(stringConverter("Michael"))
-
-    default:
-
-        println("something else")
-
-    }
-
-}
-
-
-
-// zero as an Int
-
-// zero as a Double
-
-// an integer value of 42
-
-// a positive double value of 3.14159
-
-// a string value of "hello"
-
-// an (x, y) point at 3.0, 5.0
-
-// a movie called Ghostbusters, dir. Ivan Reitman
-
-// Hello, Michael</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -984,14 +784,7 @@ things.append(optionalNumber as Any) // No warning</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val optionalNumber: Int? = 3
-
-things.append(optionalNumber)        // Warning
-
-things.append(optionalNumber as Any) // No warning</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

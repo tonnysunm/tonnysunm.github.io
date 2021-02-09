@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -417,14 +420,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum SomeEnumeration {
-
-    // enumeration definition goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -454,20 +450,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum CompassPoint {
-
-    case north
-
-    case south
-
-    case east
-
-    case west
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -491,14 +474,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum Planet {
-
-    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -518,10 +494,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var directionToHead = CompassPoint.west</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -541,10 +514,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">directionToHead = .east</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -600,32 +570,7 @@ case .west:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">directionToHead = .south
-
-switch directionToHead {
-
-case .north:
-
-    println("Lots of planets have a north")
-
-case .south:
-
-    println("Watch out for penguins")
-
-case .east:
-
-    println("Where the sun rises")
-
-case .west:
-
-    println("Where the skies are blue")
-
-}
-
-// Prints "Watch out for penguins"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -659,24 +604,7 @@ default:
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val somePlanet = Planet.earth
-
-switch somePlanet {
-
-case .earth:
-
-    println("Mostly harmless")
-
-default:
-
-    println("Not a safe place for humans")
-
-}
-
-// Prints "Mostly harmless"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -720,20 +648,7 @@ print("\(numberOfChoices) beverages available")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum Beverage: CaseIterable {
-
-    case coffee, tea, juice
-
-}
-
-val numberOfChoices = Beverage.allCases.count
-
-println("${numberOfChoices) beverages available")
-
-// Prints "3 beverages available"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -763,20 +678,7 @@ println("${numberOfChoices) beverages available")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for beverage in Beverage.allCases {
-
-    println(beverage)
-
-}
-
-// coffee
-
-// tea
-
-// juice</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -816,16 +718,7 @@ println("${numberOfChoices) beverages available")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum Barcode {
-
-    case upc(Int, Int, Int, Int)
-
-    case qrCode(String)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -845,10 +738,7 @@ println("${numberOfChoices) beverages available")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var productBarcode = Barcode.upc(8, 85909, 51226, 3)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -868,10 +758,7 @@ println("${numberOfChoices) beverages available")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">productBarcode = .qrCode("ABCDEFGHIJKLMNOP")</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -903,22 +790,7 @@ case .qrCode(let productCode):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">switch productBarcode {
-
-case .upc(val numberSystem, val manufacturer, val product, val check):
-
-    println("UPC: ${numberSystem), ${manufacturer), ${product), ${check).")
-
-case .qrCode(val productCode):
-
-    println("QR code: ${productCode).")
-
-}
-
-// Prints "QR code: ABCDEFGHIJKLMNOP."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -950,22 +822,7 @@ case let .qrCode(productCode):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">switch productBarcode {
-
-case val .upc(numberSystem, manufacturer, product, check):
-
-    println("UPC : ${numberSystem), ${manufacturer), ${product), ${check).")
-
-case val .qrCode(productCode):
-
-    println("QR code: ${productCode).")
-
-}
-
-// Prints "QR code: ABCDEFGHIJKLMNOP."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1007,18 +864,7 @@ case val .qrCode(productCode):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum ASCIIControlCharacter: Character {
-
-    case tab = "\t"
-
-    case lineFeed = "\n"
-
-    case carriageReturn = "\r"
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1056,14 +902,7 @@ case val .qrCode(productCode):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum Planet: Int {
-
-    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1087,14 +926,7 @@ case val .qrCode(productCode):
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum CompassPoint: String {
-
-    case north, south, east, west
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1122,18 +954,7 @@ let sunsetDirection = CompassPoint.west.rawValue
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val earthsOrder = Planet.earth.rawValue
-
-// earthsOrder is 3
-
-
-
-val sunsetDirection = CompassPoint.west.rawValue
-
-// sunsetDirection is "west"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1169,12 +990,7 @@ val sunsetDirection = CompassPoint.west.rawValue
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val possiblePlanet = Planet(rawValue: 7)
-
-// possiblePlanet is of type Planet? and equals Planet.uranus</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1216,32 +1032,7 @@ if let somePlanet = Planet(rawValue: positionToFind) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val positionToFind = 11
-
-if val somePlanet = Planet(rawValue: positionToFind) {
-
-    switch somePlanet {
-
-    case .earth:
-
-        println("Mostly harmless")
-
-    default:
-
-        println("Not a safe place for humans")
-
-    }
-
-} else {
-
-    println("There isn't a planet at position ${positionToFind)")
-
-}
-
-// Prints "There isn't a planet at position 11"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1283,18 +1074,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum ArithmeticExpression {
-
-    case number(Int)
-
-    indirect case addition(ArithmeticExpression, ArithmeticExpression)
-
-    indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1322,18 +1102,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">indirect enum ArithmeticExpression {
-
-    case number(Int)
-
-    case addition(ArithmeticExpression, ArithmeticExpression)
-
-    case multiplication(ArithmeticExpression, ArithmeticExpression)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1359,16 +1128,7 @@ let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.numb
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val five = ArithmeticExpression.number(5)
-
-val four = ArithmeticExpression.number(4)
-
-val sum = ArithmeticExpression.addition(five, four)
-
-val product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1412,34 +1172,7 @@ print(evaluate(product))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func evaluate(_ expression: ArithmeticExpression): Int {
-
-    switch expression {
-
-    case val .number(value):
-
-        return value
-
-    case val .addition(left, right):
-
-        return evaluate(left) + evaluate(right)
-
-    case val .multiplication(left, right):
-
-        return evaluate(left) * evaluate(right)
-
-    }
-
-}
-
-
-
-println(evaluate(product))
-
-// Prints "18"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

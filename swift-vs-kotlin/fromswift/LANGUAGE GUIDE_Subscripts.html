@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -427,24 +430,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">subscript(index: Int): Int {
-
-    get {
-
-        // Return an appropriate subscript value here.
-
-    }
-
-    set(newValue) {
-
-        // Perform a suitable setting action here.
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -468,14 +454,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">subscript(index: Int): Int {
-
-    // Return an appropriate subscript value here.
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -511,26 +490,7 @@ print("six times three is \(threeTimesTable[6])")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct TimesTable {
-
-    val multiplier: Int
-
-    subscript(index: Int): Int {
-
-        return multiplier * index
-
-    }
-
-}
-
-val threeTimesTable = TimesTable(multiplier: 3)
-
-println("six times three is ${threeTimesTable[6])")
-
-// Prints "six times three is 18"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -566,12 +526,7 @@ numberOfLegs["bird"] = 2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
-
-numberOfLegs["bird"] = 2</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -647,52 +602,7 @@ numberOfLegs["bird"] = 2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct Matrix {
-
-    val rows: Int, columns: Int
-
-    var grid: [Double]
-
-    init(rows: Int, columns: Int) {
-
-        self.rows = rows
-
-        self.columns = columns
-
-        grid = Array(repeating: 0.0, count: rows * columns)
-
-    }
-
-    func indexIsValid(row: Int, column: Int): Bool {
-
-        return row &#62;= 0 &#38;&#38; row &#60; rows &#38;&#38; column &#62;= 0 &#38;&#38; column &#60; columns
-
-    }
-
-    subscript(row: Int, column: Int): Double {
-
-        get {
-
-            assert(indexIsValid(row: row, column: column), "Index out of range")
-
-            return grid[(row * columns) + column]
-
-        }
-
-        set {
-
-            assert(indexIsValid(row: row, column: column), "Index out of range")
-
-            grid[(row * columns) + column] = newValue
-
-        }
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -712,10 +622,7 @@ numberOfLegs["bird"] = 2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var matrix = Matrix(rows: 2, columns: 2)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -737,12 +644,7 @@ matrix[1, 0] = 3.2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">matrix[0, 1] = 1.5
-
-matrix[1, 0] = 3.2</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -766,14 +668,7 @@ matrix[1, 0] = 3.2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func indexIsValid(row: Int, column: Int): Bool {
-
-    return row &#62;= 0 &#38;&#38; row &#60; rows &#38;&#38; column &#62;= 0 &#38;&#38; column &#60; columns
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -795,12 +690,7 @@ matrix[1, 0] = 3.2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val someValue = matrix[2, 2]
-
-// This triggers an assert, because [2, 2] is outside of the matrix bounds.</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -848,24 +738,7 @@ print(mars)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum Planet: Int {
-
-    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
-
-    static subscript(n: Int): Planet {
-
-        return Planet(rawValue: n)!
-
-    }
-
-}
-
-val mars = Planet[4]
-
-println(mars)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -425,22 +428,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Person {
-
-    var residence: Residence?
-
-}
-
-
-
-class Residence {
-
-    var numberOfRooms = 1
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -460,10 +448,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val john = Person()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -485,12 +470,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val roomCount = john.residence!.numberOfRooms
-
-// this triggers a runtime error</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -520,20 +500,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val roomCount = john.residence?.numberOfRooms {
-
-    println("John's residence has ${roomCount) room(s).")
-
-} else {
-
-    println("Unable to retrieve the number of rooms.")
-
-}
-
-// Prints "Unable to retrieve the number of rooms."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -553,10 +520,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john.residence = Residence()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -586,20 +550,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val roomCount = john.residence?.numberOfRooms {
-
-    println("John's residence has ${roomCount) room(s).")
-
-} else {
-
-    println("Unable to retrieve the number of rooms.")
-
-}
-
-// Prints "John's residence has 1 room(s)."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -637,14 +588,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Person {
-
-    var residence: Residence?
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -698,44 +642,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Residence {
-
-    var rooms = [Room]()
-
-    var numberOfRooms: Int {
-
-        return rooms.count
-
-    }
-
-    subscript(i: Int): Room {
-
-        get {
-
-            return rooms[i]
-
-        }
-
-        set {
-
-            rooms[i] = newValue
-
-        }
-
-    }
-
-    func printNumberOfRooms() {
-
-        println("The number of rooms is ${numberOfRooms)")
-
-    }
-
-    var address: Address?
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -761,16 +668,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Room {
-
-    val name: String
-
-    init(name: String) { self.name = name }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -816,36 +714,7 @@ class Residence {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Address {
-
-    var buildingName: String?
-
-    var buildingNumber: String?
-
-    var street: String?
-
-    func buildingIdentifier(): String? {
-
-        if val buildingNumber = buildingNumber, val street = street {
-
-            return "${buildingNumber) ${street)"
-
-        } else if buildingName != nil {
-
-            return buildingName
-
-        } else {
-
-            return nil
-
-        }
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -891,22 +760,7 @@ if let roomCount = john.residence?.numberOfRooms {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val john = Person()
-
-if val roomCount = john.residence?.numberOfRooms {
-
-    println("John's residence has ${roomCount) room(s).")
-
-} else {
-
-    println("Unable to retrieve the number of rooms.")
-
-}
-
-// Prints "Unable to retrieve the number of rooms."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -932,16 +786,7 @@ john.residence?.address = someAddress</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val someAddress = Address()
-
-someAddress.buildingNumber = "29"
-
-someAddress.street = "Acacia Road"
-
-john.residence?.address = someAddress</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -979,28 +824,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func createAddress(): Address {
-
-    println("Function was called.")
-
-
-
-    val someAddress = Address()
-
-    someAddress.buildingNumber = "29"
-
-    someAddress.street = "Acacia Road"
-
-
-
-    return someAddress
-
-}
-
-john.residence?.address = createAddress()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1038,14 +862,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func printNumberOfRooms() {
-
-    println("The number of rooms is ${numberOfRooms)")
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1075,20 +892,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if john.residence?.printNumberOfRooms() != nil {
-
-    println("It was possible to print the number of rooms.")
-
-} else {
-
-    println("It was not possible to print the number of rooms.")
-
-}
-
-// Prints "It was not possible to print the number of rooms."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1118,20 +922,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if (john.residence?.address = someAddress) != nil {
-
-    println("It was possible to set the address.")
-
-} else {
-
-    println("It was not possible to set the address.")
-
-}
-
-// Prints "It was not possible to set the address."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1175,20 +966,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val firstRoomName = john.residence?[0].name {
-
-    println("The first room name is ${firstRoomName).")
-
-} else {
-
-    println("Unable to retrieve the first room name.")
-
-}
-
-// Prints "Unable to retrieve the first room name."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1208,10 +986,7 @@ john.residence?.address = createAddress()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john.residence?[0] = Room(name: "Bathroom")</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1251,30 +1026,7 @@ if let firstRoomName = john.residence?[0].name {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val johnsHouse = Residence()
-
-johnsHouse.rooms.append(Room(name: "Living Room"))
-
-johnsHouse.rooms.append(Room(name: "Kitchen"))
-
-john.residence = johnsHouse
-
-
-
-if val firstRoomName = john.residence?[0].name {
-
-    println("The first room name is ${firstRoomName).")
-
-} else {
-
-    println("Unable to retrieve the first room name.")
-
-}
-
-// Prints "The first room name is Living Room."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1316,18 +1068,7 @@ testScores["Brian"]?[0] = 72
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
-
-testScores["Dave"]?[0] = 91
-
-testScores["Bev"]?[0] += 1
-
-testScores["Brian"]?[0] = 72
-
-// the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1371,20 +1112,7 @@ testScores["Brian"]?[0] = 72
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val johnsStreet = john.residence?.address?.street {
-
-    println("John's street name is ${johnsStreet).")
-
-} else {
-
-    println("Unable to retrieve the address.")
-
-}
-
-// Prints "Unable to retrieve the address."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1424,30 +1152,7 @@ if let johnsStreet = john.residence?.address?.street {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val johnsAddress = Address()
-
-johnsAddress.buildingName = "The Larches"
-
-johnsAddress.street = "Laurel Street"
-
-john.residence?.address = johnsAddress
-
-
-
-if val johnsStreet = john.residence?.address?.street {
-
-    println("John's street name is ${johnsStreet).")
-
-} else {
-
-    println("Unable to retrieve the address.")
-
-}
-
-// Prints "John's street name is Laurel Street."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1487,16 +1192,7 @@ if val johnsStreet = john.residence?.address?.street {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val buildingIdentifier = john.residence?.address?.buildingIdentifier() {
-
-    println("John's building identifier is ${buildingIdentifier).")
-
-}
-
-// Prints "John's building identifier is The Larches."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1532,26 +1228,7 @@ if val johnsStreet = john.residence?.address?.street {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val beginsWithThe =
-
-    john.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
-
-    if beginsWithThe {
-
-        println("John's building identifier begins with \"The\".")
-
-    } else {
-
-        println("John's building identifier does not begin with \"The\".")
-
-    }
-
-}
-
-// Prints "John's building identifier begins with "The"."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

@@ -155,10 +155,11 @@
     }
 
     .not-support {
-      border: 1px dashed #eaeaea;
+      border: 1px dashed #d4d1d1;
       padding: 10px;
       margin-top: 16px;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .left-bravo {
@@ -173,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/swift-vs-kotlin/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/swift-vs-kotlin/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -413,10 +416,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val someString = "Some string literal value"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -462,22 +462,7 @@ till you come to the end; then stop."
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val quotation = """
-
-The White Rabbit put on his spectacles.  "Where shall I begin,
-
-please your Majesty?" he asked.
-
-
-
-"Begin at the beginning," the King said gravely, "and go on
-
-till you come to the end; then stop."
-
-"""</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -503,16 +488,7 @@ These are the same.
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val singleLineString = "These are the same."
-
-val multilineString = """
-
-These are the same.
-
-"""</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -544,22 +520,7 @@ till you come to the end; then stop."
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val softWrappedQuotation = """
-
-The White Rabbit put on his spectacles.  "Where shall I begin, \
-
-please your Majesty?" he asked.
-
-
-
-"Begin at the beginning," the King said gravely, "and go on \
-
-till you come to the end; then stop."
-
-"""</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -589,20 +550,7 @@ It also ends with a line break.
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val lineBreaks = """
-
-
-
-This string starts with a line break.
-
-It also ends with a line break.
-
-
-
-"""</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -644,18 +592,7 @@ let sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
-
-// "Imagination is more important than knowledge" - Einstein
-
-val dollarSign = "\u{24}"        // $,  Unicode scalar U+0024
-
-val blackHeart = "\u{2665}"      // &#9829;,  Unicode scalar U+2665
-
-val sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -681,16 +618,7 @@ Escaping all three quotation marks \"\"\"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val threeDoubleQuotationMarks = """
-
-Escaping the first quotation mark \"""
-
-Escaping all three quotation marks \"\"\"
-
-"""</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -728,14 +656,7 @@ Here are three more double quotes: """
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val threeMoreDoubleQuotationMarks = #"""
-
-Here are three more double quotes: """
-
-"""#</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -773,14 +694,7 @@ var anotherEmptyString = String()  // initializer syntax
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var emptyString = ""               // empty string literal
-
-var anotherEmptyString = String()  // initializer syntax
-
-// these two strings are both empty, and are equivalent to each other</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -806,16 +720,7 @@ var anotherEmptyString = String()  // initializer syntax
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if emptyString.isEmpty {
-
-    println("Nothing to see here")
-
-}
-
-// Prints "Nothing to see here"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -861,22 +766,7 @@ constantString += " and another Highlander"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var variableString = "Horse"
-
-variableString += " and carriage"
-
-// variableString is now "Horse and carriage"
-
-
-
-val constantString = "Highlander"
-
-constantString += " and another Highlander"
-
-// this reports a compile-time error - a constant string cannot be modified</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -924,24 +814,7 @@ constantString += " and another Highlander"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for character in "Dog!🐶" {
-
-    println(character)
-
-}
-
-// D
-
-// o
-
-// g
-
-// !
-
-// 🐶</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -961,10 +834,7 @@ constantString += " and another Highlander"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val exclamationMark: Character = "!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -990,16 +860,7 @@ print(catString)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
-
-val catString = String(catCharacters)
-
-println(catString)
-
-// Prints "Cat!🐱"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1039,16 +900,7 @@ var welcome = string1 + string2
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val string1 = "hello"
-
-val string2 = " there"
-
-var welcome = string1 + string2
-
-// welcome now equals "hello there"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1072,14 +924,7 @@ instruction += string2
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var instruction = "look over"
-
-instruction += string2
-
-// instruction now equals "look over there"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1103,14 +948,7 @@ welcome.append(exclamationMark)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val exclamationMark: Character = "!"
-
-welcome.append(exclamationMark)
-
-// welcome now equals "hello there!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1172,52 +1010,7 @@ print(goodStart + end)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val badStart = """
-
-one
-
-two
-
-"""
-
-val end = """
-
-three
-
-"""
-
-println(badStart + end)
-
-// Prints two lines:
-
-// one
-
-// twothree
-
-
-
-val goodStart = """
-
-one
-
-two
-
-
-
-"""
-
-println(goodStart + end)
-
-// Prints three lines:
-
-// one
-
-// two
-
-// three</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1255,14 +1048,7 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val multiplier = 3
-
-val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
-
-// message is "3 times 2.5 is 7.5"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1284,12 +1070,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println(#"Write an interpolated string in Swift using ${multiplier)."#)
-
-// Prints "Write an interpolated string in Swift using ${multiplier)."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1311,12 +1092,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println(#"6 times 7 is \#(6 * 7)."#)
-
-// Prints "6 times 7 is 42."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1354,14 +1130,7 @@ let combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val eAcute: Character = "\u{E9}"                         // &#233;
-
-val combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
-
-// eAcute is &#233;, combinedEAcute is e&#769;</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1385,14 +1154,7 @@ let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val precomposed: Character = "\u{D55C}"                  // 한
-
-val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#4523;
-
-// precomposed is 한, decomposed is &#4370;&#4449;&#4523;</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1414,12 +1176,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val enclosedEAcute: Character = "\u{E9}\u{20DD}"
-
-// enclosedEAcute is &#233;&#8413;</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1441,12 +1198,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val regionalIndicatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
-
-// regionalIndicatorForUS is 🇺🇸</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1484,14 +1236,7 @@ print("unusualMenagerie has \(unusualMenagerie.count) characters")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
-
-println("unusualMenagerie has ${unusualMenagerie.count) characters")
-
-// Prints "unusualMenagerie has 40 characters"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1525,24 +1270,7 @@ print("the number of characters in \(word) is \(word.count)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var word = "cafe"
-
-println("the number of characters in ${word) is ${word.count)")
-
-// Prints "the number of characters in cafe is 4"
-
-
-
-word += "\u{301}"    // COMBINING ACUTE ACCENT, U+0301
-
-
-
-println("the number of characters in ${word) is ${word.count)")
-
-// Prints "the number of characters in cafe&#769; is 4"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1594,28 +1322,7 @@ greeting[index]
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val greeting = "Guten Tag!"
-
-greeting[greeting.startIndex]
-
-// G
-
-greeting[greeting.index(before: greeting.endIndex)]
-
-// !
-
-greeting[greeting.index(after: greeting.startIndex)]
-
-// u
-
-val index = greeting.index(greeting.startIndex, offsetBy: 7)
-
-greeting[index]
-
-// a</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1637,12 +1344,7 @@ greeting.index(after: greeting.endIndex) // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">greeting[greeting.endIndex] // Error
-
-greeting.index(after: greeting.endIndex) // Error</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1668,16 +1370,7 @@ greeting.index(after: greeting.endIndex) // Error</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for index in greeting.indices {
-
-    println("${greeting[index]) ", terminator: "")
-
-}
-
-// Prints "G u t e n   T a g ! "</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1721,20 +1414,7 @@ welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var welcome = "hello"
-
-welcome.insert("!", at: welcome.endIndex)
-
-// welcome now equals "hello!"
-
-
-
-welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
-
-// welcome now equals "hello there!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1764,20 +1444,7 @@ welcome.removeSubrange(range)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">welcome.remove(at: welcome.index(before: welcome.endIndex))
-
-// welcome now equals "hello there"
-
-
-
-val range = welcome.index(welcome.endIndex, offsetBy: -6)..&#60;welcome.endIndex
-
-welcome.removeSubrange(range)
-
-// welcome now equals "hello"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1823,22 +1490,7 @@ let newString = String(beginning)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val greeting = "Hello, world!"
-
-val index = greeting.firstIndex(of: ",") ?: greeting.endIndex
-
-val beginning = greeting[..&#60;index]
-
-// beginning is "Hello"
-
-
-
-// Convert the result to a String for long-term storage.
-
-val newString = String(beginning)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1882,20 +1534,7 @@ if quotation == sameQuotation {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val quotation = "We're a lot alike, you and I."
-
-val sameQuotation = "We're a lot alike, you and I."
-
-if quotation == sameQuotation {
-
-    println("These two strings are considered equal")
-
-}
-
-// Prints "These two strings are considered equal"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1933,28 +1572,7 @@ if eAcuteQuestion == combinedEAcuteQuestion {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">// "Voulez-vous un caf&#233;?" using LATIN SMALL LETTER E WITH ACUTE
-
-val eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
-
-
-
-// "Voulez-vous un cafe&#769;?" using LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
-
-val combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
-
-
-
-if eAcuteQuestion == combinedEAcuteQuestion {
-
-    println("These two strings are considered equal")
-
-}
-
-// Prints "These two strings are considered equal"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1988,24 +1606,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val latinCapitalLetterA: Character = "\u{41}"
-
-
-
-val cyrillicCapitalLetterA: Character = "\u{0410}"
-
-
-
-if latinCapitalLetterA != cyrillicCapitalLetterA {
-
-    println("These two characters are not equivalent.")
-
-}
-
-// Prints "These two characters are not equivalent."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2063,34 +1664,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val romeoAndJuliet = [
-
-    "Act 1 Scene 1: Verona, A public place",
-
-    "Act 1 Scene 2: Capulet's mansion",
-
-    "Act 1 Scene 3: A room in Capulet's mansion",
-
-    "Act 1 Scene 4: A street outside Capulet's mansion",
-
-    "Act 1 Scene 5: The Great Hall in Capulet's mansion",
-
-    "Act 2 Scene 1: Outside Capulet's mansion",
-
-    "Act 2 Scene 2: Capulet's orchard",
-
-    "Act 2 Scene 3: Outside Friar Lawrence's cell",
-
-    "Act 2 Scene 4: A street in Verona",
-
-    "Act 2 Scene 5: Capulet's mansion",
-
-    "Act 2 Scene 6: Friar Lawrence's cell"
-
-]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2124,24 +1698,7 @@ print("There are \(act1SceneCount) scenes in Act 1")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var act1SceneCount = 0
-
-for scene in romeoAndJuliet {
-
-    if scene.hasPrefix("Act 1 ") {
-
-        act1SceneCount += 1
-
-    }
-
-}
-
-println("There are ${act1SceneCount) scenes in Act 1")
-
-// Prints "There are 5 scenes in Act 1"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2181,30 +1738,7 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var mansionCount = 0
-
-var cellCount = 0
-
-for scene in romeoAndJuliet {
-
-    if scene.hasSuffix("Capulet's mansion") {
-
-        mansionCount += 1
-
-    } else if scene.hasSuffix("Friar Lawrence's cell") {
-
-        cellCount += 1
-
-    }
-
-}
-
-println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
-
-// Prints "6 mansion scenes; 2 cell scenes"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2238,10 +1772,7 @@ println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">let dogString = "Dog&#8252;🐶"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2283,18 +1814,7 @@ print("")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for codeUnit in dogString.utf8 {
-
-    println("${codeUnit) ", terminator: "")
-
-}
-
-println("")
-
-// Prints "68 111 103 226 128 188 240 159 144 182 "</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2336,18 +1856,7 @@ print("")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for codeUnit in dogString.utf16 {
-
-    println("${codeUnit) ", terminator: "")
-
-}
-
-println("")
-
-// Prints "68 111 103 8252 55357 56374 "</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2389,18 +1898,7 @@ print("")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for scalar in dogString.unicodeScalars {
-
-    println("${scalar.value) ", terminator: "")
-
-}
-
-println("")
-
-// Prints "68 111 103 8252 128054 "</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2434,24 +1932,7 @@ println("")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">for scalar in dogString.unicodeScalars {
-
-    println("${scalar) ")
-
-}
-
-// D
-
-// o
-
-// g
-
-// &#8252;
-
-// 🐶</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
