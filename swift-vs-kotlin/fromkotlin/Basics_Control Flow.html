@@ -230,14 +230,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
                   Control Flow
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
                   Returns and Jumps
                 </a>
-                
+                 ✅
               </ol>
             
           </ul>
@@ -249,14 +249,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
                   Classes and Inheritance
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
                   Properties and Fields
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -427,7 +427,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
                   Filtering
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -730,18 +730,18 @@ val max = if (a &#62; b) a else b</code>
                   <pre>
                     <code class="swift">// Traditional usage 
 var max = a 
-if (a &#60; b) max = b
+if a &#60; b { max = b }
 &#8203;
 // With else 
 var max: Int
-if (a &#62; b) {
+if a &#62; b {
     max = a
 } else {
     max = b
 }
  
-// As expression 
-let max = if (a &#62; b) a else b</code>
+let max = a &#62; b ? a : b
+</code>
                   </pre>
                   
               
@@ -770,13 +770,15 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let max = if (a &#62; b) {
+                    <code class="swift">let max: Int
+if a &#62; b {
     print("Choose a")
-    a
+    max = a
 } else {
     print("Choose b")
-    b
-}</code>
+    max = b
+}
+</code>
                   </pre>
                   
               
@@ -819,13 +821,15 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (x) {
-    1 -&#62; print("x == 1")
-    2 -&#62; print("x == 2")
-    else -&#62; { // Note the block
-        print("x is neither 1 nor 2")
-    }
-}</code>
+                    <code class="swift">switch x {
+case 1:
+    print("x == 1")
+case 2:
+    print("x == 2")
+default:
+    print("x is neither 1 nor 2")
+}
+</code>
                   </pre>
                   
               
@@ -851,10 +855,13 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (x) {
-    0, 1 -&#62; print("x == 0 or x == 1")
-    else -&#62; print("otherwise")
-}</code>
+                    <code class="swift">switch x {
+case 0, 1:
+    print("x == 0 or x == 1")
+default:
+    print("otherwise")
+}
+</code>
                   </pre>
                   
               
@@ -880,10 +887,13 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (x) {
-    parseInt(s) -&#62; print("s encodes x")
-    else -&#62; print("s does not encode x")
-}</code>
+                    <code class="swift">switch x {
+case is Int:
+    print("s encodes x")
+default:
+    print("s does not encode x")
+}
+</code>
                   </pre>
                   
               
@@ -911,12 +921,17 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when (x) {
-    in 1..10 -&#62; print("x is in the range")
-    in validNumbers -&#62; print("x is valid")
-    !in 10..20 -&#62; print("x is outside the range")
-    else -&#62; print("none of the above")
-}</code>
+                    <code class="swift">switch x {
+case 1...10:
+    print("x is in the range")
+case let x where validNumbers.contains(x):
+    print("x is valid")
+case let x where 10...20 ~= x:
+    print("x is outside the range")
+default:
+    print("none of the above")
+}
+</code>
                   </pre>
                   
               
@@ -942,10 +957,15 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func hasPrefix(x: Any) = when(x) {
-    is String -&#62; x.startsWith("prefix")
-    else -&#62; false
-}</code>
+                    <code class="swift">func hasPrefix(x: Any) -&#62; Bool {
+    switch x {
+    case let x as String:
+        return x.starts(with: "prefix")
+    default:
+        return false
+    }
+}
+</code>
                   </pre>
                   
               
@@ -972,11 +992,14 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">when {
-    x.isOdd() -&#62; print("x is odd")
-    y.isEven() -&#62; print("y is even")
-    else -&#62; print("x+y is odd.")
-}</code>
+                    <code class="swift">if x.isOdd() {
+    print("x is odd")
+}else if y.isEven() {
+    print("y is even")
+}else {
+    print("x+y is odd.")
+}
+</code>
                   </pre>
                   
               
@@ -1003,11 +1026,21 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func Request.getBody() =
-        when (let response = executeRequest()) {
-            is Success -&#62; response.body
-            is HttpError -&#62; throw HttpException(response.status)
-        }</code>
+                    <code class="swift">extension Request {
+    
+    func getBody() throws -&#62; Body {
+        let response = executeRequest()
+        
+        switch response {
+        case .success(let body):
+            return body
+        case .error(let status):
+            throw .httpException(status)
+        }
+    }
+}
+        
+</code>
                   </pre>
                   
               
@@ -1072,9 +1105,10 @@ let max = if (a &#62; b) a else b</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for (item: Int in ints) {
+                    <code class="swift">for item in ints {
     // ...
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1102,12 +1136,13 @@ for (i in 6 downTo 0 step 2) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for (i in 1..3) {
+                    <code class="swift">for i in 1...3 {
     print(i)
 }
-for (i in 6 downTo 0 step 2) {
+for i in stride(from: 6, through: 0, by: -2) {
     print(i)
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1132,9 +1167,10 @@ for (i in 6 downTo 0 step 2) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for (i in array.indices) {
+                    <code class="swift">for i in array.indices {
     print(array[i])
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1159,9 +1195,10 @@ for (i in 6 downTo 0 step 2) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for ((index, value) in array.withIndex()) {
-    print("the element at $index is $value")
-}</code>
+                    <code class="swift">for (index, value) in array.enumerated() {
+    print("the element at \(index) is \(value)")
+}
+</code>
                   </pre>
                   
               
@@ -1204,13 +1241,15 @@ do {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">while (x &#62; 0) {
-    x--
+                    <code class="swift">while x &#62; 0 {
+    x -= 1
 }
 &#8203;
-do {
-    let y = retrieveData()
-} while (y != null) // y is visible here!</code>
+var y: String?
+repeat {
+    y = retrieveData()
+} while y != nil
+</code>
                   </pre>
                   
               

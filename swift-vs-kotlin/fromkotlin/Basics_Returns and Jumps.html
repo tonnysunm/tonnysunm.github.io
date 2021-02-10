@@ -230,14 +230,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
                   Control Flow
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
                   Returns and Jumps
                 </a>
-                
+                 ✅
               </ol>
             
           </ul>
@@ -249,14 +249,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
                   Classes and Inheritance
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
                   Properties and Fields
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -427,7 +427,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
                   Filtering
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -696,12 +696,16 @@
                   <code class="kotlin">val s = person.name ?: return</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let s = person.name ?? return</code>
+                    <code class="swift">guard let s = person.name else { return }
+
+</code>
                   </pre>
                   
               
@@ -740,9 +744,10 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">loop@ for (i in 1..100) {
+                    <code class="swift">loop: for i in 1...100 {
     // ...
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -769,11 +774,12 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">loop@ for (i in 1..100) {
-    for (j in 1..100) {
-        if (...) break@loop
+                    <code class="swift">loop: for i in 1...100 {
+    for j in 1...100 {
+        if ... break loop
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -818,10 +824,10 @@
                   <pre>
                     <code class="swift">func foo() {
     [1, 2, 3, 4, 5].forEach {
-        if ($0 == 3) return // non-local return directly to the caller of foo()
-        print(it)
+        if $0 == 3 { return }
+        print($0)
     }
-    print("this point is unreachable")
+    print("this point is reachable")
 }
 </code>
                   </pre>
@@ -852,13 +858,7 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() {
-    [1, 2, 3, 4, 5].forEach lit@{
-        if ($0 == 3) return@lit // local return to the caller of the lambda, i.e. the forEach loop
-        print(it)
-    }
-    print(" done with explicit label")
-}
+                    <code class="swift">
 </code>
                   </pre>
                   
@@ -888,13 +888,7 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() {
-    [1, 2, 3, 4, 5].forEach {
-        if ($0 == 3) return@forEach // local return to the caller of the lambda, i.e. the forEach loop
-        print(it)
-    }
-    print(" done with implicit label")
-}
+                    <code class="swift">
 </code>
                   </pre>
                   
@@ -961,15 +955,7 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func foo() {
-    run loop@{
-        [1, 2, 3, 4, 5].forEach {
-            if ($0 == 3) return@loop // non-local return from the lambda passed to run
-            print(it)
-        }
-    }
-    print(" done with nested loop")
-}
+                    <code class="swift">
 </code>
                   </pre>
                   
@@ -993,7 +979,8 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">return@a 1</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               

@@ -230,14 +230,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
                   Control Flow
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
                   Returns and Jumps
                 </a>
-                
+                 ✅
               </ol>
             
           </ul>
@@ -249,14 +249,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
                   Classes and Inheritance
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
                   Properties and Fields
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -427,7 +427,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
                   Filtering
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -721,13 +721,14 @@ println(filteredMap)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf("one", "two", "three", "four")  
-let longerThan3 = numbers.filter { it.length &#62; 3 }
+                    <code class="swift">let numbers = ["one", "two", "three", "four"]
+let longerThan3 = numbers.filter { $0.count &#62; 3 }
 print(longerThan3)
-&#8203;
-let numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key11" to 11)
-let filteredMap = numbersMap.filter { (key, value) -&#62; key.endsWith("1") &#38;&#38; value &#62; 10}
-print(filteredMap)</code>
+
+let numbersMap = ["key1": 1, "key2": 2, "key3": 3, "key11": 11]
+let filteredMap = numbersMap.filter { $0.hasSuffix("1") &#38;&#38; $1 &#62; 10 }
+print(filteredMap)
+</code>
                   </pre>
                   
               
@@ -756,13 +757,16 @@ println(filteredNot)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf("one", "two", "three", "four")
-&#8203;
-let filteredIdx = numbers.filterIndexed { index, s -&#62; (index != 0) &#38;&#38; (s.length &#60; 5)  }
-let filteredNot = numbers.filterNot { it.length &#60;= 3 }
-&#8203;
+                    <code class="swift">let numbers = ["one", "two", "three", "four"]
+
+let filteredIdx = numbers
+    .enumerated()
+    .filter { $0.offset != 0 &#38;&#38; $0.element.count &#60; 5 }
+let filteredNot = numbers.filter { $0.count &#62; 3 }
+
 print(filteredIdx)
-print(filteredNot)</code>
+print(filteredNot)
+</code>
                   </pre>
                   
               
@@ -789,11 +793,12 @@ numbers.filterIsInstance&#60;String&#62;().forEach {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf(null, 1, "two", 3.0, "four")
+                    <code class="swift">let numbers = [nil, 1, "two", 3.0, "four"] as [Any?]
 print("All String elements in upper case:")
-numbers.filterIsInstance&#60;String&#62;().forEach {
-    print(it.toUpperCase())
-}</code>
+
+numbers.compactMap({ $0 as? String })
+    .forEach { print($0.uppercased()) }
+</code>
                   </pre>
                   
               
@@ -819,10 +824,11 @@ numbers.filterNotNull().forEach {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf(null, "one", "two", null)
-numbers.filterNotNull().forEach {
-    print(it.length)   // length is unavailable for nullable Strings
-}</code>
+                    <code class="swift">let numbers = [nil, "one", "two", nil]
+numbers.compactMap({ $0 }).forEach {
+    print($0.count)
+}
+</code>
                   </pre>
                   
               
@@ -863,11 +869,12 @@ println(rest)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf("one", "two", "three", "four")
-let (match, rest) = numbers.partition { it.length &#62; 3 }
-&#8203;
-print(match)
-print(rest)</code>
+                    <code class="swift">var numbers = ["one", "two", "three", "four"]
+let p = numbers.partition { $0.count &#62; 3 }
+
+print(numbers[..&#60;p])
+print(numbers[p...])
+</code>
                   </pre>
                   
               
@@ -910,13 +917,15 @@ println(emptyList&#60;Int&#62;().all { it &#62; 5 })   // vacuous truth</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf("one", "two", "three", "four")
-&#8203;
-print(numbers.any { it.endsWith("e") })
-print(numbers.none { it.endsWith("a") })
-print(numbers.all { it.endsWith("e") })
-&#8203;
-print(emptyList&#60;Int&#62;().all { $0 &#62; 5 })   // vacuous truth</code>
+                    <code class="swift">let numbers = ["one", "two", "three", "four"]
+
+
+print(numbers.contains { $0.hasSuffix("e") })
+print(!numbers.contains { $0.hasSuffix("a") })
+print(numbers.allSatisfy { $0.hasSuffix("e") })
+
+print([Int]().allSatisfy { $0 &#62; 5 })   // vacuous truth https://en.wikipedia.org/wiki/Vacuous_truth
+</code>
                   </pre>
                   
               
@@ -946,14 +955,15 @@ println(empty.none())</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let numbers = listOf("one", "two", "three", "four")
-let empty = emptyList&#60;String&#62;()
-&#8203;
-print(numbers.any())
-print(empty.any())
-&#8203;
-print(numbers.none())
-print(empty.none())</code>
+                    <code class="swift">let numbers = ["one", "two", "three", "four"]
+let empty = [String]()
+
+print(!numbers.isEmpty)
+print(!empty.isEmpty)
+
+print(numbers.isEmpty)
+print(empty.isEmpty)
+</code>
                   </pre>
                   
               

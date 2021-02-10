@@ -230,14 +230,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Control Flow.html">
                   Control Flow
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Basics_Returns and Jumps.html">
                   Returns and Jumps
                 </a>
-                
+                 ✅
               </ol>
             
           </ul>
@@ -249,14 +249,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Classes and Inheritance.html">
                   Classes and Inheritance
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Properties and Fields.html">
                   Properties and Fields
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -427,7 +427,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Collections_Filtering.html">
                   Filtering
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -715,7 +715,8 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Invoice { /*...*/ }</code>
+                    <code class="swift">class Invoice { /*...*/ }
+</code>
                   </pre>
                   
               
@@ -738,7 +739,8 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Empty</code>
+                    <code class="swift">class Empty {}
+</code>
                   </pre>
                   
               
@@ -775,7 +777,11 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person constructor(firstName: String) { /*...*/ }</code>
+                    <code class="swift">class Person {
+    init(firstName: String) {}
+    /*...*/
+}
+</code>
                   </pre>
                   
               
@@ -798,7 +804,10 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(firstName: String) { /*...*/ }</code>
+                    <code class="swift">class Person {
+    init(firstName: String) { /*...*/ }
+}
+</code>
                   </pre>
                   
               
@@ -828,24 +837,36 @@
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class InitOrderDemo(name: String) {
-    let firstProperty = "First property: $name".also(::println)
+                    <code class="swift">class InitOrderDemo {
+    private let name: String
     
-    init {
-        print("First initializer block that prints ${name}")
+    init(name: String) {
+        self.name = name
+        
+        print("First initializer block that prints \(name)")
     }
     
-    let secondProperty = "Second property: ${name.length}".also(::println)
-    
-    init {
-        print("Second initializer block that prints ${name.length}")
+    var firstProperty: String {
+        get {
+            return "First property: \(self.name)"
+        }
     }
-}</code>
+    
+    var secondProperty: String {
+        get {
+            return "Second property: \(self.name.count)"
+        }
+    }
+}
+
+</code>
                   </pre>
                   
               
@@ -870,9 +891,18 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Customer(name: String) {
-    let customerKey = name.toUpperCase()
-}</code>
+                    <code class="swift">class Customer {
+    private let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var customerKey: String {
+        get { return name.toUpperCase }
+    }
+}
+</code>
                   </pre>
                   
               
@@ -895,7 +925,18 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(let firstName: String, let lastName: String, var age: Int) { /*...*/ }</code>
+                    <code class="swift">class Person {
+    let firstName, lastName: String
+    var age: Int
+    
+    init(firstName: String, lastName: String, age: Int){
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+    }
+    /*...*/
+}
+</code>
                   </pre>
                   
               
@@ -922,11 +963,8 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(
-    let firstName: String,
-    let lastName: String,
-    var age: Int, // trailing comma
-) { /*...*/ }</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -949,7 +987,8 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Customer public @Inject constructor(name: String) { /*...*/ }</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
@@ -992,11 +1031,13 @@
               
                   <pre>
                     <code class="swift">class Person {
-    var children: MutableList&#60;Person&#62; = mutableListOf()
-    constructor(parent: Person) {
-        parent.children.add(this)
+    var children: [Person] = []
+    
+    init(parent: Person) {
+        parent.children.append(self)
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1024,12 +1065,20 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Person(let name: String) {
-    var children: MutableList&#60;Person&#62; = mutableListOf()
-    constructor(name: String, parent: Person) : this(name) {
-        parent.children.add(this)
+                    <code class="swift">class Person {
+    let name: String
+    var children: [Person] = []
+    
+    init(name: String) {
+        self.name = name
     }
-}</code>
+    
+    convenience init(name: String, parent: Person) {
+        self.init(name: name)
+        parent.children.append(self)
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1061,14 +1110,15 @@
               
                   <pre>
                     <code class="swift">class Constructors {
-    init {
-        print("Init block")
+    init() {
+        print("Constructor in default")
     }
 &#8203;
-    constructor(i: Int) {
-        print("Constructor")
+    convenience init(i: Int) {
+        print("Constructor with \(i)")
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1091,7 +1141,11 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class DontCreateMe private constructor () { /*...*/ }</code>
+                    <code class="swift">class DontCreateMe {
+    private init() { }
+    /*...*/
+}
+</code>
                   </pre>
                   
               
@@ -1114,7 +1168,13 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Customer(let customerName: String = "")</code>
+                    <code class="swift">class Customer {
+    let customerName: String
+    init(customerName: String = "") {
+        self.customerName = customerName
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1155,7 +1215,8 @@ val customer = Customer("Joe Smith")</code>
                   <pre>
                     <code class="swift">let invoice = Invoice()
 &#8203;
-let customer = Customer("Joe Smith")</code>
+let customer = Customer("Joe Smith")
+</code>
                   </pre>
                   
               
@@ -1191,10 +1252,8 @@ let customer = Customer("Joe Smith")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Example // Implicitly inherits from Any</code>
-                  </pre>
-                  
+                  <div><div class="not-support">Swift classes do not inherit from a universal base class. </div>
+</div>
               
               </td>
             </tr>
@@ -1215,7 +1274,8 @@ let customer = Customer("Joe Smith")</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Base //Class is open for inheritance</code>
+                    <code class="swift">class Base //Class is default open for inheritance
+</code>
                   </pre>
                   
               
@@ -1240,9 +1300,12 @@ class Derived(p: Int) : Base(p)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Base(p: Int)
-&#8203;
-class Derived(p: Int) : Base(p)</code>
+                    <code class="swift">class Base {
+    init(p: Int) {}
+}
+
+class Derived: Base {}
+</code>
                   </pre>
                   
               
@@ -1269,11 +1332,16 @@ class Derived(p: Int) : Base(p)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class MyView : View {
-    constructor(ctx: Context) : super(ctx)
-&#8203;
-    constructor(ctx: Context, attrs: AttributeSet) : super(ctx, attrs)
-}</code>
+                    <code class="swift">class MyView: View {
+    override init(ctx: Context) {
+        super.init(ctx: ctx)
+    }
+    
+    override init(ctx: Context, attrs: AttributeSet) {
+        super.init(ctx: ctx, attrs: attrs)
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1317,14 +1385,15 @@ class Circle() : Shape() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Shape {
-    open func draw() { /*...*/ }
-    func fill() { /*...*/ }
+                    <code class="swift">class Shape {
+    func draw() { /*...*/ }
+    private func fill() { /*...*/ }
 }
 &#8203;
-class Circle() : Shape() {
+class Circle: Shape {
     override func draw() { /*...*/ }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1349,9 +1418,10 @@ class Circle() : Shape() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Rectangle() : Shape() {
+                    <code class="swift">class Rectangle: Shape {
     final override func draw() { /*...*/ }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1394,13 +1464,17 @@ class Rectangle : Shape() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Shape {
-    open let vertexCount: Int = 0
+                    <code class="swift">class Shape {
+    var vertexCount: Int = 0
 }
-&#8203;
-class Rectangle : Shape() {
-    override let vertexCount = 4
-}</code>
+
+class Rectangle: Shape {
+    override init() {
+        super.init()
+        vertexCount = 4
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1431,15 +1505,18 @@ class Polygon : Shape {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface Shape {
-    let vertexCount: Int
+                    <code class="swift">protocol Shape {
+    var vertexCount: Int { get }
 }
-&#8203;
-class Rectangle(override let vertexCount: Int = 4) : Shape // Always has 4 vertices
-&#8203;
+
+class Rectangle: Shape {
+    let vertexCount: Int = 4
+}
+
 class Polygon : Shape {
-    override var vertexCount: Int = 0  // Can be set to any number later
-}</code>
+    var vertexCount: Int = 0  // Can be set to any number later
+}
+</code>
                   </pre>
                   
               
@@ -1493,24 +1570,33 @@ class Derived(
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Base(let name: String) {
-&#8203;
-    init { print("Initializing Base") }
-&#8203;
-    open let size: Int = 
-        name.length.also { print("Initializing size in Base: $it") }
+                    <code class="swift">class Base {
+    let name: String
+    init(name: String) {
+        self.name = name
+        print("Initializing Base")
+    }
+    
+    var size: Int {
+        get { return name.count }
+    }
 }
-&#8203;
-class Derived(
-    name: String,
-    let lastName: String,
-) : Base(name.capitalize().also { print("Argument for Base: $it") }) {
-&#8203;
-    init { print("Initializing Derived") }
-&#8203;
-    override let size: Int =
-        (super.size + lastName.length).also { print("Initializing size in Derived: $it") }
-}</code>
+
+class Derived: Base {
+    let lastName: String
+    
+    init(name: String, lastName: String) {
+        self.lastName = lastName
+        print("Initializing Derived")
+        
+        super.init(name: name.uppercased())
+    }
+    
+    override var size: Int {
+        get { return super.size + lastName.count }
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1559,19 +1645,24 @@ class FilledRectangle : Rectangle() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Rectangle {
-    open func draw() { print("Drawing a rectangle") }
-    let borderColor: String get() = "black"
+                    <code class="swift">class Rectangle {
+    func draw() { print("Drawing a rectangle") }
+    var borderColor: String {
+        get { "black" }
+    }
 }
-&#8203;
-class FilledRectangle : Rectangle() {
+
+class FilledRectangle: Rectangle {
     override func draw() {
         super.draw()
         print("Filling the rectangle")
     }
-&#8203;
-    let fillColor: String get() = super.borderColor
-}</code>
+    
+    var fillColor: String {
+        get { super.borderColor }
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1608,21 +1699,24 @@ class FilledRectangle : Rectangle() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class FilledRectangle: Rectangle() {
-    override func draw() { 
-        let filler = Filler()
-        filler.drawAndFill()
+                    <code class="swift">class Rectangle {
+    func draw() { print("Rectangle")/* ... */ }
+}
+
+protocol Polygon {
+    func draw()
+}
+extension Polygon {
+    func draw() { print("Polygon")/* ... */ }
+}
+
+class Square: Rectangle, Polygon {
+    // The compiler requires draw() to be overridden:
+    override func draw() {
+        super.draw() // call to Rectangle.draw()
     }
-&#8203;
-    inner class Filler {
-        func fill() { print("Filling") }
-        func drawAndFill() {
-            super@FilledRectangle.draw() // Calls Rectangle's implementation of draw()
-            fill()
-            print("Drawn a filled rectangle with color ${super@FilledRectangle.borderColor}") // Uses Rectangle's implementation of borderColor's get()
-        }
-    }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1673,21 +1767,24 @@ class Square() : Rectangle(), Polygon {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Rectangle {
-    open func draw() { /* ... */ }
+                    <code class="swift">class Rectangle {
+    func draw() { print("Rectangle")/* ... */ }
 }
-&#8203;
-interface Polygon {
-    func draw() { /* ... */ } // interface members are 'open' by default
+
+protocol Polygon {
+    func draw()
 }
-&#8203;
-class Square() : Rectangle(), Polygon {
+extension Polygon {
+    func draw() { print("Polygon")/* ... */ }
+}
+
+class Square: Rectangle, Polygon {
     // The compiler requires draw() to be overridden:
     override func draw() {
-        super&#60;Rectangle&#62;.draw() // call to Rectangle.draw()
-        super&#60;Polygon&#62;.draw() // call to Polygon.draw()
+        super.draw() // call to Rectangle.draw()
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -1730,13 +1827,8 @@ abstract class Rectangle : Polygon() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Polygon {
-    open func draw() {}
-}
-&#8203;
-abstract class Rectangle : Polygon() {
-    abstract override func draw()
-}</code>
+                    <code class="swift">
+</code>
                   </pre>
                   
               
