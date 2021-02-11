@@ -450,16 +450,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greet(person: String): String {
-
-    val greeting = "Hello, " + person + "!"
-
-    return greeting
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -485,16 +476,7 @@ print(greet(person: "Brian"))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println(greet(person: "Anna"))
-
-// Prints "Hello, Anna!"
-
-println(greet(person: "Brian"))
-
-// Prints "Hello, Brian!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -522,18 +504,7 @@ print(greetAgain(person: "Anna"))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greetAgain(person: String): String {
-
-    return "Hello again, " + person + "!"
-
-}
-
-println(greetAgain(person: "Anna"))
-
-// Prints "Hello again, Anna!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -575,18 +546,7 @@ print(sayHelloWorld())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func sayHelloWorld(): String {
-
-    return "hello, world"
-
-}
-
-println(sayHelloWorld())
-
-// Prints "hello, world"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -636,26 +596,7 @@ print(greet(person: "Tim", alreadyGreeted: true))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greet(person: String, alreadyGreeted: Bool): String {
-
-    if alreadyGreeted {
-
-        return greetAgain(person: person)
-
-    } else {
-
-        return greet(person: person)
-
-    }
-
-}
-
-println(greet(person: "Tim", alreadyGreeted: true))
-
-// Prints "Hello again, Tim!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -697,18 +638,7 @@ greet(person: "Dave")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greet(person: String) {
-
-    println("Hello, ${person)!")
-
-}
-
-greet(person: "Dave")
-
-// Prints "Hello, Dave!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -748,30 +678,7 @@ printWithoutCounting(string: "hello, world")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func printAndCount(string: String): Int {
-
-    println(string)
-
-    return string.count
-
-}
-
-func printWithoutCounting(string: String) {
-
-    val _ = printAndCount(string: string)
-
-}
-
-printAndCount(string: "hello, world")
-
-// prints "hello, world" and returns a value of 12
-
-printWithoutCounting(string: "hello, world")
-
-// prints "hello, world" but does not return a value</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -827,32 +734,7 @@ printWithoutCounting(string: "hello, world")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func minMax(array: [Int]): (min: Int, max: Int) {
-
-    var currentMin = array[0]
-
-    var currentMax = array[0]
-
-    for value in array[1..&#60;array.count] {
-
-        if value &#60; currentMin {
-
-            currentMin = value
-
-        } else if value &#62; currentMax {
-
-            currentMax = value
-
-        }
-
-    }
-
-    return (currentMin, currentMax)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -876,14 +758,7 @@ print("min is \(bounds.min) and max is \(bounds.max)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val bounds = minMax(array: [8, -6, 2, 109, 3, 71])
-
-println("min is ${bounds.min) and max is ${bounds.max)")
-
-// Prints "min is -6 and max is 109"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -941,34 +816,7 @@ println("min is ${bounds.min) and max is ${bounds.max)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func minMax(array: [Int]): (min: Int, max: Int)? {
-
-    if array.isEmpty { return nil }
-
-    var currentMin = array[0]
-
-    var currentMax = array[0]
-
-    for value in array[1..&#60;array.count] {
-
-        if value &#60; currentMin {
-
-            currentMin = value
-
-        } else if value &#62; currentMax {
-
-            currentMax = value
-
-        }
-
-    }
-
-    return (currentMin, currentMax)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -994,16 +842,7 @@ println("min is ${bounds.min) and max is ${bounds.max)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if val bounds = minMax(array: [8, -6, 2, 109, 3, 71]) {
-
-    println("min is ${bounds.min) and max is ${bounds.max)")
-
-}
-
-// Prints "min is -6 and max is 109"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1057,30 +896,7 @@ print(anotherGreeting(for: "Dave"))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greeting(for person: String): String {
-
-    "Hello, " + person + "!"
-
-}
-
-println(greeting(for: "Dave"))
-
-// Prints "Hello, Dave!"
-
-
-
-func anotherGreeting(for person: String): String {
-
-    return "Hello, " + person + "!"
-
-}
-
-println(anotherGreeting(for: "Dave"))
-
-// Prints "Hello, Dave!"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1122,18 +938,7 @@ someFunction(firstParameterName: 1, secondParameterName: 2)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction(firstParameterName: Int, secondParameterName: Int) {
-
-    // In the function body, firstParameterName and secondParameterName
-
-    // refer to the argument values for the first and second parameters.
-
-}
-
-someFunction(firstParameterName: 1, secondParameterName: 2)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1173,16 +978,7 @@ someFunction(firstParameterName: 1, secondParameterName: 2)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction(argumentLabel parameterName: Int) {
-
-    // In the function body, parameterName refers to the argument value
-
-    // for that parameter.
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1210,18 +1006,7 @@ print(greet(person: "Bill", from: "Cupertino"))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func greet(person: String, from hometown: String): String {
-
-    return "Hello ${person)!  Glad you could visit from ${hometown)."
-
-}
-
-println(greet(person: "Bill", from: "Cupertino"))
-
-// Prints "Hello Bill!  Glad you could visit from Cupertino."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1263,18 +1048,7 @@ someFunction(1, secondParameterName: 2)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
-
-    // In the function body, firstParameterName and secondParameterName
-
-    // refer to the argument values for the first and second parameters.
-
-}
-
-someFunction(1, secondParameterName: 2)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1318,20 +1092,7 @@ someFunction(parameterWithoutDefault: 4) // parameterWithDefault is 12</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
-
-    // If you omit the second argument when calling this function, then
-
-    // the value of parameterWithDefault is 12 inside the function body.
-
-}
-
-someFunction(parameterWithoutDefault: 3, parameterWithDefault: 6) // parameterWithDefault is 6
-
-someFunction(parameterWithoutDefault: 4) // parameterWithDefault is 12</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1385,30 +1146,7 @@ arithmeticMean(3, 8.25, 18.75)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func arithmeticMean(_ numbers: Double...): Double {
-
-    var total: Double = 0
-
-    for number in numbers {
-
-        total += number
-
-    }
-
-    return total / Double(numbers.count)
-
-}
-
-arithmeticMean(1, 2, 3, 4, 5)
-
-// returns 3.0, which is the arithmetic mean of these five numbers
-
-arithmeticMean(3, 8.25, 18.75)
-
-// returns 10.0, which is the arithmetic mean of these three numbers</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1450,18 +1188,7 @@ arithmeticMean(3, 8.25, 18.75)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func swapTwoInts(_ a: inout Int, _ b: inout Int) {
-
-    val temporaryA = a
-
-    a = b
-
-    b = temporaryA
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1489,18 +1216,7 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var someInt = 3
-
-var anotherInt = 107
-
-swapTwoInts(&#38;someInt, &#38;anotherInt)
-
-println("someInt is now ${someInt), and anotherInt is now ${anotherInt)")
-
-// Prints "someInt is now 107, and anotherInt is now 3"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1544,20 +1260,7 @@ func multiplyTwoInts(_ a: Int, _ b: Int) -&#62; Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func addTwoInts(_ a: Int, _ b: Int): Int {
-
-    return a + b
-
-}
-
-func multiplyTwoInts(_ a: Int, _ b: Int): Int {
-
-    return a * b
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1581,14 +1284,7 @@ func multiplyTwoInts(_ a: Int, _ b: Int): Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func printHelloWorld() {
-
-    println("hello, world")
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1622,10 +1318,7 @@ func multiplyTwoInts(_ a: Int, _ b: Int): Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var mathFunction: (Int, Int): Int = addTwoInts</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1647,12 +1340,7 @@ func multiplyTwoInts(_ a: Int, _ b: Int): Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("Result: ${mathFunction(2, 3))")
-
-// Prints "Result: 5"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1676,14 +1364,7 @@ print("Result: \(mathFunction(2, 3))")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">mathFunction = multiplyTwoInts
-
-println("Result: ${mathFunction(2, 3))")
-
-// Prints "Result: 6"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1705,12 +1386,7 @@ println("Result: ${mathFunction(2, 3))")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val anotherMathFunction = addTwoInts
-
-// anotherMathFunction is inferred to be of type (Int, Int): Int</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1752,18 +1428,7 @@ printMathResult(addTwoInts, 3, 5)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func printMathResult(_ mathFunction: (Int, Int): Int, _ a: Int, _ b: Int) {
-
-    println("Result: ${mathFunction(a, b))")
-
-}
-
-printMathResult(addTwoInts, 3, 5)
-
-// Prints "Result: 8"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1807,20 +1472,7 @@ func stepBackward(_ input: Int) -&#62; Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func stepForward(_ input: Int): Int {
-
-    return input + 1
-
-}
-
-func stepBackward(_ input: Int): Int {
-
-    return input - 1
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1844,14 +1496,7 @@ func stepBackward(_ input: Int): Int {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func chooseStepFunction(backward: Bool): (Int): Int {
-
-    return backward ? stepBackward : stepForward
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1875,14 +1520,7 @@ let moveNearerToZero = chooseStepFunction(backward: currentValue &#62; 0)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var currentValue = 3
-
-val moveNearerToZero = chooseStepFunction(backward: currentValue &#62; 0)
-
-// moveNearerToZero now refers to the stepBackward() function</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1922,30 +1560,7 @@ print("zero!")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("Counting to zero:")
-
-// Counting to zero:
-
-while currentValue != 0 {
-
-    println("${currentValue)... ")
-
-    currentValue = moveNearerToZero(currentValue)
-
-}
-
-println("zero!")
-
-// 3...
-
-// 2...
-
-// 1...
-
-// zero!</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -2013,44 +1628,7 @@ print("zero!")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func chooseStepFunction(backward: Bool): (Int): Int {
-
-    func stepForward(input: Int): Int { return input + 1 }
-
-    func stepBackward(input: Int): Int { return input - 1 }
-
-    return backward ? stepBackward : stepForward
-
-}
-
-var currentValue = -4
-
-val moveNearerToZero = chooseStepFunction(backward: currentValue &#62; 0)
-
-// moveNearerToZero now refers to the nested stepForward() function
-
-while currentValue != 0 {
-
-    println("${currentValue)... ")
-
-    currentValue = moveNearerToZero(currentValue)
-
-}
-
-println("zero!")
-
-// -4...
-
-// -3...
-
-// -2...
-
-// -1...
-
-// zero!</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

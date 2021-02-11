@@ -263,7 +263,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Interfaces.html">
                   Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -706,12 +706,16 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface MyInterface {
+                    <code class="swift">protocol MyInterface {
     func bar()
+}
+
+extension MyInterface {
     func foo() {
-      // optional body
+        // optional body
     }
-}</code>
+}
+</code>
                   </pre>
                   
               
@@ -752,11 +756,21 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class Child : MyInterface {
-    override func bar() {
+                    <code class="swift">class Child: MyInterface {
+    func bar() {
         // body
     }
-}</code>
+}
+
+//or
+
+extension Child: MyInterface {
+    func bar() {
+        // body
+    }
+}
+
+</code>
                   </pre>
                   
               
@@ -806,20 +820,28 @@ class Child : MyInterface {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface MyInterface {
-    let prop: Int // abstract
-&#8203;
-    let propertyWithImplementation: String
-        get() = "foo"
-&#8203;
+                    <code class="swift">protocol MyInterface {
+    var prop: Int { get }
+    
+    var propertyWithImplementation: String { get }
+    
+    func foo()
+}
+
+extension MyInterface {
+    var propertyWithImplementation: String {
+        get { return "foo" }
+    }
+}
+
+class Child: MyInterface {
+    var prop: Int = 29
+    
     func foo() {
         print(prop)
     }
 }
-&#8203;
-class Child : MyInterface {
-    override let prop: Int = 29
-}</code>
+</code>
                   </pre>
                   
               
@@ -872,23 +894,34 @@ data class Employee(
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface Named {
-    let name: String
+                    <code class="swift">import Foundation
+
+protocol Named {
+    var name: String { get }
 }
-&#8203;
-interface Person : Named {
+
+protocol Person: Named {
+    var firstName: String { get }
+    var lastName: String { get }
+}
+
+extension Person {
+    var name: String {
+        get { "\(firstName) \(lastName)" }
+    }
+}
+
+class Employee: Person {
     let firstName: String
     let lastName: String
-    
-    override let name: String get() = "$firstName $lastName"
-}
-&#8203;
-data class Employee(
-    // implementing 'name' is not required
-    override let firstName: String,
-    override let lastName: String,
     let position: Position
-) : Person</code>
+    
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+}
+</code>
                   </pre>
                   
               
@@ -948,30 +981,31 @@ class D : A, B {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface A {
-    func foo() { print("A") }
+                    <code class="swift">protocol A {
+    func foo()
     func bar()
 }
-&#8203;
-interface B {
+extension A {
+    func foo() { print("A") }
+}
+
+
+protocol B {
+    func foo()
+    func bar()
+}
+extension B {
     func foo() { print("B") }
     func bar() { print("bar") }
 }
-&#8203;
-class C : A {
-    override func bar() { print("bar") }
+
+
+class C: A {
+    func bar() { print("bar") }
 }
-&#8203;
-class D : A, B {
-    override func foo() {
-        super&#60;A&#62;.foo()
-        super&#60;B&#62;.foo()
-    }
-&#8203;
-    override func bar() {
-        super&#60;B&#62;.bar()
-    }
-}</code>
+
+//call default implementation in method is not supportted
+</code>
                   </pre>
                   
               

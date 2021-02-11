@@ -263,7 +263,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Interfaces.html">
                   Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -706,11 +706,12 @@ class Message { /*...*/ }
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func printMessage() { /*...*/ }
+                    <code class="swift">package org.example
+&#8203;
+func printMessage() { /*...*/ }
 class Message { /*...*/ }
 &#8203;
-// ...
-</code>
+// ...</code>
                   </pre>
                   
               
@@ -747,8 +748,7 @@ class Message { /*...*/ }
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">import AModule.Message // Message submodule is now accessible without qualification
-</code>
+                    <code class="swift">import org.example.Message // Message is now accessible without qualification</code>
                   </pre>
                   
               
@@ -771,8 +771,7 @@ class Message { /*...*/ }
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">import AModule // everything in 'AModule' becomes accessible
-</code>
+                    <code class="swift">import org.example.* // everything in 'org.example' becomes accessible</code>
                   </pre>
                   
               
@@ -796,8 +795,8 @@ import org.test.Message as testMessage // testMessage stands for 'org.test.Messa
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">import AModule.Message // Message is accessible
-</code>
+                    <code class="swift">import org.example.Message // Message is accessible
+import org.test.Message as testMessage // testMessage stands for 'org.test.Message'</code>
                   </pre>
                   
               

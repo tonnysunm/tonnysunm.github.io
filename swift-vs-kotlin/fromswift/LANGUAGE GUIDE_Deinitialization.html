@@ -448,14 +448,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">deinit {
-
-    // perform the deinitialization
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -509,30 +502,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Bank {
-
-    static var coinsInBank = 10_000
-
-    static func distribute(coins numberOfCoinsRequested: Int): Int {
-
-        val numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
-
-        coinsInBank -= numberOfCoinsToVend
-
-        return numberOfCoinsToVend
-
-    }
-
-    static func receive(coins: Int) {
-
-        coinsInBank += coins
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -574,32 +544,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Player {
-
-    var coinsInPurse: Int
-
-    init(coins: Int) {
-
-        coinsInPurse = Bank.distribute(coins: coins)
-
-    }
-
-    func win(coins: Int) {
-
-        coinsInPurse += Bank.distribute(coins: coins)
-
-    }
-
-    deinit {
-
-        Bank.receive(coins: coinsInPurse)
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -627,18 +572,7 @@ print("There are now \(Bank.coinsInBank) coins left in the bank")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var playerOne: Player? = Player(coins: 100)
-
-println("A new player has joined the game with ${playerOne!.coinsInPurse) coins")
-
-// Prints "A new player has joined the game with 100 coins"
-
-println("There are now ${Bank.coinsInBank) coins left in the bank")
-
-// Prints "There are now 9900 coins left in the bank"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -666,18 +600,7 @@ print("The bank now only has \(Bank.coinsInBank) coins left")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">playerOne!.win(coins: 2_000)
-
-println("PlayerOne won 2000 coins &#38; now has ${playerOne!.coinsInPurse) coins")
-
-// Prints "PlayerOne won 2000 coins &#38; now has 2100 coins"
-
-println("The bank now only has ${Bank.coinsInBank) coins left")
-
-// Prints "The bank now only has 7900 coins left"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -705,18 +628,7 @@ print("The bank now has \(Bank.coinsInBank) coins")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">playerOne = nil
-
-println("PlayerOne has left the game")
-
-// Prints "PlayerOne has left the game"
-
-println("The bank now has ${Bank.coinsInBank) coins")
-
-// Prints "The bank now has 10000 coins"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

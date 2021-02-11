@@ -444,10 +444,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -475,18 +472,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func backward(_ s1: String, _ s2: String): Bool {
-
-    return s1 &#62; s2
-
-}
-
-var reversedNames = names.sorted(by: backward)
-
-// reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -524,14 +510,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">{ (parameters): return type in
-
-    statements
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -555,14 +534,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: { (s1: String, s2: String): Bool in
-
-    return s1 &#62; s2
-
-})</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -582,10 +554,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: { (s1: String, s2: String): Bool in return s1 &#62; s2 } )</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -619,10 +588,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: { s1, s2 in return s1 &#62; s2 } )</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -656,10 +622,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: { s1, s2 in s1 &#62; s2 } )</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -693,10 +656,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: { $0 &#62; $1 } )</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -730,10 +690,7 @@ var reversedNames = names.sorted(by: backward)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted(by: &#62;)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -795,38 +752,7 @@ someFunctionThatTakesAClosure() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunctionThatTakesAClosure(closure: (): Void) {
-
-    // function body goes here
-
-}
-
-
-
-// Here's how you call this function without using a trailing closure:
-
-
-
-someFunctionThatTakesAClosure(closure: {
-
-    // closure's body goes here
-
-})
-
-
-
-// Here's how you call this function with a trailing closure instead:
-
-
-
-someFunctionThatTakesAClosure() {
-
-    // trailing closure's body goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -846,10 +772,7 @@ someFunctionThatTakesAClosure() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted() { $0 &#62; $1 }</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -869,10 +792,7 @@ someFunctionThatTakesAClosure() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reversedNames = names.sorted { $0 &#62; $1 }</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -900,18 +820,7 @@ let numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val digitNames = [
-
-    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
-
-    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
-
-]
-
-val numbers = [16, 58, 510]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -951,30 +860,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val strings = numbers.map { (number): String in
-
-    var number = number
-
-    var output = ""
-
-    repeat {
-
-        output = digitNames[number % 10]! + output
-
-        number /= 10
-
-    } while number &#62; 0
-
-    return output
-
-}
-
-// strings is inferred to be of type [String]
-
-// its value is ["OneSix", "FiveEight", "FiveOneZero"]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1006,22 +892,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func loadPicture(from server: Server, completion: (Picture): Void, onFailure: (): Void) {
-
-    if val picture = download("photo.jpg", from: server) {
-
-        completion(picture)
-
-    } else {
-
-        onFailure()
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1049,18 +920,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">loadPicture(from: someServer) { picture in
-
-    someView.currentPicture = picture
-
-} onFailure: {
-
-    println("Couldn't download the next picture.")
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1108,24 +968,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func makeIncrementer(forIncrement amount: Int): (): Int {
-
-    var runningTotal = 0
-
-    func incrementer(): Int {
-
-        runningTotal += amount
-
-        return runningTotal
-
-    }
-
-    return incrementer
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1151,16 +994,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func incrementer(): Int {
-
-    runningTotal += amount
-
-    return runningTotal
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1180,10 +1014,7 @@ val numbers = [16, 58, 510]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val incrementByTen = makeIncrementer(forIncrement: 10)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1213,20 +1044,7 @@ incrementByTen()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">incrementByTen()
-
-// returns a value of 10
-
-incrementByTen()
-
-// returns a value of 20
-
-incrementByTen()
-
-// returns a value of 30</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1250,14 +1068,7 @@ incrementBySeven()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val incrementBySeven = makeIncrementer(forIncrement: 7)
-
-incrementBySeven()
-
-// returns a value of 7</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1279,12 +1090,7 @@ incrementBySeven()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">incrementByTen()
-
-// returns a value of 40</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1328,20 +1134,7 @@ incrementByTen()
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val alsoIncrementByTen = incrementByTen
-
-alsoIncrementByTen()
-
-// returns a value of 50
-
-
-
-incrementByTen()
-
-// returns a value of 60</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1381,16 +1174,7 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -&#62; Void
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var completionHandlers = [(): Void]()
-
-func someFunctionWithEscapingClosure(completionHandler: @escaping (): Void) {
-
-    completionHandlers.append(completionHandler)
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1448,48 +1232,7 @@ print(instance.x)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunctionWithNonescapingClosure(closure: (): Void) {
-
-    closure()
-
-}
-
-
-
-class SomeClass {
-
-    var x = 10
-
-    func doSomething() {
-
-        someFunctionWithEscapingClosure { self.x = 100 }
-
-        someFunctionWithNonescapingClosure { x = 200 }
-
-    }
-
-}
-
-
-
-val instance = SomeClass()
-
-instance.doSomething()
-
-println(instance.x)
-
-// Prints "200"
-
-
-
-completionHandlers.first?()
-
-println(instance.x)
-
-// Prints "100"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1521,22 +1264,7 @@ println(instance.x)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class SomeOtherClass {
-
-    var x = 10
-
-    func doSomething() {
-
-        someFunctionWithEscapingClosure { [self] in x = 100 }
-
-        someFunctionWithNonescapingClosure { x = 200 }
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1568,22 +1296,7 @@ println(instance.x)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct SomeStruct {
-
-    var x = 10
-
-    mutating func doSomething() {
-
-        someFunctionWithNonescapingClosure { x = 200 }  // Ok
-
-        someFunctionWithEscapingClosure { x = 100 }     // Error
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1639,33 +1352,7 @@ print(customersInLine.count)
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
-
-println(customersInLine.count)
-
-// Prints "5"
-
-
-
-val customerProvider = { customersInLine.remove(at: 0) }
-
-println(customersInLine.count)
-
-// Prints "5"
-
-
-
-println("Now serving ${customerProvider()}!")
-
-// Prints "Now serving Chris!"
-
-println(customersInLine.count)
-
-// Prints "4"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1695,21 +1382,7 @@ serve(customer: { customersInLine.remove(at: 0) } )
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">// customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
-
-func serve(customer customerProvider: (): String) {
-
-    println("Now serving ${customerProvider()}!")
-
-}
-
-serve(customer: { customersInLine.remove(at: 0) } )
-
-// Prints "Now serving Alex!"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1739,21 +1412,7 @@ serve(customer: customersInLine.remove(at: 0))
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">// customersInLine is ["Ewa", "Barry", "Daniella"]
-
-func serve(customer customerProvider: @autoclosure (): String) {
-
-    println("Now serving ${customerProvider()}!")
-
-}
-
-serve(customer: customersInLine.remove(at: 0))
-
-// Prints "Now serving Ewa!"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1801,39 +1460,7 @@ for customerProvider in customerProviders {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">// customersInLine is ["Barry", "Daniella"]
-
-var customerProviders: [(): String] = []
-
-func collectCustomerProviders(_ customerProvider: @autoclosure @escaping (): String) {
-
-    customerProviders.append(customerProvider)
-
-}
-
-collectCustomerProviders(customersInLine.remove(at: 0))
-
-collectCustomerProviders(customersInLine.remove(at: 0))
-
-
-
-println("Collected ${customerProviders.count} closures.")
-
-// Prints "Collected 2 closures."
-
-for customerProvider in customerProviders {
-
-    println("Now serving ${customerProvider()}!")
-
-}
-
-// Prints "Now serving Barry!"
-
-// Prints "Now serving Daniella!"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

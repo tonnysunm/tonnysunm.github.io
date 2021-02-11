@@ -454,20 +454,7 @@ class SomeClass {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct SomeStructure {
-
-    // structure definition goes here
-
-}
-
-class SomeClass {
-
-    // class definition goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -505,28 +492,7 @@ class VideoMode {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct Resolution {
-
-    var width = 0
-
-    var height = 0
-
-}
-
-class VideoMode {
-
-    var resolution = Resolution()
-
-    var interlaced = false
-
-    var frameRate = 0.0
-
-    var name: String?
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -562,12 +528,7 @@ let someVideoMode = VideoMode()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val someResolution = Resolution()
-
-val someVideoMode = VideoMode()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -603,12 +564,7 @@ val someVideoMode = VideoMode()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("The width of someResolution is ${someResolution.width)")
-
-// Prints "The width of someResolution is 0"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -630,12 +586,7 @@ val someVideoMode = VideoMode()</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("The width of someVideoMode is ${someVideoMode.resolution.width)")
-
-// Prints "The width of someVideoMode is 0"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -659,14 +610,7 @@ print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">someVideoMode.resolution.width = 1280
-
-println("The width of someVideoMode is now ${someVideoMode.resolution.width)")
-
-// Prints "The width of someVideoMode is now 1280"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -700,10 +644,7 @@ println("The width of someVideoMode is now ${someVideoMode.resolution.width)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val vga = Resolution(width: 640, height: 480)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -739,12 +680,7 @@ var cinema = hd</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val hd = Resolution(width: 1920, height: 1080)
-
-var cinema = hd</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -764,10 +700,7 @@ var cinema = hd</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">cinema.width = 2048</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -789,12 +722,7 @@ var cinema = hd</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("cinema is now ${cinema.width) pixels wide")
-
-// Prints "cinema is now 2048 pixels wide"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -816,12 +744,7 @@ var cinema = hd</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("hd is still ${hd.width) pixels wide")
-
-// Prints "hd is still 1920 pixels wide"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -867,36 +790,7 @@ print("The remembered direction is \(rememberedDirection)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">enum CompassPoint {
-
-    case north, south, east, west
-
-    mutating func turnNorth() {
-
-        self = .north
-
-    }
-
-}
-
-var currentDirection = CompassPoint.west
-
-val rememberedDirection = currentDirection
-
-currentDirection.turnNorth()
-
-
-
-println("The current direction is ${currentDirection)")
-
-println("The remembered direction is ${rememberedDirection)")
-
-// Prints "The current direction is north"
-
-// Prints "The remembered direction is west"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -938,18 +832,7 @@ tenEighty.frameRate = 25.0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val tenEighty = VideoMode()
-
-tenEighty.resolution = hd
-
-tenEighty.interlaced = true
-
-tenEighty.name = "1080i"
-
-tenEighty.frameRate = 25.0</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -971,12 +854,7 @@ alsoTenEighty.frameRate = 30.0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val alsoTenEighty = tenEighty
-
-alsoTenEighty.frameRate = 30.0</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -998,12 +876,7 @@ alsoTenEighty.frameRate = 30.0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">println("The frameRate property of tenEighty is now ${tenEighty.frameRate)")
-
-// Prints "The frameRate property of tenEighty is now 30.0"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1043,16 +916,7 @@ alsoTenEighty.frameRate = 30.0</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">if tenEighty === alsoTenEighty {
-
-    println("tenEighty and alsoTenEighty refer to the same VideoMode instance.")
-
-}
-
-// Prints "tenEighty and alsoTenEighty refer to the same VideoMode instance."</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

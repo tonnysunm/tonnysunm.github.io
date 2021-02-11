@@ -462,29 +462,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Person {
-
-    val name: String
-
-    init(name: String) {
-
-        self.name = name
-
-        println("${name} is being initialized")
-
-    }
-
-    deinit {
-
-        println("${name} is being deinitialized")
-
-    }
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -508,14 +486,7 @@ var reference3: Person?</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var reference1: Person?
-
-var reference2: Person?
-
-var reference3: Person?</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -537,12 +508,7 @@ var reference3: Person?</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reference1 = Person(name: "John Appleseed")
-
-// Prints "John Appleseed is being initialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -564,12 +530,7 @@ reference3 = reference1</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reference2 = reference1
-
-reference3 = reference1</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -591,12 +552,7 @@ reference2 = nil</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reference1 = nil
-
-reference2 = nil</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -618,12 +574,7 @@ reference2 = nil</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">reference3 = nil
-
-// Prints "John Appleseed is being deinitialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -681,35 +632,7 @@ class Apartment {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Person {
-
-    val name: String
-
-    init(name: String) { self.name = name }
-
-    var apartment: Apartment?
-
-    deinit { println("${name} is being deinitialized") }
-
-}
-
-
-
-class Apartment {
-
-    val unit: String
-
-    init(unit: String) { self.unit = unit }
-
-    var tenant: Person?
-
-    deinit { println("Apartment ${unit} is being deinitialized") }
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -731,12 +654,7 @@ var unit4A: Apartment?</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var john: Person?
-
-var unit4A: Apartment?</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -758,12 +676,7 @@ unit4A = Apartment(unit: "4A")</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john = Person(name: "John Appleseed")
-
-unit4A = Apartment(unit: "4A")</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -785,12 +698,7 @@ unit4A!.tenant = john</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john!.apartment = unit4A
-
-unit4A!.tenant = john</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -812,12 +720,7 @@ unit4A = nil</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john = nil
-
-unit4A = nil</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -875,35 +778,7 @@ class Apartment {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Person {
-
-    val name: String
-
-    init(name: String) { self.name = name }
-
-    var apartment: Apartment?
-
-    deinit { println("${name} is being deinitialized") }
-
-}
-
-
-
-class Apartment {
-
-    val unit: String
-
-    init(unit: String) { self.unit = unit }
-
-    weak var tenant: Person?
-
-    deinit { println("Apartment ${unit} is being deinitialized") }
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -937,24 +812,7 @@ unit4A!.tenant = john</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var john: Person?
-
-var unit4A: Apartment?
-
-
-
-john = Person(name: "John Appleseed")
-
-unit4A = Apartment(unit: "4A")
-
-
-
-john!.apartment = unit4A
-
-unit4A!.tenant = john</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -976,12 +834,7 @@ unit4A!.tenant = john</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john = nil
-
-// Prints "John Appleseed is being deinitialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1003,12 +856,7 @@ unit4A!.tenant = john</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">unit4A = nil
-
-// Prints "Apartment 4A is being deinitialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1076,45 +924,7 @@ class CreditCard {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Customer {
-
-    val name: String
-
-    var card: CreditCard?
-
-    init(name: String) {
-
-        self.name = name
-
-    }
-
-    deinit { println("${name} is being deinitialized") }
-
-}
-
-
-
-class CreditCard {
-
-    val number: UInt64
-
-    unowned val customer: Customer
-
-    init(number: UInt64, customer: Customer) {
-
-        self.number = number
-
-        self.customer = customer
-
-    }
-
-    deinit { println("Card #${number} is being deinitialized") }
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1134,10 +944,7 @@ class CreditCard {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var john: Customer?</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1159,12 +966,7 @@ john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john = Customer(name: "John Appleseed")
-
-john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1188,14 +990,7 @@ john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">john = nil
-
-// Prints "John Appleseed is being deinitialized"
-
-// Prints "Card #1234567890123456 is being deinitialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1265,46 +1060,7 @@ class Course {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Department {
-
-    var name: String
-
-    var courses: [Course]
-
-    init(name: String) {
-
-        self.name = name
-
-        self.courses = []
-
-    }
-
-}
-
-
-
-class Course {
-
-    var name: String
-
-    unowned var department: Department
-
-    unowned var nextCourse: Course?
-
-    init(name: String, in department: Department) {
-
-        self.name = name
-
-        self.department = department
-
-        self.nextCourse = nil
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1340,26 +1096,7 @@ department.courses = [intro, intermediate, advanced]</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val department = Department(name: "Horticulture")
-
-
-
-val intro = Course(name: "Survey of Plants", in: department)
-
-val intermediate = Course(name: "Growing Common Herbs", in: department)
-
-val advanced = Course(name: "Caring for Tropical Plants", in: department)
-
-
-
-intro.nextCourse = intermediate
-
-intermediate.nextCourse = advanced
-
-department.courses = [intro, intermediate, advanced]</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1425,42 +1162,7 @@ class City {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Country {
-
-    val name: String
-
-    var capitalCity: City!
-
-    init(name: String, capitalName: String) {
-
-        self.name = name
-
-        self.capitalCity = City(name: capitalName, country: self)
-
-    }
-
-}
-
-
-
-class City {
-
-    val name: String
-
-    unowned val country: Country
-
-    init(name: String, country: Country) {
-
-        self.name = name
-
-        self.country = country
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1484,15 +1186,7 @@ print("\(country.name)'s capital city is called \(country.capitalCity.name)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var country = Country(name: "Canada", capitalName: "Ottawa")
-
-println("${country.name}'s capital city is called ${country.capitalCity.name}")
-
-// Prints "Canada's capital city is called Ottawa"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1570,55 +1264,7 @@ println("${country.name}'s capital city is called ${country.capitalCity.name}")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class HTMLElement {
-
-
-
-    val name: String
-
-    val text: String?
-
-
-
-    lazy var asHTML: (): String = {
-
-        if val text = self.text {
-
-            return "&#60;${self.name}&#62;${text}&#60;/${self.name}&#62;"
-
-        } else {
-
-            return "&#60;${self.name} /&#62;"
-
-        }
-
-    }
-
-
-
-    init(name: String, text: String? = nil) {
-
-        self.name = name
-
-        self.text = text
-
-    }
-
-
-
-    deinit {
-
-        println("${name} is being deinitialized")
-
-    }
-
-
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1650,23 +1296,7 @@ print(heading.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">val heading = HTMLElement(name: "h1")
-
-val defaultText = "some default text"
-
-heading.asHTML = {
-
-    return "&#60;${heading.name}&#62;${heading.text ?: defaultText}&#60;/${heading.name}&#62;"
-
-}
-
-println(heading.asHTML())
-
-// Prints "&#60;h1&#62;some default text&#60;/h1&#62;"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1690,14 +1320,7 @@ print(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
-
-println(paragraph!.asHTML())
-
-// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1717,10 +1340,7 @@ println(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">paragraph = nil</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1762,18 +1382,7 @@ println(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">lazy var someClosure = {
-
-    [unowned self, weak delegate = self.delegate]
-
-    (index: Int, stringToProcess: String): String in
-
-    // closure body goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1799,16 +1408,7 @@ println(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">lazy var someClosure = {
-
-    [unowned self, weak delegate = self.delegate] in
-
-    // closure body goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1888,57 +1488,7 @@ println(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class HTMLElement {
-
-
-
-    val name: String
-
-    val text: String?
-
-
-
-    lazy var asHTML: (): String = {
-
-        [unowned self] in
-
-        if val text = self.text {
-
-            return "&#60;${self.name}&#62;${text}&#60;/${self.name}&#62;"
-
-        } else {
-
-            return "&#60;${self.name} /&#62;"
-
-        }
-
-    }
-
-
-
-    init(name: String, text: String? = nil) {
-
-        self.name = name
-
-        self.text = text
-
-    }
-
-
-
-    deinit {
-
-        println("${name} is being deinitialized")
-
-    }
-
-
-
-}
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1962,14 +1512,7 @@ print(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
-
-println(paragraph!.asHTML())
-
-// Prints "&#60;p&#62;hello, world&#60;/p&#62;"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1991,12 +1534,7 @@ println(paragraph!.asHTML())
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">paragraph = nil
-
-// Prints "p is being deinitialized"</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>

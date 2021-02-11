@@ -460,26 +460,7 @@ private func somePrivateFunction() {}</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public class SomePublicClass {}
-
-internal class SomeInternalClass {}
-
-fileprivate class SomeFilePrivateClass {}
-
-private class SomePrivateClass {}
-
-
-
-public var somePublicVariable = 0
-
-internal val someInternalConstant = 0
-
-fileprivate func someFilePrivateFunction() {}
-
-private func somePrivateFunction() {}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -501,12 +482,7 @@ let someInternalConstant = 0            // implicitly internal</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class SomeInternalClass {}              // implicitly internal
-
-val someInternalConstant = 0            // implicitly internal</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -580,50 +556,7 @@ private class SomePrivateClass {                // explicitly private class
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public class SomePublicClass {                  // explicitly public class
-
-    public var somePublicProperty = 0            // explicitly public class member
-
-    var someInternalProperty = 0                 // implicitly internal class member
-
-    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
-
-    private func somePrivateMethod() {}          // explicitly private class member
-
-}
-
-
-
-class SomeInternalClass {                       // implicitly internal class
-
-    var someInternalProperty = 0                 // implicitly internal class member
-
-    fileprivate func someFilePrivateMethod() {}  // explicitly file-private class member
-
-    private func somePrivateMethod() {}          // explicitly private class member
-
-}
-
-
-
-fileprivate class SomeFilePrivateClass {        // explicitly file-private class
-
-    func someFilePrivateMethod() {}              // implicitly file-private class member
-
-    private func somePrivateMethod() {}          // explicitly private class member
-
-}
-
-
-
-private class SomePrivateClass {                // explicitly private class
-
-    func somePrivateMethod() {}                  // implicitly private class member
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -661,14 +594,7 @@ private class SomePrivateClass {                // explicitly private class
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func someFunction(): (SomeInternalClass, SomePrivateClass) {
-
-    // function implementation goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -692,14 +618,7 @@ private class SomePrivateClass {                // explicitly private class
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">private func someFunction(): (SomeInternalClass, SomePrivateClass) {
-
-    // function implementation goes here
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -743,20 +662,7 @@ private class SomePrivateClass {                // explicitly private class
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public enum CompassPoint {
-
-    case north
-
-    case south
-
-    case east
-
-    case west
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -802,22 +708,7 @@ internal class B: A {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public class A {
-
-    fileprivate func someMethod() {}
-
-}
-
-
-
-internal class B: A {
-
-    override internal func someMethod() {}
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -853,26 +744,7 @@ internal class B: A {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public class A {
-
-    fileprivate func someMethod() {}
-
-}
-
-
-
-internal class B: A {
-
-    override internal func someMethod() {
-
-        super.someMethod()
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -906,10 +778,7 @@ internal class B: A {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">private var privateInstance = SomePrivateClass()</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -957,24 +826,7 @@ internal class B: A {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct TrackedString {
-
-    private(set) var numberOfEdits = 0
-
-    var value: String = "" {
-
-        didSet {
-
-            numberOfEdits += 1
-
-        }
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1004,21 +856,7 @@ print("The number of edits is \(stringToEdit.numberOfEdits)")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">var stringToEdit = TrackedString()
-
-stringToEdit.value = "This string will be tracked."
-
-stringToEdit.value += " This edit will increment numberOfEdits."
-
-stringToEdit.value += " So will this one."
-
-println("The number of edits is ${stringToEdit.numberOfEdits}")
-
-// Prints "The number of edits is 3"
-</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1054,26 +892,7 @@ println("The number of edits is ${stringToEdit.numberOfEdits}")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">public struct TrackedString {
-
-    public private(set) var numberOfEdits = 0
-
-    public var value: String = "" {
-
-        didSet {
-
-            numberOfEdits += 1
-
-        }
-
-    }
-
-    public init() {}
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1111,14 +930,7 @@ println("The number of edits is ${stringToEdit.numberOfEdits}")
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">protocol SomeProtocol {
-
-    func doSomething()
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
@@ -1154,26 +966,7 @@ extension SomeStruct: SomeProtocol {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">struct SomeStruct {
-
-    private var privateVariable = 12
-
-}
-
-
-
-extension SomeStruct: SomeProtocol {
-
-    func doSomething() {
-
-        println(privateVariable)
-
-    }
-
-}</code>
-                  </pre>
-                  
+                  <div></div>
               
               </td>
             </tr>
