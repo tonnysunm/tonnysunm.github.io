@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,18 +671,20 @@
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Channel basics
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#channel-basics" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -721,18 +724,20 @@ print("Done!")</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Closing and iteration over channels
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#closing-and-iteration-over-channels" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -772,18 +777,20 @@ print("Done!")</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Building channel producers
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#building-channel-producers" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -813,18 +820,20 @@ print("Done!")</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Pipelines
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#pipelines" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -856,6 +865,7 @@ print("Done!")</code>
         
           
           
+          
 
           
             <tr>
@@ -881,6 +891,7 @@ print("Done!")</code>
             </tr>
           
         
+          
           
           
 
@@ -918,18 +929,20 @@ coroutineContext.cancelChildren() // cancel children coroutines</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Prime numbers with pipeline
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#prime-numbers-with-pipeline" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -961,6 +974,7 @@ coroutineContext.cancelChildren() // cancel children coroutines</code>
         
           
           
+          
 
           
             <tr>
@@ -986,6 +1000,7 @@ coroutineContext.cancelChildren() // cancel children coroutines</code>
             </tr>
           
         
+          
           
           
 
@@ -1023,18 +1038,20 @@ coroutineContext.cancelChildren() // cancel all children to let main finish</cod
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Fan-out
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#fan-out" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1072,6 +1089,7 @@ coroutineContext.cancelChildren() // cancel all children to let main finish</cod
         
           
           
+          
 
           
             <tr>
@@ -1103,6 +1121,7 @@ coroutineContext.cancelChildren() // cancel all children to let main finish</cod
         
           
           
+          
 
           
             <tr>
@@ -1132,18 +1151,20 @@ producer.cancel() // cancel producer coroutine and thus kill them all</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Fan-in
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#fan-in" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1177,6 +1198,7 @@ producer.cancel() // cancel producer coroutine and thus kill them all</code>
             </tr>
           
         
+          
           
           
 
@@ -1214,18 +1236,20 @@ coroutineContext.cancelChildren() // cancel all children to let main finish</cod
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Buffered channels
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#buffered-channels" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1269,18 +1293,20 @@ sender.cancel() // cancel sender coroutine</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Channels are fair
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#channels-are-fair" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1342,18 +1368,20 @@ suspend func player(name: String, table: Channel&#60;Ball&#62;) {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Ticker channels
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/channels.html#ticker-channels" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 

@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -400,22 +401,20 @@
         
           
           
+          
 
           
             <tr>
-              <td class="sticky-row" colspan="2">
-                <div>
-                  <div>Swift</div>
-                  <h2 style="text-align:center;">
-                    Protocols
-                    <a class="anchor" target="_blank"></a>
-                  </h2>
-                  <div>Kotlin</div>
-                </div>
+              <td colspan="2" style="text-align: center;">
+              <h2>
+                Protocols
+                <a class="anchor" href="#https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#protocols" target="_blank"></a>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -430,6 +429,7 @@
             </tr>
           
         
+          
           
           
 
@@ -456,6 +456,7 @@
         
           
           
+          
 
           
             <tr>
@@ -478,6 +479,7 @@
             </tr>
           
         
+          
           
           
 
@@ -504,6 +506,7 @@
         
           
           
+          
 
           
             <tr>
@@ -516,6 +519,7 @@
             </tr>
           
         
+          
           
           
 
@@ -544,6 +548,7 @@
         
           
           
+          
 
           
             <tr>
@@ -568,6 +573,7 @@
         
           
           
+          
 
           
             <tr>
@@ -590,6 +596,7 @@
             </tr>
           
         
+          
           
           
 
@@ -618,6 +625,7 @@ let john = Person(fullName: "John Appleseed")
             </tr>
           
         
+          
           
           
 
@@ -664,6 +672,7 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
         
           
           
+          
 
           
             <tr>
@@ -676,6 +685,7 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
             </tr>
           
         
+          
           
           
 
@@ -702,6 +712,7 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
         
           
           
+          
 
           
             <tr>
@@ -724,6 +735,7 @@ var ncc1701 = Starship(name: "Enterprise", prefix: "USS")
             </tr>
           
         
+          
           
           
 
@@ -776,6 +788,7 @@ print("And another one: \(generator.random())")
         
           
           
+          
 
           
             <tr>
@@ -788,6 +801,7 @@ print("And another one: \(generator.random())")
             </tr>
           
         
+          
           
           
 
@@ -812,6 +826,7 @@ print("And another one: \(generator.random())")
             </tr>
           
         
+          
           
           
 
@@ -860,6 +875,7 @@ lightSwitch.toggle()
         
           
           
+          
 
           
             <tr>
@@ -872,6 +888,7 @@ lightSwitch.toggle()
             </tr>
           
         
+          
           
           
 
@@ -898,6 +915,7 @@ lightSwitch.toggle()
         
           
           
+          
 
           
             <tr>
@@ -910,6 +928,7 @@ lightSwitch.toggle()
             </tr>
           
         
+          
           
           
 
@@ -938,6 +957,7 @@ lightSwitch.toggle()
             </tr>
           
         
+          
           
           
 
@@ -990,6 +1010,7 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
         
           
           
+          
 
           
             <tr>
@@ -1002,6 +1023,7 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
             </tr>
           
         
+          
           
           
 
@@ -1044,6 +1066,7 @@ class SomeSubClass: SomeSuperClass, SomeProtocol {
         
           
           
+          
 
           
             <tr>
@@ -1080,6 +1103,7 @@ for _ in 1...5 {
         
           
           
+          
 
           
             <tr>
@@ -1092,6 +1116,7 @@ for _ in 1...5 {
             </tr>
           
         
+          
           
           
 
@@ -1128,6 +1153,7 @@ protocol DiceGameDelegate: AnyObject {
             </tr>
           
         
+          
           
           
 
@@ -1208,6 +1234,7 @@ protocol DiceGameDelegate: AnyObject {
         
           
           
+          
 
           
             <tr>
@@ -1260,6 +1287,7 @@ protocol DiceGameDelegate: AnyObject {
         
           
           
+          
 
           
             <tr>
@@ -1300,6 +1328,7 @@ game.play()
         
           
           
+          
 
           
             <tr>
@@ -1312,6 +1341,7 @@ game.play()
             </tr>
           
         
+          
           
           
 
@@ -1336,6 +1366,7 @@ game.play()
             </tr>
           
         
+          
           
           
 
@@ -1366,6 +1397,7 @@ game.play()
         
           
           
+          
 
           
             <tr>
@@ -1388,6 +1420,7 @@ print(d12.textualDescription)
             </tr>
           
         
+          
           
           
 
@@ -1422,6 +1455,7 @@ print(game.textualDescription)
         
           
           
+          
 
           
             <tr>
@@ -1434,6 +1468,7 @@ print(game.textualDescription)
             </tr>
           
         
+          
           
           
 
@@ -1472,6 +1507,7 @@ print(myDice.textualDescription)
         
           
           
+          
 
           
             <tr>
@@ -1484,6 +1520,7 @@ print(myDice.textualDescription)
             </tr>
           
         
+          
           
           
 
@@ -1518,6 +1555,7 @@ extension Hamster: TextRepresentable {}</code>
         
           
           
+          
 
           
             <tr>
@@ -1544,6 +1582,7 @@ print(somethingTextRepresentable.textualDescription)
         
           
           
+          
 
           
             <tr>
@@ -1556,6 +1595,7 @@ print(somethingTextRepresentable.textualDescription)
             </tr>
           
         
+          
           
           
 
@@ -1594,6 +1634,7 @@ if twoThreeFour == anotherTwoThreeFour {
             </tr>
           
         
+          
           
           
 
@@ -1642,6 +1683,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1654,6 +1696,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1674,6 +1717,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1706,6 +1750,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1718,6 +1763,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1744,6 +1790,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1766,6 +1813,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1818,6 +1866,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1842,6 +1891,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1854,6 +1904,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1880,6 +1931,7 @@ for level in levels.sorted() {
         
           
           
+          
 
           
             <tr>
@@ -1892,6 +1944,7 @@ for level in levels.sorted() {
             </tr>
           
         
+          
           
           
 
@@ -1942,6 +1995,7 @@ wishHappyBirthday(to: birthdayPerson)
             </tr>
           
         
+          
           
           
 
@@ -2006,6 +2060,7 @@ beginConcert(in: seattle)
         
           
           
+          
 
           
             <tr>
@@ -2018,6 +2073,7 @@ beginConcert(in: seattle)
             </tr>
           
         
+          
           
           
 
@@ -2042,6 +2098,7 @@ beginConcert(in: seattle)
             </tr>
           
         
+          
           
           
 
@@ -2082,6 +2139,7 @@ class Country: HasArea {
         
           
           
+          
 
           
             <tr>
@@ -2106,6 +2164,7 @@ class Country: HasArea {
             </tr>
           
         
+          
           
           
 
@@ -2134,6 +2193,7 @@ class Country: HasArea {
             </tr>
           
         
+          
           
           
 
@@ -2174,6 +2234,7 @@ class Country: HasArea {
         
           
           
+          
 
           
             <tr>
@@ -2186,6 +2247,7 @@ class Country: HasArea {
             </tr>
           
         
+          
           
           
 
@@ -2212,6 +2274,7 @@ class Country: HasArea {
             </tr>
           
         
+          
           
           
 
@@ -2254,6 +2317,7 @@ class Country: HasArea {
         
           
           
+          
 
           
             <tr>
@@ -2276,6 +2340,7 @@ class Country: HasArea {
             </tr>
           
         
+          
           
           
 
@@ -2314,6 +2379,7 @@ for _ in 1...4 {
             </tr>
           
         
+          
           
           
 
@@ -2356,6 +2422,7 @@ for _ in 1...4 {
         
           
           
+          
 
           
             <tr>
@@ -2396,6 +2463,7 @@ for _ in 1...5 {
         
           
           
+          
 
           
             <tr>
@@ -2408,6 +2476,7 @@ for _ in 1...5 {
             </tr>
           
         
+          
           
           
 
@@ -2438,6 +2507,7 @@ for _ in 1...5 {
         
           
           
+          
 
           
             <tr>
@@ -2466,6 +2536,7 @@ print("And here's a random Boolean: \(generator.randomBool())")
         
           
           
+          
 
           
             <tr>
@@ -2478,6 +2549,7 @@ print("And here's a random Boolean: \(generator.randomBool())")
             </tr>
           
         
+          
           
           
 
@@ -2508,6 +2580,7 @@ print("And here's a random Boolean: \(generator.randomBool())")
         
           
           
+          
 
           
             <tr>
@@ -2520,6 +2593,7 @@ print("And here's a random Boolean: \(generator.randomBool())")
             </tr>
           
         
+          
           
           
 
@@ -2560,6 +2634,7 @@ print("And here's a random Boolean: \(generator.randomBool())")
         
           
           
+          
 
           
             <tr>
@@ -2580,6 +2655,7 @@ let differentNumbers = [100, 100, 200, 100, 200]</code>
             </tr>
           
         
+          
           
           
 

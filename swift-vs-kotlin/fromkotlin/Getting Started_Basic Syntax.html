@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,16 +671,17 @@
         
           
           
+          
 
           
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
                   <div>Kotlin</div>
-                  <h2 style="text-align:center;">
+                  <h1 style="text-align:center;">
                     Basic Syntax
                     <a class="anchor" target="_blank"></a>
-                  </h2>
+                  </h1>
                   <div>Swift</div>
                 </div>
               </td>
@@ -688,18 +690,20 @@
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Package definition and imports
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#defining-packages" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -730,18 +734,20 @@ import kotlin.text.*
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Program entry point
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#program-entry-point" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -769,18 +775,20 @@ Code written at global scope is used as the entry point for the program, so you 
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Functions
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#defining-functions" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -811,6 +819,7 @@ Code written at global scope is used as the entry point for the program, so you 
         
           
           
+          
 
           
             <tr>
@@ -835,6 +844,7 @@ Code written at global scope is used as the entry point for the program, so you 
             </tr>
           
         
+          
           
           
 
@@ -865,6 +875,7 @@ Code written at global scope is used as the entry point for the program, so you 
         
           
           
+          
 
           
             <tr>
@@ -893,18 +904,20 @@ Code written at global scope is used as the entry point for the program, so you 
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Variables
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#defining-variables" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -937,6 +950,7 @@ c = 3       // deferred assignment
         
           
           
+          
 
           
             <tr>
@@ -960,6 +974,7 @@ x += 1</code>
             </tr>
           
         
+          
           
           
 
@@ -996,18 +1011,20 @@ func incrementX() {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Comments
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#comments" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1039,6 +1056,7 @@ func incrementX() {
         
           
           
+          
 
           
             <tr>
@@ -1066,18 +1084,20 @@ and ends here. */</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 String templates
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-string-templates" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1117,18 +1137,20 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Conditional expressions
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-conditional-expressions" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1167,6 +1189,7 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
         
           
           
+          
 
           
             <tr>
@@ -1185,6 +1208,7 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
                     <code class="swift">func maxOf(a: Int, b: Int) -&#62; Int {
     a &#62; b ? a : b
 }
+
 </code>
                   </pre>
                   
@@ -1195,18 +1219,20 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Nullable values and null checks
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-nullable-values-and-checking-for-null" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1235,6 +1261,7 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
             </tr>
           
         
+          
           
           
 
@@ -1283,6 +1310,7 @@ let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
             </tr>
           
         
+          
           
           
 
@@ -1336,6 +1364,7 @@ guard let y = y else {
 }
 &#8203;
 print(x * y)
+
 </code>
                   </pre>
                   
@@ -1346,18 +1375,20 @@ print(x * y)
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Type checks and automatic casts
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-type-checks-and-automatic-casts" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1399,6 +1430,7 @@ print(x * y)
         
           
           
+          
 
           
             <tr>
@@ -1436,6 +1468,7 @@ func getStringLength(obj: Any) -&#62; Int? {
             </tr>
           
         
+          
           
           
 
@@ -1476,18 +1509,20 @@ func getStringLength(obj: Any) -&#62; Int? {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 for loop
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-a-for-loop" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1520,6 +1555,7 @@ for item in items {
         
           
           
+          
 
           
             <tr>
@@ -1550,18 +1586,20 @@ for index in items.indices {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 while loop
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-a-while-loop" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1598,18 +1636,20 @@ while index &#60; items.count {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 when expression
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-when-expression" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1649,6 +1689,7 @@ while index &#60; items.count {
     }
 }
 
+
 </code>
                   </pre>
                   
@@ -1659,18 +1700,20 @@ while index &#60; items.count {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Ranges
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-ranges" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1703,6 +1746,7 @@ if 1...y+1 ~= x {
             </tr>
           
         
+          
           
           
 
@@ -1743,6 +1787,7 @@ if !(list.indices ~= list.count) {
         
           
           
+          
 
           
             <tr>
@@ -1769,6 +1814,7 @@ if !(list.indices ~= list.count) {
             </tr>
           
         
+          
           
           
 
@@ -1807,18 +1853,20 @@ for x in stride(from: 9, through: 0, by: -3) {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Collections
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#using-collections" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1849,6 +1897,7 @@ for x in stride(from: 9, through: 0, by: -3) {
         
           
           
+          
 
           
             <tr>
@@ -1873,6 +1922,7 @@ for x in stride(from: 9, through: 0, by: -3) {
     print("apple is fine too")
 }
 
+
 </code>
                   </pre>
                   
@@ -1881,6 +1931,7 @@ for x in stride(from: 9, through: 0, by: -3) {
             </tr>
           
         
+          
           
           
 
@@ -1917,18 +1968,20 @@ fruits
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Creating basic classes and their instances
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/basic-syntax.html#creating-basic-classes-and-their-instances" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 

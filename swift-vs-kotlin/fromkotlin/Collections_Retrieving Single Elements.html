@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,16 +671,17 @@
         
           
           
+          
 
           
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
                   <div>Kotlin</div>
-                  <h2 style="text-align:center;">
+                  <h1 style="text-align:center;">
                     Retrieving Single Elements
                     <a class="anchor" target="_blank"></a>
-                  </h2>
+                  </h1>
                   <div>Swift</div>
                 </div>
               </td>
@@ -688,18 +690,20 @@
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Retrieving by position
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-elements.html#retrieving-by-position" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -733,6 +737,7 @@ print(numbersSortedSet.elementAt(0)) // elements are stored in the ascending ord
         
           
           
+          
 
           
             <tr>
@@ -758,6 +763,7 @@ print(numbers.last())</code>
             </tr>
           
         
+          
           
           
 
@@ -787,18 +793,20 @@ print(numbers.elementAtOrElse(5) { index -&#62; "The value for index $index is u
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Retrieving by condition
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-elements.html#retrieving-by-condition" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -828,6 +836,7 @@ print(numbers.last { it.startsWith("f") })</code>
         
           
           
+          
 
           
             <tr>
@@ -851,6 +860,7 @@ print(numbers.firstOrNull { it.length &#62; 6 })</code>
             </tr>
           
         
+          
           
           
 
@@ -880,18 +890,20 @@ print(numbers.findLast { $0 % 2 == 0 })</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Random element
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-elements.html#random-element" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -919,18 +931,20 @@ print(numbers.random())</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Checking existence
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-elements.html#checking-existence" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -964,6 +978,7 @@ print(numbers.containsAll(listOf("one", "zero")))</code>
             </tr>
           
         
+          
           
           
 

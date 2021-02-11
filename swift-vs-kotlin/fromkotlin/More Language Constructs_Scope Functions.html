@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,22 +671,24 @@
         
           
           
+          
 
           
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
                   <div>Kotlin</div>
-                  <h2 style="text-align:center;">
+                  <h1 style="text-align:center;">
                     Scope Functions
                     <a class="anchor" target="_blank"></a>
-                  </h2>
+                  </h1>
                   <div>Swift</div>
                 </div>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -721,6 +724,7 @@
         
           
           
+          
 
           
             <tr>
@@ -752,18 +756,20 @@ print(alice)</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Context object: this or it
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#context-object-this-or-it" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -813,6 +819,7 @@ print(alice)</code>
         
           
           
+          
 
           
             <tr>
@@ -825,6 +832,7 @@ print(alice)</code>
             </tr>
           
         
+          
           
           
 
@@ -858,6 +866,7 @@ print(adam)</code>
         
           
           
+          
 
           
             <tr>
@@ -872,6 +881,7 @@ print(adam)</code>
         
           
           
+          
 
           
             <tr>
@@ -907,6 +917,7 @@ let i = getRandomInt()</code>
         
           
           
+          
 
           
             <tr>
@@ -940,6 +951,7 @@ let i = getRandomInt()</code>
             </tr>
           
         
+          
           
           
 
@@ -954,6 +966,7 @@ let i = getRandomInt()</code>
             </tr>
           
         
+          
           
           
 
@@ -995,6 +1008,7 @@ numberList.also { print("Populating the list") }
         
           
           
+          
 
           
             <tr>
@@ -1030,6 +1044,7 @@ let i = getRandomInt()</code>
         
           
           
+          
 
           
             <tr>
@@ -1042,6 +1057,7 @@ let i = getRandomInt()</code>
             </tr>
           
         
+          
           
           
 
@@ -1079,6 +1095,7 @@ print("There are $countEndsWithE elements that end with e.")</code>
         
           
           
+          
 
           
             <tr>
@@ -1112,18 +1129,20 @@ with(numbers) {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 let
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#let" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1151,6 +1170,7 @@ print(resultList)</code>
             </tr>
           
         
+          
           
           
 
@@ -1184,6 +1204,7 @@ numbers.map { it.length }.filter { $0 &#62; 3 }.let {
         
           
           
+          
 
           
             <tr>
@@ -1207,6 +1228,7 @@ numbers.map { it.length }.filter { $0 &#62; 3 }.let(::println)</code>
             </tr>
           
         
+          
           
           
 
@@ -1244,6 +1266,7 @@ let length = str?.let {
         
           
           
+          
 
           
             <tr>
@@ -1277,18 +1300,20 @@ print("First item after modifications: '$modifiedFirstItem'")</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 with
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#with" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1320,6 +1345,7 @@ with(numbers) {
             </tr>
           
         
+          
           
           
 
@@ -1355,18 +1381,20 @@ print(firstAndLast)</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 run
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#run" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1414,6 +1442,7 @@ let letResult = service.let {
         
           
           
+          
 
           
             <tr>
@@ -1457,18 +1486,20 @@ for (match in hexNumberRegex.findAll("+1234 -FFFF not-a-number")) {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 apply
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#apply" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1502,18 +1533,20 @@ print(adam)</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 also
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#also" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1545,18 +1578,20 @@ numbers
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 takeIf and takeUnless
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/scope-functions.html#takeif-and-takeunless" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1590,6 +1625,7 @@ print("even: $evenOrNull, odd: $oddOrNull")</code>
         
           
           
+          
 
           
             <tr>
@@ -1617,6 +1653,7 @@ print(caps)</code>
             </tr>
           
         
+          
           
           
 
@@ -1656,6 +1693,7 @@ displaySubstringPosition("010000011", "12")</code>
             </tr>
           
         
+          
           
           
 

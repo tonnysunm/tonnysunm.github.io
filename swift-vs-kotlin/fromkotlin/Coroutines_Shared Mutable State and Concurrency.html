@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,18 +671,20 @@
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 The problem
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#the-problem" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -733,6 +736,7 @@
         
           
           
+          
 
           
             <tr>
@@ -774,18 +778,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Volatiles are of no help
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#volatiles-are-of-no-help" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -831,18 +837,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Thread-safe data structures
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#thread-safe-data-structures" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -886,18 +894,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Thread confinement fine-grained
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#thread-confinement-fine-grained" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -949,18 +959,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Thread confinement coarse-grained
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#thread-confinement-coarse-grained" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1008,18 +1020,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Mutual exclusion
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#mutual-exclusion" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1071,18 +1085,20 @@ func main() = runBlocking {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Actors
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html#actors" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1112,6 +1128,7 @@ class GetCounter(let response: CompletableDeferred&#60;Int&#62;) : CounterMsg() 
             </tr>
           
         
+          
           
           
 
@@ -1153,6 +1170,7 @@ func CoroutineScope.counterActor() = actor&#60;CounterMsg&#62; {
             </tr>
           
         
+          
           
           
 

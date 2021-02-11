@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,22 +671,24 @@
         
           
           
+          
 
           
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
                   <div>Kotlin</div>
-                  <h2 style="text-align:center;">
+                  <h1 style="text-align:center;">
                     Collection Ordering
                     <a class="anchor" target="_blank"></a>
-                  </h2>
+                  </h1>
                   <div>Swift</div>
                 </div>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -737,6 +740,7 @@ func main() {
         
           
           
+          
 
           
             <tr>
@@ -760,6 +764,7 @@ print(listOf("aaa", "bb", "c").sortedWith(lengthComparator))</code>
             </tr>
           
         
+          
           
           
 
@@ -787,18 +792,20 @@ print(listOf("aaa", "bb", "c").sortedWith(compareBy { it.length }))</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Natural order
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-ordering.html#natural-order" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -830,18 +837,20 @@ print("Sorted descending: ${numbers.sortedDescending()}")</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Custom orders
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-ordering.html#custom-orders" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -877,6 +886,7 @@ print("Sorted by the last letter descending: $sortedByLast")</code>
         
           
           
+          
 
           
             <tr>
@@ -902,18 +912,20 @@ print("Sorted by length ascending: ${numbers.sortedWith(compareBy { it.length })
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Reverse order
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-ordering.html#reverse-order" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -941,6 +953,7 @@ print(numbers.reversed())</code>
         
           
           
+          
 
           
             <tr>
@@ -966,6 +979,7 @@ print(reversedNumbers)</code>
             </tr>
           
         
+          
           
           
 
@@ -999,18 +1013,20 @@ print(reversedNumbers)</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Random order
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/collection-ordering.html#random-order" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 

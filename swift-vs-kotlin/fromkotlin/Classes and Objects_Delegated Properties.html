@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -270,14 +271,14 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Functional (SAM) Interfaces.html">
                   Functional (SAM) Interfaces
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -326,7 +327,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -670,22 +671,24 @@
         
           
           
+          
 
           
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
                   <div>Kotlin</div>
-                  <h2 style="text-align:center;">
+                  <h1 style="text-align:center;">
                     Delegated Properties
                     <a class="anchor" target="_blank"></a>
-                  </h2>
+                  </h1>
                   <div>Swift</div>
                 </div>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -713,6 +716,7 @@
             </tr>
           
         
+          
           
           
 
@@ -758,6 +762,7 @@ class Delegate {
         
           
           
+          
 
           
             <tr>
@@ -783,6 +788,7 @@ print(e.p)</code>
         
           
           
+          
 
           
             <tr>
@@ -806,18 +812,20 @@ print(e.p)</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Lazy
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#lazy" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -859,18 +867,20 @@ func main() {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Observable
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#observable" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -922,18 +932,20 @@ func main() {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Delegating to another property
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#delegating-to-another-property" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -969,6 +981,7 @@ var MyClass.extDelegated: Int by ::topLevelInt</code>
             </tr>
           
         
+          
           
           
 
@@ -1018,18 +1031,20 @@ func main() {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Storing properties in a map
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#storing-properties-in-a-map" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1061,6 +1076,7 @@ func main() {
         
           
           
+          
 
           
             <tr>
@@ -1090,6 +1106,7 @@ func main() {
         
           
           
+          
 
           
             <tr>
@@ -1113,6 +1130,7 @@ print(user.age)  // Prints 25</code>
             </tr>
           
         
+          
           
           
 
@@ -1144,18 +1162,20 @@ print(user.age)  // Prints 25</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Local delegated properties
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#local-delegated-properties" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1193,18 +1213,20 @@ print(user.age)  // Prints 25</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h3>
+              <h2>
                 Property delegate requirements
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#property-delegate-requirements" target="_blank"></a>
-              </h3>
+              </h2>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1248,6 +1270,7 @@ class ResourceDelegate {
             </tr>
           
         
+          
           
           
 
@@ -1303,6 +1326,7 @@ class ResourceDelegate(private var resource: Resource = Resource()) {
         
           
           
+          
 
           
             <tr>
@@ -1346,18 +1370,20 @@ var readWrite: Int by resourceDelegate()</code>
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Translation rules
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#translation-rules" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1403,18 +1429,20 @@ class C {
         
           
           
+          
 
           
             <tr>
               <td colspan="2" style="text-align: center;">
-              <h4>
+              <h3>
                 Providing a delegate
                 <a class="anchor" href="#https://kotlinlang.org/docs/reference/delegated-properties.html#providing-a-delegate" target="_blank"></a>
-              </h4>
+              </h3>
               </td>
             </tr>
           
         
+          
           
           
 
@@ -1484,6 +1512,7 @@ class MyUI {
         
           
           
+          
 
           
             <tr>
@@ -1531,6 +1560,7 @@ func &#60;T&#62; MyUI.bindResource(
         
           
           
+          
 
           
             <tr>
@@ -1576,6 +1606,7 @@ class C {
             </tr>
           
         
+          
           
           
 
