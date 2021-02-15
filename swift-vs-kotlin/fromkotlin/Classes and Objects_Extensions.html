@@ -285,7 +285,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
                   Extensions
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -299,7 +299,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
                   Sealed Classes
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -320,7 +320,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
                   Objects
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -341,7 +341,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
                   Delegation
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -723,11 +723,10 @@
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func MutableList&#60;Int&#62;.swap(index1: Int, index2: Int) {
-    let tmp = this[index1] // 'this' corresponds to the list
-    this[index1] = this[index2]
-    this[index2] = tmp
-}</code>
+                    <code class="swift">public struct Array&#60;Element&#62; {
+    mutating func swapAt(_ i: Int, _ j: Int)
+}
+</code>
                   </pre>
                   
               
@@ -752,8 +751,9 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let list = [1, 2, 3]
-list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
+                    <code class="swift">var list = [1, 2, 3]
+list.swapAt(0, 2)
+</code>
                   </pre>
                   
               
@@ -780,14 +780,7 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func &#60;T&#62; MutableList&#60;T&#62;.swap(index1: Int, index2: Int) {
-    let tmp = this[index1] // 'this' corresponds to the list
-    this[index1] = this[index2]
-    this[index2] = tmp
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -835,22 +828,8 @@ printClassName(Rectangle())</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">open class Shape
-&#8203;
-class Rectangle: Shape()
-&#8203;
-func Shape.getName() = "Shape"
-&#8203;
-func Rectangle.getName() = "Rectangle"
-&#8203;
-func printClassName(s: Shape) {
-    print(s.getName())
-}    
-&#8203;
-printClassName(Rectangle())</code>
-                  </pre>
-                  
+                  <div><div class="not-support">Overriding declarations in extensions is not supported</div>
+</div>
               
               </td>
             </tr>
@@ -882,9 +861,13 @@ Example().printFunctionType()</code>
     func printFunctionType() { print("Class method") }
 }
 &#8203;
-func Example.printFunctionType() { print("Extension function") }
+extension Example {
+    //Error: Invalid redeclaration of 'printFunctionType()'
+    func printFunctionType() { print("Extension function") }
+}
 &#8203;
-Example().printFunctionType()</code>
+Example().printFunctionType()
+</code>
                   </pre>
                   
               
@@ -917,10 +900,13 @@ Example().printFunctionType(1)</code>
                     <code class="swift">class Example {
     func printFunctionType() { print("Class method") }
 }
-&#8203;
-func Example.printFunctionType(i: Int) { print("Extension function") }
-&#8203;
-Example().printFunctionType(1)</code>
+
+extension Example {
+    func printFunctionType(i: Int) { print("Extension function") }
+}
+
+Example().printFunctionType(i: 1)
+</code>
                   </pre>
                   
               
@@ -964,12 +950,16 @@ Example().printFunctionType(1)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func Any?.toString() -&#62; String {
-    if (this == null) return "null"
-    // after the null check, 'this' is autocast to a non-null type, so the toString() below
-    // resolves to the member function of the Any class
-    return toString()
-}</code>
+                    <code class="swift">extension Optional {
+    func toString() -&#62; String {
+        guard let x = self else  {
+            return "nil"
+        }
+        
+        return "\(x)"
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1009,8 +999,14 @@ Example().printFunctionType(1)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let &#60;T&#62; List&#60;T&#62;.lastIndex: Int
-    get() = size - 1</code>
+                    <code class="swift">extension Array {
+    var lastIndex: Int {
+        get {
+            return count - 1
+        }
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1034,7 +1030,12 @@ Example().printFunctionType(1)</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let House.number = 1 // error: initializers are not allowed for extension properties</code>
+                    <code class="swift">extension House {
+    var number: Int {
+        get { 1 }
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1081,15 +1082,14 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class MyClass {
-    companion object { }  // will be called "Companion"
+                    <code class="swift">class MyClass {}
+
+extension MyClass {
+    static func printCompanion() { print("static") }
 }
-&#8203;
-func MyClass.Companion.printCompanion() { print("companion") }
-&#8203;
-func main() {
-    MyClass.printCompanion()
-}</code>
+
+MyClass.printCompanion()
+</code>
                   </pre>
                   
               
@@ -1130,9 +1130,12 @@ fun List&#60;String&#62;.getLongestString() { /*...*/}</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">package org.example.declarations
- 
-func List&#60;String&#62;.getLongestString() { /*...*/}</code>
+                    <code class="swift">extension Array where Element == String {
+    func getLongestString() -&#62; String {
+        return "..."
+    }
+}
+</code>
                   </pre>
                   
               
@@ -1163,14 +1166,9 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">package org.example.usage
-&#8203;
-import org.example.declarations.getLongestString
-&#8203;
-func main() {
-    let list = listOf("red", "green", "blue")
-    list.getLongestString()
-}</code>
+                    <code class="swift">let list = ["red", "green", "blue"]
+list.getLongestString()
+</code>
                   </pre>
                   
               
@@ -1230,32 +1228,7 @@ fun main() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Host(let hostname: String) {
-    func printHostname() { print(hostname) }
-}
-&#8203;
-class Connection(let host: Host, let port: Int) {
-     func printPort() { print(port) }
-&#8203;
-     func Host.printConnectionString() {
-         printHostname()   // calls Host.printHostname()
-         print(":")
-         printPort()   // calls Connection.printPort()
-     }
-&#8203;
-     func connect() {
-         /*...*/
-         host.printConnectionString()   // calls the extension function
-     }
-}
-&#8203;
-func main() {
-    Connection(Host("kotl.in"), 443).connect()
-    //Host("kotl.in").printConnectionString(443)  // error, the extension function is unavailable outside Connection
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1281,15 +1254,7 @@ func main() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class Connection {
-    func Host.getConnectionString() {
-        toString()         // calls Host.toString()
-        this@Connection.toString()  // calls Connection.toString()
-    }
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1342,42 +1307,7 @@ fun main() {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">open class Base { }
-&#8203;
-class Derived : Base() { }
-&#8203;
-open class BaseCaller {
-    open func Base.printFunctionInfo() {
-        print("Base extension function in BaseCaller")
-    }
-&#8203;
-    open func Derived.printFunctionInfo() {
-        print("Derived extension function in BaseCaller")
-    }
-&#8203;
-    func call(b: Base) {
-        b.printFunctionInfo()   // call the extension function
-    }
-}
-&#8203;
-class DerivedCaller: BaseCaller() {
-    override func Base.printFunctionInfo() {
-        print("Base extension function in DerivedCaller")
-    }
-&#8203;
-    override func Derived.printFunctionInfo() {
-        print("Derived extension function in DerivedCaller")
-    }
-}
-&#8203;
-func main() {
-    BaseCaller().call(Base())   // "Base extension function in BaseCaller"
-    DerivedCaller().call(Base())  // "Base extension function in DerivedCaller" - dispatch receiver is resolved virtually
-    DerivedCaller().call(Derived())  // "Base extension function in DerivedCaller" - extension receiver is resolved statically
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>

@@ -285,7 +285,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
                   Extensions
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -299,7 +299,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
                   Sealed Classes
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -320,7 +320,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
                   Objects
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -341,7 +341,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
                   Delegation
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -722,14 +722,7 @@
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">window.addMouseListener(object : MouseAdapter() {
-    override func mouseClicked(e: MouseEvent) { /*...*/ }
-&#8203;
-    override func mouseEntered(e: MouseEvent) { /*...*/ }
-})</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -754,22 +747,13 @@ val ab: A = object : A(1), B {
 }</code>
                 </pre>
                 
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">open class A(x: Int) {
-    public open let y: Int = x
-}
-&#8203;
-interface B { /*...*/ }
-&#8203;
-let ab: A = object : A(1), B {
-    override let y = 15
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -796,16 +780,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func foo() {
-    let adHoc = object {
-        var x: Int = 0
-        var y: Int = 0
-    }
-    print(adHoc.x + adHoc.y)
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -841,25 +816,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class C {
-    // Private function, so the return type is the anonymous object type
-    private func foo() = object {
-        let x: String = "x"
-    }
-&#8203;
-    // Public function, so the return type is Any
-    func publicFoo() = object {
-        let x: String = "x"
-    }
-&#8203;
-    func bar() {
-        let x1 = foo().x        // Works
-        let x2 = publicFoo().x  // ERROR: Unresolved reference 'x'
-    }
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -894,24 +851,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">func countClicks(window: JComponent) {
-    var clickCount = 0
-    var enterCount = 0
-&#8203;
-    window.addMouseListener(object : MouseAdapter() {
-        override func mouseClicked(e: MouseEvent) {
-            clickCount++
-        }
-&#8203;
-        override func mouseEntered(e: MouseEvent) {
-            enterCount++
-        }
-    })
-    // ...
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -954,17 +894,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">object DataProviderManager {
-    func registerDataProvider(provider: DataProvider) {
-        // ...
-    }
-&#8203;
-    let allDataProviders: Collection&#60;DataProvider&#62;
-        get() = // ...
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -985,10 +915,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">DataProviderManager.registerDataProvider(...)</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1013,14 +940,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">object DefaultListener : MouseAdapter() {
-    override func mouseClicked(e: MouseEvent) { ... }
-&#8203;
-    override func mouseEntered(e: MouseEvent) { ... }
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1060,14 +980,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class MyClass {
-    companion object Factory {
-        func create(): MyClass = MyClass()
-    }
-}</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1088,10 +1001,7 @@ let ab: A = object : A(1), B {
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">let instance = MyClass.create()</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1116,14 +1026,7 @@ val x = MyClass.Companion</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class MyClass {
-    companion object { }
-}
-&#8203;
-let x = MyClass.Companion</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1154,20 +1057,7 @@ val y = MyClass2</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">class MyClass1 {
-    companion object Named { }
-}
-&#8203;
-let x = MyClass1
-&#8203;
-class MyClass2 {
-    companion object { }
-}
-&#8203;
-let y = MyClass2</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
@@ -1198,20 +1088,7 @@ val f: Factory&#60;MyClass&#62; = MyClass</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">interface Factory&#60;T&#62; {
-    func create(): T
-}
-&#8203;
-class MyClass {
-    companion object : Factory&#60;MyClass&#62; {
-        override func create(): MyClass = MyClass()
-    }
-}
-&#8203;
-let f: Factory&#60;MyClass&#62; = MyClass</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>

@@ -285,7 +285,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
                   Extensions
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -299,7 +299,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
                   Sealed Classes
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -320,7 +320,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
                   Objects
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -341,7 +341,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
                   Delegation
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -732,20 +732,34 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface Base {
+                    <code class="swift">protocol Base {
     func print()
 }
-&#8203;
-class BaseImpl(let x: Int) : Base {
-    override func print() { print(x) }
+
+class BaseImpl: Base {
+    private var x = 0
+    init(x: Int) {
+        self.x = x
+    }
+    
+    func print() { Swift.print(x) }
 }
-&#8203;
-class Derived(b: Base) : Base by b
-&#8203;
-func main() {
-    let b = BaseImpl(10)
-    Derived(b).print()
-}</code>
+
+class Derived: Base {
+    private var b: Base
+    init(_ b: Base) {
+        self.b = b
+    }
+    
+    func print() {
+        b.print()
+    }
+}
+
+
+let b = BaseImpl(x: 10)
+Derived(b).print()
+</code>
                   </pre>
                   
               
@@ -802,25 +816,36 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface Base {
+                    <code class="swift">protocol Base {
     func printMessage()
     func printMessageLine()
 }
-&#8203;
-class BaseImpl(let x: Int) : Base {
-    override func printMessage() { print(x) }
-    override func printMessageLine() { print(x) }
+
+class BaseImpl: Base {
+    private var x = 0
+    init(x: Int) {
+        self.x = x
+    }
+    
+    func printMessage() { print(x) }
+    func printMessageLine() { print(x) }
 }
-&#8203;
-class Derived(b: Base) : Base by b {
-    override func printMessage() { print("abc") }
+
+class Derived: Base {
+    private var b: Base
+    init(_ b: Base) {
+        self.b = b
+    }
+    
+    func printMessage() { b.printMessage() }
+    func printMessageLine() { print("abc") }
 }
-&#8203;
-func main() {
-    let b = BaseImpl(10)
-    Derived(b).printMessage()
-    Derived(b).printMessageLine()
-}</code>
+
+
+let b = BaseImpl(x: 10)
+Derived(b).printMessage()
+Derived(b).printMessageLine()
+</code>
                   </pre>
                   
               
@@ -864,27 +889,40 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">interface Base {
-    let message: String
+                    <code class="swift">protocol Base {
+    var message: String { get }
     func print()
 }
-&#8203;
-class BaseImpl(let x: Int) : Base {
-    override let message = "BaseImpl: x = $x"
-    override func print() { print(message) }
+
+class BaseImpl: Base {
+    private var x = 0
+    init(x: Int) {
+        self.x = x
+    }
+    
+    var message: String {
+        get { "BaseImpl: x = \(x)" }
+    }
+    
+    func print() { Swift.print(message) }
 }
-&#8203;
-class Derived(b: Base) : Base by b {
-    // This property is not accessed from b's implementation of `print`
-    override let message = "Message of Derived"
+
+class Derived: Base {
+    private var b: Base
+    init(_ b: Base) {
+        self.b = b
+    }
+    
+    let message = "Message of Derived"
+    
+    func print() { b.print() }
 }
-&#8203;
-func main() {
-    let b = BaseImpl(10)
-    let derived = Derived(b)
-    derived.print()
-    print(derived.message)
-}</code>
+
+let b = BaseImpl(x: 10)
+let derived = Derived(b)
+derived.print()
+print(derived.message)
+</code>
                   </pre>
                   
               

@@ -285,7 +285,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Extensions.html">
                   Extensions
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -299,7 +299,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Sealed Classes.html">
                   Sealed Classes
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -320,7 +320,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Objects.html">
                   Objects
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -341,7 +341,7 @@
                 <a href="/swift-vs-kotlin/fromkotlin/Classes and Objects_Delegation.html">
                   Delegation
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -708,11 +708,12 @@ object NotANumber : Expr()</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">sealed class Expr
-&#8203;
-data class Const(let number: Double) : Expr()
-data class Sum(let e1: Expr, let e2: Expr) : Expr()
-object NotANumber : Expr()</code>
+                    <code class="swift">indirect enum Expr {
+    case const(Double)
+    case sum(Expr, Expr)
+    case notANumber
+}
+</code>
                   </pre>
                   
               
@@ -757,13 +758,14 @@ object NotANumber : Expr</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">sealed interface Expr
-&#8203;
-sealed class MathExpr(): Expr
-&#8203;
-data class Const(let number: Double) : MathExpr()
-data class Sum(let e1: Expr, let e2: Expr) : MathExpr()
-object NotANumber : Expr</code>
+                    <code class="swift">protocol Expr {}
+
+indirect enum MathExpr: Expr {
+    case const(Double)
+    case sum(Expr, Expr)
+    case notANumber
+}
+</code>
                   </pre>
                   
               
@@ -807,12 +809,17 @@ object NotANumber : Expr</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">func eval(expr: Expr): Double = when(expr) {
-    is Const -&#62; expr.number
-    is Sum -&#62; eval(expr.e1) + eval(expr.e2)
-    NotANumber -&#62; Double.NaN
-    // the `else` clause is not required because we've covered all the cases
-}</code>
+                    <code class="swift">func eval(expr: Expr) -&#62; Double? {
+    switch expr {
+    case .const(let number):
+        return number
+    case .sum(let e1, let e2):
+        return eval(e1) + eval(e2)
+    default:
+        return nil
+    }
+}
+</code>
                   </pre>
                   
               
@@ -850,10 +857,7 @@ object NotANumber : Expr</code>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <pre>
-                    <code class="swift">kotlinOptions.languageVersion = "1.5"</code>
-                  </pre>
-                  
+                  <div><div class="not-support" /></div>
               
               </td>
             </tr>
