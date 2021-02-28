@@ -9,7 +9,7 @@ const Nav = ({styles, location={}})=>{
 
     const isHome = location.pathname === '/'
     const isWorks = location.pathname === '/works'
-    
+
     return (
     	<nav styleName="nav">
             <Link styleName="logo" to="/">
@@ -19,7 +19,7 @@ const Nav = ({styles, location={}})=>{
             <div styleName="menu">
                 <Link to="/" styleName={isHome?"active":""}>Hello</Link>
                 <Link to="/works" styleName={isWorks?"active":""}>Works</Link>
-                <a href="https://medium.com/tonny-sunm">Blog</a>
+                <a href="https://tonny.medium.com/">Blog</a>
             </div>
     	</nav>
     )
